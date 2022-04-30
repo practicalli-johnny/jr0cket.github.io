@@ -347,11 +347,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Hack the Tower - February 2013]]></title>
+    <title><![CDATA[Hack the Tower February 2013]]></title>
     <link href="http://jr0cket.co.uk/2013/02/hack-tower-february-2013.html.html"/>
     <id>http://jr0cket.co.uk/2013/02/hack-tower-february-2013.html.html</id>
     <published>2013-02-22T14:08:00.000Z</published>
-    <updated>2022-04-30T20:02:21.642Z</updated>
+    <updated>2022-04-30T20:49:23.217Z</updated>
     <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-6h-4Dv2fnf8/USeAlY8lgwI/AAAAAAAAJFw/OQheQYOK8zs/s1600/tower42-surrounded-by-blue-cranes.jpg" class="img-thumbnail">
 <p>When 100 developers and 1 robot signed up for the February edition of Hack the Tower, across many technical communities in London, I could tell it was going to be a big event.</p>
 <blockquote><p>Heading out for a full day of coding <a href="https://twitter.com/HackTheTower" target="_blank" rel="noopener">@HackTheTower</a> - excited about what people will create today #LSDC <a href="https://twitter.com/londonscala" target="_blank" rel="noopener">#LondonScala</a> #LJCjug #LdnClj #robots</p>
@@ -359,7 +359,8 @@
 <p>Developers arrived from different communities, including</p>
 <ul>
 <li><a href="http://www.meetup.com/london-scala/" target="_blank" rel="noopener">London Scala user group</a></li>
-<li><a href="https://groups.google.com/forum/?fromgroups#!forum/london-clojurians" target="_blank" rel="noopener">London Clojure community</a>*   <a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">London Java Community</a></li>
+<li><a href="https://groups.google.com/forum/?fromgroups#!forum/london-clojurians" target="_blank" rel="noopener">London Clojure community</a></li>
+<li><a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">London Java Community</a></li>
 <li><a href="http://www.meetup.com/LondonSalesforceDevelopers/" target="_blank" rel="noopener">London Salesforce developers</a></li>
 <li><a href="http://www.meetup.com/london-software-craftsmanship/" target="_blank" rel="noopener">London Software Craftsmanship</a>&gt;</li>
 </ul>
@@ -375,8 +376,7 @@
 <footer><strong>@balopat</strong><cite><a href="http://twitter.com/balopat/status/300232782590914560" target="_blank" rel="noopener">twitter.com/balopat/status/300232782590914560</a></cite></footer></blockquote></p>
 <p>Luckily Github was not down for long.  As git is distributed, we were able to save our changes locally or topped up on Coffee whist we waited a few minutes for Github to come back.</p>
 <h1 id="Dancing-robot-curious-developers"><a href="#Dancing-robot-curious-developers" class="headerlink" title="Dancing robot, curious developers"></a>Dancing robot, curious developers</h1><p>Everyone’s instant favourite project seemed to be the NVO robot.  Its an amazing piece of kit.  Essentially a programmable robot that can by default can play Japanese music and do Tai Chi.</p>
-<iframe allowfullscreen frameborder="0" height="315" src="http://www.youtube.com/embed/rJnjmwtGQuE" width="420"></iframe>
-
+<div class="video-container"><iframe src="//www.youtube.com/embed/rJnjmwtGQuE" frameborder="0" allowfullscreen></iframe></div>
 <p>You can program the robot visually, by dragging and dropping actions and wiring them up together.  You can create a sequence of positions and get the software to work out the moves necessary to go from one position to another.  Just like digital animators use in software like blender.</p>
 <p>You can drill down into each of these actions and program the robot in python or several other languages.</p>
 <img src="https://pbs.twimg.com/profile_images/304321293/2442675643_5ffdd15b3b-square_bigger.jpg" class="img-thumbnail">
@@ -389,7 +389,7 @@
 <p>There were a lot of developers from LSug  group and they ended up split into three smaller groups to focus on different problems.</p>
 <p>Some of the team were working with MongoDB, some working on the RSVP via meetup.  All the events displayed on the Lsug website can now be joined directly, without having to visit the meetup site.  Perhaps the total number of Yes RSVP’s can be added to each meetup?</p>
 <h1 id="Coding-board"><a href="#Coding-board" class="headerlink" title="Coding board"></a>Coding board</h1><blockquote>
-<p><a href="https://twitter.com/villademor" target="_blank" rel="noopener">@villademor</a> Playing around with <a href="http://t.co/ReN3kzR5" target="_blank" rel="noopener">codingboard.org</a>, <a href="https://twitter.com/scala&quot;" target="_blank" rel="noopener">#Scala</a> on <a href="https://twitter.com/HackTheTower" target="_blank" rel="noopener">@HackTheTower</a> <a href="https://twitter.com/londonscala" target="_blank" rel="noopener">#LondonScala</a> with <a href="https://twitter.com/balopat" target="_blank" rel="noopener">@balopat</a>, <a href="https://twitter.com/gnorsilva" title="gnorsilva" target="_blank" rel="noopener">@gnorsilva</a> among others!</p>
+<p><a href="https://twitter.com/villademor" target="_blank" rel="noopener">@villademor</a> Experimenting with <a href="http://t.co/ReN3kzR5" target="_blank" rel="noopener">codingboard.org</a>, <a href="https://twitter.com/scala&quot;" target="_blank" rel="noopener">#Scala</a> on <a href="https://twitter.com/HackTheTower" target="_blank" rel="noopener">@HackTheTower</a> <a href="https://twitter.com/londonscala" target="_blank" rel="noopener">#LondonScala</a> with <a href="https://twitter.com/balopat" target="_blank" rel="noopener">@balopat</a>, <a href="https://twitter.com/gnorsilva" title="gnorsilva" target="_blank" rel="noopener">@gnorsilva</a> among others!</p>
 </blockquote>
 <p><a href="http://codingboard.org/" target="_blank" rel="noopener">Coding Board</a> is a small web application allowing developers to share code with each other in a hands-on session.  When we want to talk about the decisions we took as we approached a problem, its  nice to have the code itself shared on the screen in a syntax  highlighted way.</p>
 <p><a href="https://twitter.com/balopat" target="_blank" rel="noopener">Balint Pato</a> started this project as a <a href="http://blog.balopat.com/2012/12/a-gift-for-christmas-to-the-software-craftsmanship-community.html" target="_blank" rel="noopener">Christmas gift</a> for the <a href="http://www.meetup.com/london-software-craftsmanship/" target="_blank" rel="noopener">London Software Craftsmanship Community</a> using:</p>
@@ -447,7 +447,8 @@
 <p>Developers arrived from different communities, including</p>
 <ul>
 <li><a href="http://www.meetup.com/london-scala/" target="_blank" rel="noopener">London Scala user group</a></li>
-<li><a href="https://groups.google.com/forum/?fromgroups#!forum/london-clojurians" target="_blank" rel="noopener">London Clojure community</a>*   <a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">London Java Community</a></li>
+<li><a href="https://groups.google.com/forum/?fromgroups#!forum/london-clojurians" target="_blank" rel="noopener">London Clojure community</a></li>
+<li><a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">London Java Community</a></li>
 <li><a href="http://www.meetup.com/LondonSalesforceDevelopers/" target="_blank" rel="noopener">London Salesforce developers</a></li>
 <li><a href="http://www.meetup.com/london-software-craftsmanship/" target="_blank" rel="noopener">London Software Craftsmanship</a>&gt;</li>
 </ul>

@@ -663,14 +663,14 @@ rake update_style             # update the template&apos;s style
     <link href="http://jr0cket.co.uk/2014/03/creating-content-in-markdown-for-your-octopress-blog.html"/>
     <id>http://jr0cket.co.uk/2014/03/creating-content-in-markdown-for-your-octopress-blog.html</id>
     <published>2014-03-13T19:32:20.000Z</published>
-    <updated>2022-01-02T20:20:15.298Z</updated>
+    <updated>2022-04-30T20:46:21.667Z</updated>
     <content type="html"><![CDATA[<p>Octopress enables the creation of great looking blog post using simple markdown text.  This gives you a no-fuss way of writing your blogs without getting distracted.  Here I will cover how to add formatting to you text and embedding code and other useful media into your blog posts.</p>
-<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently. </p>
+<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently.</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="Adding-styles-to-text"><a href="#Adding-styles-to-text" class="headerlink" title="Adding styles to text"></a>Adding styles to text</h2><p>Headings<br>Bold, italic </p>
+<h2 id="Adding-styles-to-text"><a href="#Adding-styles-to-text" class="headerlink" title="Adding styles to text"></a>Adding styles to text</h2><p>Headings<br>Bold, italic</p>
 <h2 id="Adding-images"><a href="#Adding-images" class="headerlink" title="Adding images"></a>Adding images</h2><p>Images are always a good way to explain concepts or to just get attendtion for your writing.</p>
-<p>To add an image to your post, you add the following code </p>
+<p>To add an image to your post, you add the following code</p>
 <figure class="highlight plain"><figcaption><span>[Insert an image in your post]</span><a href="http://octopress.org/docs/plugins/image-tag/" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;/path/to/image&quot; class=&quot;[class names]&quot; title=&quot;[width] [height] [title text [alt text]]&quot;&gt;</span><br></pre></td></tr></table></figure>
 <p>Here is an example with my two cute cats:</p>
 <img src="/images/kittens-snuggled.png">
@@ -681,10 +681,10 @@ rake update_style             # update the template&apos;s style
 <h3 id="Github-Gists"><a href="#Github-Gists" class="headerlink" title="Github Gists"></a>Github Gists</h3><p>I am used to using Github and Gists for sharing and collaborating around code, so as Octopress can use Gits then I have started using the gist directive.</p>
 <script src="//gist.github.com/9532424.js"></script>
 <p>See the <a href="Octopress article on Github gists">http://octopress.org/docs/plugins/gist-tag/</a> for a few more examples.</p>
-<h2 id="Adding-Video"><a href="#Adding-Video" class="headerlink" title="Adding Video"></a>Adding Video</h2><p>You can add embedded videos from YouTube and Vimeo very easily, you just need to know the id of the video which is the last characters of the </p>
+<h2 id="Adding-Video"><a href="#Adding-Video" class="headerlink" title="Adding Video"></a>Adding Video</h2><p>You can add embedded videos from YouTube and Vimeo very easily, you just need to know the id of the video which is the last characters of the</p>
 <p>For example, there is a great video by Lindsey Stirling at <a href="https://www.youtube.com/watch?v=DHdkRvEzW84" target="_blank" rel="noopener">https://www.youtube.com/watch?v=DHdkRvEzW84</a>, so to include this video in a post I would use the video id at the end of that web address (after the watch?v=).  So I would add the following code to my code</p>
 
-  youtub DHdkRvEzW84
+  youtube DHdkRvEzW84
 
 <p>You can use either YouTube or Vimeo for your video souce using the following syntax:</p>
 
@@ -696,7 +696,7 @@ rake update_style             # update the template&apos;s style
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Octopress enables the creation of great looking blog post using simple markdown text.  This gives you a no-fuss way of writing your blogs without getting distracted.  Here I will cover how to add formatting to you text and embedding code and other useful media into your blog posts.</p>
-<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently. </p>
+<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently.</p>
 </blockquote>]]>
     
     </summary>
