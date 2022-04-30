@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Clojure Namespaces | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Clojure has some amazing capabilities when it comes to namespaces and how they import their respective libraries, some more documented than others. That said I wanted to get a few examples down that I">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clojure Namespaces">
+<meta property="og:url" content="http://jr0cket.co.uk/clojure/namespaces.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Clojure has some amazing capabilities when it comes to namespaces and how they import their respective libraries, some more documented than others. That said I wanted to get a few examples down that I">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clojure Namespaces">
+<meta name="twitter:description" content="Clojure has some amazing capabilities when it comes to namespaces and how they import their respective libraries, some more documented than others. That said I wanted to get a few examples down that I">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/clojure/namespaces.html" class="article-date">
+  <time datetime="2022-01-02T20:20:15.310Z" itemprop="datePublished">2 Jan 2022</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Clojure Namespaces
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Clojure has some amazing capabilities when it comes to namespaces and how they import their respective libraries, some more documented than others. That said I wanted to get a few examples down that I’ve learned to:</p>
+<p>hopefully help any others who might have some of the same issues I did, and<br>for my own edification in case I ever need a reference.<br>require over use<br>First and foremost whenever importing a clojure library it is typically recommended to leverage the require syntax over the use syntax. The primary reason for this is to avoid unnecessary namespace conflictions when useing an entire library.</p>
+<p>For example, if you had the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:use clojure.string))</span><br></pre></td></tr></table></figure>
+<p>…then you would receive the below error:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARNING: replace already refers to: #&apos;clojure.core/replace in namespace: user, being replaced by: #&apos;clojure.string/replace  </span><br><span class="line">WARNING: reverse already refers to: #&apos;clojure.core/reverse in namespace: user, being replaced by: #&apos;clojure.string/reverse</span><br></pre></td></tr></table></figure>
+<p>If, instead we used require as in:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require clojure.string))</span><br></pre></td></tr></table></figure>
+<p>…then the errors disappear. So what exactly happened? Well when we called use we imported every symbol defined in the clojure.string library to our current namespace. Now, the default namespace that Clojure provides already has a plethora of functions (things in the clojure.core library like map and defn), so when we went and added a few more some collided with previous symbol definitions; namely replace and reverse. On the other hand, when calling require it’s essentially telling the system to load those symbols, but not into our namespace. So what does this mean? Well lets check out this code:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:use clojure.string))</span><br><span class="line"></span><br><span class="line">(join &quot; &quot; [&quot;My&quot; &quot;simple&quot; &quot;sentence.&quot;])</span><br><span class="line"></span><br><span class="line">; =&gt; &quot;My simple sentence.&quot;</span><br></pre></td></tr></table></figure>
+<p>In this example join is a function within the clojure.string library and we were able to call it without any other isms (shown below) because we imported all of the clojure.string symbols (i.e. functions) into our local namespace. This will not work if we had used require. Lets take a look at how it would be written to work with require.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require clojure.string))</span><br><span class="line"></span><br><span class="line">(clojure.string/join &quot; &quot; [&quot;My&quot; &quot;simple&quot; &quot;sentence.&quot;])</span><br><span class="line"></span><br><span class="line">; =&gt; &quot;My simple sentence.&quot;</span><br></pre></td></tr></table></figure>
+<p>As you can see in the above example what we did was qualify the namespace where the join function was since we were referencing a symbol outside our current namespace. If we hadn’t done that and requireed the clojure.string library we would’ve received the following error:</p>
+<p>CompilerException java.lang.RuntimeException: Unable to resolve symbol: join in this context, compiling:(NO_SOURCE_PATH:1:1)<br>Now that some of the basics are out of the way, lets get into the fun namespace things we can do!</p>
+<p>Side Note: I’ll be using require specifically from here on out. If you’re set on using use then I leave it to the reader to modify the examples.</p>
+<p>Referring symbols from require<br>To import symbols from other libraries into your local namespace, like we saw with use, in a one-off manner one can use the keyword :refer. Following along fron the above, using :refer allows us to write code as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require [clojure.string :refer [join]]))</span><br><span class="line"></span><br><span class="line">(join &quot; &quot; [&quot;My&quot; &quot;simple&quot; &quot;sentence.&quot;])</span><br><span class="line">; =&gt; &quot;My simple sentence.&quot;</span><br></pre></td></tr></table></figure>
+<p>The most immediate new addition that you likely saw is the syntactic change to the vector surrounding the clojure.string import. This basically allows Clojure to understand the options you want to apply when importing a library. In the above instance we’re adding the addition of the :refer key like we talked about.</p>
+<p>I typically find myself using :refer for utility functions (like logging) when I’m:</p>
+<p>sure that the symbol is highly unlikely to be used by any other library,<br>when I use the given function all over the project, and<br>when the function name accurately represents its use.<br>Side Note: :refer can take a keyword of :all which makes its use exactly like that of use. For example the below two samples of code are equivalent:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:use clojure.string))</span><br><span class="line"></span><br><span class="line">(join &quot; &quot; [&quot;My&quot; &quot;simple&quot; &quot;sentence.&quot;])</span><br></pre></td></tr></table></figure>
+<p>…and…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require [clojure.string :refer :all]))</span><br><span class="line"></span><br><span class="line">(join &quot; &quot; [&quot;My&quot; &quot;simple&quot; &quot;sentence.&quot;])</span><br></pre></td></tr></table></figure>
+<p>Assigning namespaces as variables<br>Probably the most used keyword seen, :as allows you to bind the entire namespace of a given library (like clojure.string) to a symbol. This greatly cleans up the code while maintaining namespace references to avoid collisions. Here is how we would reassign the clojure.string library:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require [clojure.string :as clj-str]))</span><br><span class="line"></span><br><span class="line">(clj-str/join &quot; &quot; [&quot;My&quot; &quot;simple&quot; &quot;sentence.&quot;])</span><br></pre></td></tr></table></figure>
+<p>What we’ve done is bind the clojure.string library to the symbol clj-str. Now, when referencing clj-str we can execute any functions as if we had typed the entire clojure.string out before it. Concretely, clojure.string/join and clj-str/join are synonymous in the above example. In fact, since the clojure.string library was imported you could still use the full clojure.string/join even though we bound it :as clj-str if your heart truly desired.</p>
+<h2 id="Grouping-libraries-by-prefix"><a href="#Grouping-libraries-by-prefix" class="headerlink" title="Grouping libraries by prefix"></a>Grouping libraries by prefix</h2><p>So we’ve worked a lot with clojure.string, but, let’s be honest, when dealing with actual development the number of imports get voluminous. Luckily Clojure has a nice way to handle prefixing such that namespaced imports start to make sense. They remove unnecessary code to be written and help the readability tremendously. Lets start with a simple example where we want to use not only the clojure.string library, but also the clojure.pprint library. That could look something like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require clojure.string</span><br><span class="line">            clojure.pprint))</span><br></pre></td></tr></table></figure>
+<p>…or we could tighten it up as…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require [clojure string</span><br><span class="line">                     pprint]))</span><br></pre></td></tr></table></figure>
+<h2 id="Bringing-the-basics-together"><a href="#Bringing-the-basics-together" class="headerlink" title="Bringing the basics together"></a>Bringing the basics together</h2><p>To put all of these features into a production environment lets look at the Storm clojure features. As some readers might know, I work heavily with Storm in my day-to-day and can personally say the below example is in some production code at this moment.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:require [backtype.storm [clojure :refer [defbolt bolt emit-bolt! ack!] :as storm]</span><br><span class="line">                            [testing :refer [with-simulated-time-local-cluster</span><br><span class="line">                                             with-local-cluster</span><br><span class="line">                                             complete-topology</span><br><span class="line">                                             read-tuples]]</span><br><span class="line">                            [config :as conf]]))</span><br></pre></td></tr></table></figure>
+<p>The above might seem a bit confusing, but all of the fundamentals are there. To walk through it a bit:</p>
+<p>We’re importing backtype.storm.clojure and binding it to the symbol storm while referring defbolt, bolt, emit-bolt!, and ack! into the local namespace.<br>We’re importing backtype.storm.testing and referring the function with-simulated-time-local-cluster, with-local-cluster, complete-topology, and read-tuples without binding the namespace to a local symbol.</p>
+<p>Finally we’re importing backtype.storm.config and binding it as the symbol conf without referring any symbols (i.e. functions) into the local namespace.<br>Thats all for the basics! Lets move into some of the unique namespace features Clojure has.</p>
+<h2 id="Manipulating-clojure-core-symbols"><a href="#Manipulating-clojure-core-symbols" class="headerlink" title="Manipulating clojure.core symbols"></a>Manipulating clojure.core symbols</h2><p>One of the lovely concepts in Clojure is that you can actually refer, rename, and exclude given core Clojure functions within a namespace through the :refer-clojure keyword. This is very handy when developing a library with symbols that syntactically collide with a clojure.core-bound function. For example, when I was developing clj-template and making the html bindings a few symbols (i.e. map, meta, and time) collided with core functions already provided. So how do we fix that?</p>
+<p>Welcome the :rename keyword. It allows one to import clojure.core functions and :rename them to new symbols. As an example, lets look at how we would change the map, meta, and time function bindings:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:refer-clojure :rename &#123;map clj-map</span><br><span class="line">                           meta clj-meta</span><br><span class="line">                           time clj-time&#125;))</span><br></pre></td></tr></table></figure>
+<p>Now, if we attempt to reference map at all we’ll get the error:</p>
+<pre><code>foo.bar=&gt; map  
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: map in this context, compiling:(NO_SOURCE_PATH:0:0)  
+</code></pre><p>…where clj-map returns:</p>
+<pre><code>foo.bar=&gt; clj-map  
+#&lt;core$map clojure.core$map@49107ba0&gt;
+</code></pre><p>Hurray!</p>
+<p>If we just want to remove certain functions from being imported altogether (for instance, map) we can use the :exclude keyword as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:refer-clojure :exclude [map]))</span><br></pre></td></tr></table></figure>
+<p>In the reverse sence we can refer in only specific symbols we want with the :only keyword. Lets look at an example where we only refer in the map symbol:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(ns foo.bar</span><br><span class="line">  (:refer-clojure :only [map]))</span><br></pre></td></tr></table></figure>
+<h2 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h2><p>Clojure provides a lot of power with its dependency system and, in and of itself, can be daunting at times. I hope this helps smooth out its, seemingly, rough edges and provide some concise examples to help better grasp the full potential of Clojure namespaces.</p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/clojure/namespaces.html" data-id="cl2mbqft3001uzqmj84jhnczx" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/clojure/namespaces.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/clojure/namespaces.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

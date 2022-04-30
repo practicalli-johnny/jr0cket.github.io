@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Archives | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Clojure, Community and developer tools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jr0cket">
+<meta property="og:url" content="http://jr0cket.co.uk/archives/page/12/index.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Clojure, Community and developer tools">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jr0cket">
+<meta name="twitter:description" content="Clojure, Community and developer tools">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-managing-multiple-ssh-keys-to-avoid.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/11/managing-multiple-ssh-keys-to-avoid.html.html" class="article-date">
+  <time datetime="2012-11-03T12:04:00.000Z" itemprop="datePublished">3 Nov 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/managing-multiple-ssh-keys-to-avoid.html.html">Managing Multiple SSH Keys to Avoid Heroku Permission Issues</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-WbaI8XNIuc4/UJPNtGsJ8gI/AAAAAAAAIgQ/O-QkJLcoS9s/s1600/ssh-private-public-keys2.jpg" class="img-thumbnail"> 
+<p>I was a little surprised to have an access issue with <a href="http://www.heroku.com/" target="_blank" rel="noopener">Heroku</a> when using my new Mac Book Pro, as its always been really easy to deploy my applications to Heroku in the past.&nbsp; I kicked myself when I realised I’d only set up a public key specifically for my Github account.</p>
+<p>This got me to wondering the best way to set up keys given I am using different services for both personal project and work. </p>
+        
+          <p class="article-more-link">
+            <a href="/2012/11/managing-multiple-ssh-keys-to-avoid.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/11/managing-multiple-ssh-keys-to-avoid.html.html" data-id="cl2mbqfx800g0zqmj9tnsmn2r" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/11/managing-multiple-ssh-keys-to-avoid.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/heroku/">heroku</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-developer-mentors-invade-kings-college_1.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/11/developer-mentors-invade-kings-college_1.html.html" class="article-date">
+  <time datetime="2012-11-01T15:14:00.000Z" itemprop="datePublished">1 Nov 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/events/">events</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/developer-mentors-invade-kings-college_1.html.html">Developer Mentors Invade Kings College London</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-aqvkk1hXMKs/UJKPf9DH41I/AAAAAAAAIfA/6nRGAqOmupI/s1600/gdc-logo.jpg" class="img-thumbnail">
+<p>It was great to meet so many eager minds at Kings College during the Meet a Mentor session for the Graduate Developer community.</p>
+<p>Kings College is a stunning setting for helping students understand the expectations that will be put upon them when they get into industry.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/11/developer-mentors-invade-kings-college_1.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/11/developer-mentors-invade-kings-college_1.html.html" data-id="cl2mbqfuu007dzqmj0tbsbo19" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/11/developer-mentors-invade-kings-college_1.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gdc/">gdc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mentoring/">mentoring</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-london-scala-hackathon-powered-by-heroku.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/london-scala-hackathon-powered-by-heroku.html.html" class="article-date">
+  <time datetime="2012-10-30T14:32:00.000Z" itemprop="datePublished">30 Oct 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/events/">events</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/london-scala-hackathon-powered-by-heroku.html.html">London Scala Hackday Powered by Heroku</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Saturday 27th saw a great hackday thanks to <a href="https://twitter.com/rrees" target="_blank" rel="noopener">Robert Rees</a>, The Guardian and members of the <a href="http://www.meetup.com/london-scala/" target="_blank" rel="noopener">London Scala user group</a>.  The ambitious challenge was to build an community website where events, conferences, blogs, code repos and  community discussions were all available from one place.</p>
+<p>There are several websites out there that do a part of what a community  needs, to this project is trying to help bring all that together in one  place.  So the grand plans include, pulling in content from event sites,  publishing events to sites, register at events with a single touch and  widely distribute your interest and attendance automatically.</p>
+<p>Or just have fun hacking on some cool technology and learning something new.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/10/london-scala-hackathon-powered-by-heroku.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/10/london-scala-hackathon-powered-by-heroku.html.html" data-id="cl2mbqfwv00f1zqmj706dhe1h" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/10/london-scala-hackathon-powered-by-heroku.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackday/">hackday</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/heroku/">heroku</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scala/">scala</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-using-emacs-24-server-on-mac-osx-for.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/using-emacs-24-server-on-mac-osx-for.html.html" class="article-date">
+  <time datetime="2012-10-21T16:10:00.000Z" itemprop="datePublished">21 Oct 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/emacs/">emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/using-emacs-24-server-on-mac-osx-for.html.html">Using Emacs 24 Server on Mac OSX for Instant Editing</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/emacs-logo.png" class="img-thumbnail">
+<p>I love using Emacs for Clojure development, although as I add to my configuration file I noticed start-up times have grown by a few milliseconds, which can feel like a life time when you have just thought of a new idea.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/10/using-emacs-24-server-on-mac-osx-for.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/10/using-emacs-24-server-on-mac-osx-for.html.html" data-id="cl2mbqfz000mgzqmjyzfzdf1e" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/10/using-emacs-24-server-on-mac-osx-for.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ibm-and-irony-of-community-engagement.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/ibm-and-irony-of-community-engagement.html.html" class="article-date">
+  <time datetime="2012-10-18T09:05:00.000Z" itemprop="datePublished">18 Oct 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/events/">events</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/ibm-and-irony-of-community-engagement.html.html">IBM and the Irony of Community Engagement</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://2.bp.blogspot.com/-e1e0uoicAo4/UH-93ST7C7I/AAAAAAAAIZc/Mi7ucIjUk5o/s1600/jax-london-2012-logo.png" class="img-thumbnail"> 
+<p>At the <a href="http://jaxlondon.com/" target="_blank" rel="noopener">JAX London conference</a> yesterday <a href="http://uk.linkedin.com/pub/steve-poole/10/803/477" target="_blank" rel="noopener">Steve Poole of IBM</a> gave an inspiring speech, discussing the value of the right mix of business and open source participation in the development of Java.  The same day, IBM decides to no longer support the yearly <a href="http://conf.londonjavacommunity.co.uk/" target="_blank" rel="noopener">London Java Community conference</a>.  This does beg the question, does IBM understand the message they are communicating?</p>
+<img src="http://blog.sugati.nl/wp-content/uploads/2008/05/duke_evolution-300x139.jpg" class="img-topic"> 
+<p>If you give a rallying call to the developers out there to help Oracle and IBM shape Java, then you also need to support that call and not just rely on the resource of that community.</p>
+<p>Having asked IBM if the London Java Community could again use their great venue for their yearly conference, it seems the initial reply was yes, yes, yes, followed by a final response that they didn’t have the budget for us to us there venue.  Maybe some one at IBM misunderstood the request. </p>
+<img src="http://2.bp.blogspot.com/--aarZnZgEgA/UH_DNtHov_I/AAAAAAAAIZ4/azETKEhZG-k/s1600/ibm-logo.png" class="img-topic"> 
+<p>I am sure that IBM contribute to the developer community in many ways, although as an organisation I have the perception it still struggles to understand the value of community, as Oracle once used to do.  To me it seems to let down the amazing individuals at IBM who have contributed greatly to the community as well as a huge opportunity to get developers involved in IBM technology and products.  It seems IBM are not helping themselves be the drivers of community engagement, which is a missed opportunity by them. </p>
+<p>Over the last 5 years, the <a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">London Java Community</a> have been driving Java developer engagement with activities such as <a href="http://londonjavacommunity.wordpress.com/2011/09/29/adopt-a-jsr/" target="_blank" rel="noopener">Adopt a JSR</a>, a yearly <a href="http://conf.londonjavacommunity.co.uk/" target="_blank" rel="noopener">community conference</a> and <a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">regular community events</a>.  We have been very grateful to IBM for providing us use of their space for our yearly conference in the past, but it seems IBM dont have the budget this year for one Saturday. This is a bit disappointing as after a long process we only find out now, about 5 weeks before the conference.  Whilst there is no expectation for IBM to provide a venue, it is a great way that they can easily support the Java community in the UK.  It seems doubly disappointing considering the great sessions by Steve Poole and Holly Cummins at JAX London that inspired over 500 developers across a dozen countries to get involved with Java’s future and some cool IBM technology.</p>
+<img src="http://3.bp.blogspot.com/-DnE0_spNbOM/T0Y2wWJQlTI/AAAAAAAAEsk/CJs7u9Z4JtY/s1600/big-yawn.jpg" class="img-topic"> 
+<p>This situation does highlight how difficult it is for large companies to engage with the community.  If all you do is ask people to help, you probably wont get much reply without the perception of reciprocity!</p>
+<p>With the support of IBM, Oracle, Atlassian, O’Reilly and others the London Java Community has been able to get so many more developers engaged with the development of the Java language.  As we have grown to ~3000 members, we can do event more when working with partners that understand the value of community engagement, to help us help developers get involved in the future shape of Java.</p>
+<p>Sponsors have real value to gain by investing in community activity and developer groups like the <a href="http://www.meetup.com/Londonjavacommunity/" target="_blank" rel="noopener">Java</a>, <a href="http://www.meetup.com/london-scala/" target="_blank" rel="noopener">Scala</a>, <a href="http://www.meetup.com/london-software-craftsmanship/" target="_blank" rel="noopener">Craftmanship</a> and <a href="https://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">Clojure</a> communities allow a means to invest in communities in a way that is valued by the developers in those community.</p>
+<p>If you want the community to engage with you, you have to stay relevant and give developers inspiration, motivation and the means to get involved.  IBM have given the community a perception of a really big push and fail in the same day.  That is itself is quite a trick.</p>
+<p>The <a href="http://conf.londonjavacommunity.co.uk/" target="_blank" rel="noopener">London Java Community conference</a> is going ahead as planned and registration will open as soon as we confirm a new venue, so please save the date of <strong>Saturday 24th November</strong>.</p>
+<p>Thank you<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/10/ibm-and-irony-of-community-engagement.html.html" data-id="cl2mbqfw500c7zqmj00wgy845" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/10/ibm-and-irony-of-community-engagement.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-london-salesforce-developers-dreamforce.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/london-salesforce-developers-dreamforce.html.html" class="article-date">
+  <time datetime="2012-10-12T16:17:00.000Z" itemprop="datePublished">12 Oct 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/events/">events</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/london-salesforce-developers-dreamforce.html.html">London Salesforce Developers - Dreamforce Aftermath</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://flic.kr/s/aHsjCfs8vJ" class="img-thumbnail">
+<p>Over 7,000 developers flocked to the <a href="http://events.developerforce.com/conference/dreamforce" target="_blank" rel="noopener">DevZone</a> at this years Dreamforce conference.  I was one of them and along with Adam Seligman, Keir Bowden and Andy Mahood we told tales of our experiences to the <a href="http://www.meetup.com/LondonSalesforceDevelopers/" target="_blank" rel="noopener">London Salesforce Developer community</a>.</p>
+<p>Wes Nolte took charge of the mike and quizzed the panel on their experiences of the event.  Here are the questions that stuck in my memory from the evening</p>
+<h1 id="What-was-the-thing-that-got-you-most-excited-about-Dreamforce"><a href="#What-was-the-thing-that-got-you-most-excited-about-Dreamforce" class="headerlink" title="What was the thing that got you most excited about Dreamforce ?"></a>What was the thing that got you most excited about Dreamforce ?</h1><p>The thing that got to me was the sheer size of it all.  With so many developers around it was great that we had a whole of Moscone West to spread it all out.  There were banks of laptops provided for anyone to get involved in coding workshops and all through the day they were all filled up.</p>
+<p>There were so many different things to do, from playing donkey kong to coding, listening to great talks, guided tutorials, code consultations and quizing lots of people from Salesforce and Heroku about their platforms.</p>
+<img src="http://2.bp.blogspot.com/-iFOo-wRJGSo/UHg8hxE5Q1I/AAAAAAAAIYc/iSZB4mCa7dk/s1600/dreamforce-devs-tshirt-printing.png" class="img-code">
+<p>The biggest problem was what to actually do from so much choice.  Of course there was an app for that too and a chatter stream so you could discuss sessions as well.</p>
+<p>If you couldn’t make up your mind you could also queue up and print your own t-shirt!</p>
+<p>It was a sign of how open the conference was to have an <a href="http://en.wikipedia.org/wiki/Unconference" target="_blank" rel="noopener">un-conference</a> section, where anyone could propose a talk.  There was even a theatre dedicated to community related talks.  I met some great guys from Bristol who are starting up their own Salesforce community events.</p>
+<h1 id="What-was-your-favourite-session"><a href="#What-was-your-favourite-session" class="headerlink" title="What was your favourite session ?"></a>What was your favourite session ?</h1><p>The most entertaining session was by <a href="http://redmonk.com/jgovernor/2012/09/21/dreamforce-12-crazy-big-with-lower-barriers/" target="_blank" rel="noopener">James Governor from RedMonk</a>, comparing the rise of craft brewing with the rise of developers.  Craft brewing is bringing back the entrepreneurial flavour into beer making and bringing quality product to the market. Developers are doing the same for startups and enterprises around the world.  Calling developers the new kingmakers, James highlights how important developers are and the responsibility we have on our shoulders to support the businesses and projects we are involved in. See article….</p>
+<p>I also really enjoyed the live coding challenges from MVP developers and developer evangelists.  There was a great banter as well as great code being bashed out.</p>
+<img src="http://1.bp.blogspot.com/-ZwXY5J6tDHc/UHg78yqt0QI/AAAAAAAAIYU/zaOPW6R6pSg/s1600/dreamforce-devs-collaborating.png" class="img-code">
+<p>My favourite moment was when one of my colleagues was presenting.  They had a great presentation line up, all using on-line resources and then the wireless failed.  Before the venue tech guys had chance to fix it, someone from the audience donated their phone and the presentation was on again.  I had a warm fuzzy feeling about that!</p>
+<p>All through the conference there was a feeling of collaboration and community.  Whether that be debugging each others code through the workshops or collaborating on the mini-hacks.  There was a constant stream of activity every day.</p>
+<p>Have a look at <a href="http://developer.force.com/dreamforce" target="_blank" rel="noopener">all the videos and code</a> produced at the DevZone this year and see for yourself.</p>
+<h1 id="What-new-stuff-are-you-already-using-or-want-to-try-straight-away"><a href="#What-new-stuff-are-you-already-using-or-want-to-try-straight-away" class="headerlink" title="What new stuff are you already using or want to try straight away ?"></a>What new stuff are you already using or want to try straight away ?</h1><p>In a nutshell, it has to mobile development.  I remember spending a day in a workshop getting up to speed with development on Android devices and there was still lots to learn by the time I had finished.  That seems like a lifetime compared what I saw at Dreamforce.  Using the Salesforce Touch platform you can easily and quickly build HTML5 and hybrid applications in be finished in hours, not days.</p>
+<p>It seemed the hardest thing for mobile development using the Touch platform was registering for your Apple ID.</p>
+<h1 id="Turing-the-tables-on-the-audience"><a href="#Turing-the-tables-on-the-audience" class="headerlink" title="Turing the tables on the audience"></a>Turing the tables on the audience</h1><p>At the end we turned the tables and each panellist got to ask a question of the audience.</p>
+<p>I wanted to shorten our name from “Salesforce platform developers user group London”, not the easiest thing to tell your friends about.  From the feedback we got we have changed it to the punchier <a href="http://www.meetup.com/LondonSalesforceDevelopers/" target="_blank" rel="noopener">London Salesforce Developers</a>, which encompasses the different platforms (heroku, force.com, data,com, etc) under one name.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>Over 80 developers braved the cold October night to hear about out experiences and it was a great social event, made even better by the beer and pizza provided by <a href="http://www.tquila.com/" target="_blank" rel="noopener">Tquila</a>.</p>
+<p>Thanks also to our gratious hosts, 10Gen, for providing the venue.  10Gen are the company behind the popular MongoDB.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/10/london-salesforce-developers-dreamforce.html.html" data-id="cl2mbqfwv00eyzqmjoy8c3uoz" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/10/london-salesforce-developers-dreamforce.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/heroku/">heroku</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/salesforce/">salesforce</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-agile-cambridge-2012-aftermath.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/agile-cambridge-2012-aftermath.html.html" class="article-date">
+  <time datetime="2012-10-07T13:25:00.000Z" itemprop="datePublished">7 Oct 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/events/">events</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/agile-cambridge-2012-aftermath.html.html">Agile Cambridge 2012 Aftermath</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://2.bp.blogspot.com/-OJOQHJuBmYI/UHFDixa7fvI/AAAAAAAAIXQ/bFfSJSVwgMc/s1600/Agile-Cambridge-2012-600x125.jpg" class="img-thumbnail"> 
+<p>An event full of discovery, psychology, therapy sessions, learning, juggling and lots more fun, that in a nutshell was <a href="http://www.agilecambridge.net/ac2012/index.php" target="_blank" rel="noopener">Agile Cambridge 2012</a>.!  It was great to meet old friends and new as well as sit in on some great sessions.  Here are just a few of my personal highlights from the conference.</p>
+<h1 id="Cynifin-dealing-with-uncertainty"><a href="#Cynifin-dealing-with-uncertainty" class="headerlink" title="Cynifin - dealing with uncertainty"></a>Cynifin - dealing with uncertainty</h1><p>In hindsight there was a theme of “dealing with uncertainty” running through the conference, but I  guess when that is the consistent thread in our lives then its hard to  get away from that pattern anyway.</p>
+<img src="http://4.bp.blogspot.com/-REbcZKZoyAY/UHFDN_11hgI/AAAAAAAAIXI/8zdrayvVxn8/s1600/Cynefin_framework_Feb_2011.jpeg" class="img-topic">
+<p>This is the first time I managed to see Dave Snowden (<a href="http://www.twitter.com/snowded" target="_blank" rel="noopener">@snowded</a>) talk about his <a href="http://cognitive-edge.com/library/more/video/introduction-to-the-cynefin-framework/" target="_blank" rel="noopener">Cynifin model</a> for dealing with uncertainty and it was worth the wait.  Whilst I have  seen several people talk about Cynifin before, Dave really conveys the value and importance of the model like no other.</p>
+<p>Cynefin  is a Welsh word that means “the place of your multiple belongings”.   Essentially it refers to the fact that there are thousands of things in  your experience that influence your understanding and you can never be  fully aware of them or their affect.</p>
+<p>Humans evolved to  make decisions  very quickly as tigers tend not to wait for a project budget before they  eat you.  We are therefore very good at making decisions based on  partial requirements and past experience.  We also focus on the negative  as unfortunately avoidance of failure is more  attractive than following success.</p>
+<p>Cynefin is a “sense making” framework to help you understand and manage complex and complicated situations.  Dependent on which of the four domains you are in, simple, complicated, complex &amp; chaotic defines how you should think and analyse the situation.</p>
+<p>In a simple domain then you can easily categorise the situation and deal with it appropriately.  A software development team is rarely a simple domain and tends to fluctuate between complex and complicated domains, driven by the unpredictable nature of the businesses they support.</p>
+<p>The Cynefin model looks a great way to think about the situations I am in  and its a big take away to try and apply it to my working practices. </p>
+<h1 id="Cracking-your-big-rocks"><a href="#Cracking-your-big-rocks" class="headerlink" title="Cracking your big rocks"></a>Cracking your big rocks</h1><img src="http://3.bp.blogspot.com/-Z76s9Q39Rq0/UHFFlq-q0TI/AAAAAAAAIXY/PBs-UBiFfQk/s1600/cracking-a-big-rock.png" class="img-theme">
+<p>Some tasks seem to us to be so out of our scope, so unfamiliar or painful to  do that we will do anything else to avoid doing them.  These tasks that  become unmovable and intractable in our minds and cause us to waste too much time thinking about not doing them.  These are our Big Rocks!</p>
+<p><a href="http://www.agilecambridge.net/ac2012/sessioninfo.php?session=23" target="_blank" rel="noopener">Cracking your big rocks</a> was another example of a great coaching session, specifically to help us break down some ones big rocks.</p>
+<p>Assembling in groups of 4, one person had a big rock, two were coaching and one had a deck of big rock cards.  The coaches helped the person understand  the challenge of their big rock and encouraged them to find ways that they could start to break it down.  The cards were used to help shape  the coaching discussion or highlight concepts the coaches raised.  Cards  covered techniques for framing the problem, keeping rolling, saving progress as well as anti-patterns.</p>
+<h2 id="My-Rock"><a href="#My-Rock" class="headerlink" title="My Rock"></a>My Rock</h2><p>I was the person with a big rock, mine was writing a book (although much  applied to other writing too).  I never seemed to have enough time to  write the book, was overly concerned about quality and had many other personal and professional tasks pulling me away from the book writing.  The coaches helped me break down the challenge, so rather than writing chapters at a time I started to focus on sections in a chapter.  A section could be done in an hour or less and I could give myself a micro-break and decide whether to continue or re-prioritise.</p>
+<p>I’ve  never seen Johanna Hunt and Simon Cromarty talk before and was really impressed with their session, the way they bounce the conversation between themselves and the audience was really engaging.</p>
+<h1 id="Coaching-techniques"><a href="#Coaching-techniques" class="headerlink" title="Coaching techniques"></a>Coaching techniques</h1><p>Leaning to be an effective coach is very  challenging so its great to learn new techniques to help.  Using the simple props of juggling balls, we coached each other in how to juggle</p>
+<img src="http://2.bp.blogspot.com/-A7etqPlGrY8/UHF-1dLiPmI/AAAAAAAAIXs/JFwKYbygf0g/s1600/juggling-hand-and-ball.jpg" class="img-topic"> 
+<p>Where no one in a group had any experience of juggling, it was a case of the blind leading the blind.  In this situation one group decided to gate-crash a few other groups, observing what they were doing and learning by figuring out where the juggling experience was.</p>
+<p>Coaching someone to juggle is a great exampel of where experience of the skill can bring a lot of value to the coaching.  </p>
+<p>In  my group, Simon and Nasim were pretty expert jugglers.  Simon had no problem understanding what I should be doing to juggle, the  challenge for him however was to coach me rather than teach me - two  very different things with different results.  By suggesting things I could try and encouraging me to thing about what I was doing I soon gained more confidence.   Nasim was observing Simon coach me and at the end of my basic juggling  session, he gave feedback on what he saw.  </p>
+<p>When Nasim was coaching Simon he was a bit taken aback by Simon’s level of skill and wasnt sure how to coach him as he was already doing so well.  However, by talking to Simon about his juggling technique he was able to  relate to him better a juggler of equal skill.  Also asking Simon what he wanted to achieve from the session helped set a goal for Nasim and Simon to get to, framing the session nicely.  In this case Simon wanted to learn to juggle with 4 balls, so Nasim encouraged Simon to understand his technique so he could build on it and find a way to  achieve his goal.</p>
+<p>When it was my turn to coach, I  encouraged Nasim to vary his technique, to go back to basic principles and to gradually introduce more balls into the mix.  I typically asked lots of simple questions about juggling to prevent Nasim from over-thinking the task.  I also asked emotional questions, such as which technique feels better, to gauge if I was helping Nasim keep in a positive state of mind.</p>
+<p>By asking us to coach someone in a technique that we were not familiar with was a good way to practice our core skills as a coach, especially our ability to assess the situation, listen and gain understanding of the other persons objectives.  As an agile coach, it is very easy for the agile practices and mindset to dominate the conversation and activities, when doing something that most people were not used to coaching it really helped us get back to  basics.</p>
+<h1 id="One-Man-Dan"><a href="#One-Man-Dan" class="headerlink" title="One Man Dan"></a>One Man Dan</h1><p>It was great to hear from Dan North (<a href="http://www.twitter.com/tastapod" target="_blank" rel="noopener">@tastapod</a>) again, he is always entertaining and thought provoking.  Dan is embarking on his solo career and will be hitting 13 different events  between now and the December holidays.  His talk on embracing uncertainty complemented the opening keynote perfectly and highlighted how unpredictable software development is and why its wasteful to try create order.  Dan discussed the real value that can be attained by  accepting uncertainty and dealing with it gracefully.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Conferences are a great way to discover new things as  well as catch up with friends and make new ones.  It was great to catch up with Dan North and find out about his new adventures, hear the agile coaching stories from John McFaden and meet Darcy D, another ex-thoughworker mixing UX development and agile coaching.</p>
+<p>There were lots of sessions I didn’t get chance to see, so am looking forward to catching up with them on <a href="http://www.infoq.com/" target="_blank" rel="noopener">InfoQ</a> soon.</p>
+<p>Thanks to <a href="http://www.linkedin.com/in/markdalgarnouk" target="_blank" rel="noopener">Mark Delgarmo</a> and team for organising the event.  Special thanks to <a href="http://www.rallydev.com/" target="_blank" rel="noopener">Rally Software</a> for sponsoring the social event on Thursday night where I had some great conversations, delicious food and a pint or three of <a href="http://www.samuelsmithsbrewery.co.uk/" target="_blank" rel="noopener">Samuel Smiths beer</a>!</p>
+<p>Hope to see you all at Agile Cambridge 2013!</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/10/agile-cambridge-2012-aftermath.html.html" data-id="cl2mbqft2001tzqmjung3ej4r" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/10/agile-cambridge-2012-aftermath.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agilecambridge/">agilecambridge</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-7-on-mac-osx-openjdk-and-oracle.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/09/java-7-on-mac-osx-openjdk-and-oracle.html.html" class="article-date">
+  <time datetime="2012-09-24T06:06:00.000Z" itemprop="datePublished">24 Sep 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/java-7-on-mac-osx-openjdk-and-oracle.html.html">Java 7 on Mac OSX - OpenJDK and Oracle</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>There are many things that make the MacBook pro a nice machine for software developers.  The default version of Java Standard Edition development environment is not one of those things. </p>
+<p>Although Java SE does come pre-installed on most OSX versions, it is the <a href="https://blogs.oracle.com/henrik/entry/java_6_eol_h_h" target="_blank" rel="noopener">soon to be unsupported Java 6 version</a> (unsupported that is without paying Oracle big support fees of course).</p>
+<p>Whilst its fairly easy to install Java SE 7 on the Mac, its a little more interesting when it comes to setting it as the default Java runtime environment.  If you also want to try installing OpenJDK 7, then there is a little more discovery to be done when locating the install files.  This article covers the easiest way I found to install Java SE 7 and OpenJDK 7 together.</p>
+<h1 id="Install-Java-7"><a href="#Install-Java-7" class="headerlink" title="Install Java 7"></a>Install Java 7</h1><p>To openjdk or not openjdk, that is the question.  On the Mac there  doesn’t seem to be much in it when it comes to ease of installation.   Both Oracle Java SE 7 and OpenJDK 7 come as dmg files for the Mac,  although the OpenJDK files are not as easy to find. </p>
+<img src="http://openjdk.java.net/images/duke-plug.png" class="img-topic">
+<ul>
+<li><p><strong>Oracle Java SE 7</strong>: <a href="http://jdk7.java.net/download.html" target="_blank" rel="noopener">http://jdk7.java.net/download.html</a></p>
+</li>
+<li><p><strong>OpenJDK 7</strong>: <a href="http://code.google.com/p/openjdk-osx-build/" target="_blank" rel="noopener">http://code.google.com/p/openjdk-osx-build/</a></p>
+</li>
+</ul>
+<blockquote>
+<p>There is a website for the <a href="http://openjdk.java.net/" target="_blank" rel="noopener">OpenJDK project</a>, although most of the content seems a little dated and unless you are running Linux it provides nothing of interest to help you install OpenJDK on the Mac.  Download the latest versions of Java SE 7 and OpenJDK 7 and open the dmg files to install them.</p>
+</blockquote>
+<h1 id="Configure-the-default-Java-development-environment"><a href="#Configure-the-default-Java-development-environment" class="headerlink" title="Configure the default Java development environment"></a>Configure the default Java development environment</h1><img src="http://2.bp.blogspot.com/-EefDxGq9ryQ/UF_0CiSUafI/AAAAAAAAIWc/b7zxUylXl28/s1600/macosx-applications-java-preferences.png" class="img-code"> 
+<p>OSX allows you to install multiple versions of the Java development environment, a very useful ability especially for testing new versions easily.  In the <code>Applications &gt; Utilities</code> folder there is an application called <code>Java Preferences</code>.</p>
+<p>Running this application lets you manage multiple version of the Java development environment, Java SE.</p>
+<img src="http://4.bp.blogspot.com/-xV6Z991bVj4/UF_1DIwM0iI/AAAAAAAAIWs/dtT637cbQxY/s1600/macosx-java-preferences-openjdk.png" class="img-code"> 
+<p>When a change is made its effects take place immediately, so if you are working in a terminal and change Java versions then you do not need to restart the terminal.</p>
+<p>When you have your new versions of Java 7 installed, use the Java Preferences tool to the order around.  If you move an environment to the top of the list it becomes the default choice.</p>
+<p>Note that for OpenJDK 7 and Java SE 6 there may be two versions installed.  Use the 64-bit version if you have that option. </p>
+<h1 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h1><p>As the changes take effect straight away, you can go to an open terminal and check that Java 7 is the default Java environment using the <code>java -version</code> command.</p>
+<img src="http://4.bp.blogspot.com/-rqKNxf-fz4k/UF_2y7mIAjI/AAAAAAAAIW0/xJW5WxRVpBM/s1600/macosx-java7-version-terminal.png" class="img-code"> 
+<p>Over the next few months I will see what development life is like with OpenJDK 7 as the default.  OpenJDK seems to be a newer version than Oracle Java SE, so will have more bug fixes and features - and possibly more bugs.</p>
+<p>Using OpenJDK will give me an opportunity to feed back my experiences to the community and if I run into trouble, its easy enough to switch over to Oracle Java SE 7.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/09/java-7-on-mac-osx-openjdk-and-oracle.html.html" data-id="cl2mbqfw900cnzqmjp63t2iu0" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/09/java-7-on-mac-osx-openjdk-and-oracle.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macosx/">macosx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/openjdk/">openjdk</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-clojure-poetry-in-motion-developers-get.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/09/clojure-poetry-in-motion-developers-get.html.html" class="article-date">
+  <time datetime="2012-09-03T04:58:00.000Z" itemprop="datePublished">3 Sep 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/clojure-poetry-in-motion-developers-get.html.html">Clojure Poetry in Motion - Developers Get Creative Again at London Coding Dojo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-2eAwzw2-ujM/T4q6G9NelbI/AAAAAAAAHQk/wecy_sHn7K8/s1600/ldncljdojo.jpg" class="img-thumbnail"> 
+<p>The August 2012 coding dojo for the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> brought some creativity to bear, in terms of Clojure, artistic sentiment and a little bare face cheek.</p>
+<p>After the usual round of votes for the evenings challenge - which included grand ideas such as re-implementing Emacs in Clojure! - we settled on a poem generator.  Here is what we got up to.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/09/clojure-poetry-in-motion-developers-get.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/09/clojure-poetry-in-motion-developers-get.html.html" data-id="cl2mbqftu004dzqmjmpxavdqu" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/09/clojure-poetry-in-motion-developers-get.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-i-am-not-tshirt-i-am-free-man.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/07/i-am-not-tshirt-i-am-free-man.html.html" class="article-date">
+  <time datetime="2012-07-31T12:01:00.000Z" itemprop="datePublished">31 Jul 2012</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/07/i-am-not-tshirt-i-am-free-man.html.html">I Am Not a Tshirt, I Am a Free Man</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://4.bp.blogspot.com/-fYCru6W3z-Q/TzDl82k8gSI/AAAAAAAAEa8/HYrx4dg5TZI/s1600/lolcats-cat-in-chicken-suit.jpg" class="img-thumbnail">
+<p>The whirlwind tour of duty with Atlassian is over and I am older and wiser for the experience.  As a famous writer once put it</p>
+<blockquote>
+<p><a href="http://en.wikiquote.org/wiki/A_Tale_of_Two_Cities" target="_blank" rel="noopener">“It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief”</a> Well it certainly was an interesting experience and I learnt so many valuable things, many of which I never expected to learn.</p>
+</blockquote>
+<p>Initially I was involved in shaping the role I was undertaking and it was great to brainstorm on how to meaningfully connect with the developer community.  At a certain point though I felt it became all about the marketing and and little about what we were saying and doing, so I regrettably bowed out. </p>
+<h1 id="Developing-user-run-user-groups"><a href="#Developing-user-run-user-groups" class="headerlink" title="Developing user run user groups"></a>Developing user run user groups</h1><p>Although <a href="http://www.adaptavist.com/" target="_blank" rel="noopener">Adaptavist</a>, <a href="http://www.clearvision-cm.com/" target="_blank" rel="noopener">Clearvision</a> and other partners really helped drive a community around Atlassian in the UK, the lack of active community was a limiting factor for building a strong community around the product and platform.</p>
+<p>Although I managed to establish three regional user groups in London, Bristol and Reading, it still remains a challenging issue for Atlassian on how to run a passionate user group around software development tools in the UK.</p>
+<p>Part of the challenge is in the different ways that everyone uses these tools.  Also there is some gap between users working with JIRA and those working with Confluence.  The products are quite powerful and often aimed at different areas of the business.  I something wonder if it would have been better to have seperate  JIRA, Confluence and DevTools events.</p>
+<h1 id="Blogging-and-outbound-marketing"><a href="#Blogging-and-outbound-marketing" class="headerlink" title="Blogging and outbound marketing"></a>Blogging and outbound marketing</h1><p>I really relished the opportunity to enhance my blogging skill and now I get over 1,000 hits for some of the posts I create on <a href="http://blog.jr0cket.co.uk/" target="_blank" rel="noopener">my personal blog website</a>.  Blogging is a great way to get feedback from the community on ideas you have for applying technology.  Blogging also encourages others to share their stories and help the development community grow.</p>
+<p>My twitter addiction was under control before I started at Atlassian and using a great tool like HootSuite helped me not waste too much time.  Twitter is an amazing tool for learning and discovering things, but its so easy to spend a whole day there and yet feel you havent achieved anything.  Creating lists and scheduling posts helped me make the most out of the Twitter service. </p>
+<p>I also learnt all about outbound marketing, search engine optimisation and other marketing techniques.  All these are useful to help raise awareness about a company or service, however its just a small initial step when the goal is to really get developers to engage with you.  Marketing techniques help developers find your content, but you have to say something that is meaningful to them, something that inspires and engages with them.  It is quite a challenge to come up with meainingful technical content on a regular basis.</p>
+<p>I did have a great time putting together useful content for the <a href="http://www.go-git.com/getting-on-git" target="_blank" rel="noopener">Getting on Git</a> campaign we ran with Clearvision, giving developers a great insight into the benefits of Git adoption.  Rather than just focus on products, we gave a wider understanding of the value of making the switch and practical ideas on how to make that change.  </p>
+<h1 id="Getting-practical"><a href="#Getting-practical" class="headerlink" title="Getting practical"></a>Getting practical</h1><p>I believe its very important to do things at a local level to make the community highly active.  While its important to give product updates to the community, its even more important to help them see how it relates to their own challenges.</p>
+<p>One of the best ways I found to do this is to get developers practical.  Running workshops, hackathons and developer events aimed at giving people the experience they need to succeed with your products is vital if you want real adoption and raving fans!</p>
+<p>An organisation can only do so much to reach out to the community, the more it engages with that community at a local and practical level, the more active that community becomes at growing the community itself.</p>
+<h1 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h1><p>Again, I’d like to thank everyone at Atlassian for the experience and wish them all the luck in the world.  For a developer, I still think Atlassian is one of the top 10 places to work, especially if you are based in Sydney Australia - its beautiful there!</p>
+<img src="http://2.bp.blogspot.com/-0qK1sD0URSY/TyB1RNTkDpI/AAAAAAAAG5o/9I846UDFUno/s1600/2012-01-23+17.21.30.jpg" class="img-topic">
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/07/i-am-not-tshirt-i-am-free-man.html.html" data-id="cl2mbqfw400c0zqmjh45h3r0p" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/07/i-am-not-tshirt-i-am-free-man.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/atlassian/">atlassian</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/11/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/10/">10</a><a class="page-number" href="/archives/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/archives/page/13/">13</a><a class="page-number" href="/archives/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/26/">26</a><a class="extend next" rel="next" href="/archives/page/13/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

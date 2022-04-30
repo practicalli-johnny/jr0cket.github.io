@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title:  HTML Templates in Clojure Hiccup  Hoplon)  clj-templateA few days ago I finally had my first project accepted into the Clojure toolbox called clj-template. I built it solely to rid myself of w">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jr0cket">
+<meta property="og:url" content="http://jr0cket.co.uk/clojure/html-in-clojure.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="title:  HTML Templates in Clojure Hiccup  Hoplon)  clj-templateA few days ago I finally had my first project accepted into the Clojure toolbox called clj-template. I built it solely to rid myself of w">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jr0cket">
+<meta name="twitter:description" content="title:  HTML Templates in Clojure Hiccup  Hoplon)  clj-templateA few days ago I finally had my first project accepted into the Clojure toolbox called clj-template. I built it solely to rid myself of w">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/clojure/html-in-clojure.html" class="article-date">
+  <time datetime="2022-01-02T20:20:15.310Z" itemprop="datePublished">2 Jan 2022</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="title-HTML-Templates-in-Clojure"><a href="#title-HTML-Templates-in-Clojure" class="headerlink" title="title:  HTML Templates in Clojure"></a>title:  HTML Templates in Clojure</h2><ul>
+<li><a href="https://github.com/weavejester/hiccup" target="_blank" rel="noopener">Hiccup</a> </li>
+<li><a href="https://github.com/tailrecursion/hoplon" target="_blank" rel="noopener">Hoplon</a>)</li>
+</ul>
+<h2 id="clj-template"><a href="#clj-template" class="headerlink" title="clj-template"></a>clj-template</h2><p>A few days ago I finally had my first project accepted into the Clojure toolbox called clj-template. I built it solely to rid myself of writing horrendous bracket-attribute style documents (i.e. HTML, XML) and let Clojure work its magic in my stead. Also, I know it isn’t a huge deal to contribute to the Clojure Toolbox considering its only one person maintaining a Github repository, but it feels good to finally be contributing a full project into the community.</p>
+<p>All that said, I wanted to write a brief overview for anyone else who might find this useful.</p>
+<h2 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a>The problem</h2><p>I was working with a web developer and had convinced him to try Clojure with the Luminus project. Upon working with him through the development process I quickly re-learned that I hate writing HTML (or XML for that matter) and thought that there must be a better way to handle this.</p>
+<p>I’ll caveat at this point that when I code I use either the LightTable IDE or classic Emacs. I really hate having to download specific IDE’s just to work with a given language (read: HTML / XML editors), but back to the point…</p>
+<h2 id="The-coffee-shop"><a href="#The-coffee-shop" class="headerlink" title="The coffee shop"></a>The coffee shop</h2><p>After mulling the problem over for a bit I met up with a few friends at our local coffee shop (because who doesn’t work better with coffee?) to present what I had in mind. Basically I wanted first class Clojure functions that directly correlated to each HTML tag such that you’d get the following functionality…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(html (head (title &#123;:class &quot;my-class&quot;&#125; &quot;My Site&quot;)) (body (p &quot;Content&quot;)))</span><br></pre></td></tr></table></figure>
+<p>which would produce the corresponding HTML…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;  </span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title class=&quot;my-class&quot;&gt;My Site&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;p&gt;Content&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>I wrote this on a white board and we all came to a unanimous, and resounding, “yes, we want this.”</p>
+<h2 id="The-build"><a href="#The-build" class="headerlink" title="The build"></a>The build</h2><p>As it turns out generating this capability was remarkably easy. It required I have two items of knowledge:</p>
+<ul>
+<li>Ground truth on the official syntax tags for HTML, and<ul>
+<li>An understanding of Clojure macros</li>
+</ul>
+</li>
+</ul>
+<p>I figured it would be easiest to, given a static set of HTML keywords, generate the function bindings through macros on the fly once a user imported the namespace. Going this route would be extremely flexible later if someone wanted to supply their own keywords for function binding (e.g. XML).</p>
+<p>My friends helped with some Google-foo to find the official list of keywords for HTML and I already had a moderately good understanding of macros which made this project easier than expected.</p>
+<p>In the end I was able to bake in a little extra to handle a few edge cases, primarily in the case where a developer wanted to drop in an unbalanced tag. For example…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;  </span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;p&gt;Content 1&lt;/p&gt;&lt;br /&gt; &lt;!-- unbalanced break tag --&gt;</span><br><span class="line">    &lt;p&gt;Content 2&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>but in the original model with the code…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(html (body (p &quot;Content 1&quot;) (br) (p &quot;Content 2&quot;)))</span><br></pre></td></tr></table></figure>
+<p>it would’ve produced…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;  </span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;p&gt;Content 1&lt;/p&gt;&lt;br&gt;&lt;/br&gt;</span><br><span class="line">    &lt;p&gt;Content 2&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>which doesn’t render properly (read: intuitively to the developer).</p>
+<p>To solve this I added a small demarkation to the function bindings through a dash (-) to denote the use of an unbalanced node. The new code then looks like…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(html (body (p &quot;Content 1&quot;) (br-) (p &quot;Content 2&quot;)))</span><br></pre></td></tr></table></figure>
+<p>which correctly creates a <code>&lt;br /&gt;</code> tag as one would expect.</p>
+<p>I was also able to find the official HTML5 tags as well and have those available in a separate namespace.</p>
+<p>If you’re interested at the gory details you can check the source out and feel free to email if you have any questions.</p>
+<h2 id="Simple-usage"><a href="#Simple-usage" class="headerlink" title="Simple usage"></a>Simple usage</h2><p>Okay, so you like what you’ve seen and you want to use it? Below is a very simple example to get you all started, but feel free to check out the Github page which covers usage in more detail. For this example I’m assuming you have Leiningen installed and you’ve already ran something like…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lein new test</span><br></pre></td></tr></table></figure>
+<p>as well as added clj-template to the project.clj dependencies with the line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[clj-template &quot;0.9.0&quot;]</span><br></pre></td></tr></table></figure>
+<p>If that’s all good then you’re ready for the example.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(ns test.core</span><br><span class="line">  (:require [clojure.java.io :as clj-io]</span><br><span class="line">            [clj-template.html5 :refer :all]))</span><br><span class="line"></span><br><span class="line">(def site</span><br><span class="line">  (html</span><br><span class="line">    (head (title &quot;Sample Site&quot;))</span><br><span class="line">    (body</span><br><span class="line">      (p &#123;:style &quot;font-weight: &apos;bold&apos;;&quot;&#125; &quot;Some content&quot;)</span><br><span class="line">      (br-)</span><br><span class="line">      (a &#123;:href &quot;https://github.com/&quot;&#125; &quot;Github&quot;))))</span><br><span class="line"></span><br><span class="line">(defn -main []</span><br><span class="line">  (with-open [w (clj-io/writer &quot;site.html&quot;)]</span><br><span class="line">    (.write w site)))</span><br></pre></td></tr></table></figure>
+<p>This example, once run, will write a small HTML site (called “site.html”) which you can open from a web browser to verify how everything went!</p>
+<h2 id="Where-is-it-used"><a href="#Where-is-it-used" class="headerlink" title="Where is it used"></a>Where is it used</h2><p>Currently my team and I have a few web applications built and we’ve swapped in clj-template where Selmer had been previously. It’s become extremely useful for a multitude of reasons…</p>
+<ul>
+<li>Quicker to type</li>
+<li>Simple to understand</li>
+<li>Easier to reason about the HTML and site design (i.e. removes clutter)</li>
+<li>Turns all web development into Clojure code (with help from ClojureScript as well)</li>
+<li>Turns CSS into Clojure maps which can be manipulated with all Clojure capabilties</li>
+<li>Trivializes HTML templating through full use of Clojure functions (e.g. for, recur, when, etc.)</li>
+</ul>
+<h2 id="Moving-forward"><a href="#Moving-forward" class="headerlink" title="Moving forward"></a>Moving forward</h2><p>What we’re now working is a way to supply hooks into a Clojure REPL to recompile the HTML-generating code as the user changes it eliminating the need to continue recompiling each time.</p>
+<p>Another feature we’ll hopefully get to soon is contributing some useful functions / macros we’ve been using back into the repository under a clj-template.util namespace.</p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/clojure/html-in-clojure.html" data-id="cl2mbqfro0002zqmjxini7oyq" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/clojure/html-in-clojure.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/clojure/html-in-clojure.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

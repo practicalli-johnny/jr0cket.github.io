@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Tag: coding | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Clojure, Community and developer tools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jr0cket">
+<meta property="og:url" content="http://jr0cket.co.uk/tags/coding/index.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Clojure, Community and developer tools">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jr0cket">
+<meta name="twitter:description" content="Clojure, Community and developer tools">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-clojure-templates-are-easy-with-leiningen" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/clojure-templates-are-easy-with-leiningen.html" class="article-date">
+  <time datetime="2015-03-09T22:58:28.000Z" itemprop="datePublished">9 Mar 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/clojure-templates-are-easy-with-leiningen.html">Clojure Templates Are Easy With Leiningen</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>  Using templates to create your Clojure projects can save you a lot of setup time and ensure your team is using the same base configuration and dependencies.  There are <a href="https://clojars.org/search?q=lein-template" target="_blank" rel="noopener">templates on Clojars.org</a>, however I’ll show you how easy it is to create your own with <a href="http://leiningen.org" target="_blank" rel="noopener">Leiningen</a>.</p>
+<p>  I’ll create a simple template based on the leiningen default template, adding a section in the project.clj to give a custom propmt when run in the repl.</p>
+<blockquote>
+<p>Templates used to be a Leinigen pluging called <a href="https://github.com/Raynes/lein-newnew" target="_blank" rel="noopener">lein-newnew</a> and its repo was the only doucmentation I found and was a little outdated.  The plugin is now part of Leiningen and there are a few <a href="https://github.com/technomancy/leiningen/tree/master/src/leiningen/new" target="_blank" rel="noopener">built in templates</a>.  There is also information via <code>lein help new</code>.</p>
+</blockquote>
+<blockquote>
+<p>If you want to create a template in a more automatic way from a more complete project you created, take a look at the <a href="https://github.com/tcw/lein-create-template" target="_blank" rel="noopener">lein-create-template</a> Leinignen plugin.</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/03/clojure-templates-are-easy-with-leiningen.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2015/03/clojure-templates-are-easy-with-leiningen.html" data-id="cl2mbqftw004nzqmj3118z6k7" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2015/03/clojure-templates-are-easy-with-leiningen.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leiningen/">leiningen</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flying-planes-with-clojure-and.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/03/flying-planes-with-clojure-and.html.html" class="article-date">
+  <time datetime="2013-03-21T21:33:00.000Z" itemprop="datePublished">21 Mar 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/03/flying-planes-with-clojure-and.html.html">Flying Planes With Clojure and FlightGear</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Dale Thatcher from the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> created a <a href="https://github.com/dalethatcher/flightgear" target="_blank" rel="noopener">Clojure project</a> that allows you to fly a plane in real time.  Now, Dale has not yet connected this to a real plane, instead he is using the open source flight simulator, <a href="http://www.flightgear.org/" target="_blank" rel="noopener">FlightGear</a>.</p>
+<p>I took Dale’s project for a test flight and here are my experiences!</p>
+        
+          <p class="article-more-link">
+            <a href="/2013/03/flying-planes-with-clojure-and.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/03/flying-planes-with-clojure-and.html.html" data-id="cl2mbqfv7008wzqmjsgv03gns" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/03/flying-planes-with-clojure-and.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/events/">events</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-clojure-development-with-lighttable-02x.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/12/clojure-development-with-lighttable-02x.html.html" class="article-date">
+  <time datetime="2012-12-04T19:13:00.000Z" itemprop="datePublished">4 Dec 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/12/clojure-development-with-lighttable-02x.html.html">Clojure Development With LightTable 0.2.x</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p><a href="http://www.lighttable.com/" target="_blank" rel="noopener">LightTable</a> is a <a href="http://www.kickstarter.com/projects/ibdknox/light-table" target="_blank" rel="noopener">kickstarter project</a> to create new kind of developer tool for Clojure development, inspired by the <a href="http://www.youtube.com/watch?v=PUv66718DII" target="_blank" rel="noopener">Inventing on Principle talk by Bret Victor</a>.</p>
+<p>LightTable aims to give developers instant feedback about their code, showing how any change affects their applications. Giving you a developer “surface” to work on, which will bring information to the places you need it the most.  The principles of the LightTable design include:</p>
+<ul>
+<li>Documentation there when you need it, no need to search</li>
+<li>Edit anywhere and anything - not just text and not just as files</li>
+<li>Discover by doing, changes produces instantaneous results</li>
+<li>Shine a light on related pieces of code</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2012/12/clojure-development-with-lighttable-02x.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html.html" data-id="cl2mbqftv004jzqmjv4rny3i9" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lighttable/">lighttable</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-clojure-poetry-in-motion-developers-get.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/09/clojure-poetry-in-motion-developers-get.html.html" class="article-date">
+  <time datetime="2012-09-03T04:58:00.000Z" itemprop="datePublished">3 Sep 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/clojure-poetry-in-motion-developers-get.html.html">Clojure Poetry in Motion - Developers Get Creative Again at London Coding Dojo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-2eAwzw2-ujM/T4q6G9NelbI/AAAAAAAAHQk/wecy_sHn7K8/s1600/ldncljdojo.jpg" class="img-thumbnail"> 
+<p>The August 2012 coding dojo for the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> brought some creativity to bear, in terms of Clojure, artistic sentiment and a little bare face cheek.</p>
+<p>After the usual round of votes for the evenings challenge - which included grand ideas such as re-implementing Emacs in Clojure! - we settled on a poem generator.  Here is what we got up to.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/09/clojure-poetry-in-motion-developers-get.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/09/clojure-poetry-in-motion-developers-get.html.html" data-id="cl2mbqftu004dzqmjmpxavdqu" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/09/clojure-poetry-in-motion-developers-get.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-euroclojure-developers-get-musical-with.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/05/euroclojure-developers-get-musical-with.html.html" class="article-date">
+  <time datetime="2012-05-24T10:02:00.000Z" itemprop="datePublished">24 May 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/05/euroclojure-developers-get-musical-with.html.html">EuroClojure - Developers Get Musical With Overtone</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://1.bp.blogspot.com/-Wo6T3gjQpAA/Tzeu0e4laKI/AAAAAAAAEeQ/xbyWBx246qc/s1600/overtone-logo-rounded-corners.png" class="img-thumbnail"> 
+<p>Sam Aaron and Jeff Rose gave a whirlwind tour of creating music with Overtone, an open source music generator written in Clojure. </p>
+<p>You can define your own instruments, map keyboards and other synthesiser hardware, all to make some funky sounds - although you probably want to have headphones on when experimenting!</p>
+<blockquote>
+<p><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@samaaron</a> with overtone you can sit on a train and make musicI had fun creating my first overtone project from scratch at the last Overtone Hackday.  Have a look at <a href="http://jr0cket.co.uk/2012/02/developers-making-music-together-london.html">how I set up my environment</a>.</p>
+</blockquote>
+<h1 id="The-Design-of-Overtone"><a href="#The-Design-of-Overtone" class="headerlink" title="The Design of Overtone"></a>The Design of Overtone</h1><img src="http://1.bp.blogspot.com/-zi_tjIry5n0/TzetrkxV1XI/AAAAAAAAEeI/CVhhVWK-oHM/s1600/overtone-logo.png" class="img-topic"> 
+<p>Music is not a very easy concept to define in software.  Typically you start with a synthesiser and work your way up to notes and chords.  Eventually you may get to a music piece, but this is often driven by a hardware keyboard and recorded.</p>
+<p>The difficulty is that everyone has a different idea of how to describe music.</p>
+<p>Overtone comes in two parts.  The Super-Collider generates all the sounds from over 500 midi building blocks, essentially you create a directed graph that returns values to represent those sounds.  The clojure project part allows you to define instruments (synthesisers) and orchestrate these instruments together.</p>
+<h1 id="Basic-approach-to-making-music"><a href="#Basic-approach-to-making-music" class="headerlink" title="Basic approach to making music"></a>Basic approach to making music</h1><p>Overtone generally works on the principle of subtractive synthesis.  You create a number of different sounds by defining individual instruments and by adjusting the time and frequency of the sound wave to vary the sounds produced.</p>
+<p>Once you have some instruments, then adding an envelope generator will give you a changing sound through time by, essentially multiplying the sound by the envelope.</p>
+<p>Join sounds together by creating a player function that takes a time and plays the instruments - adding durations to the sound.  </p>
+<p>To spice up your sounds you can then experiment with playing two different frequencies at the same time, referred to as multi-channel expansion.  A resident low pass filter is also fun to experiment with.</p>
+<img src="http://3.bp.blogspot.com/-0rI8wFPDhPA/T74BOseE1RI/AAAAAAAAIEM/eIjoBNil-bk/s1600/twiki-from-buck-rogers1.jpg" class="img-topic">
+<p>Sam and Geoff showed off what they call <em>the stepinator</em>, which seems to emulate a square wave form which steps through a series of values over time.  This created some Buck Rogers style music.</p>
+<img src="http://2.bp.blogspot.com/-VkwWleTTwuI/TzfwcibV8QI/AAAAAAAAEeY/uwjAdgtY3dw/s1600/novation-launchpad-music-control-surface_1.jpg" class="img-topic">
+<p>Eventually you will want to use an external keyboard or some hardware device to pay your music as calling functions over and over again from within the REPL will only get you so far.  If you map functions, frequencies, etc to the external player controls then you can play your clojure code..</p>
+<h1 id="Getting-Visual"><a href="#Getting-Visual" class="headerlink" title="Getting Visual"></a>Getting Visual</h1><img src="http://2.bp.blogspot.com/-NmIbHt43IE0/T74EEoWjzcI/AAAAAAAAIEY/VPDM_0NLrMs/s1600/overtone-graphics-samaaron.png" class="img-topic"> 
+<p>To make the music come alive even more, you can use the <a href="http://processing.org/" target="_blank" rel="noopener">Java processing framework</a>.  Instead of calling processing directly, you can use the clojure project <a href="https://github.com/quil/quil" target="_blank" rel="noopener">Quil</a> to visualise the overtone sounds, creating a sphere and controlling the size of the sphere with the different frequencies of the sounds.</p>
+<h1 id="Get-collaborative"><a href="#Get-collaborative" class="headerlink" title="Get collaborative"></a>Get collaborative</h1><img src="http://3.bp.blogspot.com/-ZvjBQPJ0xFc/T74F49jxpAI/AAAAAAAAIEg/UwD1s9smJFE/s1600/freesound-logo.png" class="img-topic">
+<p>Sam and Geoff are trying out different ways of sharing the REPL so they can jam together.  Many people are sharing their sounds on <a href="http://freesound.org/" target="_blank" rel="noopener">freesound.org</a>, a collaborative database of Creative Commons Licensed sounds. Browse, download and share sounds</p>
+<h1 id="Get-started"><a href="#Get-started" class="headerlink" title="Get started"></a>Get started</h1><p>Read the <a href="https://github.com/overtone/overtone/wiki" target="_blank" rel="noopener">Overtone documentation</a> to get started or have a look at <a href="http://jr0cket.co.uk/2012/02/developers-making-music-together-london.html">my setup on Ubuntu</a>.  Dont forget to experiment.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/05/euroclojure-developers-get-musical-with.html.html" data-id="cl2mbqfv5008lzqmji4jpi7nv" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/05/euroclojure-developers-get-musical-with.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/euroclojure/">euroclojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/events/">events</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-clojure-developers-blog-with-github.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/04/clojure-developers-blog-with-github.html.html" class="article-date">
+  <time datetime="2012-04-12T10:25:00.000Z" itemprop="datePublished">12 Apr 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/github/">github</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/04/clojure-developers-blog-with-github.html.html">Clojure Developers Blog With Github Gists</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-thumbnail">
+<p>Whilst <a href="https://github.com/" target="_blank" rel="noopener">Github</a> is a great way to share a whole repository of code, sometimes you want to talk about the design and challenges of developing your code, that discussion is often best done in a blog post.</p>
+<p>So how do you put your lovingly crafted <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> code (or anything else) into a blog so that it looks as beautiful as it does in Emacs?  Lets take a look at Github Gists.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/04/clojure-developers-blog-with-github.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/04/clojure-developers-blog-with-github.html.html" data-id="cl2mbqftr0044zqmjudhaw7lb" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/04/clojure-developers-blog-with-github.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-gists/">github-gists</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-clojurescript-the-hard-truth-london-clojurians.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/03/clojurescript-the-hard-truth-london-clojurians.html.html" class="article-date">
+  <time datetime="2012-03-28T15:30:00.000Z" itemprop="datePublished">28 Mar 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/03/clojurescript-the-hard-truth-london-clojurians.html.html">ClojureScript - the Hard Truth - London Clojurians March 2012 Dojo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://4.bp.blogspot.com/-2cr1Ig4KeS8/T2DECGVqQbI/AAAAAAAAGKg/t8crLWDICgA/s1600/clojure-dojo-logo.png" class="img-thumbnail"> 
+<p>The March edition of the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> coding dojo all the suggested dojo challenges were to be carried out with  ClojureScript.  After a long list of ideas we voted to do either Conway’s Game of Life or Monty  Carlo graphics.</p>
+<p>Getting started with ClojureScript seemed reminiscent of the challenge the group faced a couple of years ago when first trying out Clojure.  Although getting started with Clojure itself is pretty easy these days, it feels like ClojureScript still has a way to go in terms of a great developer experience.</p>
+<p>I looked at <a href="http://clojurescriptone.com/" target="_blank" rel="noopener">ClojureScript One</a> and was put off a little by the amount of git projects it was downloading as part of its bootstrap process.  I am sure its a great project, but seemed too much for the dojo and my netbook!</p>
+<p>We settled on <a href="https://github.com/emezeske/lein-cljsbuild" target="_blank" rel="noopener">lein-cljsbuild</a> project and used the simple example that comes with it.  We fired the example up okay and had a working webserver thanks to some Ring Clojure magic and a tiny bit of JavaScript.</p>
+<pre><code>lein deps
+lein ring server-headless 3000
+</code></pre><p>Whilst we could display text in a web page and a JavaScript popup, we could not do anything that required working with the DOM - specifically setting up a graphic area or adding buttons.</p>
+<p>In hindsight, perhaps we should have looked at the advanced example that came with lein-cljsbuild, although we would probably have also run out of time with that too…  </p>
+<p>Perhaps if we had spent a bit of time before the dojo with the basics things would have gone better, however it was good to discover as a group the level of challenge involved and it made it easier to get started as we could draw from a range of experiences.</p>
+<p>So what else did I learn?</p>
+<h1 id="You-need-a-JavaScript-resource"><a href="#You-need-a-JavaScript-resource" class="headerlink" title="You need a JavaScript resource"></a>You need a JavaScript resource</h1><p>I started to become a bit weary when it was mentioned that we should have someone in the team with JavaScript experience.  Even though we had someone with experience we still had lots of challenges.</p>
+<h1 id="Google-Closure-libraries"><a href="#Google-Closure-libraries" class="headerlink" title="Google Closure libraries"></a>Google Closure libraries</h1><img src="http://2.bp.blogspot.com/-qHb-QXI9CRY/T2HA8BHP6tI/AAAAAAAAGPA/H4kUBrgm6Vc/s1600/Google-developers-logo.png" class="img-topic"> 
+<p>The <a href="http://code.google.com/closure/library/docs/gettingstarted.html" target="_blank" rel="noopener">Closure Library</a> is a JavaScript library that provides cross-browser functions for DOM manipulations and events, <a href="http://en.wikipedia.org/wiki/AJAX" title="AJAX" target="_blank" rel="noopener">AJAX</a> and <a href="http://en.wikipedia.org/wiki/JSON" title="JSON" target="_blank" rel="noopener">JSON</a>, as well as more high-level objects such as User Interface widgets and controls. </p>
+<p>The Google Closure library looks really great, but there seems to be a few challenges to get it to work with ClojureScript.  Again this is down to our limited time to get to grips with several APIs, so we had little luck finding something that worked.</p>
+<h1 id="Where’s-my-DOM"><a href="#Where’s-my-DOM" class="headerlink" title="Where’s my DOM"></a>Where’s my DOM</h1><p>Our group got stuck on trying to find elements in the DOM via ClojureScript, repeatedly getting nil when asking for elements in the DOM.  We postulated that is was a timing problem, but were not able to code around the problem.</p>
+<p>We fired up the <a href="http://code.google.com/chrome/devtools/" target="_blank" rel="noopener">Chrome browser developer tools</a> to see the errors, but couldn’t get any of the many fixes we found on Google to work. </p>
+<h1 id="Using-jQuery-to-load-things-up"><a href="#Using-jQuery-to-load-things-up" class="headerlink" title="Using jQuery to load things up"></a>Using jQuery to load things up</h1><p>By the end of the night I had a strong impression that you cant do ClojureScript without knowing a lot of JavaScript.  This goes against what I thought was possible, to write a Clojure style syntax that you could run inside a JavaScript engine.  Yes, I expected quite a bit of interop, having lots of doto calls to chain some JavaScript calls, but didnt figure on jQuery being there or so essential.</p>
+<h1 id="Find-an-example-that-works"><a href="#Find-an-example-that-works" class="headerlink" title="Find an example that works"></a>Find an example that works</h1><p>Find an example ClojureScript project that works and is easy enough to understand - without having to spend an hour setting up Leiningen plugins and dependencies or having to download lots of things from the Internet.  This was tricky to find in the time we had.</p>
+<h1 id="Some-blogs-to-and-projects-to-review"><a href="#Some-blogs-to-and-projects-to-review" class="headerlink" title="Some blogs to and projects to review"></a>Some blogs to and projects to review</h1><ul>
+<li><a href="http://jng.imagine27.com/articles/2011-07-23-101007_clojurescript_demo_convex_hull.html" target="_blank" rel="noopener">Convex Hull ClojureScript demo - imagine27.com</a> </li>
+<li><a href="https://github.com/clojure/clojurescript/tree/master/samples" target="_blank" rel="noopener">ClojureScript sample apps</a></li>
+<li><a href="http://www.sitepoint.com/google-closure-how-not-to-write-javascript/" target="_blank" rel="noopener">Google Closure: How not to write JavaScript</a></li>
+<li><a href="https://developers.google.com/closure/library/docs/gettingstarted" target="_blank" rel="noopener">Google Closure: Getting Started</a></li>
+<li><a href="http://closure-library.googlecode.com/svn/docs/index.html" target="_blank" rel="noopener">Google Closure API documentation</a></li>
+</ul>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>So first impressions of the experience suggest I need to read some good tutorials on the subject and review code of some more projects.  I plan on doing some more projects around Noir, so I’ll try and see where the advantages of using ClojureScript are when using a set of Clojure web frameworks.</p>
+<p>I am still excited about ClojureScript, but its one of those things where I need to find more time than I have to get to grips with it. If anyone has any other blog or project recomendations, please let me know.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/03/clojurescript-the-hard-truth-london-clojurians.html.html" data-id="cl2mbqfu40055zqmjgere7vi2" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/03/clojurescript-the-hard-truth-london-clojurians.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojurescript/">clojurescript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-learning-clojure-through-practice.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/02/learning-clojure-through-practice.html.html" class="article-date">
+  <time datetime="2012-02-29T22:30:00.000Z" itemprop="datePublished">29 Feb 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/learning-clojure-through-practice.html.html">Learning Clojure Through Practice - London Clojurians February Dojo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://4.bp.blogspot.com/-2cr1Ig4KeS8/T2DECGVqQbI/AAAAAAAAGKg/t8crLWDICgA/s1600/clojure-dojo-logo.png" class="img-thumbnail">
+<p>Another chance to practice Clojure with the help of the great people that are part of the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians community</a>.  Each person at the dojo has a different experience with Clojure and functional programming, so there is always something different to learn.  It still amazes me how much I learn and how confident each dojo makes me (by the end of the night anyway).</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/02/learning-clojure-through-practice.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/02/learning-clojure-through-practice.html.html" data-id="cl2mbqfwj00dvzqmj1b3xqp03" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/02/learning-clojure-through-practice.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/4clojure/">4clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacslive/">emacslive</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/events/">events</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-battleships-at-london-clojure-coding.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/02/battleships-at-london-clojure-coding.html.html" class="article-date">
+  <time datetime="2012-02-07T16:15:00.000Z" itemprop="datePublished">7 Feb 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/battleships-at-london-clojure-coding.html.html">Battleships at London Clojure Coding Dojo - January 2012</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-dHDGQemeztI/TzFK4RV4_zI/AAAAAAAAEbM/AQn4UlfVuWQ/s1600/220px-Battleship_game_board.svg.png" class="img-thumbnail">
+<p>Its not quite <a href="http://en.wikipedia.org/wiki/WarGames" target="_blank" rel="noopener">Global Thermo Nuclear War</a>, but battleships was a great choice for a coding dojo topic.  Its a simple enough game and therefore a challenge that you feel you can tackle within one evening.  Its also a game that most people know and have fond memories, so the discussions have lots of context.</p>
+<p>If you are not familiar with the Battleships game, please see the <a href="http://en.wikipedia.org/wiki/Battleships_%28game%29" target="_blank" rel="noopener">Wikipedia page on Battleships</a>. </p>
+<p>At the January 2012 dojo we used a <a href="https://github.com/NeillAlexander/battleships" target="_blank" rel="noopener">battleships server created by Neill Alexander</a> and Robert Rees kindly facilitated the night. The battleships server allows you to submit your “player” and proceeds to play battleship games against is own player - CPU1 (shame the player is not called Master Control Program so I could slip in a Tron reference).</p>
+<img src="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png" class="img-topic"> 
+<p>To get started with the dojo I forked the project on Github to my own account and cloned the project repository to my local machine.  I still use the command line to clone remote repositories, its pretty straight forward:</p>
+<pre><code>git clone url local-folder-name
+</code></pre><p>For my fork of the battleships game the command becomes</p>
+<pre><code>git clone https://github.com/jr0cket/battleships
+</code></pre><blockquote>
+<p>When I clone a github repository that I have forked from someone elses repository I prefix the local folder name with my username so I know its my fork and not the original - saves a lot of hassle wondering why I cant push changes back to github directly</p>
+</blockquote>
+<img src="http://1.bp.blogspot.com/-rxD8__T6tzA/TzFNNTKKLwI/AAAAAAAAEb8/k10iLxa3I70/s1600/leiningen-face.jpg" class="img-topic"> 
+<p>The project is on my local computer I can fire up leiningen build tool and get the project running.  First thing to do is to make sure I have all the libraries the project depends upon.  Leiningen will download the Internet of jars for me (just like maven) with the following command:</p>
+<pre><code>lein deps
+</code></pre><p>The battleships project uses Clojail to create a sandbox, so its important to set the Java runtime environment security permissions.  There is a handy lein task for this courtesy of Robert Rees that creats a <code>.java-policy</code> document in the … file:</p>
+<pre><code>lein policy
+</code></pre><p>Or you can just create the file with any handy text editor.</p>
+<img src="http://1.bp.blogspot.com/-PLeobToC6lc/TzFJCfBSLPI/AAAAAAAAEbE/zSx1cOgHzZE/s1600/emacs128x128icon.png" class="img-topic"> 
+<p>I then fire up Emacs from within the top level project directory (makes it quicker to find my project files) and opened emacs with the <code>project.clj</code> file to see how the project is set up. </p>
+<pre><code>emacs project.clj &amp;
+</code></pre><p>Clojure has a repl for working with the language dynamically, so I fire the REPL server up using emacs (of course).  Adding <strong>clojure-mode</strong> to emacs 24 gives you the swank REPL server - allowing you to call <code>clojure-jack-in</code> and fire up a swank REPl server using the lein project.clj project definition.  I defined a keyboard shortcut <code>Ctrl-c, Ctrl-j</code> for the <code>M-x clojure-jack-in</code> command in the <code>.emacs.d/config.el</code> emacs configuration file.</p>
+<p>I then open the relevant clojure code using the keyboard shortcut <code>Ctrl-c Ctrl-f</code>.  For the dojo I just needed to work with the <code>demo.clj</code> file that defines a battleship player: <code>jr0cket-battleships/src/battleships/demo.clj</code></p>
+<p>Once the project is loaded into emacs and swank is running, load the battleships namespace into the swank server using the <code>(use ...)</code> function.</p>
+<p>Note that <code>(use)</code> will load in all the required dependencies at once whereas <code>(requires)</code> will also require you add all the dependencies yourself.</p>
+<pre><code>user+&gt; (use :reload-all &apos;[battleships.client :as client])
+nil
+</code></pre><p>For the dojo we had a central server that we all submitted to.  I also spun up a local battleships server so I could do some testing.</p>
+<pre><code>lein ring server
+</code></pre><p>Now I am in the namespace I can submit the player I created - initially this was just the default demo.clj player as I was interested in a baseline player to work with.  By default the demo.clj player will shoot and place your ships at random, with no intelligence to these<br>actions</p>
+<pre><code>user&gt; (submit-player &quot;src/battleships/demo.clj&quot; &quot;baseline&quot; &quot;http://localhost:3000&quot;)
+Submitting to http://localhost:3000/create
+    {:status 200, :headers {&quot;date&quot; &quot;Tue, 31 Jan 2012 21:24:18 GMT&quot;, &quot;content-type&quot; &quot;text/html; charset=utf-8&quot;, &quot;connection&quot; &quot;close&quot;, &quot;server&quot; &quot;Jetty(6.1.25)&quot;}, :body &quot;player1912&quot;}
+</code></pre><p>When submitting your “enhanced” player you should give it a name you will remember, different from other players.  As the game does not replay any matches, its probably worth submitting a new player rather than updating an existing one (there would have to be a lot of players to overload the server!).</p>
+<pre><code>user&gt; **(submit-player &quot;src/battleships/demo.clj&quot; &quot;Masher001&quot; &quot;http://localhost:3000&quot;)**
+Submitting to http://localhost:3000/create
+{:status 200, :headers {&quot;date&quot; &quot;Tue, 31 Jan 2012 21:24:18 GMT&quot;,
+&quot;content-type&quot; &quot;text/html; charset=utf-8&quot;, &quot;connection&quot; &quot;close&quot;,
+&quot;server&quot; &quot;Jetty(6.1.25)&quot;}, :body &quot;player1912&quot;}
+</code></pre><p>If you are playing against each other in teams, then the server address will be the  IP address of a shared server.</p>
+<img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-thumbnail"> 
+<p>Now the clojure fun begins.  Using the demo.clj as a basis, modify your player so it wins all the games, or at least stop it from sucking more than everyone else’s player.</p>
+<p>So if you want to have some Clojure fun with Battleships, go make your own fork of the <a href="https://github.com/NeillAlexander/battleships" target="_blank" rel="noopener">Battleships server</a> and get coding!</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/02/battleships-at-london-clojure-coding.html.html" data-id="cl2mbqfta002dzqmjaj6vesxs" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/02/battleships-at-london-clojure-coding.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/events/">events</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-super-special-london-clojure-dojo.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/12/super-special-london-clojure-dojo.html.html" class="article-date">
+  <time datetime="2011-12-14T12:51:00.000Z" itemprop="datePublished">14 Dec 2011</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/12/super-special-london-clojure-dojo.html.html">Super Special London Clojure Dojo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://4.bp.blogspot.com/-NgZYY3DRA4E/TuiXocmSOcI/AAAAAAAABKA/OGxF3j1o0Sk/s1600/20110617091837-ldncljdojo.png" class="img-thumbnail"> 
+<p>My brain was really challenged last night at the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> super special dojo event.  The challenge for the evening was the really hard <a href="http://www.4clojure.com/" target="_blank" rel="noopener">4Clojure</a> problems and they certainly were a challenge.</p>
+        
+          <p class="article-more-link">
+            <a href="/2011/12/super-special-london-clojure-dojo.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2011/12/super-special-london-clojure-dojo.html.html" data-id="cl2mbqfy600jgzqmjgvbckmqp" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2011/12/super-special-london-clojure-dojo.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/events/">events</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/coding/page/2/">2</a><a class="extend next" rel="next" href="/tags/coding/page/2/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

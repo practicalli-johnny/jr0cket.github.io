@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/cloud/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.302Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Heroku Deploy - a Lot Happens in 1 Minute]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/heroku-deploy-a-lot-happens-in-1-minute.html"/>
+    <id>http://jr0cket.co.uk/2014/03/heroku-deploy-a-lot-happens-in-1-minute.html</id>
+    <published>2014-03-26T19:36:33.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<p>As technology progresses then taking a few minutes to deploy your app can seem like a long time, but when you consider everything Heroku is doing during that time then its quite amazing</p>
+<a id="more"></a>
+<h2 id="Provision-server-resources-amp-managing-traffic"><a href="#Provision-server-resources-amp-managing-traffic" class="headerlink" title="Provision server resources &amp; managing traffic"></a>Provision server resources &amp; managing traffic</h2><p>Heroku creates a new “server” each time you deploy, so that the currently live application can still handle reuests until the new version is ready.  Rather than a whole bloated server, Heroku actually creates a new Linux container with a running OS.  This Linux container usually takes a second or less to create with a running operating system.</p>
+<h2 id="The-environment-is-then-established"><a href="#The-environment-is-then-established" class="headerlink" title="The environment is then established"></a>The environment is then established</h2><p>Every language you use to write your application needs some kind of runtime, eg. if you need Java you need the JVM, Ruby apps need a particular version of Ruby, Javascript probably needs nodejs and PHP needs a webserver.  As part of the Heroku buildpack used during the deployment, the relevant libraries and platforms are brought in.  Unless you change the configuration of your build or the buildfile you use, Heroku will always bring in the same version of the environment you need to run your app each time you deploy.</p>
+<h2 id="Compilation-of-code"><a href="#Compilation-of-code" class="headerlink" title="Compilation of code"></a>Compilation of code</h2><p>If your app is compiled, then the build process is run so you have a deployment made from your standard production build.</p>
+<p>Environment variables are set for the applications and any services (caching, logging, monitoring, etc) or datastores (postgres, redis, mongodb) are therefore automatically connected too.</p>
+<p>All the relevant processes are run and scalled (can you scale your app to a certain level when you deploy)</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>As technology progresses then taking a few minutes to deploy your app can seem like a long time, but when you consider everything Heroku is doing during that time then its quite amazing</p>]]>
+    
+    </summary>
+    
+      <category term="heroku" scheme="http://jr0cket.co.uk/tags/heroku/"/>
+    
+      <category term="cloud" scheme="http://jr0cket.co.uk/categories/cloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Amazon Web Services - Elastic Beanstalk Availabe - Beta Service]]></title>
+    <link href="http://jr0cket.co.uk/2011/01/amazon-web-services-elastic-beanstalk.html.html"/>
+    <id>http://jr0cket.co.uk/2011/01/amazon-web-services-elastic-beanstalk.html.html</id>
+    <published>2011-01-19T11:27:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://c213.r13.cf3.rackcdn.com/AWS%20Logo.jpg" class="img-thumbnail">
+<p>Amazon Web Services have release “Elastic Beanstalk”, there developer  cloud service that seems similar to Google App Engine, but sounds like you get more control over your environment.</p>
+<p>From the <a href="http://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noopener">AWS Elastic Beanstalk site</a>:</p>
+<p>“You simply upload your application, and Elastic Beanstalk automatically handles the deployment details of capacity provisioning, load balancing, auto-scaling, and application health monitoring.  At the same time, with Elastic Beanstalk, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.”</p>
+<p>You will have to pay for using a server and storage on the Amazon cloud, although it sounds like there are no other costs.</p>
+<p>“There is no additional charge for Elastic Beanstalk – you only pay for the underlying AWS resources (e.g. Amazon EC2, Amazon S3) that your application consumes.”</p>
+<p>There are more details on the <a href="http://aws.typepad.com/aws/2011/01/introducing-elastic-beanstalk.html" target="_blank" rel="noopener">amazon web services blog</a></p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://c213.r13.cf3.rackcdn.com/AWS%20Logo.jpg" class="img-thumbnail">
+<p>Amazon Web Services have release “Elastic Beanstalk”, th]]>
+    </summary>
+    
+      <category term="amazon" scheme="http://jr0cket.co.uk/tags/amazon/"/>
+    
+      <category term="cloud" scheme="http://jr0cket.co.uk/categories/cloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Drizzle Cloud Database on My Todo List]]></title>
+    <link href="http://jr0cket.co.uk/2010/01/drizzle-cloud-database-on-my-todo-list.html.html"/>
+    <id>http://jr0cket.co.uk/2010/01/drizzle-cloud-database-on-my-todo-list.html.html</id>
+    <published>2010-01-09T17:11:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://www.drizzle.org/sites/www.drizzle.org/themes/mythemes/acq_drizzleorg_drops_cssbord/images/Drizzle-logotype-transparent-text_0_0.png" class="img-thumbnail"> 
+<p>I’ve added a new task to my <a href="http://leankitkanban.com/" target="_blank" rel="noopener">personal kanban</a> to look into how the <a href="http://drizzle.org/wiki/Main_Page" target="_blank" rel="noopener">Drizzle</a> project would provide a high performance database system for the cloud.</p>
+<p>As the project is still in alpha phase it will be interesting to see what concepts and features are discussed through the projects growth.  I hope studying Drizzle will give me another perspective on the <a href="http://skillsmatter.com/podcast/cloud-grid/situation-normal-everything-must-change" target="_blank" rel="noopener">transition of computing to the cloud</a>. </p>
+<p>I’m also adding <a href="http://planetdrizzle.org/" target="_blank" rel="noopener">Planet Drizzle</a> to my <a href="http://www.google.com/reader/" target="_blank" rel="noopener">Google Reader</a> account to keep up with the Drizzle project news.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.drizzle.org/sites/www.drizzle.org/themes/mythemes/acq_drizzleorg_drops_cssbord/images/Drizzle-logotype-transparent-text]]>
+    </summary>
+    
+      <category term="cloud" scheme="http://jr0cket.co.uk/categories/cloud/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Using animated gifs are a lightweight way to show Emacs in action, as can be seen at Emacs Gifs. I am creating a workshop on developing Clojure with Spacemacs, so here is a little guide as to how I c">
+<meta name="keywords" content="spacemacs,gifs,screencapture">
+<meta property="og:type" content="article">
+<meta property="og:title" content="camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs">
+<meta property="og:url" content="http://jr0cket.co.uk/2017/01/spacemacs-creating-animated-gifs-videos.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Using animated gifs are a lightweight way to show Emacs in action, as can be seen at Emacs Gifs. I am creating a workshop on developing Clojure with Spacemacs, so here is a little guide as to how I c">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://jr0cket.co.uk/images/spacemacs-logo.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/spacemacs-camcorder-convert-to-gif.gif">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs">
+<meta name="twitter:description" content="Using animated gifs are a lightweight way to show Emacs in action, as can be seen at Emacs Gifs. I am creating a workshop on developing Clojure with Spacemacs, so here is a little guide as to how I c">
+<meta name="twitter:image" content="http://jr0cket.co.uk/images/spacemacs-logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-spacemacs-creating-animated-gifs-videos" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html" class="article-date">
+  <time datetime="2017-01-01T18:59:05.000Z" itemprop="datePublished">1 Jan 2017</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/emacs/">emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/spacemacs-logo.png" class="img-topic">
+<p>Using animated gifs are a lightweight way to show Emacs in action, as can be seen at <a href="https://emacsgifs.github.io/" target="_blank" rel="noopener">Emacs Gifs</a>.</p>
+<p>I am creating a workshop on <a href="https://practicalli.github.io/spacemacs" target="_blank" rel="noopener">developing Clojure with Spacemacs</a>, so here is a little guide as to how I create animated gifs and videos for this workshop directly from Emacs itself using <a href="https://github.com/Malabarba/camcorder.el" target="_blank" rel="noopener">camcorder.el</a>.</p>
+<blockquote>
+<p>There are several different ways to create animated gifs and so far I have found camcorder.el to be the easiest.  This approach has been tested on Ubuntu Linux 16.10.</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="Why-an-animated-gif-rather-than-video"><a href="#Why-an-animated-gif-rather-than-video" class="headerlink" title="Why an animated gif rather than video?"></a>Why an animated gif rather than video?</h1><p>Being an image format, animated gifs can be used like any other image.  So they are easy to include in websites.  They will also play continually without any additional code.</p>
+<p>Animated gifs are typically smaller in size, so are quicker to download than video and use less resources too.</p>
+<p>Some small amount of quality is lost when converting to an animated gif.  However, using the optimised and hence slower conversion gives a reasonable quality.  I am still experimenting with the setting though to see if I can make the conversion better.</p>
+<h1 id="camcorder-el"><a href="#camcorder-el" class="headerlink" title="camcorder.el"></a><a href="https://github.com/Malabarba/camcorder.el" target="_blank" rel="noopener">camcorder.el</a></h1><p><a href="https://github.com/Malabarba/camcorder.el" target="_blank" rel="noopener">camcorder.el</a> enables you to create a screen capture specifically of Emacs.  When run, a new Emacs frame is created with the contents of the current buffer and your actions in that frame are recorded as a video.</p>
+<p>Then <a href="https://github.com/Malabarba/camcorder.el" target="_blank" rel="noopener">camcorder.el</a> can convert the video to an animated gif. </p>
+<h2 id="Requirements-for-camcorder-el"><a href="#Requirements-for-camcorder-el" class="headerlink" title="Requirements for camcorder.el"></a>Requirements for camcorder.el</h2><p>The <code>camcorder.el</code> package itself does not actually do the recording or even the converting, its simply a convienient way to manage other tools without having to leave Emacs.</p>
+<ul>
+<li><a href="http://recordmydesktop.sourceforge.net" target="_blank" rel="noopener">recordmydesktop</a> - a linux based video &amp; audio recorder</li>
+<li><a href="http://www.mplayerhq.hu" target="_blank" rel="noopener">mplayer</a> - movie player and converter</li>
+<li><a href="https://www.imagemagick.org" target="_blank" rel="noopener">imagemagick</a> - create, edit, compose, or convert bitmap images</li>
+<li><a href="https://ffmpeg.org/" target="_blank" rel="noopener">ffmpeg</a> - video conversion tools</li>
+</ul>
+<p>For a quick and simple conversion from video to animated gif you can select ffmpeg.  If you want to optimise the size of the resulting animated gif then select the combination of mplayer and imagemagick.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install recordmydesktop mplayer imagemagick</span><br></pre></td></tr></table></figure>
+<h2 id="Add-camcorder-to-Spacemacs"><a href="#Add-camcorder-to-Spacemacs" class="headerlink" title="Add camcorder to Spacemacs"></a>Add camcorder to Spacemacs</h2><p>As far as I am aware there is not yet a Spacemacs layer that includes <code>camcorder.el</code>.  So instead we add <code>camcorder.el</code> as an additional package.</p>
+<p>Edit your <code>~/.spacemacs</code> configuration file and find <code>dotspacemacs-additional-packages</code>.  Then add <code>camcorder</code> to that list of packages:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotspacemacs-additional-packages &apos;(camcorder)</span><br></pre></td></tr></table></figure>
+<p>You will need to either reload your Spacemacs configuration with <code>SPC f e R</code> or restart Emacs.</p>
+<h2 id="Capturing-with-camcorder"><a href="#Capturing-with-camcorder" class="headerlink" title="Capturing with camcorder"></a>Capturing with camcorder</h2><p>Run either <code>camcorder-record</code> or <code>camcorder-mode</code> to record Emacs.  You are first prompted to give the file name of the video output (<code>ogv</code> video format).</p>
+<p>Once you have specified the video name, a 3 second countdown will run before starting the recording.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M-x camcorder-record</code></td>
+<td>Open a new Emacs frame and record</td>
+</tr>
+<tr>
+<td><code>M-x camcorder-mode</code></td>
+<td>Record current Emacs frame</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td>Toggle pause pause</td>
+</tr>
+<tr>
+<td><code>F12</code></td>
+<td>Stop recording and save video</td>
+</tr>
+</tbody>
+</table>
+<p>Screencasts are generated in ogv format, although if you hack <code>camcorder.el</code> you could change the video format used and even the video capture tool (recordmydesktop).</p>
+<blockquote>
+<p>As capturing creates a video file, you can edit that file with tools such as <a href="http://www.openshot.org/" target="_blank" rel="noopener">OpenShot</a> or <a href="https://www.blender.org/" target="_blank" rel="noopener">Blender</a> video editors.  So if you make a small error or want to shorten (or lengthen) a part of the video, then edit it before you convert it to gif.</p>
+</blockquote>
+<h2 id="Converting-with-camcorder"><a href="#Converting-with-camcorder" class="headerlink" title="Converting with camcorder"></a>Converting with camcorder</h2><p>You can convert the videos you generated during capturing, or any other supported video type.  So you can also used <code>camcorder.el</code> if you recorded Emacs (or other tools) separately.</p>
+<p>Run the <code>M-x camcorder-convert-to-gif</code> and you are prompted for the video file to convert to an animated gif.</p>
+<p><img src="/images/spacemacs-camcorder-convert-to-gif.gif" alt="Spacemacs - camcorder - convert-to-gif"></p>
+<h2 id="Tweaking-camcorder-el"><a href="#Tweaking-camcorder-el" class="headerlink" title="Tweaking camcorder.el"></a>Tweaking camcorder.el</h2><p>I initially made one tweak to <code>camcorder.el</code>, to change the size of the frame created for the capture.  I fount the frame too small to work with on a high resolution monitor.  The only challenge with this is it creates a larger file for the animated gif.</p>
+<p>I changed the height from 20 to 32 and the width from 65 to 120.  These sizes provided more space to see the Spacemacs menu as I demonstrate features.  When creating screen captures I run my desktop at a resolution of 1360x768 and a Spacemacs font size of 16 (Ubuntu Mono).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(defcustom frame-parameters</span><br><span class="line">  &apos;((name . &quot;camcorder.el Recording - F12 to Stop - F11 to Pause/Resume&quot;)</span><br><span class="line">    (height . 32)</span><br><span class="line">    (width . 120)</span><br><span class="line">    (top .  80))</span><br><span class="line">  &quot;Parameters used on the recording frame.</span><br><span class="line">See `make-frame&apos;.&quot;</span><br><span class="line">  :type &apos;(alist :key-type symbol :value-type sexp))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>After some testing I have now reverted back to the original height of 20 and width of 32.  I have also reduced the font settings in Spacemacs to us Ubuntu Mono with a font size of 12.</p>
+</blockquote>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>The package camcorder.el provides a simple 2-step process to create animated gif images of Emacs demos.  You can tweak the script easily and can also use different tools to do the screen capture.</p>
+<p>Animated gifs are very easy to distribute, especially on web pages and github pages sites.  With this process you also have a video version of the demo too.</p>
+<p>Keeping your demos short, between 10 and 20 seconds, typically makes the animated gifs easy to follow.  So think about what the most important point you are trying to convey when you are creating a new animated gif.</p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2017/01/spacemacs-creating-animated-gifs-videos.html" data-id="cl2mbqfxv00ihzqmjdt6vr7tr" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2017/01/spacemacs-creating-animated-gifs-videos.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gifs/">gifs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/screencapture/">screencapture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spacemacs/">spacemacs</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Beautiful Terminalation - Ohmyzsh on Ubuntu
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Kanban in Emacs Org-Mode to Get More Work Done</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2017/01/spacemacs-creating-animated-gifs-videos.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

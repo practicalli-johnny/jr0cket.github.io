@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/coding/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.306Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Quick Guide to Github Pull Requests]]></title>
+    <link href="http://jr0cket.co.uk/2014/11/quick-guide-to-github-pull-requests.html"/>
+    <id>http://jr0cket.co.uk/2014/11/quick-guide-to-github-pull-requests.html</id>
+    <published>2014-11-29T07:02:05.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="/images/24-pull-requests-of-xmas.png" class="img-topic">
+<p>  This holiday season give the gift of code… or anything else no matter how small to help out your favorite open source project.  By joining the <a href="http://24pullrequests.com/" target="_blank" rel="noopener">24 pull requests website</a> with your Github account, you can challenge yourself to contribute to 24 projects through December.</p>
+<p>  Here is a quick guide to creating pull requests on Github.<br><a id="more"></a></p>
+<h1 id="Contribute-via-a-Github-pull-request"><a href="#Contribute-via-a-Github-pull-request" class="headerlink" title="Contribute via a Github pull request"></a>Contribute via a Github pull request</h1><p>  Find a project you want to contribute to on Github.  On the top right of its page, press the fork button to create your own complete copy of the project in your own account.  This allows you to add changes (commits) to your own fork, which you then share back to the original project. </p>
+<p><img src="/images/github-pull-request-fork-gitbookio-plugin-quizzes.png" alt="Fork a project on Github"></p>
+<p>  Take a copy of your fork using the <code>git clone</code> command:</p>
+<pre><code>git clone git@github.com:jr0cket/plugin-quizzes.git
+</code></pre><p><img src="/images/github-pull-request-clone-gitbookio-plugin-quizzes.png" alt="Clone your fork"></p>
+<p>   Its very useful to create a branch for the change you are going to make.  If there are project updates while you are creating your contribution or you just mess up so bad you just want to throw your contribution away, then a seperate branch makes this easy.</p>
+<pre><code>git checkout -b doc-plugin-configuration
+</code></pre><p><img src="/images/github-pull-request-branch-create.png" alt="Fork a project on Github"></p>
+<p>  Edit the files that make up your contribution and test your changes work before you do a local commit.  Here I am updating the README.md file with some clearer instructions on how to add the plugin to your project. </p>
+<pre><code>git add README.md 
+git commit -m &quot;adding instructions on configuring the plugin&quot;
+</code></pre><p><img src="/images/github-pull-request-commit-locally.png" alt="Fork a project on Github"></p>
+<p>  Now copy your local commit back to your fork of the Github project.  Remember to push the branch you created and not the master branch.</p>
+<pre><code>git push origin doc-plugin-configuration
+</code></pre><p><img src="/images/github-pull-request-push-to-fork.png" alt="Fork a project on Github"></p>
+<p>  Once you have pushed your branch to your fork, Github gives you the option to create a pull request.</p>
+<p><img src="/images/github-pull-request-create-pull-request.png" alt="Create a Pull Request"></p>
+<p>  When you create the pull request, it uses your commit message as the title of the pull request.  You can also add further information if it helps the project maintainers understand what the change is about and why they should accept it.</p>
+<p><img src="/images/github-pull-request-message-example.png" alt="Pull Request message"></p>
+<p>  Create the pull request and then wait for the project maintainters to talk a look at your change.  If your change has a large green icon next to it, it means it can easily be merged into the project.</p>
+<p><img src="/images/github-pull-request-push-submitted.png" alt="Pull Request submitted"></p>
+<h2 id="Patients-is-a-virtue"><a href="#Patients-is-a-virtue" class="headerlink" title="Patients is a virtue"></a>Patients is a virtue</h2><p>  Its now time to wait for the project maintainers to review your pull request.  If they like what they see and its easy to merge into the project then that may happen fairly quickly.  However, as it’s their project then it is up to them what they accept.  This is why small contributions are better than large, so you can develop good communication with the project maintainers with the minimum of effort.</p>
+<h2 id="Planing-to-contribute-regularly"><a href="#Planing-to-contribute-regularly" class="headerlink" title="Planing to contribute regularly"></a>Planing to contribute regularly</h2><p>  If you want to are going to contribute to a project over time, its a good idea to create your own fork.  Also, once you have cloned your fork, you should also add the original project repository.  </p>
+<pre><code>git remote add upstream git://github.com/project/repository-name
+</code></pre><p>  Before you make any change or create a new branch for your change, you should get all the latest updates from the original project.</p>
+<pre><code>git pull upstream master
+</code></pre><h2 id="Updating-your-own-fork"><a href="#Updating-your-own-fork" class="headerlink" title="Updating your own fork"></a>Updating your own fork</h2><p>  If your pull request is accepted then you can pull that commit into your own fork by pulling the changes from the original project and pushing them back to your fork.</p>
+<pre><code>git pull upstream master 
+</code></pre><blockquote>
+<p>If you have other changes in the working copy, you can always use <code>git stash</code> before you pull in order to keep your work safe.  Once you have done a pull you can use <code>git stash pop</code> to restore the changes back to your working copy.</p>
+</blockquote>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/24-pull-requests-of-xmas.png" class="img-topic">
+<p>  This holiday season give the gift of code… or anything else no matter how small to help out your favorite open source project.  By joining the <a href="http://24pullrequests.com/" target="_blank" rel="noopener">24 pull requests website</a> with your Github account, you can challenge yourself to contribute to 24 projects through December.</p>
+<p>  Here is a quick guide to creating pull requests on Github.<br>]]>
+    
+    </summary>
+    
+      <category term="github" scheme="http://jr0cket.co.uk/tags/github/"/>
+    
+      <category term="git" scheme="http://jr0cket.co.uk/tags/git/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/categories/coding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Contributing to Open Source Projects]]></title>
+    <link href="http://jr0cket.co.uk/2014/11/contributing-to-open-source-projects.html"/>
+    <id>http://jr0cket.co.uk/2014/11/contributing-to-open-source-projects.html</id>
+    <published>2014-11-28T19:23:39.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="/images/24-pull-requests-of-xmas.png" class="img-topic">
+<p>  This holiday season give the gift of code… or anything else no matter how small to help out your favorite open source project.  By joining the 24 pull reuests website with your Github account, you can challenge yourself to contribute to 24 projects through December.</p>
+<p>  Here are some reasons why you should contribute to open source projects.<br><a id="more"></a></p>
+<p>  It can seem like a bit task to jump into any open source project, so start by looking for the smallest thing your could contribute.</p>
+<h3 id="Why-contribute-to-Open-Source-Project"><a href="#Why-contribute-to-Open-Source-Project" class="headerlink" title="Why contribute to Open Source Project"></a>Why contribute to Open Source Project</h3><p>  Its simple really, as developers we all use open source projects and we would get less done without them.  It is an opportunity to get more experience outside of your daily routine and is a great way to differentiate yourself should you look for another role.  </p>
+<p>  Look at the open source projects you use regularly, which of those have issues you could help with?</p>
+<h3 id="What-could-I-possibly-contribute"><a href="#What-could-I-possibly-contribute" class="headerlink" title="What could I possibly contribute ?"></a>What could I possibly contribute ?</h3><p>  You don’t need to be the best coder on the planet to contribute, find a simple bug in the issue tracker for the project and have a go.  You should match any coding styles the project uses, even if you dont like them.</p>
+<p>  If you find something you dont understand in the docs, then write an improvement.  I often start contributing by answering some of the simpler issues raised.  Those issues are often from missunderstanding the docs for the project, so it can be an effective way to work out what needs improving.</p>
+<p>  All this frees up the time the project maintainers have to develop the code and tackle larger features and bugs.</p>
+<h2 id="Concered-about-your-code-quality"><a href="#Concered-about-your-code-quality" class="headerlink" title="Concered about your code quality ?"></a>Concered about your code quality ?</h2><p>  There is no such thing as perfect code, so you shouldnt be afraid to share.  </p>
+<p>  To help your code be more useful to the project, you should look out for coding styles used.  Even if you have your own style that you love, you should use the styles already adopted by the project.</p>
+<p>  The smaller the code change you make, the less likely you will make any coding fubar’s and if you do then its easier for the project maintainers to tell you what they would like to see instead.  If you have lots of changes over several files, if the maintainers dont like the first code they see they are likely to just reject the change.</p>
+<h2 id="Using-Github-amp-Pull-Requests"><a href="#Using-Github-amp-Pull-Requests" class="headerlink" title="Using Github &amp; Pull Requests"></a>Using Github &amp; Pull Requests</h2><p>  One of the easiest way to contribute to an open source project is to create a small change and share it back to the original project.  If the project is on Github, you can create a pull request.  A pull request is a message to the original project to invite them to pull a change you made into the original project.</p>
+<p>  You can make a change directly on the projects Github page, or ifs a code change that you want to test then you can fork the project and have your own copy of the project on Github.</p>
+<h3 id="Learning-to-use-Git"><a href="#Learning-to-use-Git" class="headerlink" title="Learning to use Git"></a>Learning to use Git</h3><p>  If you are not up to speed with Git yet, the most useful website I have found it <a href="http://try.github.com" target="_blank" rel="noopener">try.github.com</a>.</p>
+<p>  If you use the Git command line client, then <code>git help &lt;command&gt;</code> is a great way to get help on specific commands.  Alternatively, there is a great online help at <a href="http://git-scm.com/docs/" target="_blank" rel="noopener">git-scm.com/docs</a></p>
+<p>  There is a list of <a href="http://git-scm.com/downloads" target="_blank" rel="noopener">graphical Git clients</a> on the git-scm.com website.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/24-pull-requests-of-xmas.png" class="img-topic">
+<p>  This holiday season give the gift of code… or anything else no matter how small to help out your favorite open source project.  By joining the 24 pull reuests website with your Github account, you can challenge yourself to contribute to 24 projects through December.</p>
+<p>  Here are some reasons why you should contribute to open source projects.<br>]]>
+    
+    </summary>
+    
+      <category term="github" scheme="http://jr0cket.co.uk/tags/github/"/>
+    
+      <category term="git" scheme="http://jr0cket.co.uk/tags/git/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/categories/coding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[BDD With JBehave and Netbeans - a First Taste]]></title>
+    <link href="http://jr0cket.co.uk/2010/02/bdd-with-jbehave-and-netbeans-first.html.html"/>
+    <id>http://jr0cket.co.uk/2010/02/bdd-with-jbehave-and-netbeans-first.html.html</id>
+    <published>2010-02-28T16:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://issuetrackr.googlecode.com/svn-history/r105/trunk/issuetrackr/lib/jbehave-2.1/docs/images/jbehave-logo.png" class="img-thumbnail"> 
+<p>This is a quick overview of how I created a simple hello world example using JBehave and Netbeans, following the BDD development practices.</p>
+<h1 id="Create-a-New-Project"><a href="#Create-a-New-Project" class="headerlink" title="Create a New Project"></a>Create a New Project</h1><p>Create a new project in Netbeans <code>Ctrl-Shift-N</code></p>
+<p>Select a Java Application template (from the Java category) and call the project <code>HelloBDDWorld</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package org.jr0cket.scenarios;</span><br><span class="line">import org.jbehave.scenario.Scenario;</span><br><span class="line"></span><br><span class="line">public class IReceiveAGreetingWhenILogin extends Scenario &#123;</span><br><span class="line"></span><br><span class="line">    public IReceiveAGreetingWhenILogin()&#123;</span><br><span class="line">        super(new LoginSteps());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>`</code> LoginSteps.java</p>
+<p>package org.jr0cket.scenarios;</p>
+<p>import org.jbehave.scenario.steps.Steps;</p>
+<p>class LoginSteps extends Steps {</p>
+<pre><code>public LoginSteps() {   }
+</code></pre><p>}</p>
+<p>This exercise is based on the two minute tutorial on the JBehave site, with some added details for Netbeans and a couple of corrections.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://issuetrackr.googlecode.com/svn-history/r105/trunk/issuetrackr/lib/jbehave-2.1/docs/images/jbehave-logo.png" class="img-thum]]>
+    </summary>
+    
+      <category term="bdd" scheme="http://jr0cket.co.uk/tags/bdd/"/>
+    
+      <category term="jbehave" scheme="http://jr0cket.co.uk/tags/jbehave/"/>
+    
+      <category term="netbeans" scheme="http://jr0cket.co.uk/tags/netbeans/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/categories/coding/"/>
+    
+  </entry>
+  
+</feed>

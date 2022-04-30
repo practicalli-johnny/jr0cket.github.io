@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/book-reviews/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.290Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Book Review - Scribus Beginners Guide]]></title>
+    <link href="http://jr0cket.co.uk/2011/05/book-review-scribus-beginners-guide.html.html"/>
+    <id>http://jr0cket.co.uk/2011/05/book-review-scribus-beginners-guide.html.html</id>
+    <published>2011-05-06T08:13:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://www.packtpub.com/sites/default/files/imagecache/productview/3005_Scribus%201.3.jpg" class="img-topic">
+<p><a href="http://scribus.net/" target="_blank" rel="noopener">Scribus</a> is an open source desktop publishing tool that helps you create professionally laid out documents, from simple documents to full blown magazines, corporate brochures or even books.  Desktop publishing tools are not a replacement for word processors, instead they give you the freedom to create uniquely designed documents and help you manage large sets of text and graphic content.  Scribus is similar to Adobe InDesign or Quarq Xpress and gives you a wide range of tools to layout content in either print or digital media form.  Scribus is pretty easy to get to grips with and has good documentaton on the project website.  The <a href="http://www.packtpub.com/scribus-1-3-5-beginners-guide/book" target="_blank" rel="noopener">Scribus 1.3.5 beginners guide</a> is a really handy guide through the workflow of desktop publishing and helps you clearly understand how to create professional looking results. </p>
+<a id="more"></a>
+<img src="http://www.uberdownloads.com/images/screenshots/Scribus_1.jpg" class="img-thumbnail">
+<p>The book includes a simple comparison between Scribus and other desktop publsihing tools such as InDesign, Quark Express and Microsoft publisher, setting expectations clearly as to what you can get from Scribus and the kind of interoperability between desktop publishing tools (its a little limited, but the Scribus project is trying and is the most open).</p>
+<p>The book begins by covering some theory behind desktop publishing, using the metaphor - What you see is what you mean - to get you thinking about the overal design that would appeal to your audience, whilst also considering the resource and media constraints you have.  As with developing software, knowing the needs of your audience is an important factor in the layout of your documents.  Knowing the limitations of what you can print out effectively or deliver as other media is an important set of constraints to consider.</p>
+<p>An important concept to understand is the <em>graphic workflow</em> for desktop publishing.  The first chapter therefore covers the use of <a href="http://www.inkscape.org/" target="_blank" rel="noopener">Inkscape</a>, <a href="http://www.gimp.org/" target="_blank" rel="noopener">Gimp</a> and <a href="http://www.libreoffice.org/" target="_blank" rel="noopener">LibreOffice (open office)</a> to create and manage your content (text and images) and then using Scribus to pull that content together in an appealing and productive layout.  Also covered is the idea of using Inkscape as a tool for mock-up designs.  I see Scribus as kind of the the big brother to Inkscape (review) in that Inkscape works with a single page document, whereas Scribus can manage content across a multiple page document.  You can assemble some very intricate documents using Scribus that would take a lot of time and effort to do using Inkscape and word processors such as Libre office and Microsoft office.</p>
+<p>Next is the overview of the Scribus workspace, including details of the menus and tool bars for which there are many.  This overview is very easy to understand, especially for someone who has little or no experience.  The coverage of the text, graphics and page layout options are very detailed and nicey sprinkled with mini-tutorials to help you get to grips with Scribus quickly.  The first tutorial guides you through the creation of a simple business card, so you get a nice gentle start whilst still being practical.  </p>
+<p>Due to the good layout and extensive use of screenshots its easy for an advanced user to skip through to the parts of the workspace you want to learn about. </p>
+<p>Once the Scribus workstation is covered, the book goes on to detail how to create your own layouts for desktop publishing using all the features of Scribus.  Again you are guided step-by-step through the various options for choosing a document layout and managing the structure of your documents, using frames for importing and managing text and graphics, changing colours and styles, stacking and layers to manage the presentation, distorting shapes using resizing, rotating / scaling frames, alignment and distribution of objects.  There are a lot of layout options in Scribus and the book does a good job of introducing each aspect.  Again this is done using a step by step tutorial style and the odd pop-quiz that helps you quickly gain confidence with the tool. </p>
+<p>There is good coverage of the how Scribus handles advanced colour features.  Using shading, gradient fills, pattern fills and transparency of images and the use of layers, its shown how to create eye-catching effects to enhance your documents. Support for CMYK and colour profiles is covered when talking about profiling with the Argyll plugin for Scribus.</p>
+<p>As printing documents is full of pitfalls, in part due to the wide range of printing hardware out there, there is a whole chapter on this topic.  Scribus has a pre-flight verifier to check the quality of your document output and can give you a lot of information and highlight any errors in PDF generation.  Using the print preview you can see examples of colour separation and ink coverage, all very important for print media.  There is also some very useful information for book production, marks and bleeds, security for pdf’s and all the various standards for pdf documents.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Overall the book gives a complete coverage of all the typical layout techniques you will need for your desktop publishing efforts the book.  By the time you reach the end of the book you will know how to produce an Adobe portable document file (pdf) that is suitable for your print or online distribution.</p>
+<blockquote>
+<p>Scribus has recently moved to a new file format its documents and the book referes to the Scribus version which uses this new file format.  Documents created with older versions of Scribus are supported in all newer versions, but document created in 1.3.5 onwards are not backwards compatible.  On Debian based system, both the older version of Scribus and newer version Scribus-NG can be run side by side.</p>
+</blockquote>
+<p>The Scribus beginers guide book has a well presented layout with content nicely spaced through the books 348 pages, making it comfortable to read both in book and ebook form.  Althought there is plenty of information online, the book is a great way to get started and give you confidence in your approach and use of Scribus, so you can make use of the reference materials online.</p>
+<p>There are several books available for Scribus, however the Scribus 1.3.5 beginners guide is the most up to date, covering all the latest features of this evolving tool.  This book makes a nice addition to the <a href="http://docs.scribus.net/" target="_blank" rel="noopener">online reference documentation</a> and the <a href="http://wiki.scribus.net/canvas/Scribus" target="_blank" rel="noopener">community resources</a> available for Scribus.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.packtpub.com/sites/default/files/imagecache/productview/3005_Scribus%201.3.jpg" class="img-topic">
+<p><a href="http://scribus.net/" target="_blank" rel="noopener">Scribus</a> is an open source desktop publishing tool that helps you create professionally laid out documents, from simple documents to full blown magazines, corporate brochures or even books.  Desktop publishing tools are not a replacement for word processors, instead they give you the freedom to create uniquely designed documents and help you manage large sets of text and graphic content.  Scribus is similar to Adobe InDesign or Quarq Xpress and gives you a wide range of tools to layout content in either print or digital media form.  Scribus is pretty easy to get to grips with and has good documentaton on the project website.  The <a href="http://www.packtpub.com/scribus-1-3-5-beginners-guide/book" target="_blank" rel="noopener">Scribus 1.3.5 beginners guide</a> is a really handy guide through the workflow of desktop publishing and helps you clearly understand how to create professional looking results. </p>]]>
+    
+    </summary>
+    
+      <category term="scribus" scheme="http://jr0cket.co.uk/tags/scribus/"/>
+    
+      <category term="book-reviews" scheme="http://jr0cket.co.uk/categories/book-reviews/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Step by Step Guide to Submitting a Slashdot.org Book Review]]></title>
+    <link href="http://jr0cket.co.uk/2011/02/guide-to-submitting-book-review-at.html.html"/>
+    <id>http://jr0cket.co.uk/2011/02/guide-to-submitting-book-review-at.html.html</id>
+    <published>2011-02-19T19:21:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="http://slashdotmedia.com/wp-content/uploads/2013/03/slashdot_logo_lrg_color.png" class="img-thumbnail">
+<p><a href="http://slashdot.org/" target="_blank" rel="noopener">Slashdot</a> is a great resource for lots of technical news and book reviews but I have experienced problems submitting book reviews and the <a href="http://slashdot.org/faq/bookreviews.shtml" target="_blank" rel="noopener">Slashdot book review guidelines</a> could be presented in a clearer way (with some pictures).<br><a id="more"></a><br>Even though I have had book reviews published, I have been unable to get a submission that shows up in the <a href="http://books.slashdot.org/index2.pl?fhfilter=bookreview" target="_blank" rel="noopener">pending list of book reviews</a>, so although this is a guide for first-time book review submitters, its also become a request for improvements from Slashdot.</p>
+<p>Creating a good book review can take a while when you include reading the book.  You should also plan to spend up to an hour (or more) formatting the review text and preparing for your submission, as it can be a bit of a fiddly process.</p>
+<blockquote>
+<p>once you have submitted the review to Slashdot you are unable to edit it in anyway, so you need to get it right first time.</p>
+</blockquote>
+<h1 id="Writing-the-review"><a href="#Writing-the-review" class="headerlink" title="Writing the review"></a>Writing the review</h1><p>As mentioned there is the <a href="http://slashdot.org/faq/bookreviews.shtml" target="_blank" rel="noopener">Slashdot book review guide, a long page on how to write a book review</a> that has lots of useful suggestions.  I suggest you read this page and make your own notes on writing a review </p>
+<p>The Slashdot book review guidelines also include a few lines on how to submit a review, but some information seems out of date and the overall process is not as clear as it could be.  So here are my additions to guide you through the submission process more smoothly.</p>
+<h1 id="Format-of-your-review"><a href="#Format-of-your-review" class="headerlink" title="Format of your review"></a>Format of your review</h1><p>Its recommended by Slashdot that you write your submission in plain text editor as only simple HTML formatting is allowed.  There is no way to cut and paste rendered HTML as part of your submission, eg. You cant copy a web page, only the text will be pasted into the slashdot form and you loose your links.</p>
+<p>Allowed HTML tags include:</p>
+<ul>
+<li><code>P</code> - use paragraphs and not link brakes (br tag is not welcome)</li>
+<li><code>a href</code> - use for hyptertext - dont just include URLs in the text</li>
+<li><code>cite</code> - use this tag when referring to the book title</li>
+<li><code>&quot; &quot;</code> - use quotation marks around chapters and section titles (dont include Chapter x or Section x inside the quotes)</li>
+</ul>
+<blockquote>
+<p>Alternative approach: write your review as a WYSIWYG editor that will show you the html - most blogs will do this.  Keep formatting very plain and ensure that only the above hypertext is used.  Blogs tend to put styles, divs and br codes all over.  If you have simple html code, then copy and  paste from the HTML view of blog / editor into the “Your Scoop” section.  If your code is messy, copy the html into a simple editor and do some find/replace work.</p>
+</blockquote>
+<h1 id="What-to-hypertext-link"><a href="#What-to-hypertext-link" class="headerlink" title="What to hypertext / link"></a>What to hypertext / link</h1><p>Dont go crazy with your hypertext links in your review, only hypertext the essential parts of your review.</p>
+<p>The review should link the book title to the books page on the <a href="http://www.barnesandnoble.com/" target="_blank" rel="noopener">Barnes and Noble website</a>, unless the book is not available from them.  Slashdot has an arrangement with Barnes and Nobel and will change any links you include that point elsewhere (or remove those links) </p>
+<h1 id="Submitting-the-review"><a href="#Submitting-the-review" class="headerlink" title="Submitting the review"></a>Submitting the review</h1><img src="http://lh3.googleusercontent.com/_yKz3swsAoNQ/TWAJjByOlDI/AAAAAAAAARA/3SrLYe_FSK4/s640/Slashdot-Submissions-Form.png" class="img-code"> 
+<p>Reviews are only accepted by submitting them via the <a href="http://slashdot.org/submission" target="_blank" rel="noopener">Slashdot submissions page</a>, any emailed reviews are ignored.</p>
+<p>1) Open your browser at the <a href="http://slashdot.org/submission" target="_blank" rel="noopener">Slashdot submissions page</a></p>
+<p>I dont recommend using the <em>submit a story</em> link that is on the top navigation bar.  The submit a story link (eventually) pops up a form within the page, but I find it very slow to appear.  Also, if you accidental click away from the form onto the browser window behind, then the form closes.</p>
+<img src="http://4.bp.blogspot.com/-eO3w2obYD4I/TWAI9FQ_wsI/AAAAAAAAAQo/MIsEbj_pNoA/s1600/Slashdot-BookReviewForm.png" class="img-topic">  
+<p>2) Before adding any information, enter <strong>bookreview</strong> as the tag followed by a comma or press the <strong>preview</strong> button to update the submissions form.</p>
+<p>Adding the bookreview tag changes the form layout, so you can enter the book details.  Those details will be used to create a table of book details in the final review, however you dont see that table in our submission until your review has been published by the Slashdot team. </p>
+<blockquote>
+<p>Be wary of entering any other tags than bookreview.  Other tags can confuse the form and mean your submission does not get classified as a book review on Slashdot.</p>
+</blockquote>
+<img src="http://2.bp.blogspot.com/-Rj1Ve973buo/TWAI9cs88lI/AAAAAAAAAQw/6rJTpkMzHmU/s1600/Slashdot-BookReviewFrom-example.png" class="img-code"> 
+<p>3) Fill in the book review form fields.</p>
+<p>The book review form fields are fairly obvious, although you should take note that there is a Story Title field and a Book Title field.</p>
+<p>The story title is usually “Book Review: Book title”, although if the book title and sub title is quite long, then you should use a suitable abbreviation for the book title.  You can then put the full book title in the Book Title form field.</p>
+<p>The URL form field is for the original source of a story.  I am not sure if this is relevant to a book review unless you want to include a link from your Slashdot submission to a copy of the book review on your personal blog.  I included the review on my own website, but this seems to have been removed by the Slashdot editors. </p>
+<p>4) Dont save yet</p>
+<p><strong>Only use the Preview button until you have completely finished</strong>.  Once you press save, you cannot do anything more with your submission so wait until you are finished!</p>
+<img src="http://1.bp.blogspot.com/-D35Z1pmMxEs/TWAJBivBDFI/AAAAAAAAAQ8/0MKCjj5u4Is/s1600/Slashdot-BookReview-Preview-medium.png" class="img-code"> 
+<p>Add your review to the “Your Scoop” text box using simple HTML formatting tags from a simple text editor</p>
+<p>The first paragraph of the text in this “Your Scoop” section is the text you will see on the main page of the Slashdot page (if published).  The following paragraphs will be included in the full page review “Read More” link.</p>
+<p><strong>Remember - only press the Preview button until you have completely finished.</strong>  Once you press save, you cannot do anything more with your submission.</p>
+<p>5) Make sure your review looks right before submitting it.</p>
+<p>You can switch between preview and editing screens until your submission times out, which will happen sometime after an hour.  Its important to keep a copy of the html text for the review outside of the browser, cutting and pasting a new version into the submissions form.</p>
+<p>Only press save when you are absolutely sure everything look good in preview mode.  Once you press save you cannot change anything about your submission and will have to resubmit if there are errors.</p>
+<blockquote>
+<p>Keep a copy of the html code you have submitted, just in case.  Also you can use that as a reminder for the next review.</p>
+</blockquote>
+<p>6) Check your book review has been submitted</p>
+<p>Click on your account name in the top right hand corner, this will take you to your logged in view of Slashdot.</p>
+<p>Click on the submissions tab in the left hand navigation bar and you should see your submissions.  There is a status message at the top of the page, but I have not actually found it accurate.  Currently I have one book review published and a few duplicate submissions whilst I was working this submission process out.  However, the status message says I have no stories accepted and two rejected, there seems to be no more details available about which posts have been accepted, pending or rejected.</p>
+<p>7) Wait. Be patient. Find something else to do.</p>
+<p>It can take quite a while for your review to be published.  I suggest setting your expectations at around 2 weeks.  If your review has not been published by then, perhaps it may never be published.</p>
+<p>If there is something is incorrect or missing from this guide please let me know. Thanks to to Bob Roberts of the Slashdot team for helping me understand the process.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://slashdotmedia.com/wp-content/uploads/2013/03/slashdot_logo_lrg_color.png" class="img-thumbnail">
+<p><a href="http://slashdot.org/" target="_blank" rel="noopener">Slashdot</a> is a great resource for lots of technical news and book reviews but I have experienced problems submitting book reviews and the <a href="http://slashdot.org/faq/bookreviews.shtml" target="_blank" rel="noopener">Slashdot book review guidelines</a> could be presented in a clearer way (with some pictures).<br>]]>
+    
+    </summary>
+    
+      <category term="bookreview" scheme="http://jr0cket.co.uk/tags/bookreview/"/>
+    
+      <category term="slashdot" scheme="http://jr0cket.co.uk/tags/slashdot/"/>
+    
+      <category term="book-reviews" scheme="http://jr0cket.co.uk/categories/book-reviews/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Inkscape Essentials for Web Designers]]></title>
+    <link href="http://jr0cket.co.uk/2011/02/book-review-inkscape-048-essentials-for.html.html"/>
+    <id>http://jr0cket.co.uk/2011/02/book-review-inkscape-048-essentials-for.html.html</id>
+    <published>2011-02-14T18:55:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://inkscape.org/design/images/inkscape-logo.svg" class="img-thumbnail">
+<p><a href="http://inkscape.org/" target="_blank" rel="noopener">Inkscape</a> is an open source 2D drawing tool that helps you create graphic designs, from simple buttons and logos to full blown posters and web page designs. Inkscape is similar to <a href="http://www.adobe.com/products/illustrator/" target="_blank" rel="noopener">Adobe Illustrator</a> or <a href="http://www.corel.com/servlet/Satellite/gb/en/Product/1191272117978" target="_blank" rel="noopener">CorelDraw</a> and gives you a vector based graphics tool that uses the W3C Scalable Vector Graphics (SVG) format.</p>
+<p>Inkscape is easy to use, although learning the tricks that make designing a web site look great are more involved.  Here is a book review for a new book about Inkscape.</p>
+<a id="more"></a>
+<h1 id="Overview-of-the-book"><a href="#Overview-of-the-book" class="headerlink" title="Overview of the book"></a>Overview of the book</h1><img src="http://www.packtpub.com/sites/default/files/imagecache/productview/2688OS_MockupCover.jpg" class="img-topic">
+<p>The <a href="http://www.packtpub.com/inkscape-0-48-essentials-for-web-designers/book" target="_blank" rel="noopener">Inkscape 0.48 Essentails for Web designers</a> is specifically focused on helping you to create your first web site designs and does a great job of getting you started.  Most if not all the techniques covered are relevant to creating other graphic works too, so its useful as a general Inkscape tutorial. </p>
+<p>I should say up front that If you are a web designer by trade you will know all the design aspects covered in the book, although the book will help you apply that knowledge in the latest version of Inkscape (version .048).</p>
+<blockquote>
+<p>Don’t be concerned by the seemingly low version number, this is a fully working application that has been used for production work for a number of years.</p>
+</blockquote>
+<p>For those wanting to get into graphic design or start creating their own works, the book is quite a useful starting point to learn about a few important design concerns.  Also, if you are a developer who works with graphic designers, you will find interest in understanding how graphic designs are created.  No technical skills are really required except the basics of using desktop software with a modern graphical user interface.  With no prior design knowledge, I was able to use Inkscape to do some basic posters, using the book has helped me do more involved designs and uses the more advanced features of Inkscape.</p>
+<p>Inkscape is open source software and is licensed under GNU General Public License (GPL) and there are many examples of works create with Inkscape under the creative commons licences - eg <a href="http://spreadubuntu.org/" target="_blank" rel="noopener">SpreadUbuntu.org</a></p>
+<img src="http://inkscape.org/screenshots/gallery/thumbs/inkscape-0.48-webdesign-text_thumb.png" class="img-topic">
+<p>While the focus on the book is Inkscape for web design, all the techniques are useful if you want to create advertising posters, desktop wallpapers, company logos, single page comics, etc.  The only limitation to using Inkscape, apart from your creativity and imagination, is that it only does a single page graphic in each inkscape window, but each graphic can be saved as individual images and made into a document using <a href="http://www.scribus.net/" target="_blank" rel="noopener">Scribus</a> or <a href="http://www.openoffice.org/" target="_blank" rel="noopener">OpenOffice</a> / <a href="http://www.libreoffice.org/" target="_blank" rel="noopener">LibreOffice</a> as Inkscape can save your designs using standard image formats (png, jpeg, svg, etc.)</p>
+<p>The book content is nice and clean, with content on pages nicely spaced out making the book really easy to read and follow, so no need to be daunted by the 316 page count.</p>
+<p>As the book progresses it assumes you have read earlier chapters so does not repeat exact details, for example the exact steps to create drop shadows is shown only once, keeping the book nice and to the point.  You will therefore get the most out of the book by following along with the exercises in Inkscape.</p>
+<p>So the book covers simple design techniques useful for any graphic design, along with lots of good ideas on how to design and enhancing your website, from site layouts, templates to animations.</p>
+<h1 id="The-book-in-more-detail"><a href="#The-book-in-more-detail" class="headerlink" title="The book in more detail"></a>The book in more detail</h1><p>An important starting point in the book is the overview of <a href="http://en.wikipedia.org/wiki/Vector_graphics" target="_blank" rel="noopener">vector graphics</a> and how they differ from <a href="http://en.wikipedia.org/wiki/Raster_graphics" target="_blank" rel="noopener">raster graphics</a> (eg. vector graphics scale uniformly and you dont get blur when scaling images).  This concisely sets the scene as to why vector graphics are better for web design - flexibility, quality and small file sizes.</p>
+<p>The Inkscape install guidance is nothing more than download and install but this is probably all you need.  There are a few hints for Mac Users to help them out.  There are packages available for Ubuntu and Debian based distributions in their respective distribution repositories.  A Microsoft Windows installer is also available from the <a href="http://inkscape.org/download/" target="_blank" rel="noopener">downloads section</a> of the Inkscape website.</p>
+<p>The tour of the Inkscape user interface is very detailed with a good indication of what you can do with all the controls that make up Inkscape.  There are just about enough drawings provided as examples, although I would have liked a few more images to make the tour a little clearer.  I recommend you read the Inkscape tour in dual page view if you are reading the ebook (pdf) version.</p>
+<p>The design concepts in the book start with web site layouts in chapter 2, steadily building each of the design aspects onto the site layout (images, text, patterns, icons, buttons and logos, site maps).  The book covers four basic design principles of Proximity, Alignment, Repetition, Contrast and suggests reading <cite>The Non-Designer’s Design Book: Design and Typographic Principles for the Visual Novice by Robin Williams</cite> for more detailed study.</p>
+<p>You are walked through step by step construction of a basic web page design - including header, footer, sidebar, content, navigation.  Using guides, grids and aligning techniques to manage your web page layout.  Pulling all the design work together to create a store-front for a website.  Its pretty hard to go wrong following these steps.  The book use the same web design jargon you get in industry and any jargon used is explained well enough.</p>
+<p>When you have created your web page design, you are shown how to slice up that design and export it as a series of image files (png) for use in the HTML code of the actual web page.  This is the same basic process as used in industry.  </p>
+<p>Throughout the book there are specific chapters on working with images, styling text, creating logos and buttons, using patterns for background images and more details on creating flow diagrams such as for creating web site maps.  </p>
+<p>Each chapter again builds on the previous information to give you an easy to follow guide and provides examples of why the design techniques covered here are important along with approaches to create the most suitable designs for your clients.</p>
+<p>There is nice coverage of how to use Inkscape and GIMP in collaboration to create your own animations for your website.  The animations are relatively simple but effective, scrolling text and a sailing boat on the sea, showning you the technique in more than enough detail for any website design using animated GIF images.</p>
+<p>Getting a little more technical at the end of the book, though still easy to follow, it covers the XML structures that Inkscape uses to hold your graphic designs.  These XML structures let you tweak your designs using Inkscapes XML editor.  There is also a reference section on the various plugins available for Inkscape, mentioning specifically Agave for colour palette management and Export to PDF CMYK for color separation for the CMYK standard.  There is also a section on how to create your own custom page templates.</p>
+<h1 id="What-I-would-have-liked-more-of"><a href="#What-I-would-have-liked-more-of" class="headerlink" title="What I would have liked more of"></a>What I would have liked more of</h1><p>I would have liked to see more information about filters that you can apply to your designs.&nbsp; There are a nice range of filters you can use in Inkscape and some are simple enough to use, but there are some that give great effects but have quite a few options you can tweek.&nbsp; There is plenty of scope for doing a whole chapter on using filters that would make the book more complete.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p><a href="http://www.packtpub.com/inkscape-0-48-essentials-for-web-designers/book" target="_blank" rel="noopener">Inkscape 0.48 essentials for Web Designers</a> is a great book to get started with Inkscape, especially if you are designing your own site.  For example, If you have installed wordpress and want to create some custom themes, then this book would be very helpful to make your site stand out from the crowd.</p>
+<p>There is an <a href="http://www.packtpub.com/inkscape-048-illustrators-cookbook/book" target="_blank" rel="noopener">Inkscape Illustrators Cookbook</a> out in April 2011 that seems more general compared to web developers book but as mentioned before, all the concepts presented in the web developers book are relevant for creating other graphic designs.</p>
+<p>The book never attempts to teach you all about design, that would require a much larger book.  There is enough design information in here to get you started on a good path and give you a good steer in the right direction.  The coverage of Inkscape is very detailed and will help you get the most out of the tool, whether you are using it for web development or other graphical design activities.</p>
+<p>This book makes a nice addition to the <a href="http://inkscape.org/doc/" target="_blank" rel="noopener">online resources available for Inkscape</a> and with its tutorial style is a good contrast to <a href="http://inkscape.org/books/" target="_blank" rel="noopener">other Inkscape books available</a> which may contain more reference material but are more general in nature.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://inkscape.org/design/images/inkscape-logo.svg" class="img-thumbnail">
+<p><a href="http://inkscape.org/" target="_blank" rel="noopener">Inkscape</a> is an open source 2D drawing tool that helps you create graphic designs, from simple buttons and logos to full blown posters and web page designs. Inkscape is similar to <a href="http://www.adobe.com/products/illustrator/" target="_blank" rel="noopener">Adobe Illustrator</a> or <a href="http://www.corel.com/servlet/Satellite/gb/en/Product/1191272117978" target="_blank" rel="noopener">CorelDraw</a> and gives you a vector based graphics tool that uses the W3C Scalable Vector Graphics (SVG) format.</p>
+<p>Inkscape is easy to use, although learning the tricks that make designing a web site look great are more involved.  Here is a book review for a new book about Inkscape.</p>]]>
+    
+    </summary>
+    
+      <category term="inkscape" scheme="http://jr0cket.co.uk/tags/inkscape/"/>
+    
+      <category term="book-reviews" scheme="http://jr0cket.co.uk/categories/book-reviews/"/>
+    
+  </entry>
+  
+</feed>

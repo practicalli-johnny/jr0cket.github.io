@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/presenting/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.306Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Share Your Revealjs Slides on Github Pages]]></title>
+    <link href="http://jr0cket.co.uk/2014/01/share-your-revealjs-slides-on-github-pages.html"/>
+    <id>http://jr0cket.co.uk/2014/01/share-your-revealjs-slides-on-github-pages.html</id>
+    <published>2014-01-03T23:50:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<p>In previous articles I showed how to <a href="http://jr0cket.co.uk/2013/09/create-html5-presentations-emacs-revealjs.html">setup Emacs Org-reveal &amp; Reveal.js</a> to <a href="http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html">generate your own presentations</a> from Emacs Org-mode files.  This time I’ll show you how to publish those presentations on <a href="http://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> as I have done for <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">my own presentations</a>.</p>
+<a id="more"></a>
+<p><a href="http://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> are a great place for publishing your <a href="http://lab.hakim.se/reveal-js/" target="_blank" rel="noopener">Reveal.js</a> presentations or any static web content.  For existing repositories you simply commit your content to a <code>gh-pages</code> branch or you can create a specific user or organisation repository and commit to the <code>master</code> branch.</p>
+<blockquote><p>Github Pages are great for any websites that is self-contained, in that there is no reliance on a database or other services running locally.  You can even create great looking pages without any coding by using the Github authoring tool, as I have done with my Github user home page.</p>
+</blockquote>
+<h2 id="How-to-use-Github-pages"><a href="#How-to-use-Github-pages" class="headerlink" title="How to use Github pages"></a>How to use Github pages</h2><p><strong>Existing code repositories</strong><br>If you already have a repository for your code and want to add web page documentation, then you can simply add a <code>gh-pages</code> branch and commit all your documentation to that branch.</p>
+<p><strong>Content only repositories</strong><br>If you only have content then you can create a user or organisation repository.  This is a specifically named repository in the form of <code>name.github.io</code>  where name is the exact name of your Github user account or the Github organisation you are part of.</p>
+<p>As my Github user account name is jr0cket I created an repository named <code>jr0cket.github.io</code>.</p>
+<p>Once created, you can type in the name of this repository into your browser and it will display any content you have committed into the repository (and pushed it to Github).</p>
+<p><strong>Separating slide content into their own repository</strong><br>As I planed to create a number of presentations, I use both an account repository as the home page and created a new repository called slides to host all my presentations.  This allows all my presentations to be easily cloned or forked by others easily without getting content that is only relevant to me on my Github pages home page. </p>
+<p>Keeping the presentations all in one repository keeps things simple should I define my own Reveal.js themes or if there are Reveal.js updates.</p>
+<p>I added  everything to the gh-pages branch (reveal.js, images, org &amp; generated html files).  Then I generate the Reveal.js slides locally using org-reveal in Emacs, so I can check they look okay.  Once I am happy with the slides I commit the html and .org files to Git and push them up to Github.</p>
+<h2 id="Setting-up-a-Github-Pages-account-repository"><a href="#Setting-up-a-Github-Pages-account-repository" class="headerlink" title="Setting up a Github Pages account repository"></a>Setting up a Github Pages account repository</h2><p>Creating an user repository on Github is just the same as for any other repository, except that the name must match the form name.github.io - where name is exactly the same as you Github user name.</p>
+<p>I created a new repository called <code>jr0cket.github.io</code>, this has a web address (URL) of <a href="http://jr0cket.github.io" target="_blank" rel="noopener">http://jr0cket.github.io</a></p>
+<p>I used the Automatic Page Generator from Github to create the site without coding and with a handful of nice templates to choose from.  You can of course add your own HTML, CSS &amp; JavaScript if you wish.  The Automatic Page Generator is in on the Settings page of your repository, under the Github pages section.  This section shows you the repository URL and a button to generate a page for you.</p>
+<p>If you are going to use your user or org repository for your slides, then jump to the secion on “Adding Reveal.js to your repository”<br>Creating a repository for your Reveal.js slides</p>
+<p>If you don’t already have a Github repository for your slides (and are not using your user or org repository), go to your account on Github and create a new repository.</p>
+<p>Then clone your Github repository locally (substituting the address of your repository)<br>git clone <a href="https://github.com/user/repository.git" target="_blank" rel="noopener">https://github.com/user/repository.git</a></p>
+<h2 id="Create-an-orphaned-gh-pages-branch"><a href="#Create-an-orphaned-gh-pages-branch" class="headerlink" title="Create an orphaned gh-pages branch"></a>Create an orphaned gh-pages branch</h2><p>Github pages publishes content only from the branch gh-pages (unless you are using a user or org repository).  In your local repository, create a new branch called gh-pages.  According to Github, the gh-pages branch should be an orphaned branch.</p>
+<pre><code>cd repository
+git checkout --orphan gh-pages
+</code></pre><p>An orphaned branch is one that is not connected to another branch, in this case its not attached to master.  Technically I don’t think gh-pages branch needs to be orphaned to publish your content, but this is the approach that Github recommends.</p>
+<p>Once you have the gh-pages branch you can commit your files to that branch as normal. </p>
+<pre><code>git add .
+git commit -m &quot;First pages commit&quot;
+git push origin gh-pages
+</code></pre><p>Pushing your Reveal.js slides at this point will not give you the desired results, as we haven’t added the Reveal.js files to the repository.  So lets do that next.</p>
+<h2 id="Adding-Reveal-js-to-your-repository"><a href="#Adding-Reveal-js-to-your-repository" class="headerlink" title="Adding Reveal.js to your repository"></a>Adding Reveal.js to your repository</h2><p>You need to provide the JavaScript and CSS files from Reveal.js to make your slides display correctly.  I copy the following folders from within the reveal.js folder into the root of my slides project</p>
+<pre><code>cp /path/to/revealjs/css    ~/my-slides
+cp /path/to/revealjs/js     ~/my-slides
+cp /path/to/revealjs/lib    ~/my-slides
+cp /path/to/revealjs/plugin ~/my-slides
+</code></pre><p>You also need to check that the HTML for your web pages references Reveal.js files correctly.  The best way to do this is in the configuration for Emacs Org-reveal.</p>
+<p>In my Org-reveal setup, I have defined the root for the Reveal.js files in my live-pack init.el file as follows:</p>
+<pre><code>(setq org-reveal-root &quot;&quot;)
+</code></pre><p>So long at this org-reveal setting is loaded, it shouldn’t matter which file you add it to in your Emacs configuration.</p>
+<p>The HTML you generate with Org-reveal in Emacs should have references to the Reveal.js includes in the <head><meta name="generator" content="Hexo 3.9.0"> section.  Here is an example:</head></p>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;title&gt;(My presentation title)&lt;/title&gt;
+&lt;meta name=&quot;author&quot; content=&quot;(John Stevenson)&quot;/&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/reveal.min.css&quot;/&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/theme/jr0cket.css&quot; id=&quot;theme&quot;/&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/print/pdf.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;/&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;My presentation title&quot;&gt;
+&lt;/head&gt;
+</code></pre><h2 id="The-final-push"><a href="#The-final-push" class="headerlink" title="The final push"></a>The final push</h2><p>Then push the Reveal.js files to your Github repository (and any updated to your Org &amp; html files)</p>
+<pre><code>git add .
+git commit -m &quot;Adding Reveal.js files for presentation&quot;
+git push origin gh-pages
+</code></pre><h2 id="Browsing-your-Slides"><a href="#Browsing-your-Slides" class="headerlink" title="Browsing your Slides"></a>Browsing your Slides</h2><p>If you added your slides to a user or org repository, then you should be able to browse to <a href="http://name.github.io" target="_blank" rel="noopener">http://name.github.io</a> where name is your Github user or org name (eg. <a href="http://jr0cket.github.io)" target="_blank" rel="noopener">http://jr0cket.github.io)</a>.</p>
+<p>If, like me, you created a seperate repository for all your slides, you can brows them by going to <a href="http://name.github.io/repo-name" target="_blank" rel="noopener">http://name.github.io/repo-name</a> where name is your Github user name and repo-name is the name of the repository you added Reveal.js and your slides to (eg. <a href="http://jr0cket.github.io/slides)" target="_blank" rel="noopener">http://jr0cket.github.io/slides)</a>.</p>
+<p>Note that you need to add the html filename to the URL to browse your presentation, or as I have done add links to the page on jr0cket.github.io</p>
+<h2 id="Using-Hub-as-an-alternative-way-to-create-your-Github-pages-repository"><a href="#Using-Hub-as-an-alternative-way-to-create-your-Github-pages-repository" class="headerlink" title="Using Hub as an alternative way to create your Github pages repository"></a>Using Hub as an alternative way to create your Github pages repository</h2><ul>
+<li>Install <a href="http://hub.github.com/" target="_blank" rel="noopener">Hub</a></li>
+<li>Create a folder called <code>name.github.io</code> on your laptop, where <em>name</em> is your Github user name or organisation name</li>
+<li>Inside that folder, initialise a git repository - <code>git init</code></li>
+<li>Rename the master branch to gh-pages - <code>git branch -m gh-pages</code></li>
+<li>Use hub to to create the repository on github - <code>hub create -d &quot;optional description of the repository&quot;</code></li>
+</ul>
+<p>If you want to specify the repository name using hub, use the command form - <code>hub create account-name.github.io -d &quot;optional description of the repository&quot;</code></p>
+<ul>
+<li>Create and commit your content in the local repository on the gh-branch, then push the <code>gh-pages branch to github - github push -u origin gh-pages</code></li>
+</ul>
+<p>The <code>-u</code> option sets github to be the default remote repository to and the gh-pages the default branch.  So when you do a push or pull you dont need to specify remote repository or branch you can just do git push and git pull</p>
+<h2 id="Example-Reveal-js-presentations-on-Github-pages"><a href="#Example-Reveal-js-presentations-on-Github-pages" class="headerlink" title="Example Reveal.js presentations on Github pages"></a>Example Reveal.js presentations on Github pages</h2><p>See my <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">Github page</a> for a list of my presentations created with Emacs Org-mode and Reveal.js.</p>
+<p>Thank you.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>In previous articles I showed how to <a href="http://jr0cket.co.uk/2013/09/create-html5-presentations-emacs-revealjs.html">setup Emacs Org-reveal &amp; Reveal.js</a> to <a href="http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html">generate your own presentations</a> from Emacs Org-mode files.  This time I’ll show you how to publish those presentations on <a href="http://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> as I have done for <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">my own presentations</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="emacs" scheme="http://jr0cket.co.uk/tags/emacs/"/>
+    
+      <category term="revealjs" scheme="http://jr0cket.co.uk/tags/revealjs/"/>
+    
+      <category term="presenting" scheme="http://jr0cket.co.uk/categories/presenting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Creating Cool Slides With Emacs Org-Mode and Revealjs]]></title>
+    <link href="http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html.html"/>
+    <id>http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html.html</id>
+    <published>2013-10-03T14:55:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://1.bp.blogspot.com/-PLeobToC6lc/TzFJCfBSLPI/AAAAAAAAEbE/zSx1cOgHzZE/s1600/emacs128x128icon.png" class="img-thumbnail">
+<p><a href="http://lab.hakim.se/reveal-js" target="_blank" rel="noopener">Reveal.js</a> has a whole bag of tricks to help you highlight the concepts in your presentations. I’ll show you how to write presentations with Emacs &amp; Org-mode that make use of these features, whilest keeping your content as markdown text.  I use a <a href="https://raw.github.com/jr0cket/slides/gh-pages/template-jr0cket.org" target="_blank" rel="noopener">simple template</a> with all the common features there as examples I can copy-n-paste.</p>
+<p>I also have a <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">Github pages site with example slides</a> I have created.</p>
+<a id="more"></a>
+<blockquote>
+<p>In a previous article I showed you <a href="http://blog.jr0cket.co.uk/2013/09/create-html5-presentations-emacs-revealjs.html" target="_blank" rel="noopener">how to configure Emacs, Org-reveal and Reveal.js</a> to create HTML5 presentations.</p>
+</blockquote>
+<h1 id="Creating-your-presentation"><a href="#Creating-your-presentation" class="headerlink" title="Creating your presentation"></a>Creating your presentation</h1><p>Using Emacs, create a file for your presentation and ensure that the filename has the .org extension.</p>
+<pre><code>C-x C f my-presentation.org
+</code></pre><blockquote>
+<p>You can create a new file in Emacs just by opening a file with the new filename.</p>
+</blockquote>
+<h1 id="Defining-the-Title-Slide"><a href="#Defining-the-Title-Slide" class="headerlink" title="Defining the Title Slide"></a>Defining the Title Slide</h1><p>There is a special set of tags you can use to define the title slide, including the theme and style of the overall presentation.</p>
+<p>At the top of the <code>my-presentation.org</code> file, add <code>Title</code>, <code>Author</code> and <code>Email</code> tags to create the tile slide.</p>
+<pre><code>#+Title: Presenting with Emacs
+#+Author: John Stevenson
+#+Email: @jr0cket
+</code></pre><blockquote>
+<p>At first I could not figure out how to add a twitter handle rather than an email address, then I realised I could put anytihng for the email address.  So I just put @jr0cket as the email address and it displays just fine on the rendered slides.</p>
+</blockquote>
+<h1 id="Setting-the-Presentation-Theme-and-Slide-behaviour"><a href="#Setting-the-Presentation-Theme-and-Slide-behaviour" class="headerlink" title="Setting the Presentation Theme and Slide behaviour"></a>Setting the Presentation Theme and Slide behaviour</h1><p>Once you have defined the overall configuration of the presentation, you can add a table of contents or include special formatting libraries like mathjax. </p>
+<p>I never use the table of contents as unless you have a short presentation it will run off the bottom of the screen.  Here is an example of not having a table of contents, but having mathjax available:</p>
+<pre><code>#+OPTIONS: toc:nil reveal_mathjax:t
+</code></pre><h2 id="Choosing-Themes"><a href="#Choosing-Themes" class="headerlink" title="Choosing Themes"></a>Choosing Themes</h2><p>You can choose from several built in presentations, including <strong>default</strong>, <strong>beige</strong>, <strong>sky</strong>, <strong>night</strong> (my favorite), <strong>serif</strong>, <strong>simple</strong>, <strong>moon</strong></p>
+<p>You can also make your own theme by creating a new CSS file and defining styles to for that theme.</p>
+<p>Define which theme you want using the code:</p>
+<pre><code>#+REVEAL_THEME: night
+</code></pre><h2 id="Transitions"><a href="#Transitions" class="headerlink" title="Transitions"></a>Transitions</h2><p>There are several built in styles of transition effects to move from one slide to another.  I find linear the most pleasing, as it simply slides the content in from the right or bottom to.  Cube is quite a nice rotating cube in the middle of the screen, so you may not get the full benefit of a wide screen display. Zoom is a bit to much for my delicate eyes.</p>
+<p>The available tranistions include: <strong>default, cube, page, concave, zoom, linear, fade, none</strong></p>
+<p>Define a transition before any of the slide content (before the first heading) using the code:</p>
+<pre><code>#+REVEAL_TRANS: linear    
+</code></pre><h1 id="Defining-Slides"><a href="#Defining-Slides" class="headerlink" title="Defining Slides"></a>Defining Slides</h1><p>Each slide is defined by using a <code>*</code> character in front of the title.  * is the top-level header for an Org-mode file, so you can collapse each slides content using the TAB key to make it easy to navigate whist creating that content.</p>
+<img src="http://github.com/yjwen/org-reveal/raw/master/images/hlevel.png" class="img-code">
+<p>Using a single <code>*</code> for a number of slide titles will create a series of slides you navigate horizontally.  If you define a slide with two <code>*</code> characters, then you create slides underneath the slide above.  These slides underneath are navigated vertically, giving a 2 dimensional effect to your presentation.</p>
+<pre><code>* title 1
+* title 2
+** sub-title 2.1
+** sub-title 2.2
+* title 3
+</code></pre><p>Each title is a seperate slide, however sub-title 2.1 and 2.1 are slides underneath title 2.  If you are on the title 2 slide and you press the left arrow, you will got to title 3 slide.  If you are on title 2 slide and press the down arrow, you will go to slide heading 2.1.</p>
+<p>So with this simple notation you can create a 2-dimentional presentation.</p>
+<h1 id="Adding-Slide-Content"><a href="#Adding-Slide-Content" class="headerlink" title="Adding Slide Content"></a>Adding Slide Content</h1><p>You can place what ever text you want underneath the heading to for the slide content</p>
+<pre><code>* A very interesting slide
+
+**This slide is interesting because I am a geek :)
+  - bullet points can be added in moderation
+  - dont get too carried away with them
+</code></pre><h1 id="Adding-Links"><a href="#Adding-Links" class="headerlink" title="Adding Links"></a>Adding Links</h1><p>Links to other web pages and resources can be added by simply including a web address in double square brackets:</p>
+<pre><code>[[web address]]   
+[[http://www.google.com]]   
+</code></pre><p>You can also mark text to be a link by placing the link text inside double square brackets as follows:</p>
+<pre><code>[[web address][clickable text]]
+[[http://www.google.co.uk] [Google search engine]]
+</code></pre><p>Any links defined will use the slide style for their colour, font and any animation styles.</p>
+<h1 id="Including-Images"><a href="#Including-Images" class="headerlink" title="Including Images"></a>Including Images</h1><p>You can include images in the presentation using the same kind of syntax for links.  Simply add the relative path of your image within double brackets</p>
+<pre><code>[[./images/org-reveal.png]]
+</code></pre><p>This will display an image from the file org-reveal.png in the images folder.  The same form is also used if you want to include images from web</p>
+<pre><code>[[http://web-address/image-name.png]]
+</code></pre><h1 id="Slide-Colours-and-Background-Images"><a href="#Slide-Colours-and-Background-Images" class="headerlink" title="Slide Colours and Background Images"></a>Slide Colours and Background Images</h1><p>You can set a different colour or image background for each slide, over-riding the presentation them chosen.  This is set by defining properties for each slide using the <code>:PROPERTIES:</code> notation.</p>
+<p>To define the colour of the slide background you can use an RGB coluor value or any supported CSS colour format. Here is a simple example of a slide with a red background </p>
+<pre><code>:PROPERTIES:
+:reveal_background: #FF0000
+:END:
+</code></pre><p>When setting a background image simply provide the relative path to that image. You can also make the background image slide in rather than fade in.</p>
+<p>This slide has a background image</p>
+<pre><code>:PROPERTIES:
+:reveal_background: ./logos/github-octopus.png
+:reveal_background_trans: slide
+:END:
+</code></pre><h2 id="Effects-within-Slides"><a href="#Effects-within-Slides" class="headerlink" title="Effects within Slides"></a>Effects within Slides</h2><p>You can animate specific parts of each slide using Fragment Options.  You can make your content <strong>grow</strong>, <strong>shrink</strong>, <strong>roll-in</strong> and <strong>fade-out</strong>.  You can also highlight the text in red, green and blue.</p>
+<ul>
+<li>This slide rolls in text line by line:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#+ATTR_REVEAL: :frag roll-in</span><br><span class="line">- show bullet-points</span><br><span class="line">- one by one</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Highlight the last bulletpoint in red</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- all these bullet-points</span><br><span class="line">- show up on the page</span><br><span class="line">- as soon as its shown</span><br><span class="line"></span><br><span class="line">#+ATTR_REVEAL: :frag highlight-red</span><br><span class="line">- this last one is then highlighted in red</span><br></pre></td></tr></table></figure>
+<h1 id="Generating-your-Reveal-js-presentation"><a href="#Generating-your-Reveal-js-presentation" class="headerlink" title="Generating your Reveal.js presentation"></a>Generating your Reveal.js presentation</h1><p>Once you have your presentation written you can generate the presentation with the command</p>
+<pre><code>M-x org-reveal-export-to-html
+</code></pre><p>This command creates a single index.html file that contains your whole presentation, except for any images you have used.  The <code>.html</code> file will be have the same name as your org-mode file, so if you created your content in <code>my-presentation.org</code> then you will generate <code>my-presentation.html</code>.</p>
+<p>If your links and images are all correctly referenced in your presentation, then simply opening my-presentation.html file in a browser will show you the end result.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>I really liked the presentations generated by Reveal.js and Org-reveal makes is easy to create presentations without having to hand code any JavaScript.  As my presentations are written in plain text then its easy to manage them with Git and collaborate with others via Github.</p>
+<p>The next step is to get these presentations in the Cloud.  I could use Heroku, although as this is just a static website and then <a href="http://pages.github.com/" target="_blank" rel="noopener"><strong>Github pages</strong></a> makes more sense.  I will cover deploying your presentations to Github pages in a follow-on article.</p>
+<p>I may also create my own theme by customising one of the existing cascading style sheets (CSS files) should I have issues with projectors but at the moment the night theme works well for me.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://1.bp.blogspot.com/-PLeobToC6lc/TzFJCfBSLPI/AAAAAAAAEbE/zSx1cOgHzZE/s1600/emacs128x128icon.png" class="img-thumbnail">
+<p><a href="http://lab.hakim.se/reveal-js" target="_blank" rel="noopener">Reveal.js</a> has a whole bag of tricks to help you highlight the concepts in your presentations. I’ll show you how to write presentations with Emacs &amp; Org-mode that make use of these features, whilest keeping your content as markdown text.  I use a <a href="https://raw.github.com/jr0cket/slides/gh-pages/template-jr0cket.org" target="_blank" rel="noopener">simple template</a> with all the common features there as examples I can copy-n-paste.</p>
+<p>I also have a <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">Github pages site with example slides</a> I have created.</p>]]>
+    
+    </summary>
+    
+      <category term="emacs" scheme="http://jr0cket.co.uk/tags/emacs/"/>
+    
+      <category term="revealjs" scheme="http://jr0cket.co.uk/tags/revealjs/"/>
+    
+      <category term="orgmode" scheme="http://jr0cket.co.uk/tags/orgmode/"/>
+    
+      <category term="presenting" scheme="http://jr0cket.co.uk/categories/presenting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Thats What I Call Visualisation... Black Holes]]></title>
+    <link href="http://jr0cket.co.uk/2012/01/this-is-what-i-call-visualisation.html.html"/>
+    <id>http://jr0cket.co.uk/2012/01/this-is-what-i-call-visualisation.html.html</id>
+    <published>2012-01-18T02:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<p>Trying to see the heart of our galaxy even though its black… thats a major task for any visualisation project.  Not forgetting the huge amound of space and the sheer volume of data required if you were going to map the galaxy accurately.  This kind of scope is what I think about when people start talking about “big data” analysis as it helps me determine how relatively big their big data project actually is.</p>
+<a id="more"></a>
+<p><a href="http://go.theregister.com/feed/www.theregister.co.uk/2012/01/18/picture_black_hole_galaxy/" target="_blank" rel="noopener">A Plan has been hatched to view Milky Way’s black hole heart - The Register</a></p>
+<p>The <a href="http://eventhorizontelescope.org/index.html" target="_blank" rel="noopener">Event Horizon Telescope</a> (EHT) team is looking for the ring of matter which forms around the edge of a black hole.</p>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/BH_LMC.png/300px-BH_LMC.png" class="img-code">
+<p>As the main feature of space is its black and the main feature of a black hole is black… how are you going to see them :-)</p>
+<p>If Einstein’s equations behind the General Theory of Relativity are correct, the matter around the edge of the event horizon will form a circle as it spins around the rim.  This will form an edge to an otherwise invisible shape and give some indication of scale of the center of our galaxy.  Exciting stuff.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Trying to see the heart of our galaxy even though its black… thats a major task for any visualisation project.  Not forgetting the huge amound of space and the sheer volume of data required if you were going to map the galaxy accurately.  This kind of scope is what I think about when people start talking about “big data” analysis as it helps me determine how relatively big their big data project actually is.</p>]]>
+    
+    </summary>
+    
+      <category term="visualisation" scheme="http://jr0cket.co.uk/tags/visualisation/"/>
+    
+      <category term="presenting" scheme="http://jr0cket.co.uk/categories/presenting/"/>
+    
+  </entry>
+  
+</feed>

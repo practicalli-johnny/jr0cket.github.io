@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/community/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.302Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Growing Your Developer Career]]></title>
+    <link href="http://jr0cket.co.uk/2016/01/growing-your-developer-career.html"/>
+    <id>http://jr0cket.co.uk/2016/01/growing-your-developer-career.html</id>
+    <published>2016-01-21T12:14:24.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<p>Just being a great developer or even a good one is not enough to create a great career.  How effective you are at communicating your skills, experience and the value you can bring to others really drives the quality of your career.  Luckily there are many ways to show off your skills, including those soft skills that are harder to quantify. </p>
+<p>It is not just recruiters &amp; human resources departments that can get you a job, but more and more it is other developers that bring you in to their teams.  The more developers who know who you are, the more opportunities will be presented to you.</p>
+<p>Activities you can do to boost your career include:</p>
+<ul>
+<li>Blogging &amp; technical content</li>
+<li>Social media for research and communication</li>
+<li>digital presence</li>
+<li>Meetups, Conferences and public speaking</li>
+<li>Understanding the modern recruitment process</li>
+</ul>
+<p>I will walk through this aspects to help you understand them in more detail and describe my experiences and any tips I have to share</p>
+<blockquote>
+<p>Previously I covered aspects of <a href="http://jr0cket.co.uk/2015/09/creating-a-digital-presence.html">creating your digital self</a> previously, covering a range of social media and developer community websites.</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="Classic-recruitment"><a href="#Classic-recruitment" class="headerlink" title="Classic recruitment"></a>Classic recruitment</h1><p>Most of the recruitment companies out there are not particularly progressive, essentially providing little more than collecting and shuffling CV’s.  These types of recruiters are solely focused on their own goals and you are just a name in their database.</p>
+<p>We will look at why these recruiters are considered evil and why community engaged recruiters are often a much better service.</p>
+<h2 id="Evil-recruiters"><a href="#Evil-recruiters" class="headerlink" title="Evil recruiters"></a>Evil recruiters</h2><p>While recruiters themselves are typically not evil, the system that they work within makes them seem so.  Most recruitement consultancies are all about the numbers, usually leaving a bad experience for all involved.</p>
+<p>Typically these recruitement companies engage with their clients (employers) to deliver results based on numbers (eg. 20 CV’s within 5 working days).  This leads to brute-force searches of all the CV’s they have collected for any relevant keywords for a particular job specification.</p>
+<p>If not enough results are found, then recruitment consultants will carry out similar brute-force searches on LinkedIn and Github to try and find possible candidates.  These searches are sometimes also used to find people who do not have a CV on file with the company.</p>
+<h3 id="Deailing-with-Evil-recruiters"><a href="#Deailing-with-Evil-recruiters" class="headerlink" title="Deailing with Evil recruiters"></a>Deailing with Evil recruiters</h3><p>It may still be worth dealing with a specific recruitment consultancy if they have the sole contract for a particular company you are interested in working with.</p>
+<p>I suggest that you send your CV as a pdf document to ensure that recruitement consultancy does not edit the document.  If they insist on a word document, include a reference to an online version and place it in a prominent place on your website (should the employer Google who you are).</p>
+<h2 id="Community-engaged-recruiters"><a href="#Community-engaged-recruiters" class="headerlink" title="Community engaged recruiters"></a>Community engaged recruiters</h2><p>Companies such as RecWorks &amp; eSynergy Solutions actively engage with technical communities in order to understand more effectively how the developer role continues to evolve.  Typically these companies deal with more forward thinking companies that have more progressive roles.</p>
+<p>They will probably not cover as wide a scope as evil recruiters, however it is usually a case of quality over quantity.</p>
+<p>These community engaged recruiters usually have a better relationship with you and are more open with their processes.  They also give back to the community and are in a better position to understand the trends in our industry.</p>
+<hr>
+
+<h1 id="The-modern-recruitment-process"><a href="#The-modern-recruitment-process" class="headerlink" title="The modern recruitment process"></a>The modern recruitment process</h1><h2 id="Developers-recruit-developers"><a href="#Developers-recruit-developers" class="headerlink" title="Developers recruit developers"></a>Developers recruit developers</h2><p>The more enlightened companies realise that developers are much more effective at finding good developers than the classic recruitment process.  In fact, many IT organisations and development teams are frustrated by the speed and quality of their own HR process and it can be seen as a blocker.</p>
+<blockquote>
+<p>I have join several companies via initial contact from the development team.  Often this is from meeting them at developer events either as an attendee or a speaker.  I also get recognition from blog posts.</p>
+</blockquote>
+<h3 id="Developer-team-recruitment-practices"><a href="#Developer-team-recruitment-practices" class="headerlink" title="Developer team recruitment practices"></a>Developer team recruitment practices</h3><h4 id="Pairing"><a href="#Pairing" class="headerlink" title="Pairing"></a>Pairing</h4><p>By spending a day with the company is a very effective way for them to understand what it will be like working with you.  It also gives you a great experience of what it would be like working with their developers.</p>
+<p>You may pair with one person all day, however its preferably to pair with different people during the day.</p>
+<p>My first experience with this was at a company that built online games.  They effectively hired me for 2 days as the recruitment process.  On paper it looked a great match and the first couple of hours were all positive.  However, as we got into the detail of what they were doing I grew concerned about their approach and didnt feel like I would be a good cultural fit.  In the end we parted after the first day as both sided realised it was not a great match.  I gained many interesting insights into how I think that day, which made it easier for me to assess any other potential roles.</p>
+<h4 id="Tests-Challenges"><a href="#Tests-Challenges" class="headerlink" title="Tests / Challenges"></a>Tests / Challenges</h4><p>I am weary of tests that do not let you access the Internet for answers.  Shutting you away from the tools you use regularly only testing your memory and not your ability to apply what you can learn.  Everyone writes code with the help of Google, Stack Exchange, etc and there is just too much to remember and from my point of view its more important to see how we can learn something new and apply it.</p>
+<p>Instead, setting a challenge and building it with a candidate is much more effective.  Having an exercise or challenge that you have recently done at work it a very valuable approach at it also lets the candidate understand the team they will be working with a little more.  There are also many kata-style challenges on the Internet to choose from if you cant come up with your own exercises.</p>
+<p>Some companies will even publish how to approach them via Github, eg <a href="https://vzaar.com/" target="_blank" rel="noopener">Vzaar</a>, a video hosting company publishes <a href="https://github.com/vzaar/note-to-recruiters/blob/master/ntr.md" target="_blank" rel="noopener">a note to recruiters</a></p>
+<h3 id="Preparing-for-tests"><a href="#Preparing-for-tests" class="headerlink" title="Preparing for tests"></a>Preparing for tests</h3><p>Its very common for you to be sent a coding challenge, so one way to improve your chances it to practice similar kinds of challenges.  Most sane challenges will probably be similar to one of the many <a href="https://en.wikipedia.org/wiki/Kata_%28programming%29" target="_blank" rel="noopener">coding kata</a> challenges.  Many of these are published on the Internet and if you get really stuck you may be able to find some suggested solutions (but its more effective to do as much as you can first).</p>
+<p>Another excellent way is to attend a code dojo, usually a couple of hours on an evening where you get into small groups and code up a challenge.  At the end you demonstrate what you have done, covering any challenges and lessons learned.  Code dojos are always welcoming to new starters and its a very collaborative event, all you need is a willingness to try.</p>
+<p>Examples of code dojo events include</p>
+<ul>
+<li><a href="http://www.meetup.com/London-Code-Dojo/" target="_blank" rel="noopener">London Code Dojo meetup</a> - dojo’s run most months</li>
+<li><a href="http://www.londonclojurians.org/" target="_blank" rel="noopener">London Clojurians Dojos</a> - up to 4 dojo’s per month</li>
+<li><a href="http://www.meetup.com/london-scala/" target="_blank" rel="noopener">London Scala Dojo</a> - monthly dojo, started by Andy Hicks &amp; myself in 2010</li>
+<li><a href="http://www.meetup.com/The-London-Python-Group-TLPG/" target="_blank" rel="noopener">London Python Dojo</a> - runs most months</li>
+</ul>
+<p>If you want to start you own Code Dojo, take a look at “<a href="http://ntoll.org/article/how-to-run-an-awesome-code-dojo" target="_blank" rel="noopener">How to run an awesome code dojo</a>“ by <a href="https://twitter.com/ntoll" target="_blank" rel="noopener">Nicholas Tollervey</a>.</p>
+<h1 id="Showing-your-development-skills"><a href="#Showing-your-development-skills" class="headerlink" title="Showing your development skills"></a>Showing your development skills</h1><p>By making the applications you build available via the Internet, with services like [Heroku], enables anyone to see what you can do and a chance to experience your work.  Think of this like an artist or model creating a portfolio of work.</p>
+<p>Actually having people use your work is a very powerful way to get attention.  If the developers you meet have used your apps then they will give you a lot of trust and have plenty of questions to ask you about, on a subject that you should be fairly comfortable with.</p>
+<p>If user experience (UX) is not your strongest area (and you dont want to create just another Twitter bootstrap site), then you can create a [webservice] or [API]. or that is either very useful or very funny (but be careful to not offend here).</p>
+<p>Examples of an API….</p>
+<ul>
+<li>Google Map API</li>
+<li>KeanIO Analysis in 60 seconds (check mobile browser tab)</li>
+<li>Twilio - set up your own service to respond to phone calls &amp; texts</li>
+<li>Braintree - add a payments system to your app</li>
+<li>Pusher - add websockets service to your app</li>
+</ul>
+<p>There are hundreds more you can find on Google or go to any hackathon event and the sponsors usually have API’s you can try out.</p>
+<h1 id="Hackathons"><a href="#Hackathons" class="headerlink" title="Hackathons"></a>Hackathons</h1><p>Another way to create something different is to take part in a Hackathon.  This is typically a weekend event where you have 24-36 hours to create something, usually as a small group (eg. 2-6 people).  Each group builds a web app, a mobile app or even something physical connected to a software service or app.  At the end of the hack each team usually has a few minutes to show off what they have built.</p>
+<p>Many hackathons have prizes for the teams they judge the best.  Event sponsors have their own prizes that they give out prizes for the team they like the most.  Prizes can range from cool gadgets &amp; toys to large cash prizes.  Because of prizes, there is more of a competition aspect to some hackathons, however, most remain collaborative regardless of the prizes on offer.</p>
+<p>Visit the meetup.com group called <a href="http://www.meetup.com/UK-Hackathons-and-Jams/" target="_blank" rel="noopener">Hackathons &amp; Jams</a> that lists many of the events happening in the United Kingdom.</p>
+<h1 id="Showing-your-code"><a href="#Showing-your-code" class="headerlink" title="Showing your code"></a>Showing your code</h1><img src="/images/github-logo-social-coding.png" class="img-topic">
+<p>If you want to show how good a developer you are to other developers, then share your code on Github.  If you create sometihng interesting then develops may star your project or follow you</p>
+<p>Here are some useful resources if you are still learning Git / Github</p>
+<ul>
+<li><a href="https://try.github.io" target="_blank" rel="noopener">Try Git</a></li>
+<li><a href="Git Tutorial by Atlassian">https://www.atlassian.com/git/tutorials</a></li>
+</ul>
+<h2 id="Recruitement-through-Github"><a href="#Recruitement-through-Github" class="headerlink" title="Recruitement through Github"></a>Recruitement through Github</h2><p>Some interesting articles on the subject of recruiting from Github, including details of what recruiters may be looking for include:</p>
+<ul>
+<li><a href="https://medium.com/@aiiane/github-for-recruiters-66868c57c79a" target="_blank" rel="noopener">Github for recruiters</a></li>
+<li><a href="http://www.eremedia.com/sourcecon/the-complete-guide-to-recruiting-and-sourcing-candidates-on-github/" target="_blank" rel="noopener">The complete guide to sourcing developers from Github</a></li>
+<li><a href="http://www.socialtalent.co/blog/how-to-use-github-to-find-super-talented-developers" target="_blank" rel="noopener">Use Github to find your Super-Talented developers</a></li>
+<li><a href="http://sourcingrecruitment.info/2015/05/github-and-stackoverflow-in-technical-recruitment/" target="_blank" rel="noopener">Github &amp; StackExchange for recruitement</a></li>
+</ul>
+<h1 id="Language-experiences-Polyglot-developers"><a href="#Language-experiences-Polyglot-developers" class="headerlink" title="Language experiences - Polyglot developers"></a>Language experiences - Polyglot developers</h1><p>Once developers have gained solid experience in there first language, many look to enhance their skills by trying a very different language.  A common choice is JavaScript, especially for those developers working on web user interfaces or needing to build lightweight services / API’s.</p>
+<p>More and more developers are learning a second or third major language, making them what we term Polyglot developers, in that they are comfortable coding with more than one language.</p>
+<p>A polyglot developer is very valuable as they can use the most appropriate language for the project at hand.  They understand the characteristics of a language and know why that language would be the best fit.</p>
+<p>A good starting point for this is by reading <a href>Seven Languages in Seven Weeks</a>.  This book teaches you the characteristics of seven languages, rather than trying to make you proficient in seven languages.</p>
+<h1 id="Contributing-to-Open-Source-Projects"><a href="#Contributing-to-Open-Source-Projects" class="headerlink" title="Contributing to Open Source Projects"></a>Contributing to Open Source Projects</h1><p>Most of the software world now runs on <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank" rel="noopener">open source software</a>, so there are a great many projects out there you can contribute to.  Many of these project can be found on <a href="https://github.com" target="_blank" rel="noopener">Github</a></p>
+<p>If you are interested in getting involved, choose a project you really like or some software you use often.  Check the project README file for details of how to contribute.  Projects on Github have a built in <strong>Issue Tracker</strong> where you can check for bugs that need fixing and any features requested.  If you start with one of these issues then let the project team know about it, either in the issue itself or in the chat room if the project has one.</p>
+<blockquote>
+<p>Many projects have IRC, Slack or Gitter based chat rooms to talk about the developent of a project.  Introduce yourself and let them know you are interested in helping out.</p>
+</blockquote>
+<p>If you are looking for projects to contribute, talk at look at <a href="https://twitter.com/yourfirstpr" target="_blank" rel="noopener">Your First PR</a> on Twitter.</p>
+<blockquote>
+<p>Open Source Projects usually have a license, defining the terms of use for the software.  By UK law, the authors of the sorouce retain copywrite of that software, unless specifically over-ridden by the license.  The Open Source Initiative has a list of <a href="http://opensource.org/licenses/category" target="_blank" rel="noopener">Open Source licenses</a></p>
+</blockquote>
+<blockquote>
+<p><a href="http://creativecommons.org/" target="_blank" rel="noopener">Creative Commons</a> is a similar license usually for creative works such as images, videos, blogs &amp; books</p>
+</blockquote>
+<h1 id="Writing-tutorials-amp-blog-posts"><a href="#Writing-tutorials-amp-blog-posts" class="headerlink" title="Writing tutorials &amp; blog posts"></a>Writing tutorials &amp; blog posts</h1><p>Writing a tutorials &amp; blog posts are a great way to review how much you understand about a topic.  Its also a great way to get feedback from the community, who can offer additional technologies &amp; approached to try out.</p>
+<p>A great tool for writing tutorials and ebooks is <a href="https://www.gitbook.com/" target="_blank" rel="noopener">Gitbook</a>.  You can write your content in [Markdown] and Gitbook will generate a fully navigable website and a range of ebook formats. </p>
+<h1 id="Helping-amp-Mentoring-via-StackExchange-or-forums"><a href="#Helping-amp-Mentoring-via-StackExchange-or-forums" class="headerlink" title="Helping &amp; Mentoring via StackExchange or forums"></a>Helping &amp; Mentoring via StackExchange or forums</h1><p>There are lots of opportunities to help other developers at websites such as <a href="http://stackoverflow.com" target="_blank" rel="noopener">StackExchange</a>.  Find a topic you have experience in or even something you are currently learning.  There are lots of questions at various skill levels and so there should be some you can answer.</p>
+<blockquote>
+<p>Actually for some questions you can practice Googl’ing for the answer.  Its amazing how many answers you can find out there, either in one post or accross a few different posts.  You can also help keep StackExchange useful by idenifying duplicate questions.</p>
+</blockquote>
+<h1 id="Speaking-at-conferences-amp-meetups"><a href="#Speaking-at-conferences-amp-meetups" class="headerlink" title="Speaking at conferences &amp; meetups"></a>Speaking at conferences &amp; meetups</h1><p>Speaking at conferences can seem quite dawnting, but its invaluable experience.  If you can talk to an audience of 50 people you can easily talk to your team and the rest of the business you work for.</p>
+<p>Obviously speaking at events helps you get noticed and gives you a good standing with employers.  When you are speaking you are also helping to promote your employer too, even if you are not directly talking about anything your employer does.</p>
+<p>I suggest starting small with a local meetup and giving what is called a Lightning Talk.  This is a 5 to 10 minute talk on a specific topic and is a good way to start to build up some confidence.</p>
+<p>There are plenty of expert speakers out there, but everyone had to start small and work their way up to bigger talks</p>
+<blockquote>
+<p>Everyone has something they do that is of interest to others, it can be as simple as sharing your experiences of a language feature or new technology.</p>
+</blockquote>
+<p>My first talk was on Personal Kanban, it was an agile technique I had been using for a few months and it had made a big difference to the way I worked.  I did a 30 minute talk on the subject and although it felt like hard work and not very good, I got lots of positive feedback from the audience.</p>
+<h2 id="Top-tips-for-speaking"><a href="#Top-tips-for-speaking" class="headerlink" title="Top tips for speaking"></a>Top tips for speaking</h2><ul>
+<li><p>Have a point (or three) you want to get across - its good to be focused in your talk, trying to cover too many things in a talk can be quite confusing for an audience.</p>
+</li>
+<li><p>Tell a story around the point you want to make, as context makes it easier for people to relate and remember your point.</p>
+</li>
+<li><p>Draw from your own experiences.  Nothing is more powerful for an audience than someone sharing their own challenges &amp; solutions.</p>
+</li>
+<li><p>Practice your talk - either with yourself or with others.  If you have a talk for a conference, then get some colleagues together at lunchtime or find a meetup a few weeks before your talk and give a shorter version of your talk.  This is a great way to get feedback and refine your presentation.</p>
+</li>
+</ul>
+<p>Thank you<br><a href="@jr0cket">https://twitter.com/jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Just being a great developer or even a good one is not enough to create a great career.  How effective you are at communicating your skills, experience and the value you can bring to others really drives the quality of your career.  Luckily there are many ways to show off your skills, including those soft skills that are harder to quantify. </p>
+<p>It is not just recruiters &amp; human resources departments that can get you a job, but more and more it is other developers that bring you in to their teams.  The more developers who know who you are, the more opportunities will be presented to you.</p>
+<p>Activities you can do to boost your career include:</p>
+<ul>
+<li>Blogging &amp; technical content</li>
+<li>Social media for research and communication</li>
+<li>digital presence</li>
+<li>Meetups, Conferences and public speaking</li>
+<li>Understanding the modern recruitment process</li>
+</ul>
+<p>I will walk through this aspects to help you understand them in more detail and describe my experiences and any tips I have to share</p>
+<blockquote>
+<p>Previously I covered aspects of <a href="http://jr0cket.co.uk/2015/09/creating-a-digital-presence.html">creating your digital self</a> previously, covering a range of social media and developer community websites.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="community" scheme="http://jr0cket.co.uk/categories/community/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Building Your Online Persona for Fun and Profit]]></title>
+    <link href="http://jr0cket.co.uk/2011/12/building-your-online-persona-for-fun-and-profit.html.html"/>
+    <id>http://jr0cket.co.uk/2011/12/building-your-online-persona-for-fun-and-profit.html.html</id>
+    <published>2011-12-16T10:09:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<p>There is an ever growing number of software developers in the world and a very limited number of rewarding jobs, so how do you make yourself noticed without killing yourself working crazy hours?&nbsp;</p>
+<p>Here are just a few ideas…</p>
+<h1 id="Social-Coding…-share-your-code"><a href="#Social-Coding…-share-your-code" class="headerlink" title="Social Coding… share your code"></a>Social Coding… share your code</h1><img src="http://4.bp.blogspot.com/-r6gpmbm2UE0/TusOpmiQ--I/AAAAAAAABKc/pjDZ-I41yAg/s1600/github-octopus-test.png" class="img-thumbnail"> 
+<p>There is a steadily growing move away from the traditional HR route to getting a job, especially for those great jobs.&nbsp; The most common approach seems to be scanning code repositories such as Github.</p>
+<p>Its not surprising that one of the main skills an employer is looking for is good code, but how much code do you put on your CV? </p>
+<p>Developers have seen the benefits of sharing their pet projects (it worked for Linus Torvald) and its a great way to show off not just your skills but also you interests.</p>
+<p>I <a href="https://github.com/jr0cket" target="_blank" rel="noopener">share the code</a> I help create at coding dojos and those kind of events are a great way to show of your interest in learning something new.</p>
+<p>Good employers also look for active committers on open source projects to understand the quality a developer can provide.&nbsp; Working on an open source project is a demonstration of how well you can work in a team.&nbsp; Not only showing code, but also helping other developers with problems and how they deal with the community of users around the project.</p>
+<h1 id="Get-Linked-In"><a href="#Get-Linked-In" class="headerlink" title="Get Linked In"></a>Get Linked In</h1><p>LinkedIn is simple, its like your traditional online CV and a no-brainer to keep current so people can see your general history.&nbsp; I also include any significant community involvement on my profile, to give a more complete picture.</p>
+<h1 id="Get-social…-learn-to-tweet-effectively"><a href="#Get-social…-learn-to-tweet-effectively" class="headerlink" title="Get social… learn to tweet effectively"></a>Get social… learn to tweet effectively</h1><img src="http://3.bp.blogspot.com/-VIi0iC7c2-k/TusJIbR2V4I/AAAAAAAABKM/w7iG4_0XzkM/s1600/twitter-logo-bird-text-medium.jpg" class="img-thumbnail">
+<p>I didnt get twitter at first, until I saw tools like <a href="http://www.tweetdeck.com/" target="_blank" rel="noopener">Tweetdeck</a> (a great startup success story in the UK) and <a href="http://hootsuite.com" target="_blank" rel="noopener">Hootsuite</a>.  These tools allow you to filter out noise and turn twitter into an excellent research and communication tool.&nbsp; If there is some great event happening, an interesting article to read, or a cool new project update, you can usually find it out first on twitter.</p>
+<p>The other aspect to twitter is following interesting people - or as is more common, following interesting hash-tags - eg. #LJCJug for the London Java Community or #Clojure for discussions on the functional programming language.&nbsp; Most technical events have a hash tag so you can give feedback and share the lessons learnt from those events.</p>
+<p>Although many people share their blog posts by twitter, its not a complete replacement for for RSS feeds, rather it is a good way to find blogs that are worth reading and adding them to your feed reader (eg. Google Reader).</p>
+<h2 id="Twitter-tools"><a href="#Twitter-tools" class="headerlink" title="Twitter tools"></a>Twitter tools</h2><ul>
+<li><a href="http://www.hootsuite.com/" target="_blank" rel="noopener">Hootsuite</a> (web 2.0), </li>
+<li><a href="http://www.tweetdeck.com/" target="_blank" rel="noopener">Tweetdeck</a> (desktop, mobile app)</li>
+</ul>
+<h1 id="Blogging-don’t-forget-to-share-your-thoughts…"><a href="#Blogging-don’t-forget-to-share-your-thoughts…" class="headerlink" title="Blogging - don’t forget to share your thoughts…"></a>Blogging - don’t forget to share your thoughts…</h1><img src="http://code.google.com/apis/blogger/images/gdata-blogger-icon.png" class="img-thumbnail">
+<p>Your code does not tell the whole story, so why not share your thoughts, opinions and aspirations.&nbsp; Having a blog is not about telling the world what they should be doing, but showing leadership in the discussion of worthy topics.</p>
+<p>Rather than try starting language wars, interesting blogs are those that encourage you to improve and give you the tools to do so.&nbsp; Have a look at the range of topics covered on the London Java Community blog aggregation site, agrity.</p>
+<p>Blogging tools: <a href="http://blogger.com/" target="_blank" rel="noopener">blogger.com</a> , <a href="http://wordpress.com/" target="_blank" rel="noopener">wordpress.com</a></p>
+<blockquote>
+<p>Update (May 2014): I have moved away from the classic blogging platforms to something lightweight and much easier to use.  I now use <a href="http://hexo.io" target="_blank" rel="noopener">Hexo.io</a> to generate my blog and static websites and deploy them to <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a></p>
+</blockquote>
+<h1 id="Events…-step-away-from-the-keyboard"><a href="#Events…-step-away-from-the-keyboard" class="headerlink" title="Events… step away from the keyboard"></a>Events… step away from the keyboard</h1><img src="http://2.bp.blogspot.com/-hDVu363NrJQ/TusdxybhRHI/AAAAAAAABKk/lI1hKevZQ0A/s1600/ljc-conf-associates.jpg" class="img-thumbnail">
+<p>Being part of a great technical community also includes events outside of the Internet and is a great way to build meaningful connections with people.</p>
+<p>There are hundreds of amazing technical communities in the UK and I find it very rewarding (socially and financially) to be <a href="http://john.jr0cket.co.uk/community" target="_blank" rel="noopener">a part of many of them</a>.</p>
+<p><a href="http://meetup.com/" target="_blank" rel="noopener">Meetup.com</a> is a great tool for organising events and getting feedback from the community as to what kind of events to run.</p>
+<p><a href="http://lanyrd.com/" target="_blank" rel="noopener">Lanyrd</a> is a social conference website where the community creates and manages events.&nbsp; It allows you to pull together all the information around the conference too - such as videos of the events, presentation slides, speaker lists, etc.&nbsp; Lanyrd is great for building up your speaker profile, when you get round to speaking at events :-)</p>
+<h1 id="Public-speaking…-interact-with-lightning-talks-amp-presentations"><a href="#Public-speaking…-interact-with-lightning-talks-amp-presentations" class="headerlink" title="Public speaking… interact with lightning talks &amp; presentations"></a>Public speaking… interact with lightning talks &amp; presentations</h1><img src="http://3.bp.blogspot.com/-SCKUw5pRbBQ/Tusd0N3VGZI/AAAAAAAABKs/L7b7PdNdB0Y/s1600/ljc-conf-lightning-talks.jpg" class="img-thumbnail">
+<p>Talking to people shouldn’t be a scary thing, we are all human after all.&nbsp; As with most things the more you practice speaking, the more confident you become.&nbsp; Start with topics you are comfortable with and do small presentations eg. a 5 minute lightning talk.</p>
+<p>Speaking at a community event is a great opportunity to talk to a friendly audience and get positive feedback.&nbsp; Its easy to get lots of ideas on how you can continually improve.</p>
+<p>An added bonus to speaking in public is that is makes speaking at an interview seem a great deal easier.&nbsp; You will have more to talk about and will have explored many different ways to try explain things.</p>
+<h2 id="Event-tools"><a href="#Event-tools" class="headerlink" title="Event tools"></a>Event tools</h2><ul>
+<li><a href="http://meetup.com/" target="_blank" rel="noopener">Meetup.com</a></li>
+<li><a href="http://lanyrd.com/" target="_blank" rel="noopener">Lanyrd</a> </li>
+<li><a href="http://jr0cket.github.io/slides/even-developers-can-present.html" target="_blank" rel="noopener">Even Developers can present</a></li>
+<li><a href="http://www.amazon.co.uk/Confessions-Public-Speaker-Scott-Berkun/dp/0596801998" target="_blank" rel="noopener">Book: Confessions of a public speaker</a></li>
+</ul>
+<h1 id="Sometimes-a-blog-is-not-enough"><a href="#Sometimes-a-blog-is-not-enough" class="headerlink" title="Sometimes a blog is not enough"></a>Sometimes a blog is not enough</h1><p>I’ve used <a href="http://john.jr0cket.co.uk/" target="_blank" rel="noopener">Google sites</a> as a great learning tool for myself and a simple way to share my learning experiences with others.&nbsp; Whist a blog post series can help you learn, there is always a trade off with brevity.&nbsp; A really long blog can quickly becomes irrelevant and dull (hopefully not this one).&nbsp; However a well organised website allows you to find the relevant information you need quickly.</p>
+<p>The websites I build also show the level of understanding I have gained and I always feel I have learnt more when I write down (and draw) what I have learnt.&nbsp; As you build up the site, you have reference materials you can refer to from your blog posts, allowing you to keep those articles focused and interesting.</p>
+<p>To support this blog I have therefore added an <a href="http://john.jr0cket.co.uk/online-persona" target="_blank" rel="noopener">online persona section</a> to my website.</p>
+<blockquote>
+<p>Update (May 2014): I have moved away from the classic blogging platforms to something lightweight and much easier to use.  I now use <a href="http://hexo.io" target="_blank" rel="noopener">Hexo.io</a> to generate my blog and static websites and deploy them to <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a></p>
+</blockquote>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>By sharing a little of who you are and what you do, the basics of your personality, helps open up opportunities that you many not have otherwise had.  </p>
+<p>If you keep your online presence an honest reflection of yourself then its a great way to establish meaingful communication with the wider world.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>There is an ever growing number of software developers in the world and a very limited number of rewarding jobs, so how do you make yours]]>
+    </summary>
+    
+      <category term="persona" scheme="http://jr0cket.co.uk/tags/persona/"/>
+    
+      <category term="community" scheme="http://jr0cket.co.uk/categories/community/"/>
+    
+  </entry>
+  
+</feed>

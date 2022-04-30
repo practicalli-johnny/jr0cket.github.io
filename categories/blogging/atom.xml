@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/blogging/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.290Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Blogging for Developers With Hexo]]></title>
+    <link href="http://jr0cket.co.uk/2016/06/blogging-for-developers-with-hexo.html"/>
+    <id>http://jr0cket.co.uk/2016/06/blogging-for-developers-with-hexo.html</id>
+    <published>2016-06-04T12:23:08.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Using a <strong>Static Site Generators</strong> like <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> gives a developer a very fast blogging workflow, using familiar tools and giving the ability to write offline.  Content is written in markdown, keeping it portable between any blog generators and making it easy to version in Git. You can also use Git to deploy your site quickly, even over slow networks.</p>
+<p>Static sites can be hosted anywhere and are fast to serve and easy to cache.  For example, <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> offers a very fast way to host your site.</p>
+<p>Lets take a look at Hexo, my favourite static site generator.</p>
+<a id="more"></a>
+<h1 id="Blogging-with-Hexo"><a href="#Blogging-with-Hexo" class="headerlink" title="Blogging with Hexo"></a>Blogging with Hexo</h1><img src="/images/hexo-workflow-commands.png" class="img-topic">
+<p>Hexo has a very simple workflow.  First you create a blog website: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>This gives you a new Hexo website with a responsive design theme, a working blog and a sample article.</p>
+<p>Then simply create new posts with the command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;blog post title&quot;</span><br></pre></td></tr></table></figure>
+<p>This creates a new file under <code>sources/_posts/blog-post-title.md</code>.  Edit this file and write your blog in markdown.</p>
+<p>You can view your blog at any time via a local hexo server.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
+<p>As you save the blog posts you are writing you can see the changes via this local server, so you know what the site looks like before you deploy your posts.</p>
+<h1 id="Deploying-your-blog-amp-posts"><a href="#Deploying-your-blog-amp-posts" class="headerlink" title="Deploying your blog &amp; posts"></a>Deploying your blog &amp; posts</h1><p>As Hexo creates a set of HTML, JavaScript &amp; CSS files for your blog can deploy it on any web server.</p>
+<p>I use <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> to host my blog as its incredibly fast and easy to use.  Using a repository called <code>jr0cket.github.io</code> on my jr0cket account, Github Pages serves up the content at [<a href="http://jr0cket.github.io]" target="_blank" rel="noopener">http://jr0cket.github.io]</a> from the <code>master</code> branch.  Hexo is configured to deploy to this repository.</p>
+<p>Read my <a href="http://jr0cket.co.uk/2014/04/getting-started-with-hexo---a-modern-static-site-generator.html">getting started with Hexo</a> article to create your first Hexo website and start writing blogs</p>
+<h1 id="Customising-your-posts"><a href="#Customising-your-posts" class="headerlink" title="Customising your posts"></a>Customising your posts</h1><p>Each post is created from a template, which you can also customise in <code>scaffolds/post.md</code> or create new templates in <code>scafolds</code>.</p>
+<p>Here is an example template I created when writing blog posts about hexo.  It sets the category and tags as well as the topic image.  I create a new blog post with <code>hexo new hexo &quot;blog post title&quot;</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: blogging</span><br><span class="line">tags: </span><br><span class="line">- hexo</span><br><span class="line">---</span><br><span class="line">&#123; img img-thumbnail /images/hexo-logo.png &#125;</span><br><span class="line"></span><br><span class="line">Thank you.</span><br><span class="line">[@jr0cket](https://twitter.com/jr0cket)</span><br></pre></td></tr></table></figure>
+<h1 id="Customising-themes"><a href="#Customising-themes" class="headerlink" title="Customising themes"></a>Customising themes</h1><p>Landscape is the default Hexo theme and was created with responsive design principles, so it works well on all devices.  You can also use one of the many <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo themes</a> or create your own theme.</p>
+<p>See <a href="http://jr0cket.co.uk/hexo/">how I created my own version of the Hexo Landscape theme</a>.</p>
+<h1 id="Using-Git-for-content-amp-git-submodules-for-themes"><a href="#Using-Git-for-content-amp-git-submodules-for-themes" class="headerlink" title="Using Git for content &amp; git submodules for themes"></a>Using Git for content &amp; git submodules for themes</h1><img src="/images/hexo-logo.png" class="img-topic">
+<p>As the markdown you write is text-based then its easy to use Git to manage versions of your content effectively.  Git can also be used to manage any theme you create. </p>
+<p>I created my own theme and rather than keep it in the same repository, I used Git submodules to manage theme and content changes seperately.</p>
+<img src="https://lh3.googleusercontent.com/-VuoPUgPuNV8/U4uIHw5YjoI/AAAAAAAAOTs/7PF8HvWrwIQ/w320-h240-no/git-submodules-concept.png" class="img-code">
+<p>Read in more detail how I used <a href="/hexo/using-git-submodules-for-custom-hexo-theme.html">Git Submodules for managing content seperately from a custom theme</a>.</p>
+<h1 id="Why-not-just-use-blogging-platforms"><a href="#Why-not-just-use-blogging-platforms" class="headerlink" title="Why not just use blogging platforms"></a>Why not just use blogging platforms</h1><p>There are a large number of blogging platforms (wordpress, blogger, etc) that initially seem quick and simple to use.  However, you soon discover their limitations and how slow they can be.  If you want to customise themes then it becomes challenging or event impossible due to restrictions.</p>
+<p>These services require you to create your content online which depends on you having a fast internet connection as you write.  Most platforms were built several years ago, so are not always the most efficient and as they are typically database driven you end up with lots of round trip requests.  So these platforms are not great if you are traveling into work, on your way to an event or at a conference where the WiFi is not great.</p>
+<p>There are also proprietary plugins with some of these services that tie you into them and it is not always easy to migrate to another service.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Using a <strong>Static Site Generators</strong> like <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> gives a developer a very fast blogging workflow, using familiar tools and giving the ability to write offline.  Content is written in markdown, keeping it portable between any blog generators and making it easy to version in Git. You can also use Git to deploy your site quickly, even over slow networks.</p>
+<p>Static sites can be hosted anywhere and are fast to serve and easy to cache.  For example, <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> offers a very fast way to host your site.</p>
+<p>Lets take a look at Hexo, my favourite static site generator.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Theme - Creating Image Styles]]></title>
+    <link href="http://jr0cket.co.uk/2014/06/hexo-theme-creating-image-styles.html"/>
+    <id>http://jr0cket.co.uk/2014/06/hexo-theme-creating-image-styles.html</id>
+    <published>2014-06-20T17:38:18.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Adding images to a blog post helps the audience undersand what the will get from reading the article and if it will be relevant for the.  Images also aid the understanding of the topic you are covering, especially if you are explaining something technical or more complicated.</p>
+<p>The default theme for hexo only provides a single image style, so here I will create several styles of image to help convey the topic and details of every post.</p>
+<a id="more"></a>
+<h1 id="Adding-image-logos-to-posts"><a href="#Adding-image-logos-to-posts" class="headerlink" title="Adding image logos to posts"></a>Adding image logos to posts</h1><p>I like to have logos on images to provide a quick visual way to identify the topic of an article.  This is similar to other sites such as <a href="http://slashdot.org" target="_blank" rel="noopener">Slashdot</a>.  </p>
+<p>If I simply add an image then it will be placed in the middle of the article area, this does not look that great and takes up a lot of space.</p>
+<img src="/images/hexo-theme-image-default-style.png" class="img-code">
+<p>To make better use of space and improve the design, I created a style called <code>img-thumbnail</code>.  The style ensures that each image displays on the left and be no bigger than 240 pixels wide and 96 pixels high.</p>
+<figure class="highlight css"><figcaption><span>/themes/landscape/source/css/_partial/article.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.img-thumbnail</span></span><br><span class="line">  <span class="selector-tag">max-width</span>: 240<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">max-height</span>: 96<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">block</span></span><br><span class="line">  <span class="selector-tag">margin-right</span>: 12<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">margin-top</span>: 12<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">float</span>: <span class="selector-tag">left</span></span><br><span class="line">  <span class="selector-tag">clear</span>: <span class="selector-tag">left</span></span><br></pre></td></tr></table></figure>
+<p>Here is an example of what the <code>img-thumbnail</code> style looks like in the websites</p>
+<img src="/images/hexo-theme-images-style-thumbnail.png" class="img-code">
+<h1 id="Adding-image-style-for-screenshots"><a href="#Adding-image-style-for-screenshots" class="headerlink" title="Adding image style for screenshots"></a>Adding image style for screenshots</h1><p>Some images will be screenshots of the command line, code and developer tools in actoin.  These images will be centrally placed as normal, but will have specific height and with contraints to make sure all the images are big enough to view yet stil fit on the page.</p>
+<figure class="highlight css"><figcaption><span>/themes/landscape/source/css/_partial/article.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.img-screenshot</span></span><br><span class="line">  <span class="selector-tag">max-width</span>: 640<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">max-height</span>: 320<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">block</span> </span><br><span class="line">  <span class="selector-tag">margin-left</span>: <span class="selector-tag">auto</span></span><br><span class="line">  <span class="selector-tag">margin-right</span>: <span class="selector-tag">auto</span>  </span><br></pre></td></tr></table></figure>
+<p>Here is an example of what the <code>img-screenshot</code> style looks like in the websites</p>
+<img src="/images/hexo-theme-image-code.png" class="img-code">
+<h1 id="Adding-images-for-topics-discussed"><a href="#Adding-images-for-topics-discussed" class="headerlink" title="Adding images for topics discussed"></a>Adding images for topics discussed</h1><p>During an article I may talk about several different topics and what to visually highlight what topic is being disscussed.  So again I created another image style, this time placing the image on the right hand side of the content and allowing a bigger size.</p>
+<figure class="highlight css"><figcaption><span>/themes/landscape/source/css/_partial/article.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.img-topic</span></span><br><span class="line">  <span class="selector-tag">max-width</span>: 360<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">max-height</span>: 1800<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">block</span> </span><br><span class="line">  <span class="selector-tag">margin-left</span> 12<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">margin-right</span>: 12<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">float</span>: <span class="selector-tag">right</span></span><br><span class="line">  <span class="selector-tag">clear</span>: <span class="selector-tag">right</span></span><br></pre></td></tr></table></figure>
+<p>Here is an example of what the <code>img-topic</code> style looks like in the websites</p>
+<img src="/images/hexo-theme-images-style-topic.png" class="img-code">
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>By setting up different styles it makes it very easy to layout images in an article, using just one style name.  This helps me make each blog post more visually appealing to look at and therefore a better experience for the reader (and myself).</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Adding images to a blog post helps the audience undersand what the will get from reading the article and if it will be relevant for the.  Images also aid the understanding of the topic you are covering, especially if you are explaining something technical or more complicated.</p>
+<p>The default theme for hexo only provides a single image style, so here I will create several styles of image to help convey the topic and details of every post.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Theme - Using Ubuntu Google Fonts]]></title>
+    <link href="http://jr0cket.co.uk/2014/06/hexo-theme-using-ubuntu-google-fonts.html"/>
+    <id>http://jr0cket.co.uk/2014/06/hexo-theme-using-ubuntu-google-fonts.html</id>
+    <published>2014-06-16T22:37:17.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>The font that comes with the default hexo fault is quite nice, however, I like using the Ubuntu font especially for code.  As the Hexo theme uses Google fonts in some places already, then it was really easy to change which one Hexo uses.  Here I will show you how to change over to the Ubuntu font family for text and sorce code using <a href="http://www.google.com/fonts" target="_blank" rel="noopener">Google Fonts</a>.</p>
+<a id="more"></a>
+<h1 id="Defining-fonts-in-Hexo"><a href="#Defining-fonts-in-Hexo" class="headerlink" title="Defining fonts in Hexo"></a>Defining fonts in Hexo</h1><p>As Hexo uses Google Fonts by default, then you can simply define which font you want by using the font name.  The default Heox theme, landscape, uses a file called <code>source/css/_variables.styl</code> to define common variables, such as fonts.  </p>
+<p>Viewing the <code>_variables.styl</code> file you can see the fonts that Hexo uses by default, which are assigned to three variables:</p>
+<ul>
+<li>font-sans</li>
+<li>font-serif</li>
+<li>font-mono - (source code) </li>
+<li>font-icon - (icons in navbar) </li>
+</ul>
+<blockquote>
+<p>Font-icon is configured to use Font Awesome to make it quick and simple to add logos such as twitter, facebook, linkedIn and RSS feeds.  Using font icons is more efficient than using image files as they are scalable, so no need for multiple image files for the logos.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// Fonts</span><br><span class="line">font-sans = &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</span><br><span class="line">font-serif = Georgia, &quot;Times New Roman&quot;, serif</span><br><span class="line">font-mono = &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace</span><br><span class="line">font-icon = FontAwesome</span><br><span class="line">font-icon-path = &quot;fonts/fontawesome-webfont&quot;</span><br><span class="line">font-icon-version = &quot;4.0.3&quot;</span><br><span class="line">font-size = 14px</span><br><span class="line">line-height = 1.6em</span><br><span class="line">line-height-title = 1.1em</span><br></pre></td></tr></table></figure>
+<p>This is what the fonts in the hexo default theme look like: </p>
+<img src="/images/hexo-theme-original-fonts.png" class="img-code"> 
+<h1 id="Updating-Hexo-to-use-the-Ubuntu-fonts"><a href="#Updating-Hexo-to-use-the-Ubuntu-fonts" class="headerlink" title="Updating Hexo to use the Ubuntu fonts"></a>Updating Hexo to use the Ubuntu fonts</h1><p>I prefer to use the Ubunt fonts, for text and for source code.  So I updated the <code>source/css/_variables.styl</code> file with Ubuntu for the font-sans and font-serif variables and Ubuntu Mono for the font-mono variable.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// Fonts</span><br><span class="line">font-sans = Ubuntu, sans-serif</span><br><span class="line">font-serif = Ubuntu, serif</span><br><span class="line">font-mono = &quot;Ubuntu Mono&quot;, monospace</span><br><span class="line">font-icon = FontAwesome</span><br><span class="line">font-icon-path = &quot;fonts/fontawesome-webfont&quot;</span><br><span class="line">font-icon-version = &quot;4.0.3&quot;</span><br><span class="line">font-size = 14px</span><br><span class="line">line-height = 1.6em</span><br><span class="line">line-height-title = 1.1em</span><br></pre></td></tr></table></figure>
+<p>Using Ubuntu fonts just works on my laptop, as I use Ubuntu as my operating system and the Ubuntu fonts are just there.  When I publish my Hexo website, I cant guarantee everyone is using Ubuntu so I use Google Fonts to spread the Ubuntu font love.</p>
+<h1 id="Google-Fonts"><a href="#Google-Fonts" class="headerlink" title="Google Fonts"></a>Google Fonts</h1><p>Google fonts are a wide range of open fonts hosted in the cloud and part of a content delivery network (CDN).  This means that a whole range of fonts are freely availble to be used in your own websites and apps.  The content delivery network ensures these fonts are loaded (relatively) quickly anywhere in the world. </p>
+<p>You can browse the fonts avaible for use and see the code to include them in your websites by visiting <a href="http://www.google.com/fonts" target="_blank" rel="noopener">google.com/fonts</a></p>
+<p>To keep these fonts as lightweight as possible whilst loading into the browser, I chose only the Ubuntu fonts I needed.  In this case, I chose the Ubuntu Normal and Italic fonts at 400 weight and bold at 700 weight </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>I also want to show code in the Ubuntu Mono typeface at both 400 and 700 weight for normal and bold text respectively.  Google Fonts website generates me the following link I can use in my Hexo website.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Adding-the-Ubuntu-Google-Fonts-to-Hexo"><a href="#Adding-the-Ubuntu-Google-Fonts-to-Hexo" class="headerlink" title="Adding the Ubuntu Google Fonts to Hexo"></a>Adding the Ubuntu Google Fonts to Hexo</h1><p>I updated my custom theme to use the Ubuntu Google fonts by editing the <code>layout/_partial/head.ejs</code> file.  This already had a Google Font for Source Code Pro, so I simply replaced that line with the new URL I got from Google Fonts as above.</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">title</span>)&#123; %&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">title</span> %&gt;</span> | <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, maximum-scale=1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">open_graph</span>(&#123;<span class="attr">twitter_id:</span> <span class="attr">theme.twitter</span>, <span class="attr">google_plus:</span> <span class="attr">theme.google_plus</span>, <span class="attr">fb_admins:</span> <span class="attr">theme.fb_admins</span>, <span class="attr">fb_app_id:</span> <span class="attr">theme.fb_app_id</span>&#125;) %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.rss</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"alternative"</span> <span class="attr">href</span>=<span class="string">"&lt;%- theme.rss %&gt;"</span> <span class="attr">title</span>=<span class="string">"&lt;%= config.title %&gt;"</span> <span class="attr">type</span>=<span class="string">"application/atom+xml"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.favicon</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">"&lt;%- theme.favicon %&gt;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">css</span>('<span class="attr">css</span>/<span class="attr">style</span>') %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">google-analytics</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Line 10: Ubuntu fonts included from Google Fonts</p>
+</blockquote>
+<p>When Hexo generates all the theme files, the Google Docs URL for the Ubuntu fonts gets included in the head part of all pages.  This ensures that even thought without Ubuntu fonts installed on their device will see the page with Ubuntu fonts.</p>
+<h1 id="Testing-the-font-change"><a href="#Testing-the-font-change" class="headerlink" title="Testing the font change"></a>Testing the font change</h1><p>Changes to the <code>source/css/_variables.styl</code> file are picked up straight away if you are running the command <code>hexo server</code>, so all you would need to do is refresh your browser.</p>
+<p>Hexo with the Ubuntu fonts looks like:</p>
+<img src="/images/hexo-theme-ubuntu-fonts.png" class="img-code">
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Changing to Ubuntu fonts or any other Google font is pretty easy with Hexo.  It may not seem a big change that I have made, but as I refer to my blog many times during the week (and sometime many times a day), its nice to have a font that I find pleasing to read.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>The font that comes with the default hexo fault is quite nice, however, I like using the Ubuntu font especially for code.  As the Hexo theme uses Google fonts in some places already, then it was really easy to change which one Hexo uses.  Here I will show you how to change over to the Ubuntu font family for text and sorce code using <a href="http://www.google.com/fonts" target="_blank" rel="noopener">Google Fonts</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Tips When Upgrading to 2.6.x Onwards]]></title>
+    <link href="http://jr0cket.co.uk/2014/06/hexo-tips-when-upgrading-to-26x-onwards.html"/>
+    <id>http://jr0cket.co.uk/2014/06/hexo-tips-when-upgrading-to-26x-onwards.html</id>
+    <published>2014-06-04T19:35:06.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo has a bit of a refactor from version 2.6 onwards to make it a bit more flexible with regard to the node modules it uses.  So when you create a new Hexo project you have to add some module to that project before you can generate your site.  This is an easy step as its managed by the Node package manager (npm).  </p>
+<blockquote>
+<p>There are more details about <a href="https://github.com/tommy351/hexo/wiki/Migrating-from-2.5-to-2.6" target="_blank" rel="noopener">migration steps on the Hexo Github project</a>.  </p>
+</blockquote>
+<p>Here are the essential details and options for upgrading to Hexo 2.6 onwards.</p>
+<a id="more"></a>
+<h1 id="Check-your-version-of-Hexo"><a href="#Check-your-version-of-Hexo" class="headerlink" title="Check your version of Hexo"></a>Check your version of Hexo</h1><p>You can easily check the version of Hexo you are using with the following command:</p>
+<pre><code>hexo -v 
+</code></pre><p>This should give you output similar to:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hexo: 2.5.3</span><br><span class="line">os: Linux 3.11.0-20-generic linux x64</span><br><span class="line">http_parser: 1.0</span><br><span class="line">node: 0.10.26</span><br><span class="line">v8: 3.14.5.9</span><br><span class="line">ares: 1.9.0-DEV</span><br><span class="line">uv: 0.10.25</span><br><span class="line">zlib: 1.2.3</span><br><span class="line">modules: 11</span><br><span class="line">openssl: 1.0.1e</span><br></pre></td></tr></table></figure>
+<h1 id="Upgrading-Hexo"><a href="#Upgrading-Hexo" class="headerlink" title="Upgrading Hexo"></a>Upgrading Hexo</h1><p>Upgrading Hexo is as easy as installing Hexo in the first place.  Simply use node package manager to install the latest version</p>
+<pre><code>npm install -g hexo 
+</code></pre><blockquote>
+<p>The above command uses the global option, -g, so anyone can run hexo.  If you have installed Hexo in a directory not owned by your operating system account (eg. <code>/usr/local/</code> or <code>/opt</code>) then you should use <code>sudo</code> in front of this command, ie. <code>sudo npm install -g hexo</code></p>
+</blockquote>
+<h1 id="Checking-the-version-of-Hexo-again"><a href="#Checking-the-version-of-Hexo-again" class="headerlink" title="Checking the version of Hexo again"></a>Checking the version of Hexo again</h1><p>As before, you can check you are running the latest version of hexo using the command:</p>
+<pre><code>hexo -v
+</code></pre><p>This time you should have a newer version:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hexo: 2.7.1</span><br><span class="line">os: Linux 3.11.0-23-generic linux x64</span><br><span class="line">http_parser: 1.0</span><br><span class="line">node: 0.10.26</span><br><span class="line">v8: 3.14.5.9</span><br><span class="line">ares: 1.9.0-DEV</span><br><span class="line">uv: 0.10.25</span><br><span class="line">zlib: 1.2.3</span><br><span class="line">modules: 11</span><br><span class="line">openssl: 1.0.1e</span><br></pre></td></tr></table></figure>
+<p>As I am only upgrading Hexo to a new vesion, only it has a new version.  The other components are all the same version.</p>
+<h1 id="Adding-modules-to-new-Hexo-projects"><a href="#Adding-modules-to-new-Hexo-projects" class="headerlink" title="Adding modules to new Hexo projects"></a>Adding modules to new Hexo projects</h1><p>When you create a new Hexo project with the command <code>hexo init</code>, the names of the extra node modules are written to the <code>package.json</code> file.  So all that is needed is to run the node package manager</p>
+<pre><code>hexo init my-project
+cd my-project
+npm install
+</code></pre><h1 id="Adding-modules-to-an-existing-project"><a href="#Adding-modules-to-an-existing-project" class="headerlink" title="Adding modules to an existing project"></a>Adding modules to an existing project</h1><p>If you have a project that was created before Hexo version 2.6, you need to reinitialise the Hexo project.  To do this, change into the hexo directory and run the command:</p>
+<pre><code>cd my-existing-project
+hexo init
+</code></pre><p>The <code>hexo init</code> command updates the <code>package.json</code> file with the names of the required modules.  Then as with a new project you run the node package manager to fetch and install the modules:</p>
+<pre><code>npm install
+</code></pre><h1 id="Manually-updating-an-existing-Hexo-project"><a href="#Manually-updating-an-existing-Hexo-project" class="headerlink" title="Manually updating an existing Hexo project"></a>Manually updating an existing Hexo project</h1><p>If you want to control over what is being changed in your Hexo project nodejs packages, you can add each package seperately.  Here we are using the <code>npm</code> option <code>--save</code> to ensure the package is added to the <code>packages.json</code> file for the Hexo project.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-ejs --save</span><br><span class="line">npm install hexo-renderer-stylus --save</span><br><span class="line">npm install hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+<h1 id="Troubleshooting-Hexo-not-working-after-upgrade"><a href="#Troubleshooting-Hexo-not-working-after-upgrade" class="headerlink" title="Troubleshooting: Hexo not working after upgrade"></a>Troubleshooting: Hexo not working after upgrade</h1><p>If all goes wrong then try uninstalling hexo and install again (the classic IT approach).</p>
+<pre><code>npm remove hexo     
+npm install hexo -g 
+</code></pre><p>Then check the version again to see if the new hexo will run.</p>
+<pre><code>hexo -v
+</code></pre><p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo has a bit of a refactor from version 2.6 onwards to make it a bit more flexible with regard to the node modules it uses.  So when you create a new Hexo project you have to add some module to that project before you can generate your site.  This is an easy step as its managed by the Node package manager (npm).  </p>
+<blockquote>
+<p>There are more details about <a href="https://github.com/tommy351/hexo/wiki/Migrating-from-2.5-to-2.6" target="_blank" rel="noopener">migration steps on the Hexo Github project</a>.  </p>
+</blockquote>
+<p>Here are the essential details and options for upgrading to Hexo 2.6 onwards.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Custom Theme - Styling Code Snippets]]></title>
+    <link href="http://jr0cket.co.uk/2014/06/hexo-custom-theme---styling-code-snippets.html"/>
+    <id>http://jr0cket.co.uk/2014/06/hexo-custom-theme---styling-code-snippets.html</id>
+    <published>2014-06-04T05:34:28.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>The hexo theme shows code in a solid black box with syntax hightlghting to match.  It gives a nice contrast to the rest of the content, however I wanted to add curves to the corner of the code boxes.  I also wanted to  add a margin / padding around the code box so it did not touch the edges of the post.</p>
+<a id="more"></a>
+<h1 id="Add-corners-to-the-code-box"><a href="#Add-corners-to-the-code-box" class="headerlink" title="Add corners to the code box"></a>Add corners to the code box</h1><p>Values for commonly used styles are defined as variables in the file <code>source/css/_variables.styl</code>.  This makes it easy to redefine a style across the whole theme with a single change.</p>
+<p>In this case, I defined a <code>code-border-radius</code> variable and gave it a value of 10px.</p>
+<figure class="highlight"><figcaption><span>source/css/_partial/header.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code-border-radius = 10px </span><br></pre></td></tr></table></figure>
+<p>I edited the <code>source/css/_partial/highlight.styl</code> file and added definitions to the <code>$code-block</code> style: </p>
+<ul>
+<li><code>boarder-radius</code> adds a cure to the corner using size defined in the variable <code>code-border-radius</code></li>
+<li><code>background: #333</code> - why did I add this ?</li>
+<li><code>margin: 1px 10px 1px 10px</code> puts a space of 10 pixels at the left and right of the code block, as well as a 1 pixel space above and below</li>
+<li><code>border: 3px solid #EEEEEE;</code> adds a discrete white boarder around the codeblock to make it blend into the page gracefully.</li>
+</ul>
+<p>The updated <code>$code-block</code> style now looks like (added lines 11-14):</p>
+<figure class="highlight css"><figcaption><span>source/css/_partial/highlight.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$code-block</span><br><span class="line">  <span class="selector-tag">background</span>: <span class="selector-tag">highlight-background</span></span><br><span class="line">  <span class="selector-tag">margin</span>: 0 <span class="selector-tag">article-padding</span> * <span class="selector-tag">-1</span></span><br><span class="line">  <span class="selector-tag">padding</span>: 15<span class="selector-tag">px</span> <span class="selector-tag">article-padding</span></span><br><span class="line">  <span class="selector-tag">border-style</span>: <span class="selector-tag">solid</span></span><br><span class="line">  <span class="selector-tag">border-color</span>: <span class="selector-tag">color-border</span></span><br><span class="line">  <span class="selector-tag">border-width</span>: 1<span class="selector-tag">px</span> 0</span><br><span class="line">  <span class="selector-tag">overflow</span>: <span class="selector-tag">auto</span></span><br><span class="line">  <span class="selector-tag">color</span>: <span class="selector-tag">highlight-foreground</span></span><br><span class="line">  <span class="selector-tag">line-height</span>: <span class="selector-tag">font-size</span> * <span class="selector-tag">line-height</span></span><br><span class="line">  <span class="selector-tag">border-radius</span>: <span class="selector-tag">code-border-radius</span></span><br><span class="line">  <span class="selector-tag">background</span>: <span class="selector-id">#333</span>;</span><br><span class="line">  <span class="selector-tag">margin</span>: 1<span class="selector-tag">px</span> 10<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> 10<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">border</span>: 3<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#EEEEEE</span>;</span><br></pre></td></tr></table></figure>
+<p> I didnt make any further changes in to the theme in the <code>highlight.styl</code> file.  However, there are other things in this file you may want to modify.</p>
+<h2 id="Line-numbers"><a href="#Line-numbers" class="headerlink" title="Line numbers"></a>Line numbers</h2><p> The hexo theme makes the line numbers smaller in font size and makes the numbers look faded by using colour number 666.  This looked good to me, so I didnt change these styles.</p>
+ <figure class="highlight css"><figcaption><span>source/css/_partial/highlight.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$line-numbers</span><br><span class="line"> <span class="selector-tag">color</span>: <span class="selector-id">#666</span></span><br><span class="line"> <span class="selector-tag">font-size</span>: 0<span class="selector-class">.85em</span></span><br></pre></td></tr></table></figure>
+<h2 id="More-customisation-possible"><a href="#More-customisation-possible" class="headerlink" title="More customisation possible"></a>More customisation possible</h2><p>There is a whole range of settings that affect the code-block and other highlighted areas of articles in the <code>highlight.styl</code> file, however I did feel the need to make any changes here.  </p>
+<p>If I get tired of the black background for code I could change it here, although I’d need to check the colours used for syntax highlighting still worked with the new code background.</p>
+ <figure class="highlight css"><figcaption><span>source/css/_partial/highlight.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.article-entry</span></span><br><span class="line"> <span class="selector-tag">pre</span>, <span class="selector-tag">code</span></span><br><span class="line">   <span class="selector-tag">font-family</span>: <span class="selector-tag">font-mono</span></span><br><span class="line"> <span class="selector-tag">code</span></span><br><span class="line">   <span class="selector-tag">background</span>: <span class="selector-tag">color-background</span></span><br><span class="line">   <span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span></span><br><span class="line">   <span class="selector-tag">padding</span>: 0 0<span class="selector-class">.3em</span></span><br><span class="line"> <span class="selector-tag">pre</span></span><br><span class="line">   <span class="keyword">@extend</span> $code-block</span><br><span class="line">   code</span><br><span class="line">     <span class="attribute">background:</span> none</span><br><span class="line">     <span class="attribute">text-shadow:</span> none</span><br><span class="line">     <span class="attribute">padding:</span> <span class="number">0</span></span><br><span class="line"> .highlight</span><br><span class="line">   @extend $code-block</span><br><span class="line">   pre</span><br><span class="line">     <span class="attribute">border:</span> none</span><br><span class="line">     <span class="attribute">margin:</span> <span class="number">0</span></span><br><span class="line">     <span class="attribute">padding:</span> <span class="number">0</span></span><br><span class="line">   table</span><br><span class="line">     <span class="attribute">margin:</span> <span class="number">0</span></span><br><span class="line">     <span class="attribute">width:</span> auto</span><br><span class="line">   td</span><br><span class="line">     <span class="attribute">border:</span> none</span><br><span class="line">     <span class="attribute">padding:</span> <span class="number">0</span></span><br><span class="line">   figcaption</span><br><span class="line">     clearfix()</span><br><span class="line">     <span class="attribute">font-size:</span> <span class="number">0.85em</span></span><br><span class="line">     <span class="attribute">color:</span> highlight-comment</span><br><span class="line">     <span class="attribute">line-height:</span> <span class="number">1em</span></span><br><span class="line">     <span class="attribute">margin-bottom:</span> <span class="number">1em</span></span><br><span class="line">     a</span><br><span class="line">       <span class="attribute">float:</span> right</span><br><span class="line">   .gutter pre</span><br><span class="line">     @extend $line-numbers</span><br><span class="line">     <span class="attribute">text-align:</span> right</span><br><span class="line">     <span class="attribute">padding-right:</span> <span class="number">20px</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>The hexo theme shows code in a solid black box with syntax hightlghting to match.  It gives a nice contrast to the rest of the content, however I wanted to add curves to the corner of the code boxes.  I also wanted to  add a margin / padding around the code box so it did not touch the edges of the post.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Custom Theme - Maximising the Layout of the Website]]></title>
+    <link href="http://jr0cket.co.uk/2014/06/hexo-custom-theme---maximising-the-layout-of-the-website.html"/>
+    <id>http://jr0cket.co.uk/2014/06/hexo-custom-theme---maximising-the-layout-of-the-website.html</id>
+    <published>2014-06-03T14:52:05.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Whilst I like many aspects of the Hexo theme used to generate static websites, it does seem to have a lot of redundant space.  So here are a few aspects of the them I have changes in order to get more of the actual content showing on the page.</p>
+<a id="more"></a>
+<h1 id="Scaling-down-the-header-space"><a href="#Scaling-down-the-header-space" class="headerlink" title="Scaling down the header space"></a>Scaling down the header space</h1><p>The most obvious occurance is the header image, which takes up a huge part of the screen on the desktop.</p>
+<h1 id="Scaling-down-the-image"><a href="#Scaling-down-the-image" class="headerlink" title="Scaling down the image"></a>Scaling down the image</h1><h1 id="Changing-the-image"><a href="#Changing-the-image" class="headerlink" title="Changing the image"></a>Changing the image</h1><p>The most obvious way to make your website look different from all the other Hexo generated websites is to change the header image.</p>
+<h2 id="Header-image-with-my-cat"><a href="#Header-image-with-my-cat" class="headerlink" title="Header image with my cat"></a>Header image with my cat</h2><p>Very personal, not neccessarily representative of the website content though.</p>
+<p>Also not that easy to see the text in the top navigation bar, as the text and icons are white and the background image is light.</p>
+<p>Boosting the opacity of the naviation text and icons makes them stand out better on the lighter background.</p>
+<h3 id="Chaning-Navbar-text-opacity"><a href="#Chaning-Navbar-text-opacity" class="headerlink" title="Chaning Navbar text opacity"></a>Chaning Navbar text opacity</h3><p>The CSS definition called nav-link contains an opacity value.  This was changed from 0.6 (60 percent) to 0.8 (80 percent) to make the navbar links more visible when hovering over them with the mouse.</p>
+<figure class="highlight css"><figcaption><span>source/css/_partial/header.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$nav-link</span><br><span class="line">  <span class="selector-tag">float</span>: <span class="selector-tag">left</span></span><br><span class="line">  <span class="selector-tag">color</span>: <span class="selector-id">#fff</span></span><br><span class="line">  <span class="selector-tag">opacity</span>: 0<span class="selector-class">.8</span></span><br><span class="line">  <span class="selector-tag">text-decoration</span>: <span class="selector-tag">none</span></span><br><span class="line">  <span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.2</span>)</span><br><span class="line">  <span class="selector-tag">transition</span>: <span class="selector-tag">opacity</span> 0<span class="selector-class">.2s</span></span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">block</span></span><br><span class="line">  <span class="selector-tag">padding</span>: 20<span class="selector-tag">px</span> 15<span class="selector-tag">px</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">    <span class="selector-tag">opacity</span>: 1</span><br></pre></td></tr></table></figure>
+<h2 id="Increase-the-size-of-the-logo-text"><a href="#Increase-the-size-of-the-logo-text" class="headerlink" title="Increase the size of the logo text"></a>Increase the size of the logo text</h2><p>I change my logo to say “community developer” and wanted it to take up less room in the header.  So I found the CSS declaration for <code>logo-text</code> and increased the font weight from 300 to 700</p>
+<figure class="highlight css"><figcaption><span>source/css/_partial/header.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$logo-text</span><br><span class="line">  <span class="selector-tag">text-decoration</span>: <span class="selector-tag">none</span></span><br><span class="line">  <span class="selector-tag">color</span>: <span class="selector-id">#fff</span></span><br><span class="line">  <span class="selector-tag">font-weight</span>: 300</span><br><span class="line">  <span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> 4<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.3</span>)</span><br></pre></td></tr></table></figure>  
+<p> The same for the main-nav-link text</p>
+<figure class="highlight css"><figcaption><span>source/css/_partial/header.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main-nav-link</span></span><br><span class="line">  <span class="keyword">@extend</span> $nav-link</span><br><span class="line">  <span class="attribute">font-weight:</span> <span class="number">700</span></span><br><span class="line">  <span class="attribute">letter-spacing:</span> <span class="number">1px</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">    <span class="attribute">display:</span> none</span><br></pre></td></tr></table></figure>
+<h2 id="More-navbar-changes"><a href="#More-navbar-changes" class="headerlink" title="More navbar changes"></a>More navbar changes</h2><ul>
+<li>Reduced the banner height from 300px to 120px </li>
+<li>reduced the logo size from 40px to 32pd</li>
+<li>changed banner-url to point to a different image</li>
+</ul>
+<figure class="highlight"><figcaption><span>source/css/_variables.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Header</span><br><span class="line">logo-size = 32px</span><br><span class="line">subtitle-size = 16px</span><br><span class="line">banner-height = 120px</span><br><span class="line">banner-url = "images/cat-eyes-and-paw.png"</span><br></pre></td></tr></table></figure>
+<h3 id="Previous-values"><a href="#Previous-values" class="headerlink" title="Previous values"></a>Previous values</h3><p>// Header<br>logo-size = 40px<br>subtitle-size = 16px<br>banner-height = 300px<br>banner-url = “images/banner.jpg”</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Whilst I like many aspects of the Hexo theme used to generate static websites, it does seem to have a lot of redundant space.  So here are a few aspects of the them I have changes in order to get more of the actual content showing on the page.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Custom Theme - Using FontAwesome Icons]]></title>
+    <link href="http://jr0cket.co.uk/2014/06/hexo-custom-theme---adding-navbar-icon-links-using-fontawesome.html"/>
+    <id>http://jr0cket.co.uk/2014/06/hexo-custom-theme---adding-navbar-icon-links-using-fontawesome.html</id>
+    <published>2014-06-01T18:50:09.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank" rel="noopener">FontAwesome</a> provides a lot of icons you can use in your website instead of including image logos of various sizes.  There are icons for twitter, linkedin, Github and RSS feeds.  Using these icons keeps your website fast on any device or network.</p>
+<p>I’ll explain how I configured the standard <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="noopener">Hexo Landscape theme</a> to add icons in my blog website navigation bar, each icon linking to the developer related sites I use such as Github and Twitter.</p>
+<a id="more"></a> 
+<h1 id="FontAwesome-icons-are-awesome"><a href="#FontAwesome-icons-are-awesome" class="headerlink" title="FontAwesome icons are awesome"></a>FontAwesome icons are awesome</h1><p>FontAwesome is a font that has a wide range of icons, including logos from common websites such at Twitter, Github, LinkedIn, etc.  Using a font for these logos is more efficient when it comes to load times of your website, as you only need to include one font which scales to different sizes.</p>
+<img src="/images/font-awesome-icons.png" class="img-code">
+<h1 id="Adding-Icons-Styles-to-the-CSS"><a href="#Adding-Icons-Styles-to-the-CSS" class="headerlink" title="Adding Icons Styles to the CSS"></a>Adding Icons Styles to the CSS</h1><p>The Hexo theme already had two CSS ID’s defined in the header styles, providing icons for the RSS feed and search button.  I simpy copied these style definitions for the addtional icons I wanted, giving each icon its own unique CSS ID.</p>
+<p>To get the correct code for the FontAwesome icon I wanted, I refered to this <a href="http://astronautweb.co/snippet/font-awesome/" target="_blank" rel="noopener">list of CSS content values</a>.</p>
+<p>I updated the <code>source/css/_partial/header.styl</code> file to include the additional icon styles.</p>
+<figure class="highlight css"><figcaption><span>source/css/_partial/header.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#nav-rss-link</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="selector-tag">content</span>: "\<span class="selector-tag">f09e</span>"</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-twitter-link</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="selector-tag">content</span>: "\<span class="selector-tag">f099</span>"</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-linkedin-link</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="selector-tag">content</span>: "\<span class="selector-tag">f0e1</span>"</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-googleplus-link</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="selector-tag">content</span>: "\<span class="selector-tag">f0d5</span>"</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-github-link</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="selector-tag">content</span>: "\<span class="selector-tag">f113</span>"</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-search-btn</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="selector-tag">content</span>: "\<span class="selector-tag">f002</span>"</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Adding-Icons-to-the-header-layout"><a href="#Adding-Icons-to-the-header-layout" class="headerlink" title="Adding Icons to the header layout"></a>Adding Icons to the header layout</h1><p>Now the icon style are defined, we need to include them in the navigation bar layout.  This navigation bar layout is defined in the file <code>layout/_partial/header.ejs</code>, see lines 3,4,and 5 below: </p>
+<figure class="highlight javascript"><figcaption><span>layout/_partial/header.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav id=<span class="string">"sub-nav"</span>&gt;</span><br><span class="line">  &lt;a id=<span class="string">"nav-github-link"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"nav-icon"</span> href=<span class="string">"https://github.com/jr0cket"</span> target=<span class="string">"_blank"</span>&gt;&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">  &lt;a id="nav-linkedin-link" class="nav-icon" href="https:/</span><span class="regexp">/uk.linkedin.com/i</span>n/jr0cket<span class="string">" target="</span>_blank<span class="string">"&gt;&lt;/a&gt;</span></span><br><span class="line"><span class="string">  &lt;a id="</span>nav-twitter-link<span class="string">" class="</span>nav-icon<span class="string">" href="</span>https:<span class="comment">//twitter.com/jr0cket" target="_blank"&gt;&lt;/a&gt;</span></span><br><span class="line">  &lt;a id=<span class="string">"nav-googleplus-link"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"nav-icon"</span> href=<span class="string">"https://plus.google.com/117080433375668558463"</span> target=<span class="string">"_blank"</span>&gt;&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">  &lt;% if (theme.rss)&#123; %&gt;</span></span><br><span class="line"><span class="regexp">    &lt;a id="nav-rss-link" class="nav-icon" href="&lt;%- theme.rss %&gt;" title="RSS Feed"&gt;&lt;/</span>a&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line">  &lt;a id=<span class="string">"nav-search-btn"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"nav-icon"</span> title=<span class="string">"Search"</span>&gt;&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>nav&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="The-finished-result"><a href="#The-finished-result" class="headerlink" title="The finished result"></a>The finished result</h1><p>As soon as both files are saved, I can see the results as soon as I refresh the browser as I am running <code>hexo server</code>.  </p>
+<p>My navigation bar now has more icons displayed, each icon linking to my other developer websites</p>
+<img src="/images/hexo-theme-navbar-icons-fontawesome.png" class="img-code">
+<p>The navigation bar has a link for my Github, LinkedIn, Twitter and Google plus profile pages.</p>
+<p>Thank you<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank" rel="noopener">FontAwesome</a> provides a lot of icons you can use in your website instead of including image logos of various sizes.  There are icons for twitter, linkedin, Github and RSS feeds.  Using these icons keeps your website fast on any device or network.</p>
+<p>I’ll explain how I configured the standard <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="noopener">Hexo Landscape theme</a> to add icons in my blog website navigation bar, each icon linking to the developer related sites I use such as Github and Twitter.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Theme Tweaks - Showing Articles as Titles Only]]></title>
+    <link href="http://jr0cket.co.uk/2014/04/hexo-theme-tweaks---showing-articles-as-titles-only.html"/>
+    <id>http://jr0cket.co.uk/2014/04/hexo-theme-tweaks---showing-articles-as-titles-only.html</id>
+    <published>2014-04-16T08:59:33.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo displays posts in a summary format by default, showing the title and content of the article up to the point where the <code>more</code> marker is used:</p>
+<a id="more"></a>
+<p>I like this summary format for the main page as its where people tend to browse a little more and usually want a little more information to help them decide if they want to read the whole article.  </p>
+<p>[TODO: Insert picture of summary layout]</p>
+<p>However when someone selects the archive, category or tags section, they are most likely looking for something specific and so just showing the titles of the posts helps them scan the articles quickly.</p>
+<p>So this article we will cover how to modify the default Hexo theme, landscape, to show summar and title only views.</p>
+<!-- more -->
+<h2 id="Understanding-the-layout"><a href="#Understanding-the-layout" class="headerlink" title="Understanding the layout"></a>Understanding the layout</h2><p>Layout of the page is defined mainly in <a href="https://github.com/visionmedia/ejs" target="_blank" rel="noopener">EJS</a> format and then imported via the <code>theme/landscape/source/css/style.styl</code> file that is used to pull together a single <code>style.css</code> file for the whole site (once the site is generated).</p>
+<p>All pages use the default <code>index.ejs</code> [is it index or layout - check the hexo docs] as a base template, over-riding it where desired.  For the front page of the blog this is fine.</p>
+<p>The archive, categories and tag pages all use the same code, however these are the files we are going to change</p>
+<pre><code>theme/landscape/layouts/_partial/archive.ejs
+theme/landscape/layouts/_partial/category.ejs
+theme/landscape/layouts/_partial/tag.ejs
+</code></pre><p>Lets first find out what changes need to be made and in what file.</p>
+<h2 id="Using-Chrome-developer-tools"><a href="#Using-Chrome-developer-tools" class="headerlink" title="Using Chrome developer tools"></a>Using Chrome developer tools</h2><p>You can use the Chrome developer tools to find out the secion of CSS that controls the displaying of the summary part of the article.</p>
+<p>It turns out this summary part of the content is managed by a section called <code>article-entry</code>.  This is included in the file <code>theme/landscape/layouts/_partial/article.ejs</code>:</p>
+<pre><code>&lt;div class=&quot;article-entry&quot; itemprop=&quot;articleBody&quot;&gt;
+  &lt;% if (post.excerpt &amp;&amp; index){ %&gt;
+    &lt;%- post.excerpt %&gt;
+    &lt;% if (theme.excerpt_link){ %&gt;
+      &lt;p class=&quot;article-more-link&quot;&gt;
+        &lt;a href=&quot;&lt;%- config.root %&gt;&lt;%- post.path %&gt;#more&quot;&gt;&lt;%= theme.excerpt_link %&gt;&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;% } %&gt;
+</code></pre><p>I tested that this was the code rendering the article summary using the Chrome developer tools.  I right-clicked on the first line of the code, the opening <strong>div</strong> tag, and selected <code>delete node</code><br><img src="/hexo-themes-test/images/hexo-theme-tweak-devtools-delete-node.png"></p>
+<h2 id="Making-the-changes-to-the-theme"><a href="#Making-the-changes-to-the-theme" class="headerlink" title="Making the changes to the theme"></a>Making the changes to the theme</h2><p>There may be better approaches than I have taken, however mine is fairly straight formward.  I simply take a copy of the archive.ejs file and called it archive-titles.ejs.</p>
+<p>I then remove the above code completely from the <code>articles-titles.ejs</code> file and call that file instead from the <code>archive.ejs</code>, <code>category.ejs</code> and <code>tag.ejs</code> files.</p>
+<p>So the archive, catagory and tag files are changed calling the archive.ejs:</p>
+<pre><code>&lt;%- partial(&apos;_partial/archive&apos;, {pagination: 2, index: true}) %&gt;
+</code></pre><p>and now call <code>archive-titles.ejs</code>:</p>
+<pre><code>&lt;%- partial(&apos;_partial/archive-titles&apos;, {pagination: config.archive, index: true}) %&gt;
+</code></pre><p>With <code>hexo server</code> running these changes are picked up straight away, so we can easily see if the changes worked as expected</p>
+<p>[TODO: image of changed archive]</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo displays posts in a summary format by default, showing the title and content of the article up to the point where the <code>more</code> marker is used:</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Getting Started With Hexo - a Modern Static Site Generator]]></title>
+    <link href="http://jr0cket.co.uk/2014/04/getting-started-with-hexo---a-modern-static-site-generator.html"/>
+    <id>http://jr0cket.co.uk/2014/04/getting-started-with-hexo---a-modern-static-site-generator.html</id>
+    <published>2014-04-12T14:13:19.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo is a modern static website generator &amp; bloging platform written in Node.js.  It is a great way to create a blog or other content driven websites as all the content is written in markdown and can therefore be versioned with Git. </p>
+<p>I am using Hexo for my developer blog (using blogger became very slow) and am also using Hexo for a series of online tutorials on developer tools.</p>
+<p>Here is a quick guide to get going with Hexo.</p>
+<a id="more"></a>
+<h1 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h1><p>If you havent already got node, go to <a href="http://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a> and follow the instructions.  My own preference is to install node into a directory called <strong>app</strong> in the root of my home directory.</p>
+<h1 id="Install-Emacs-optional"><a href="#Install-Emacs-optional" class="headerlink" title="Install Emacs (optional)"></a>Install Emacs (optional)</h1><p>This is not a requirement for Hexo, although Emacs and Emacs Live gives a fantastic experience when writing markdown content.  Emacs is a very lightweight and full screen editor.  Emacs Live syntactically highlights your markdown content, so headings, links, bold and italic styles are shown in as you type your content.  Italic style content even displays in italic.</p>
+<img src="/images/emacs-live-markdown-screenshot.png" class="img-code">
+<h1 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h1><p>There is really good documentation on the <a href="http://hexo.io" target="_blank" rel="noopener">hexo.io</a> website, althought all you need to do to install is:</p>
+<pre><code>npm install hexo -g
+</code></pre><blockquote>
+<p>If you install nodejs on the system path, you need to use the above command with sudo - i.e <code>sudo npm install hexo -g</code></p>
+</blockquote>
+<h1 id="Create-a-Hexo-projects"><a href="#Create-a-Hexo-projects" class="headerlink" title="Create a Hexo projects"></a>Create a Hexo projects</h1><img src="/images/hexo-workflow-commands.png" class="img-topic">
+<p>Create a new hexo project, I usually do this in a folder called projects in my home folder:</p>
+<pre><code>hexo init my-project-name
+cd my-project-name
+npm install 
+</code></pre><p>This creates a new hexo project in a folder called <code>my-project-name</code>, so use what ever name you wish here.</p>
+<p>The <code>npm install</code> command adds tools for processing different content sources and languages used in the Hexo themes.</p>
+<h1 id="Configure-Hexo-to-your-will"><a href="#Configure-Hexo-to-your-will" class="headerlink" title="Configure Hexo to your will"></a>Configure Hexo to your will</h1><p>Your new hexo project is configured using a file called <code>_config.yml</code>.  In this configuration file you can set the basics of your website, eg title, authour, language, etc.  You can also set the public address of your website (URL).</p>
+<h2 id="Blog-specific-configuration"><a href="#Blog-specific-configuration" class="headerlink" title="Blog specific configuration"></a>Blog specific configuration</h2><p>If you are creating a blog website, then you can define the structure used for your blog posts.  Your posts can use any combination of year, month, day and title.  By default the posts will use all 4 combined.  I prefer to just use the year, month and title.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: :year/:month/:title/</span><br></pre></td></tr></table></figure>
+<p>You can also set the default filename, layout template (scafold) for new blog posts, when created with the command <code>hexo new</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new_post_name: :title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br></pre></td></tr></table></figure>
+<h2 id="Version-your-Hexo-project"><a href="#Version-your-Hexo-project" class="headerlink" title="Version your Hexo project"></a>Version your Hexo project</h2><p>If you are deploying your website to Github pages then the generated content is versioned by Github.  However, the markdown content for your websites and any configuration changes you make will not be versioned.</p>
+<p>If you are going to use this site for any important content, I’d recommend putting the Hexo project into a github repository (or similar service).  Using version control for your content helps you track changes effectively and gives an easy way for people to correct your content using Github pull reuests.</p>
+<p>The directories and files to add to the version control system include:</p>
+<ul>
+<li><code>_config.yml</code> for your project configuration</li>
+<li><code>source</code> directory for all the content in markdown </li>
+<li>packages.json so the tools you use to generate the Hexo website will be installed when you run <code>npm install</code></li>
+</ul>
+<h2 id="Versioning-the-Hexo-theme"><a href="#Versioning-the-Hexo-theme" class="headerlink" title="Versioning the Hexo theme"></a>Versioning the Hexo theme</h2><p>You could also version the <code>theme</code> folder assuming you were going to make changes to the default hexo them.  However, it is better to create a new theme which is a copy of the Hexo default change with your changes added.  Then you can update the hexo project <code>_config.yml</code> to use this new theme.</p>
+<p>If you decide to make a lot of theme changes then it may be better to version the theme as a seperate project.  This new theme can then be copied (cloned) in from the repository you are managing the theme with, or even set up the theme repository as a git submodule.</p>
+<h1 id="Running-a-local-Hexo-server"><a href="#Running-a-local-Hexo-server" class="headerlink" title="Running a local Hexo server"></a>Running a local Hexo server</h1><p>Although you wont have much content at this stage, you can still see what the website looks like by running Hexo server locally:</p>
+<pre><code>hexo server 
+</code></pre><p>By default this runs a node application on port 4000, so open your browser at: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<h1 id="Adding-blog-posts-to-your-Hexo-projects"><a href="#Adding-blog-posts-to-your-Hexo-projects" class="headerlink" title="Adding blog posts to your Hexo projects"></a>Adding blog posts to your Hexo projects</h1><p>The easiest way to add a new blog post is to let Hexo generate it for you from its template, this will ensure your post picks up the current them and any blog specific styling:</p>
+<pre><code>hexo new &quot;name of my blog post with full on SEO&quot;
+</code></pre><p>Hexo will return with the full path to the file it has created for you.  Edit this file in your favourite editor (surely this is Emacs).  Becareful to add your content after the <strong>frontmatter</strong>, this is the first few lines that define the title, date, style and tags used for the post.  Add your markdown </p>
+<h1 id="Adding-images-to-your-posts"><a href="#Adding-images-to-your-posts" class="headerlink" title="Adding images to your posts"></a>Adding images to your posts</h1><p>If you are only going to have a few images in the Hexo project (a few hundred or so), then the easiest way is to keep them in a <code>source/images</code> directory.  Github pages has a content delivery network (CDN) that will help deliver you images quickly around the world.  You can include these image files as you version the rest of your content for the project.</p>
+<p>If you are going to use a great many images on your website (1,000’s), you may be better off keeping those images in some kind of image service (Google+ photos) or content delivery network(CDN).</p>
+<p>Using a CDN will incure a small cost, but unless are using terrabytes of bandwidth to serve up your images this will only a few dollars a year.  Examples of CDNs <a href="http://aws.amazon.com/cloudfront/" target="_blank" rel="noopener">Amazon CloudFront</a>, <a href="http://www.edgecast.com/" target="_blank" rel="noopener">EdgeCast</a>, or <a href="http://www.level3.com/" target="_blank" rel="noopener">level3</a>.  Alternatively you could use an <a href="http://aws.amazon.com/s3/" target="_blank" rel="noopener">Amazon S3 bucket</a>, but I suggest you find a good client for that service.</p>
+<h1 id="Adding-pages-to-your-Hexo-website"><a href="#Adding-pages-to-your-Hexo-website" class="headerlink" title="Adding pages to your Hexo website"></a>Adding pages to your Hexo website</h1><p>Just like with blog posts, you can create pages using the <code>hexo new</code> command, simply by specifying the page template (scaffold).</p>
+<pre><code>hexo new page &quot;page-name&quot;
+</code></pre><p>If you want a hierachy of pages then you would have to create them manually.  It seems <code>hexo new</code> does not know how to create pages underneath other pages.  However, as its only simple markup it is generating then it is easy to copy out your own page structure using the command line or a graphical file manager.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Hexo is a lightweight and fun to use platform for bloggind and similar kinds of content driven sites.  I am currently also building out developer workshop materials using Hexo.</p>
+<p>To discover more about Hexo, visit the <a href="/hexo/">Hexo area of this site</a> and the <a href="http://hexo.io" target="_blank" rel="noopener">Hexo.io</a> website.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo is a modern static website generator &amp; bloging platform written in Node.js.  It is a great way to create a blog or other content driven websites as all the content is written in markdown and can therefore be versioned with Git. </p>
+<p>I am using Hexo for my developer blog (using blogger became very slow) and am also using Hexo for a series of online tutorials on developer tools.</p>
+<p>Here is a quick guide to get going with Hexo.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Theme Building With Chrome Developer Tools]]></title>
+    <link href="http://jr0cket.co.uk/2014/04/hexo-theme-building-with-chrome-developer-tools.html"/>
+    <id>http://jr0cket.co.uk/2014/04/hexo-theme-building-with-chrome-developer-tools.html</id>
+    <published>2014-04-10T18:27:33.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>I’m using Hexo as my blogging platform and wanted to customise the theme, which is broken down into many different parts to make it easier to manage and customise.  In order to understand what the different parts did I fired up Google Chrome deverloper tools to quickly explore the styles of Hexo’s default theme.</p>
+<a id="more"></a>
+<h1 id="Google-Chrome-browser-developer-tools"><a href="#Google-Chrome-browser-developer-tools" class="headerlink" title="Google Chrome browser developer tools"></a>Google Chrome browser developer tools</h1><p>With Chrome developer tools you can explore the source code (HTML, CSS and JavaScript) of any web page and see which part of the page each line of code is responsible for.  This is a great way for quickly seeing which CSS classes and ID’s are used to control styles, as well as seeing which block of JavaScript is providng dynamic behaviour on the page. </p>
+<h2 id="Running-the-Chrome-developer-tools"><a href="#Running-the-Chrome-developer-tools" class="headerlink" title="Running the Chrome developer tools"></a>Running the Chrome developer tools</h2><p>Right-click and select “Inspect Element” on any page you are browsing to bring up the developer tools console.  You can navigate through </p>
+<h1 id="Chrome-developer-tool-Resources"><a href="#Chrome-developer-tool-Resources" class="headerlink" title="Chrome developer tool Resources"></a>Chrome developer tool Resources</h1><blockquote>
+<p>TODO: List any follow on tutorials &amp; videos that help you make the most out of these developer tools.</p>
+</blockquote>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Using the Chrome developer tools is a fast way to explore the elements that make up your web page and should help speed up testing and bug fixing.  So get familiar with these tools and get even more productive.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>I’m using Hexo as my blogging platform and wanted to customise the theme, which is broken down into many different parts to make it easier to manage and customise.  In order to understand what the different parts did I fired up Google Chrome deverloper tools to quickly explore the styles of Hexo’s default theme.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo - Why I Prefer It Over Octopress]]></title>
+    <link href="http://jr0cket.co.uk/2014/04/hexo---why-i-prefer-it-over-octopress.html"/>
+    <id>http://jr0cket.co.uk/2014/04/hexo---why-i-prefer-it-over-octopress.html</id>
+    <published>2014-04-02T12:55:29.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>There are several <a href="http://www.staticgen.com/" target="_blank" rel="noopener">static website &amp; blogging platforms available</a>, so why did I choose <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> over things like Jekyll, Octopress, DocPad or writing my own?  Let me elaborate.</p>
+<a id="more"></a>
+<h1 id="I-write-more-JavaScript-than-Ruby"><a href="#I-write-more-JavaScript-than-Ruby" class="headerlink" title="I write more JavaScript than Ruby"></a>I write more JavaScript than Ruby</h1><p>Ruby is a great language but one I rarely use it for development anymore.  </p>
+<p>The languages I use the most are Clojure and JavaScript, so ideally the tools I use should be written in one of those languages.  Why, well I already have the environment set up to support tools in those languages and if I need to extend the tool then I have the skills to do so relatively quickly.</p>
+<h1 id="Ruby-is-a-pain-to-install"><a href="#Ruby-is-a-pain-to-install" class="headerlink" title="Ruby is a pain to install"></a>Ruby is a pain to install</h1><p>I have had a lot of problems with Ruby on MacOSX and Ubuntu, with only compilation from source code being successful.  This takes a bit of time and requires extra packages to be installed I otherwise wouldnt need.  RVM did strange things to my bash resource files last time I tried it out and the install failed on both MacOSX and Ubuntu.</p>
+<h1 id="New-is-often-Better"><a href="#New-is-often-Better" class="headerlink" title="New is often Better"></a>New is often Better</h1><p>Hexo is relatively new and yet has learnt a lot from Octopres.  So has the advantage of not baking in any technical debt or having language specific quirks.  One example of why I like Hexo better is its simplicity.  To create a new file for a blog post in Hexo you use the command:</p>
+<pre><code>hexo new &quot;title of blog post&quot;
+</code></pre><p>With Octopress the command is similar but not as easy to remember and trickier to type:</p>
+<pre><code>rake new_post[&quot;Title of blog post&quot;]
+</code></pre><p>The differeces are relatively small, but in terms of usabiltity I feel a big difference especially as I write several blog posts a week. </p>
+<p>Rather than using the command <code>octopress</code> you have to remember that you are using the command <code>rake</code>.  This is fine if you are used to Ruby every day, but I am not.  The form of the command also makes it difficult to rember (eg, that you have to use brackets and which ones were they again) and its actually harder to type, especially for a touch typist.</p>
+<h1 id="Great-feedback-process"><a href="#Great-feedback-process" class="headerlink" title="Great feedback process"></a>Great feedback process</h1><p>If you run the Hexo server then any changes you make, either to the content of your site or the design (CSS, theme, etc) is automatically picked up and rendered.  So if you are curious about how your changes look, then you just need to point your browser to the hexo server, usually running on port 4000.</p>
+<p>So to run the hexo server you use the command:</p>
+<pre><code>hexo server
+</code></pre><p>Then to see the results you open the link <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<p>When you make a change you get output in the console that is currently running the Hexo server, for example</p>
+<img src="/images/hexo-server-example-output-on-changes.png">
+<p>This allows me to work locally on my laptop and see the results instantaineously.  Only when I am ready to share my changes with the world do I need to generate the static content and push it to Github pages.</p>
+<p>This simple process should support me event when I have hundereds of blog posts and pages of content.  I wont have to wait for the generation of the site (although Hexo is pretty quick anyway, generating the site as it is in about 5 seconds).</p>
+<h1 id="Responsive-community"><a href="#Responsive-community" class="headerlink" title="Responsive community"></a>Responsive community</h1><p>There is a healthy community around Hexo.  There are already lots of articles about configuring Hexo and creating your own themes.  I have found the project itself very responsive to issues and I even had several pull requests accepted.</p>
+<h1 id="Multi-threaded-processing"><a href="#Multi-threaded-processing" class="headerlink" title="Multi-threaded processing"></a>Multi-threaded processing</h1><p>As I plan to use one platform for all my static web content, blogging, tutorials, slides and technology micro-sites, then I need something that works pretty quick.</p>
+<p>Hexo has also added a cache system to speed up the generation time even further.  The cache can be used with headers, footers or anywhere where the same content is generated repeatedly.</p>
+<h1 id="Customisation"><a href="#Customisation" class="headerlink" title="Customisation"></a>Customisation</h1><p>I also want to be able to put my own look onto my websites.  Most tools of this kind provide some nice sites, but I dont want something that just looks exactly like every other site out there.</p>
+<p>However, I dont want to spend a long time configuring themes, so it should be really easy to tweak exiting themes.  </p>
+<p>So far I have found Hexo easier to understand the theme structure from reading the default landscape theme.  Although I dont believe there is a vast difference between Hexo and Octopress themes.  It just seems a little easier to work with than the Octopress themes, but I guess it depends which themes you work with in the end.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Hexo is a great choice for any blog or static website you want to create, I highly recommend switching to it and deploying your websites on Github pages.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>There are several <a href="http://www.staticgen.com/" target="_blank" rel="noopener">static website &amp; blogging platforms available</a>, so why did I choose <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> over things like Jekyll, Octopress, DocPad or writing my own?  Let me elaborate.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://jr0cket.co.uk/2014/04/hello-world.html"/>
+    <id>http://jr0cket.co.uk/2014/04/hello-world.html</id>
+    <published>2014-04-02T11:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">trobuleshooting</a> or you can ask me on <a href="https://github.com/tommy351/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h2 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h2 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h2 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">trobuleshooting</a> or you can ask me on <a href="https://github.com/tommy351/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Static Site Generator - Modifying Existing Themes]]></title>
+    <link href="http://jr0cket.co.uk/2014/04/hexo-static-site-generator---modifying-exiting-themes.html"/>
+    <id>http://jr0cket.co.uk/2014/04/hexo-static-site-generator---modifying-exiting-themes.html</id>
+    <published>2014-04-02T06:45:21.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo is a great way to create a blog or static website and comes with some responsive and great looking themes.  However, so your site doesnt look like everyone elses, you may want to customise the look and the easiest way is to modify an existing theme.</p>
+<a id="more"></a>
+<h2 id="Landscape-the-default-theme"><a href="#Landscape-the-default-theme" class="headerlink" title="Landscape - the default theme"></a>Landscape - the default theme</h2><p>There are a wide range of themes to choose from, althought Landscape is one of the newest and is also the default so you dont need to instal it.</p>
+<h3 id="Location-of-themes"><a href="#Location-of-themes" class="headerlink" title="Location of themes"></a>Location of themes</h3><p>In the themes folder of your hexo project </p>
+<pre><code>hexo init new-project
+cd new-project
+</code></pre><p>You will now see a <code>themes/landscape</code> directory structure in your new hexo project.  Inside this landscape directory are a collection of files that generate the theme when you run ethier <code>hexo server</code> or <code>hexo generate</code>.</p>
+<h2 id="Making-your-changes-work"><a href="#Making-your-changes-work" class="headerlink" title="Making your changes work"></a>Making your changes work</h2><p>If you have already generated or deployed your site with a theme and then you modify it. it seems hexo does not pick up those changes.  First you need to run the command</p>
+<pre><code>hexo clean 
+</code></pre><p>This will remove the cache and the .deploy folders.  So now when you do</p>
+<pre><code>hexo generate
+</code></pre><p>all new files are added to public.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>Hexo is a great way to create a blog or static website and comes with some responsive and great looking themes.  However, so your site doesnt look like everyone elses, you may want to customise the look and the easiest way is to modify an existing theme.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Codeblock Highlighting Verses Markdown]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/hexo-codeblock-highlighting-vs-markdown.html"/>
+    <id>http://jr0cket.co.uk/2014/03/hexo-codeblock-highlighting-vs-markdown.html</id>
+    <published>2014-03-29T01:02:50.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>This is a simple post to see if there are any differences in the style of code when defined in a <code>{ % codeblock % }</code> or using markdown notation (tripple backticks / indentation).  In this case I am just using some simple Clojure code.</p>
+<a id="more"></a>
+<h2 id="Showing-code-by-indentation"><a href="#Showing-code-by-indentation" class="headerlink" title="Showing code by indentation"></a>Showing code by indentation</h2><p>I have wrapped the following lines by three backtick characters on the line before and line after the code.  These tripple backtick characters to instruct the Hexo markdown processor that the containing lines should be rendered as a code block.</p>
+<figure class="highlight clojure"><figcaption><span>really-simple-example.clj</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clojure-function [paramter]</span><br><span class="line">  (<span class="name"><span class="builtin-name">str</span></span> <span class="string">"Lets do something simple using Clojure and "</span> parameter))</span><br></pre></td></tr></table></figure>
+<p>That should be a simple Clojure example using markdown indentation.  </p>
+<h2 id="Using-Hexo-Codeblock"><a href="#Using-Hexo-Codeblock" class="headerlink" title="Using Hexo Codeblock"></a>Using Hexo Codeblock</h2><p>Hexo has several plugin types from Swig that you can use in your post.  Lets try out <code>codeblock</code> to see if there is any difference in how it renders compared to the above markdown.</p>
+<figure class="highlight clojure"><figcaption><span>basic-clojure-example.clj</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> authors [<span class="symbol">:name</span> <span class="string">"John Stevenson"</span>])</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> show-author [authors]</span><br><span class="line">  (<span class="name"><span class="builtin-name">str</span></span> authors))</span><br><span class="line">  </span><br><span class="line">(<span class="name">show-author</span> authors)</span><br></pre></td></tr></table></figure>
+<p>The rendering of both pieces of code is pretty much the same, except with the code block I added language and a title.  If I use three backticks then I can specify the language and a filename that contains the code.  If I just use indentation, specifying a language and filename is not possible (as far as I know).</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>This is a simple post to see if there are any differences in the style of code when defined in a <code>{ % codeblock % }</code> or using markdown notation (tripple backticks / indentation).  In this case I am just using some simple Clojure code.</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://jr0cket.co.uk/tags/hexo/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Updating Octopress With Bug Fixes and Enhancments]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/updating-octopress-with-bug-fixes-and-enhancments.html"/>
+    <id>http://jr0cket.co.uk/2014/03/updating-octopress-with-bug-fixes-and-enhancments.html</id>
+    <published>2014-03-13T19:32:54.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<p>For each Octopress project you have created (ie. for each blog / website you created with Octopress) you need to pull some code from Github remote (octopress master) and run a few rake tasks.</p>
+<p>Before you start with an update, check you Octopress projects files have been added to the Git repository or Stashed out of the way - as Octopress will try and overwrite them (although as its using git it will fail and warn you about a merge conflict).</p>
+<pre><code>git pull octopress master     # Get the latest Octopress
+bundle install                # Keep gems updated
+rake update_source            # update the template&apos;s source
+rake update_style             # update the template&apos;s style
+</code></pre><p><a href="http://octopress.org/docs/updating/" target="_blank" rel="noopener">http://octopress.org/docs/updating/</a></p>
+<p>Thank you<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>For each Octopress project you have created (ie. for each blog / website you created with Octopress) you need to pull some code from Gith]]>
+    </summary>
+    
+      <category term="octopress" scheme="http://jr0cket.co.uk/tags/octopress/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Creating Content in Markdown for Your Octopress Blog]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/creating-content-in-markdown-for-your-octopress-blog.html"/>
+    <id>http://jr0cket.co.uk/2014/03/creating-content-in-markdown-for-your-octopress-blog.html</id>
+    <published>2014-03-13T19:32:20.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<p>Octopress enables the creation of great looking blog post using simple markdown text.  This gives you a no-fuss way of writing your blogs without getting distracted.  Here I will cover how to add formatting to you text and embedding code and other useful media into your blog posts.</p>
+<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently. </p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Adding-styles-to-text"><a href="#Adding-styles-to-text" class="headerlink" title="Adding styles to text"></a>Adding styles to text</h2><p>Headings<br>Bold, italic </p>
+<h2 id="Adding-images"><a href="#Adding-images" class="headerlink" title="Adding images"></a>Adding images</h2><p>Images are always a good way to explain concepts or to just get attendtion for your writing.</p>
+<p>To add an image to your post, you add the following code </p>
+<figure class="highlight plain"><figcaption><span>[Insert an image in your post]</span><a href="http://octopress.org/docs/plugins/image-tag/" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;/path/to/image&quot; class=&quot;[class names]&quot; title=&quot;[width] [height] [title text [alt text]]&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>Here is an example with my two cute cats:</p>
+<img src="/images/kittens-snuggled.png">
+<h3 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://placekitten.com/890/280&quot;&gt;</span><br><span class="line">&lt;img src=&quot;http://placekitten.com/320/250&quot; class=&quot;left&quot; title=&quot;Place Kitten #2&quot;&gt;</span><br><span class="line">&lt;img src=&quot;http://placekitten.com/300/500&quot; class=&quot;right&quot; width=&quot;150&quot; height=&quot;250&quot; title=&quot;Place Kitten #3&quot;&gt;</span><br><span class="line">&lt;img src=&quot;http://placekitten.com/300/500&quot; class=&quot;right&quot; width=&quot;150&quot; height=&quot;250&quot; title=&quot;Place Kitten #4 An image of a very cute kitten&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Showing-code"><a href="#Showing-code" class="headerlink" title="Showing code"></a>Showing code</h2><h3 id="Code-blocks"><a href="#Code-blocks" class="headerlink" title="Code blocks"></a>Code blocks</h3><p>You can embed code snippets directly in the markup of the blog posts you write using the codeblock directive.<br><a href="http://octopress.org/docs/plugins/codeblock/" target="_blank" rel="noopener">http://octopress.org/docs/plugins/codeblock/</a></p>
+<p>These are okay but I have not figured out a way to stop Octopress examples from rendering incorrectly (unless there is an Octopress update that fixes this)</p>
+<p>[TODO - figure out how to show code snippets that are also liquid calls]</p>
+<h3 id="Github-Gists"><a href="#Github-Gists" class="headerlink" title="Github Gists"></a>Github Gists</h3><p>I am used to using Github and Gists for sharing and collaborating around code, so as Octopress can use Gits then I have started using the gist directive.</p>
+<script src="//gist.github.com/9532424.js"></script>
+<p>See the <a href="Octopress article on Github gists">http://octopress.org/docs/plugins/gist-tag/</a> for a few more examples.</p>
+<h2 id="Adding-Video"><a href="#Adding-Video" class="headerlink" title="Adding Video"></a>Adding Video</h2><p>You can add embedded videos from YouTube and Vimeo very easily, you just need to know the id of the video which is the last characters of the </p>
+<p>For example, there is a great video by Lindsey Stirling at <a href="https://www.youtube.com/watch?v=DHdkRvEzW84" target="_blank" rel="noopener">https://www.youtube.com/watch?v=DHdkRvEzW84</a>, so to include this video in a post I would use the video id at the end of that web address (after the watch?v=).  So I would add the following code to my code</p>
+
+  youtub DHdkRvEzW84
+
+<p>You can use either YouTube or Vimeo for your video souce using the following syntax:</p>
+
+   youtube video-id
+   vimeo video-id
+
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>A beautiful video with amazing music from Lindsey Stirling:</p>
+ <div class="video-container"><iframe src="//www.youtube.com/embed/DHdkRvEzW84" frameborder="0" allowfullscreen></iframe></div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Octopress enables the creation of great looking blog post using simple markdown text.  This gives you a no-fuss way of writing your blogs without getting distracted.  Here I will cover how to add formatting to you text and embedding code and other useful media into your blog posts.</p>
+<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently. </p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="octopress" scheme="http://jr0cket.co.uk/tags/octopress/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Customise Octopress Themes for Fun and Your Profit]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/customise-octopress-themes-for-fun-and-your-profit.html"/>
+    <id>http://jr0cket.co.uk/2014/03/customise-octopress-themes-for-fun-and-your-profit.html</id>
+    <published>2014-03-12T16:28:28.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<p>Octopress themes are stored in the the root folder of your project in a folder called .themes.  If you installed one of the custom themes for Octopress [link], the .themes folder is where the instructions tell you to clone the theme git repository.</p>
+<p>Themes can also be installed by passing a parameter to the rake install command. the default theme being “classic”.</p>
+<p>Using the .theme folder for your themes helps ensure that your customisations do not get over-written by Octopress updates .</p>
+<a id="more"></a>
+<h2 id="Including-font-families"><a href="#Including-font-families" class="headerlink" title="Including font families"></a>Including font families</h2><p>You can add hosted fonts just like you do with HTML pages using a link reference.  There are a large number of fonts from Google.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=&apos;http://fonts.googleapis.com/css?family=Lato&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;&gt;</span><br></pre></td></tr></table></figure>
+<p>I like the Ubuntu font so I add the Ubutu and Ubunto Mono font families using the following code:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=&apos;http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;&gt;</span><br></pre></td></tr></table></figure>
+<p>You can select your own fonts to use by visiting <a href="Google fonts">http://www.google.com/fonts/</a> and adding the font families you like to your collection and Google Fonts will generate the line of code you need to add.</p>
+<p>To add Ubuntu fonts directly to your CSS you would use the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">font-family: &apos;Ubuntu Mono&apos;, sans-serif;</span><br><span class="line">font-family: &apos;Ubuntu&apos;, sans-serif;</span><br></pre></td></tr></table></figure>
+<h2 id="Changing-Colours"><a href="#Changing-Colours" class="headerlink" title="Changing Colours"></a>Changing Colours</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass/custom/_colors.scss</span><br></pre></td></tr></table></figure>
+<h2 id="Example-light-colour-scheme"><a href="#Example-light-colour-scheme" class="headerlink" title="Example - light colour scheme"></a>Example - light colour scheme</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$header-title-font-family:</span><br><span class="line">&quot;Lato&quot;,</span><br><span class="line">&quot;Fontdiner Swanky&quot;,</span><br><span class="line">&quot;Germania One&quot;,</span><br><span class="line">&quot;Poller One&quot;,</span><br><span class="line">&quot;Georgia&quot;,</span><br><span class="line">&quot;Helvetica Neue&quot;,</span><br><span class="line">Arial,</span><br><span class="line">sans-serif !default;</span><br></pre></td></tr></table></figure>
+<h2 id="Chainging-Style"><a href="#Chainging-Style" class="headerlink" title="Chainging Style"></a>Chainging Style</h2><p>Change width of the body, the size of the dates and article titles as well as the codeblocks in </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass/custom/_styles.scss</span><br></pre></td></tr></table></figure>
+<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  max-width: 1100px;</span><br><span class="line">&#125;</span><br><span class="line">time &#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line">h1 &#123;</span><br><span class="line">  font-size: 2.2em;</span><br><span class="line">&#125;</span><br><span class="line">section &#123;</span><br><span class="line">  &gt; h1 &#123;</span><br><span class="line">    font-size: 1.5em;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">codeblock &#123;</span><br><span class="line">    font-size: 1.1em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Icons"><a href="#Icons" class="headerlink" title="Icons"></a>Icons</h2><p><a href="Social media">http://www.elegantthemes.com/blog/resources/free-social-media-icon-set</a></p>
+<h2 id="Header-images"><a href="#Header-images" class="headerlink" title="Header images"></a>Header images</h2><p>adding a CSS-styled header image isn’t immediately obvious—at least, not to web-tards like me. My first inclination was to do a bunch of surgery on ~/octopress/source/_includes/custom/header.html and stuff an image in there; that worked, but it didn’t take more than a glance at the CSS behind the Octopress default site to see that the method used there didn’t involve any additional code going into the header section. Plus, just adding an image in there didn’t really fit with the HTML5 fanciness of Octopress and Jekyll—it didn’t resize or reflow as the page was changed.</p>
+<p>The key ended up being the realization that the header styling and its reflowing was coded in ~/octopress/sass/base/_layout.scss. True to form, that file has an override in ~/octopress/sass/custom/_layout.scss, and to that I made the following changes:</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">body &gt; header h1 &#123;</span><br><span class="line">      padding-left:2.5em;</span><br><span class="line">      text-align:right;</span><br><span class="line">      @media only screen and (min-width: 432px) &#123;</span><br><span class="line">              text-align:left;</span><br><span class="line">      &#125;</span><br><span class="line">      @media only screen and (min-width: 768px) &#123;</span><br><span class="line">              padding-left:3em;</span><br><span class="line">      &#125;</span><br><span class="line">      @media only screen and (min-width: 992px) &#123;</span><br><span class="line">              padding-left:2em;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &gt; header h2 &#123;</span><br><span class="line">      padding-left:5.62em;</span><br><span class="line">      text-align:right;</span><br><span class="line">      @media only screen and (min-width: 432px) &#123;</span><br><span class="line">              text-align:left;</span><br><span class="line">              padding-left:3.9em;</span><br><span class="line">      &#125;</span><br><span class="line">      @media only screen and (min-width: 768px) &#123;</span><br><span class="line">              padding-left:5em;</span><br><span class="line">      &#125;</span><br><span class="line">      @media only screen and (min-width: 992px) &#123;</span><br><span class="line">              padding-left:2.9em;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &gt; header h1:before &#123;</span><br><span class="line">      content:&quot;&quot;;</span><br><span class="line">      position:absolute;</span><br><span class="line">      left:0em;</span><br><span class="line">      right:0;</span><br><span class="line">      top:1.5em;</span><br><span class="line">      height:110px;</span><br><span class="line">      width:110px;</span><br><span class="line">      overflow:hidden;</span><br><span class="line">      text-align:right;</span><br><span class="line">      background-image:url(&apos;/images/bigdino-blog-head3.png&apos;);</span><br><span class="line">      background-repeat:no-repeat;</span><br><span class="line">      @media only screen and (min-width: 432px) &#123;</span><br><span class="line">              top:.32em;</span><br><span class="line">      &#125;</span><br><span class="line">      @media only screen and (min-width: 768px) &#123;</span><br><span class="line">              left:.75em;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The changes are divided up into three sections: the first part styles the main title (“Bigdinosaur Blog”), the second styles the subtitle (“Tales of hacking and stomping on things”), and the third places and styles the background image. Each section also contains instructions on how the styles should change as the browser window’s width changes (the lines beginning with @media only).</p>
+<p>The most important thing, and the thing that wasn’t obvious to me at first but is actually really obvious in hindsight, is that the initial parameters for each section describe how the thing should look at its smallest, and then each min-width section describes how the thing should look starting at when the browser window is that wide or wider. So, look at header h1. This is the styling applied to the main title in the header. When the browser window is anywhere from 0 to 431 pixels wide, the title should be right-aligned with a bit of padding on its left to keep it from overlapping with the background dinosaur (more on overlapping in a bit). This is how things get displayed on, say, an iPhone.</p>
+<p>The instant the browser window is 432 pixels wide—which is the point at which the “Bigdinosaur Blog” text wraps to a single line—the text switches to left-aligned and the amount of padding changes, again to keep it from overlapping with the background dino. Another shift comes again at 768 pixels of width, and then final shift to the title’s most sprawling layout happens at 992 pixels.</p>
+<p>The subtitle, styled in the header h2 section, has similar directives—it starts out right-aligned, shifts to left-aligned at a certain point, and the amount of padding around it shifts as the browser window moves. The challenge with the subtitle is that I wanted it to maintain a consistent position relative to the main title, and since I’m doing my spacing using em values (which are themselves relative units), each new width setting required tuning by hand.</p>
+<p>The last section places the background image itself. In order to have the most control about where the image appears and where it reflows to, I’ve given it a position:absolute tag, which means that other styled elements ignore the background when figuring out their own layouts—hence all the fiddling about with padding for the header text. Instead of standard image floating behavior, an absolutely positioned image can sit on top of other page elements. This can be used to creative effect, like on the Octopress home page titlebar, but you do have to be mindful with the spacing and padding of your other elements so that they don’t get eaten.</p>
+<p>In its most narrow configuration, the background image sits on the far left of the page, with 1.5 ems of space from the top of its section to ensure that it doesn’t poke up past the main title, and with background-repeat:no-repeat set so that it only displays once rather than tiling or repeating itself. I also found that if I didn’t explicitly declare the height and width of the image, it wouldn’t display at all. Finally, there are two width settings that reposition the image as the page widens so that it maintains a visually pleasing position relative to the title.</p>
+<p>I mentioned it above, but it’s worth repeating: the values above are what work for my typeface choice and image size, and you will have to tweak your own to taste. Once I had decided exactly what I wanted to do and figured out what files to edit, it took probably an hour of making small changes and previewing and making small changes and previewing over and over again before I was happy with the way things lined up. I spent so much time fiddling, in fact, that I elected to abandon the idea of having the dino pic resize itself. Dinosaurs, I suppose, are meant to be displayed as large as possible, all the time, and would never consent to any funny-business resizing.</p>
+<p><a href="http://blog.bigdinosaur.org/changing-octopresss-header/" target="_blank" rel="noopener">http://blog.bigdinosaur.org/changing-octopresss-header/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Octopress themes are stored in the the root folder of your project in a folder called .themes.  If you installed one of the custom themes for Octopress [link], the .themes folder is where the instructions tell you to clone the theme git repository.</p>
+<p>Themes can also be installed by passing a parameter to the rake install command. the default theme being “classic”.</p>
+<p>Using the .theme folder for your themes helps ensure that your customisations do not get over-written by Octopress updates .</p>]]>
+    
+    </summary>
+    
+      <category term="octopress" scheme="http://jr0cket.co.uk/tags/octopress/"/>
+    
+      <category term="themes" scheme="http://jr0cket.co.uk/tags/themes/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Creating Blog Posts With Octopress]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/creating-blog-posts-with-octopress.html"/>
+    <id>http://jr0cket.co.uk/2014/03/creating-blog-posts-with-octopress.html</id>
+    <published>2014-03-04T15:46:14.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<p>Octopress provides an easy way to create blog posts by proving a task that will automatically place and name your markdown file.  This helps manage your blog posts in a sensible structure and avoids conflicts.</p>
+<p>To create a new post, use the following command inside your Octopress project folder:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[&quot;Title of your blog post&quot;]</span><br></pre></td></tr></table></figure>
+<p>This will create a markdown file including frontmatter to apply the blog post style.  The task creates the file under the _source folder and included the date at the start of the filename.</p>
+<a id="more"></a>
+<p>Now you can edit the file and simply add your content.  Once you have written your blog post you can ask Octopress to generate the html for your new post.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake generate </span><br></pre></td></tr></table></figure>
+<p>You can view the results locally, or simply deploy up to your chosen location (eg. github pages)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rake preview</span><br><span class="line">rake deploy  </span><br></pre></td></tr></table></figure>
+<p>If you are confident about the changes you are making, or have a test website you are deploying to, then you can use a single command to generate the new version of the site and publish it directly.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake gen_deploy</span><br></pre></td></tr></table></figure>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This covers the bloggine workflow for Octopress.  Next we will cover adding content in your blog post markdown files, inlcuding text formatting, images, code snippets, embedded video, etc</p>
+<p>Thank you</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Octopress provides an easy way to create blog posts by proving a task that will automatically place and name your markdown file.  This helps manage your blog posts in a sensible structure and avoids conflicts.</p>
+<p>To create a new post, use the following command inside your Octopress project folder:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[&quot;Title of your blog post&quot;]</span><br></pre></td></tr></table></figure>
+<p>This will create a markdown file including frontmatter to apply the blog post style.  The task creates the file under the _source folder and included the date at the start of the filename.</p>]]>
+    
+    </summary>
+    
+      <category term="octopress" scheme="http://jr0cket.co.uk/tags/octopress/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[First Blog Post Ever - Awesome]]></title>
+    <link href="http://jr0cket.co.uk/2014/03/octopress-first-blog-post-ever-awesome.html"/>
+    <id>http://jr0cket.co.uk/2014/03/octopress-first-blog-post-ever-awesome.html</id>
+    <published>2014-03-03T00:08:42.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<p>This is the first blog post of many in my adventures in learning how to publish a blog using Octopress.  </p>
+<p>As a developer I want a lightweight tool to create and easily publish content interesting to other developers in the community.  Although I can write HTML, CSS and JavaScript for webapps, I dont want to be slowed down writing these things when I am doing creative writing.</p>
+<p>Using Octopress, which is a blogging framework on top of Jekyll, I can write my content using Markdown.  As Markdown is just simple text with a few characters and indents used for formating, I can focus on the writing and make it as appealing as I can.  I dont get distracted by the visual layout of the content and a standard design for the blog is consistently applied.<br><a id="more"></a></p>
+<p>The only challenge I had intially was to get a working copy of Ruby running on my Ubuntu laptop.  Jekyll and therefore Octopress requires Ruby version 1.9.3 or greater and Unfortunately I seemed to have a mix of 1.9.1 and 1.9.3.  In Ubuntu 13.10 there is a strange stiuation where the 1.9.3 version of ruby was installed along side version 1.9.1 and therefore errors arrose when trying to generate the site.</p>
+<p>To fix Ruby on Ubuntu, I loaded up Synaptic package manager and removed all Ruby packages and anything related, such as gem and bundler.  Then I installed the package ruby2.0 along with the docs and dev packages for that version.  With only the latest version of Ruby installed, Octopress worked perfectly.</p>
+<p>I look forward to sharing my further experiences blogging with Octopress</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>This is the first blog post of many in my adventures in learning how to publish a blog using Octopress.  </p>
+<p>As a developer I want a lightweight tool to create and easily publish content interesting to other developers in the community.  Although I can write HTML, CSS and JavaScript for webapps, I dont want to be slowed down writing these things when I am doing creative writing.</p>
+<p>Using Octopress, which is a blogging framework on top of Jekyll, I can write my content using Markdown.  As Markdown is just simple text with a few characters and indents used for formating, I can focus on the writing and make it as appealing as I can.  I dont get distracted by the visual layout of the content and a standard design for the blog is consistently applied.<br>]]>
+    
+    </summary>
+    
+      <category term="octopress" scheme="http://jr0cket.co.uk/tags/octopress/"/>
+    
+      <category term="blogging" scheme="http://jr0cket.co.uk/categories/blogging/"/>
+    
+  </entry>
+  
+</feed>

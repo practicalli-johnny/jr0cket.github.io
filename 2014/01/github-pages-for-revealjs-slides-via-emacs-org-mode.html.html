@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Github Pages for Reveal.js Slides Created With Emacs Org-Mode | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="In previous articles I showed how to setup Emacs Org-reveal &amp;amp; Reveal.js to generate your own presentations from Emacs Org-mode files.  This time I’ll show you how to publish those presentations o">
+<meta name="keywords" content="emacs,dev-tools,org-mode,github-pages">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Pages for Reveal.js Slides Created With Emacs Org-Mode">
+<meta property="og:url" content="http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="In previous articles I showed how to setup Emacs Org-reveal &amp;amp; Reveal.js to generate your own presentations from Emacs Org-mode files.  This time I’ll show you how to publish those presentations o">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png">
+<meta property="og:image" content="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Github Pages for Reveal.js Slides Created With Emacs Org-Mode">
+<meta name="twitter:description" content="In previous articles I showed how to setup Emacs Org-reveal &amp;amp; Reveal.js to generate your own presentations from Emacs Org-mode files.  This time I’ll show you how to publish those presentations o">
+<meta name="twitter:image" content="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-github-pages-for-revealjs-slides-via-emacs-org-mode.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html" class="article-date">
+  <time datetime="2014-01-03T13:34:00.000Z" itemprop="datePublished">3 Jan 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/emacs/">emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Github Pages for Reveal.js Slides Created With Emacs Org-Mode
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png" class="img-thumbnail">
+<p>In previous articles I showed how to <a href="http://blog.jr0cket.co.uk/2013/09/create-html5-presentations-emacs-revealjs.html" target="_blank" rel="noopener">setup Emacs Org-reveal &amp; Reveal.js</a> to <a href="http://blog.jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html" target="_blank" rel="noopener">generate your own presentations</a> from Emacs Org-mode files.  This time I’ll show you how to publish those presentations on <a href="http://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> as I have done for <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">my own presentations</a>.</p>
+<a id="more"></a>
+<p><a href="http://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> are a great place for publishing your <a href="http://lab.hakim.se/reveal-js/" target="_blank" rel="noopener">Reveal.js</a> presentations or any static web content. For existing repositories you simply commit your content to a <em>gh-pages branch</em> or to the <em>master branch</em> of a user or organisation repository.</p>
+<blockquote><p><a href="http://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> are great for websites that is self-contained, in that there is no reliance on a database or other services running locally.  You can even create great looking pages without any coding by using the Github authoring tool.</p>
+</blockquote>
+<h1 id="Existing-code-repositories"><a href="#Existing-code-repositories" class="headerlink" title="Existing code repositories"></a>Existing code repositories</h1><p>If you already have a repository for your code and want to add web page documentation, then you can simply add a <em>gh-pages branch</em> and commit your web content to that branch.</p>
+<img src="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png" class="img-code">
+<h1 id="Content-only-repositories"><a href="#Content-only-repositories" class="headerlink" title="Content only repositories"></a>Content only repositories</h1><p>If you only have content then you can use a <em>user</em> or <em>organisation</em> repository.  This is a specifically named repository in the form of <code>name.github.io</code> where <code>name</code> is the exact name of your Github account or Github organisation you are part of.</p>
+<p>In my case I <a href="https://github.com/new" target="_blank" rel="noopener">created a repository</a> named <code>jr0cket.github.io</code>, as my Github user account name is jr0cket. </p>
+<p>Once created, you can type in the name of this repository into your browser and it will display any content you have committed into the repository and pushed it to Github.  </p>
+<p>Your user or org repository also forms the entry point for other project, so if you have a project called <em>slides</em> with web content in its <em>gh-pages</em> branch, you can see that content using the address: <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">http://jr0cket.github.io/slides</a></p>
+<h1 id="Separating-slide-content-into-their-own-repository"><a href="#Separating-slide-content-into-their-own-repository" class="headerlink" title="Separating slide content into their own repository"></a>Separating slide content into their own repository</h1><p>As I planed to create a number of presentations, I use both an account repository as the home page and created a new repository called slides to host all my presentations. &nbsp;This allows all my presentations to be easily cloned or forked by others easily without getting content that is only relevant to me on my Github pages home page. </p>
+<p>Keeping the presentations all in one repository keeps things simple should I define my own Reveal.js themes or if there are Reveal.js updates.</p>
+<p>I added &nbsp;everything to the <em>gh-pages</em> branch (reveal.js, images, org &amp; generated html files). &nbsp;Then I generate the Reveal.js slides locally using org-reveal in Emacs, so I can check they look okay. &nbsp;Once I am happy with the slides I commit the html and .org files to Git and push them up to Github.</p>
+<h1 id="Setting-up-a-Github-Pages-user-account-repository"><a href="#Setting-up-a-Github-Pages-user-account-repository" class="headerlink" title="Setting up a Github Pages user account repository"></a>Setting up a Github Pages user account repository</h1><p>Creating an user repository on Github is just the same as for any other repository, except that the name must match the form name.github.io - where name is exactly the same as you Github user name.</p>
+<p>I created a new repository called <code>jr0cket.github.io</code>, this has a web address (URL) of <a href="http://jr0cket.github.io/" target="_blank" rel="noopener">http://jr0cket.github.io</a></p>
+<p>I used the Automatic Page Generator from Github to create the site without coding and with a handful of nice templates to choose from. &nbsp;You can of course add your own HTML, CSS &amp; JavaScript if you wish. &nbsp;The Automatic Page Generator is in on the Settings page of your repository, under the Github pages section. &nbsp;This section shows you the repository URL and a button to generate a page for you.</p>
+<p>If you are going to use your user or org repository for your slides, then jump to the secion on “Adding Reveal.js to your repository”</p>
+<h1 id="Creating-a-repository-for-your-Reveal-js-slides"><a href="#Creating-a-repository-for-your-Reveal-js-slides" class="headerlink" title="Creating a repository for your Reveal.js slides"></a>Creating a repository for your Reveal.js slides</h1><p>If you don’t already have a Github repository for your slides (and are not using your user or org repository), go to your account on Github and <a href="https://github.com/new" target="_blank" rel="noopener">create a new repository</a>.</p>
+<pre><code>git clone https://github.com/username/repository.git
+</code></pre><h1 id="Create-an-orphaned-gh-pages-branch"><a href="#Create-an-orphaned-gh-pages-branch" class="headerlink" title="Create an orphaned gh-pages branch"></a>Create an orphaned gh-pages branch</h1><p>Github pages publishes content only from the branch gh-pages (unless you are using a user or org repository). In your local repository, create a new branch called gh-pages. According to Github, the gh-pages branch should be an orphaned branch.</p>
+<pre><code>cd your-local-repository
+git checkout --orphan gh-pages
+</code></pre><blockquote>
+<p>An orphaned branch is one that is not connected to another branch, in this case its not attached to master. Technically I don’t think gh-pages branch needs to be orphaned to publish your content, especially if there is nothing in the master branch, but this is <a href="https://help.github.com/articles/creating-project-pages-manually" target="_blank" rel="noopener">the approach that Github recommends</a>.</p>
+</blockquote>
+<p>Once you have the gh-pages branch you can commit your files to that branch as normal. </p>
+<pre><code>git add .
+git commit -m &quot;Adding Reveal.js files for presentation&quot;
+git push origin gh-pages
+</code></pre><p>Pushing your Reveal.js slides at this point will not give you the desired results, as we haven’t added the Reveal.js files to the repository. &nbsp;So lets do that next.</p>
+<h1 id="Adding-Reveal-js-to-your-repository"><a href="#Adding-Reveal-js-to-your-repository" class="headerlink" title="Adding Reveal.js to your repository"></a>Adding Reveal.js to your repository</h1><p>You need to provide the JavaScript and CSS files from Reveal.js to make your slides display correctly. &nbsp;I copy the following folders from within the reveal.js folder into the root of my slides project</p>
+<pre><code>cd  /path/to/revealjs/css    ~/my-slides
+cd  /path/to/revealjs/js     ~/my-slides
+cd  /path/to/revealjs/lib    ~/my-slides
+cd  /path/to/revealjs/plugin ~/my-slides
+</code></pre><p>You also need to check that the HTML for your web pages references Reveal.js files correctly. &nbsp;The best way to do this is in the configuration for Emacs Org-reveal.</p>
+<p>In my Org-reveal setup, I have defined the root for the Reveal.js files in my live-pack <code>init.el</code> file as follows:</p>
+<pre><code>(setq org-reveal-root &quot;&quot;)
+</code></pre><p>So long at this org-reveal setting is loaded, it shouldn’t matter which file you add it to in your Emacs configuration.</p>
+<p>The HTML you generate with Org-reveal in Emacs should have references to the Reveal.js includes in the <code>&lt;head&gt;</code> section. Here is an example:</p>
+<pre><code>&lt;html lang=”en”&gt;
+&lt;head&gt;
+  &lt;meta charset=”utf-8”/&gt;
+  &lt;title&gt;(My presentation title)&lt;/title&gt;
+  &lt;meta name=”author” content=”(John Stevenson)”/&gt;
+  &lt;link rel=”stylesheet” href=”./css/reveal.min.css”/&gt;
+  &lt;link rel=”stylesheet” href=”./css/theme/jr0cket.css” id=”theme”/&gt;
+  &lt;link rel=”stylesheet” href=”./css/print/pdf.css” type=”text/css” media=”print”/&gt;
+  &lt;meta name=”description” content=”My presentation title“&gt;
+&lt;/head&gt;
+</code></pre><h1 id="The-final-push"><a href="#The-final-push" class="headerlink" title="The final push"></a>The final push</h1><p>Then push the Reveal.js files to your Github repository (and any updated to your Org &amp; html files)</p>
+<pre><code>git add .
+git commit -m &quot;Adding Reveal.js files for presentation&quot;
+git push origin gh-pages
+</code></pre><h1 id="Browsing-your-Slides"><a href="#Browsing-your-Slides" class="headerlink" title="Browsing your Slides"></a>Browsing your Slides</h1><p>If you added your slides to a user or org repository, then you should be able to browse to <a href="http://name.github.io" target="_blank" rel="noopener">http://name.github.io</a> where name is your Github user or org name (eg. <a href="http://jr0cket.github.io)" target="_blank" rel="noopener">http://jr0cket.github.io)</a>.</p>
+<p>If, like me, you created a seperate repository for all your slides, you can brows them by going to <a href="http://name.github.io/repo-name" target="_blank" rel="noopener">http://name.github.io/repo-name</a> where name is your Github user name and repo-name is the name of the repository you added Reveal.js and your slides to (eg. <a href="http://jr0cket.github.io/slides)" target="_blank" rel="noopener">http://jr0cket.github.io/slides)</a>.</p>
+<p>Note that you need to add the html filename to the URL to browse your presentation, or as I have done add links to the page on <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">jr0cket.github.io</a></p>
+<h1 id="Using-Hub-as-an-alternative-way-to-create-your-Github-pages-repository"><a href="#Using-Hub-as-an-alternative-way-to-create-your-Github-pages-repository" class="headerlink" title="Using Hub as an alternative way to create your Github pages repository"></a>Using Hub as an alternative way to create your Github pages repository</h1><p>Hub is a command line tool for working with git repositories and Github.  Hub makes it easy to create and fork repositories on Github without having to visit the Github website.</p>
+<ul>
+<li>Install <a href="http://hub.github.com/" target="_blank" rel="noopener"><strong>Hub</strong></a></li>
+<li>Create a folder called <code>name.github.io</code> on your laptop, where name is your Github user name or organisation name</li>
+<li>Inside that folder, initialise a git repository - <code>git init</code></li>
+<li>Rename the master branch to gh-pages - <code>git branch -m gh-pages</code></li>
+<li><p>Use hub to to create the repository on github - <code>hub create -d &quot;optional description of the repository&quot;</code><br>– If you want to specify the repository name using hub, use the command form - <code>hub create account-name.github.io -d &quot;optional description of the repository&quot;</code></p>
+</li>
+<li><p>Create and commit your content in the local repository on the gh-branch, then push the gh-pages branch to github <code>github push -u origin gh-pages</code></p>
+</li>
+</ul>
+<p>– The -u option sets origin to be the default remote repository to and the gh-pages the default branch.  So next time you do a push or pull you dont need to specify the remote repository or branch, you can simply do <code>git push</code> and <code>git pull</code></p>
+<h1 id="Example-Reveal-js-presentations-on-Github-pages"><a href="#Example-Reveal-js-presentations-on-Github-pages" class="headerlink" title="Example Reveal.js presentations on Github pages"></a>Example Reveal.js presentations on Github pages</h1><p>See <a href="http://jr0cket.github.io/slides" target="_blank" rel="noopener">my Github page</a> for my published presentations, created with Emacs Org-mode, Org-reveal and Reveal.js.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html" data-id="cl2mbqg0600tfzqmj56nophs8" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-pages/">github-pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/org-mode/">org-mode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/01/share-your-revealjs-slides-on-github-pages.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Share Your Revealjs Slides on Github Pages
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/10/ubuntu-gnome-is-it-better-than-ubuntu.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu Gnome - Is It Better Than Ubuntu?</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/github/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.290Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Clojure Developers Blog With Github Gists]]></title>
+    <link href="http://jr0cket.co.uk/2012/04/clojure-developers-blog-with-github.html.html"/>
+    <id>http://jr0cket.co.uk/2012/04/clojure-developers-blog-with-github.html.html</id>
+    <published>2012-04-12T10:25:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-thumbnail">
+<p>Whilst <a href="https://github.com/" target="_blank" rel="noopener">Github</a> is a great way to share a whole repository of code, sometimes you want to talk about the design and challenges of developing your code, that discussion is often best done in a blog post.</p>
+<p>So how do you put your lovingly crafted <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> code (or anything else) into a blog so that it looks as beautiful as it does in Emacs?  Lets take a look at Github Gists.</p>
+<a id="more"></a>
+<h1 id="Enter-the-Github-Gist"><a href="#Enter-the-Github-Gist" class="headerlink" title="Enter the Github Gist"></a>Enter the <a href="https://gist.github.com/" target="_blank" rel="noopener">Github Gist</a></h1><p>A gist is a simple way to share code snippets with others, although unlike services like <a href="http://www.pastebucket.com/" target="_blank" rel="noopener">PasteBucket</a> the gists are automatically versioned, forkable and usable as a git repository.</p>
+<h1 id="Adding-Gists-to-Hexo"><a href="#Adding-Gists-to-Hexo" class="headerlink" title="Adding Gists to Hexo"></a>Adding Gists to Hexo</h1><p>Including a Gist inside a blog post is very easy when using Hexo, as it provides a special tag.  Simply get the number of your Github Gist and include it in the gist tag as follows</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; % gist gist-id filename % &#125;</span><br><span class="line">&#123; % gist 37766464 project.clj % &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>There should be no space between { and % or % and }</p>
+</blockquote>
+<h1 id="Adding-Gists-to-Blogger"><a href="#Adding-Gists-to-Blogger" class="headerlink" title="Adding Gists to Blogger"></a>Adding Gists to Blogger</h1><p>To add these gists to Blogger requires a bit of JavaScript and is a real pain because of how constrained Blogger is.  Luckily <a href="http://blog.moski.me/2012/01/gist-with-bloggers-dynamic-views.html" target="_blank" rel="noopener">Moski Doski has done the hard work</a> for us and put it on <a href="https://github.com/moski/gist-Blogger" target="_blank" rel="noopener">a Github repository</a> to share.</p>
+<p>At the end of each of your blog posts, include the following code using the HTML editor:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://raw.github.com/moski/gist-Blogger/master/public/gistLoader.js"</span> type=<span class="string">"text/javascript"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Here is the same code as a gist:</p>
+<script src="//gist.github.com/1649299.js"></script>
+<p>Now to include any gist template just add the following anywhere in your blog post.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"gistLoad"</span> <span class="attr">data-id</span>=<span class="string">"GistID"</span> <span class="attr">id</span>=<span class="string">"gist-GistID"</span>&gt;</span>Loading ....<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Again, the same code is available as a gist:</p>
+<script src="//gist.github.com/1649333.js"></script>
+<p>Replace the <code>GistID</code> with your gist id number, shown at the top of the gist you created (or gist you found and want to share with the world). </p>
+<h1 id="My-own-example"><a href="#My-own-example" class="headerlink" title="My own example"></a>My own example</h1><p>When I first started using Emacs I created a basic <code>init.el</code> configuration for Clojure.  This loads all the base packages you need for making Emacs 24 Clojure aware in one <code>init.el</code> file.  If you drop this <code>init.el</code> file into your <code>~/.emacs.d/</code> folder and run Emacs 24 for the first time then all the necessary packages will be automatically downloaded and added Emacs.</p>
+<script src="//gist.github.com/2366262.js?file=clojure-init.el"></script>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Using <a href="https://gist.github.com/" target="_blank" rel="noopener">Github Gists</a> in your blog post is a simple way to view code in a consistent way, at the same time providing a simple way to share code and configuration with others.  </p>
+<p>Some blogging platforms like <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> make it easy to add Gists, some like <a href="http://www.blogger.com/" target="_blank" rel="noopener">Blogger</a> require way too much encouragement.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-thumbnail">
+<p>Whilst <a href="https://github.com/" target="_blank" rel="noopener">Github</a> is a great way to share a whole repository of code, sometimes you want to talk about the design and challenges of developing your code, that discussion is often best done in a blog post.</p>
+<p>So how do you put your lovingly crafted <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> code (or anything else) into a blog so that it looks as beautiful as it does in Emacs?  Lets take a look at Github Gists.</p>]]>
+    
+    </summary>
+    
+      <category term="github" scheme="http://jr0cket.co.uk/tags/github/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="github-gists" scheme="http://jr0cket.co.uk/tags/github-gists/"/>
+    
+      <category term="github" scheme="http://jr0cket.co.uk/categories/github/"/>
+    
+  </entry>
+  
+</feed>

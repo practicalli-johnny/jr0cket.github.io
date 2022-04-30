@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Migrating From Blogger.com to Hexo.io Static Site Generator | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="I found writing articles with Blogger.com had become slow and a little frustrating.  So I decided to switch to Hexo.io as I can write articles anywhere I have a text editor (usually Emacs).  Hexo als">
+<meta name="keywords" content="hexo,migration">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Migrating From Blogger.com to Hexo.io Static Site Generator">
+<meta property="og:url" content="http://jr0cket.co.uk/2014/04/migrating-articles-to-hexo-from-bloggercom.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="I found writing articles with Blogger.com had become slow and a little frustrating.  So I decided to switch to Hexo.io as I can write articles anywhere I have a text editor (usually Emacs).  Hexo als">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://jr0cket.co.uk/images/hexo-logo.png">
+<meta property="og:image" content="https://lh5.googleusercontent.com/-2r7nkB71SpM/AAAAAAAAAAI/AAAAAAAAqOk/ea27J5tj5Mc/photo.jpg">
+<meta property="og:image" content="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Migrating From Blogger.com to Hexo.io Static Site Generator">
+<meta name="twitter:description" content="I found writing articles with Blogger.com had become slow and a little frustrating.  So I decided to switch to Hexo.io as I can write articles anywhere I have a text editor (usually Emacs).  Hexo als">
+<meta name="twitter:image" content="http://jr0cket.co.uk/images/hexo-logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-migrating-articles-to-hexo-from-bloggercom" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/04/migrating-articles-to-hexo-from-bloggercom.html" class="article-date">
+  <time datetime="2014-04-20T16:27:21.000Z" itemprop="datePublished">20 Apr 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Migrating From Blogger.com to Hexo.io Static Site Generator
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/hexo-logo.png" class="img-thumbnail">
+<p>I found writing articles with <a href="http://blogger.com" target="_blank" rel="noopener">Blogger.com</a> had become slow and a little frustrating.  So I decided to switch to Hexo.io as I can write articles anywhere I have a text editor (usually Emacs).  Hexo also creates a responsive and fast static website, so when people want to read the articles (including myself when I have forgotten something) then they can do so quickly and across multiple devices.  As its a static site, I can deploy it anywhere.</p>
+<p>So how do I get all of that content I created out of Blogger and into Hexo.  Luckily Hexo has a migration tool to make things easier</p>
+<a id="more"></a>
+<h2 id="Hexo-migration-package"><a href="#Hexo-migration-package" class="headerlink" title="Hexo migration package"></a>Hexo migration package</h2><p>Hexo has a seperate tool called <code>hexo-migrator</code> to pull in content from an RSS feed and there is a more specific migrator for Wordpress.  These migrators are installed as an npm package just like any other: </p>
+<pre><code>npm install hexo-migrator -g
+</code></pre><p>Unforntunatley the npm packaged version of hexo-migrator failed when I tried to import from blogger, regardless of whether I used the blog URL or by downloading the XML file generated by the RSS feed.  The error I got was already reported as <a href="https://github.com/hexojs/hexo-migrator-rss/issues" target="_blank" rel="noopener">an issue on the hexo-migrator Github site</a> and a fix already applied.  This fix had not yet been packaged up as a new npm version at the time of writing.</p>
+<h3 id="Hexo-migration-from-Github"><a href="#Hexo-migration-from-Github" class="headerlink" title="Hexo migration from Github"></a>Hexo migration from Github</h3><p>As a fix for the Blogger import problem exists in the Github repository, I installed the hexo migration tool directly from there.  Node package manager allows you to install directly from a Github repository (handy when someone has not patch an npm package yet).  So to install the latest version of hexo-migrator, I used the command:</p>
+<pre><code>npm install &quot;git+https://github.com/hexojs/hexo-migrator-rss.git&quot;
+</code></pre><p>I used the https address for the Github repository as I dont have SSH access.  However, to work you also have to put <strong>git+</strong> infront of the repository address for npm to work.  I am assuming <strong>git+</strong> tells npm that we are pulling from a github repository rather than a regular file system.</p>
+<h2 id="Running-the-migration"><a href="#Running-the-migration" class="headerlink" title="Running the migration"></a>Running the migration</h2><p>The migration to is very simple to use, simply run <code>hexo migrate</code> specifiying the type of input, <code>rss</code> and the location of your content.  In my case I just pulled the Blogger content directly from the website, although you could download the XML code generated by the RSS feed links and save them as a file for importing. following command and point it at the RSS feed of your website.  </p>
+<p>I created a new hexo site specifically to import blogger posts, so I would not interfeir whith the posts that I had already written using Hexo.  So if everything went wrong I could easily delete the new site and still have my new posts running. </p>
+<p>To import content directly from my blogger site into a new hexo project I used the following commands:</p>
+<pre><code>hexo init hexo-blogger-import
+cd hexo-blogger-import
+hexo migrate rss http://blog.jr0cket.co.uk/default?alt=rss
+hexo server
+</code></pre><p>It worked, brilliant.  I have a whole bunch of migrated articles in <strong>source/_posts/</strong> folder.  Running the <code>hexo server</code> allowed my to quickly see the results.</p>
+<h2 id="Oh-not-everything-is-there"><a href="#Oh-not-everything-is-there" class="headerlink" title="Oh not everything is there"></a>Oh not everything is there</h2><p>Whilst the hexo migration tool successfully grabbed articles from my blog, it only got the first 25 posts.  I have about 200 posts so my excitement was short lived.  It turns out that this is not a problem with the hexo migration tool, but a problem with the RSS feed from blogger.</p>
+<p>I clicked the RSS link on the blogger website and looking at the XML (a horible thing to do) I saw that it was only giving me the first 25 posts.  </p>
+<h2 id="Migration-by-labels"><a href="#Migration-by-labels" class="headerlink" title="Migration by labels"></a>Migration by labels</h2><p>Checking on the sites I syndicate some of my blogs too, I noticed a different form for the RSS web address (URL).  I share selective posts with <a href="http://planet.clojure.in/" target="_blank" rel="noopener">Planet Clojure</a> and <a href="http://planet.emacsen.org/" target="_blank" rel="noopener">Planet Emacsen</a>. this is done using specific blogger labels (aka tags) (i.e. PlanetClojure, PlanetEmacsen).  These RSS syndication sites were given the following RSS URL’s</p>
+<pre><code>http://blog.jr0cket.co.uk/feeds/posts/default/-/PlanetClojure
+http://blog.jr0cket.co.uk/feeds/posts/default/-/PlanetEmacsen
+</code></pre><p>So by using the different labels (Blogger calls tags labels) I could pull out more posts from blogger, even though each request would only return a maximum of 25 posts.  So instead of the default rss feed used in the first hexo migration, I used the following commands:</p>
+<pre><code>hexo migrate rss http://blog.jr0cket.co.uk/-/Clojure
+hexo migrate rss http://blog.jr0cket.co.uk/-/Emacs
+hexo migrate rss http://blog.jr0cket.co.uk/-/Ubuntu
+hexo migrate rss http://blog.jr0cket.co.uk/-/Agile
+hexo migrate rss http://blog.jr0cket.co.uk/-/Kanban
+</code></pre><p>So I carried on for each blogger label I had defined on my post until I thought I had most of the posts migrated.  Not perfect, but until I know how to get blogger to give me more than 25 posts from its RSS feed that will have to do.</p>
+<h2 id="Testing-the-migrated-content"><a href="#Testing-the-migrated-content" class="headerlink" title="Testing the migrated content"></a>Testing the migrated content</h2><p>As I was already running <code>hexo server</code> then I could see the results as I was importing each posts from a partiular blogger lable.  All I needed to do was refresh the browser each time and click on the relevant tag in the tag cloud sidebar.  </p>
+<p>If you are not running the server during the migration, you can start it by using the following command in the root of your hexo project:</p>
+<pre><code>hexo server 
+</code></pre><p>Now open your browser at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> and see the results of the migration.</p>
+<p>Each of the posts I migrated is in my blog, although the tags need tidying up (I wasnt very consistent in blogger).  The great thing is that all the posts are in date order, as the published date of each blog was put into each markdown file generated by the migration.</p>
+<h2 id="Migration-isnt-perfect"><a href="#Migration-isnt-perfect" class="headerlink" title="Migration isnt perfect"></a>Migration isnt perfect</h2><p>Whist my articles were copied over to markdown files okay, some of my post brought along with them additional styles (div’s, class styles, non-breaking spaces, etc) and other artefacts that messed up the styles that Hexo applies.  </p>
+<p>Some of the styling for headers and subheaders is using the markdown notation for bold, rather than heading.  Headers in particular are a good thing to correct, as search engines base some of the articles relevance on those headers.</p>
+<p>With some of the migrated posts I open them up in an editor and delete any offending styling that came with them.  To tell which ones to open, I use the Unix command <code>grep</code> to find which of my posts have <strong>&lt;div</strong> in their text:</p>
+<pre><code>grep &quot;&lt;div&quot; source/_posts/* 
+</code></pre><p>It turns out that most of my posts do, so if I want to see which ones I really need to fix then it probably easiest to look at the locally running website created by <code>hexo server</code>.  So I opened my browser at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> and had a look at the posts to see which ones needed the most attention.</p>
+<p>My basic strategy was to work from the most recent blog post, working backwards until I didnt care about any older posts.</p>
+<h2 id="Updating-Categories-and-Tags"><a href="#Updating-Categories-and-Tags" class="headerlink" title="Updating Categories and Tags"></a>Updating Categories and Tags</h2><p>The Hexo rss migrator pulled in all the tags (labels) form my posts on Blogger and listed them correctly in the frontmatter of each post.  </p>
+<p>Whilst editing the posts to remove the rogue style code, it was a chance to refine the tags I used and select a category for each post.  Using the local hexo server, it was quite quick to refine the tags I used by looking all all the words in the tag cloud sidebar.  Where I had used similar tags I could just pick one to make it easier and simpler to find the most relevant content on the site.</p>
+<h2 id="Adding-Summary-breaks"><a href="#Adding-Summary-breaks" class="headerlink" title="Adding Summary breaks"></a>Adding Summary breaks</h2><p>A nice feature of Hexo is that you can define how much of a summary view you want to have with each article.  The summary view is the main view of the blog and shows the title and the first part of your article.</p>
+<p>You define where the summary view ends by using the following syntax in the article markdown file:</p>
+<pre><code>&lt;!-- more --&gt;
+</code></pre><p>This is something you need to add manually to each article [TODO: check if there is a tool to do this], so if you have a lot of posts it may take a little while.  However it does help your audience (and yourself) scan through your content quickly.  </p>
+<p>If you have a lot of older posts you are importing, then its not going to be a big problem as they will be many pages into your blog summary view. </p>
+<h2 id="Images-still-on-Blogger"><a href="#Images-still-on-Blogger" class="headerlink" title="Images still on Blogger"></a>Images still on Blogger</h2><img src="https://lh5.googleusercontent.com/-2r7nkB71SpM/AAAAAAAAAAI/AAAAAAAAqOk/ea27J5tj5Mc/photo.jpg" class="img-thumbnail">
+<p>The migration is not yet finished, even after I tidy up my posts.  Many of the images in my posts are stored in Blogger, which is actually Google picasa and now Google Plus photos.  Again there is another hexo tool called <a href="https://github.com/akfish/hexo-migrator-image" target="_blank" rel="noopener">hexo-migrator-image</a> which will copy all the remote images to your local filesystem and fix your links (hopefully).</p>
+<p>Install hexo-migrator-image using the following command:</p>
+<pre><code>npm install hexo-migrator-image
+</code></pre><p>Then run the hexo-migrator-image command and wait for all the images to download.</p>
+<h3 id="Imaging-importing-was-not-so-successful"><a href="#Imaging-importing-was-not-so-successful" class="headerlink" title="Imaging importing was not so successful"></a>Imaging importing was not so successful</h3><p>The image migrator does not like https links and I had quite a lot of them.  When the image migrator hits an https link it just crashes too.</p>
+<p>Even after changing all the https links to http the results were not as expected.  Whilst images had been copied to the local filespace, the names were all changed to long numbers rather than being the original descriptive filenames.  To compound the issue, the links in the posts were not updated with to point to the local images.</p>
+<blockquote>
+<p>I wonder if the hexo image migrator failed because the images were all within hypertext ancor links (a href’s).</p>
+</blockquote>
+<p>Rather than wrestle with the hexo image migrator, I decided to leave the images where they were on Google Plus.  </p>
+<h2 id="Github-is-not-great-for-images"><a href="#Github-is-not-great-for-images" class="headerlink" title="Github is not great for images"></a>Github is not great for images</h2><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" class="img-topic">
+<p>There is not a lot of advantage putting your images in Github, except that they are right there where the rest of your website is.  However, using a good image repository that acts like a Content Delivery Network (CDN) should give you the same amount of speed and not waste space in the Github repository.</p>
+<p>By keeping images out it also makes your Git repository quicker to fork and clone</p>
+<p>So I will keep all my images on Google Plus.  Any photos I take with my Android phone end up on Google Plus anyway, so it makes sense to keep all my images there.</p>
+<h2 id="Final-migration-check"><a href="#Final-migration-check" class="headerlink" title="Final migration check"></a>Final migration check</h2><p>As a final sanity check that everything has been migrated correctly, I ran the <a href="https://github.com/sergiolepore/hexo-broken-link-checker" target="_blank" rel="noopener">hexo-broken-link-checker</a>.  This Hexo plugin detects links that don’t work, missing images and redirects.</p>
+<p>As I occasionally link to my own posts, it was good to check that these still links still worked.</p>
+<h2 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h2><p>Although I had a bit of editing of my blog posts after the migration, it was worth it to have all my blog content in markdown.  Now I can manage my posts much easier and do any updates easily in my favourite editor, Emacs.</p>
+<p>Thank you<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2014/04/migrating-articles-to-hexo-from-bloggercom.html" data-id="cl2mbqg0f00u6zqmjdv6y4wxw" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2014/04/migrating-articles-to-hexo-from-bloggercom.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/migration/">migration</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/05/git-submodules-pros-and-cons.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git Submodules Pros and Cons
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/04/hexo-theme-tweaks---showing-articles-as-titles-only.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo Theme Tweaks - Showing Articles as Titles Only</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2014/04/migrating-articles-to-hexo-from-bloggercom.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

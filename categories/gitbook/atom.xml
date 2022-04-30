@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/gitbook/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.306Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Publishing for Developers With Gitbook.io]]></title>
+    <link href="http://jr0cket.co.uk/2016/06/publishing-for-developers-with-Gitbook-io.html"/>
+    <id>http://jr0cket.co.uk/2016/06/publishing-for-developers-with-Gitbook-io.html</id>
+    <published>2016-06-07T21:29:29.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="/images/gitbook-logo.png" class="img-thumbnail">
+<p>The tools for writing books and workshops have become so much easier and open.  Even some enlightened publishing companies are moving with the times and not forcing you to write books in seperate word files.  However, having to manage the expectations of a publisher can make book writing very unattractive.</p>
+<p>Self publishing is much more fun and can be done at your own pace, using tools a developer can understand.  Its also much easier to talk to a publisher when the book is mostly done.</p>
+<p>I use <a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="noopener">GithubIO/gitbook</a>, a node.js project to create my books and workshops.  Gitbook generated a responsive design website as well as ebook formats in pdf, epub, etc.</p>
+<p>All the content is written in <a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">markdown</a> and can be managed with <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>.  There are also a range of <a href="https://plugins.gitbook.io" target="_blank" rel="noopener">Gitbook.io plugins</a> that enhance the readers experience in terms of content style and user interaction.</p>
+<blockquote>
+<p>You can also distribute your books via the self-publishing platform of <a href="https://gitbook.io" target="_blank" rel="noopener">Gitbook.io</a> where you can sell your books on its marketplace.</p>
+</blockquote>
+<h2 id="Advantages-of-Gitbook-io"><a href="#Advantages-of-Gitbook-io" class="headerlink" title="Advantages of Gitbook.io"></a>Advantages of Gitbook.io</h2><ul>
+<li>Simple to use tools, requiring only node.js to be installed</li>
+<li>Writing content in markdown keeps it human readable as you write it</li>
+<li>100+ plugsins help you style the book, applying different styles to the range of formats</li>
+<li>Content can be managed in Git and collaboration can be done in services such as Github or Bitbucket</li>
+<li>Website versions can be published on any webserver, Github Pages works well for these.</li>
+</ul>
+<p>Lets set up Gitbook.io and go through the content workflow.</p>
+<a id="more"></a>
+<h2 id="Setup-Gitbook"><a href="#Setup-Gitbook" class="headerlink" title="Setup Gitbook"></a>Setup Gitbook</h2><p>Gitbook is a node package so <a href="https://nodejs.org/" target="_blank" rel="noopener">install the latest version of node.js</a>, version 4.x and 6.x work with Gitbook.</p>
+<p>install GitBook via the nodejs package manager (npm) using the command line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install gitbook-cli -g</span><br></pre></td></tr></table></figure>
+<p><code>gitbook-cli</code> is an utility to install and use multiple versions of GitBook on the same system. It will automatically install the required version of GitBook to build a book.</p>
+<blockquote>
+<p>You should use <code>sudo</code> or install gitbook-cli as an administrator, unless you have installed node.js in your personal file space.  The <code>-g</code> option makes the gitbook commands global, so you can use them anywhere on the command line.</p>
+</blockquote>
+<h2 id="Create-a-new-book"><a href="#Create-a-new-book" class="headerlink" title="Create a new book"></a>Create a new book</h2><p>To create a new book, simply create two files:</p>
+<ul>
+<li><code>README.md</code> - introdution page to the book</li>
+<li><code>SUMMARY.md</code> - the structure of the book</li>
+</ul>
+<p>Then run the Gitbook initialisation command in the directory containing these two files</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gitbook init</span><br></pre></td></tr></table></figure>
+<p>If you wish to create the book into a new directory, you can do so by running <code>gitbook init ./directory</code></p>
+<h2 id="The-book-structure"><a href="#The-book-structure" class="headerlink" title="The book structure"></a>The book structure</h2><p>The <code>README.md</code> file should have a description or introduction to the book, written in markdown.  If its a workshop you are writing, its good to state what people will learn and what the prerequisites are.</p>
+<p>The <code>SUMMARY.md</code> file defines the structure of the book, it too is written in markdown.  Here is a sort example of a <code>SUMMARY.md</code> file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Summary</span><br><span class="line"></span><br><span class="line">* [Introduction](README.md)</span><br><span class="line">* [How to use the workshop](using-the-workshop/index.md)</span><br><span class="line">    * [Technical Requirements](using-the-workshop/requirements.md)</span><br><span class="line">    * [Code Examples](using-the-workshop/code-examples.md)</span><br><span class="line">* [Overview of Clojure](overview/index.md)</span><br><span class="line">    * [When to use Clojure](overview/purpose.md)</span><br><span class="line">    * [Who uses Clojure](overview/who-uses-clojure.md)</span><br><span class="line">    * [The syntax](overview/syntax.md)</span><br><span class="line">    * [Design](overview/design.md)</span><br><span class="line">    * [Read, Evaluate, Print Loop (REPL)](overview/repl.md)</span><br></pre></td></tr></table></figure>
+<p>If you add new sections to the <code>SUMMARY.md</code> file, then running <code>gitbook init</code> again will create the relevant directories and create files including the section tiles.</p>
+<blockquote>
+<p>Using Spacemacs / Emacs allows you to easily re-order the sections of the book in the summary.md file by usig the <code>Alt + Up Arrow</code> or <code>Alt + Down Arrow</code></p>
+</blockquote>
+<h1 id="Generating-the-book"><a href="#Generating-the-book" class="headerlink" title="Generating the book"></a>Generating the book</h1><p>You can see what the website version of your book looks like by running the Gitbook server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gitbook serve</span><br></pre></td></tr></table></figure>
+<p>Or build the static website using the Gitbook build command and serve it up from whatever webserver you prefer.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gitbook build</span><br></pre></td></tr></table></figure>
+<h1 id="Deploying-your-book-to-Github-Pages"><a href="#Deploying-your-book-to-Github-Pages" class="headerlink" title="Deploying your book to Github Pages"></a>Deploying your book to Github Pages</h1><p>I typically use Github Pages to serve my content.  Its easy for developers to use, supports custom domains and is where I typically version the content I am writing so its convieninet to have it all in one service.  Github also makes use of a content delivery network (CDN) so serving your book website is incredibly fast.</p>
+<p>I havent seen a built-in way or plugin to deploy to Github Pages, so I use a very basic script(this could probably be done better).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line"># Replace the remote Github URL to use this on a different project</span><br><span class="line"></span><br><span class="line"># This should be run from the root of the gitbook project</span><br><span class="line"># Delete the previous book build</span><br><span class="line">rm -rf _book</span><br><span class="line"></span><br><span class="line"># Trigger a clean and new build</span><br><span class="line">gitbook build .</span><br><span class="line"></span><br><span class="line"># Deploy new build</span><br><span class="line">cd _book &amp;&amp; git init &amp;&amp; git add . &amp;&amp; git commit -m &quot;automated commit from gitbook.io&quot; &amp;&amp; git branch -m master gh-pages &amp;&amp; git remote add practicalli git@github.com:practicalli/clojure.git &amp;&amp; git push -f practicalli gh-pages</span><br></pre></td></tr></table></figure>
+<h1 id="Wriing-your-book-Essential-Markdown"><a href="#Wriing-your-book-Essential-Markdown" class="headerlink" title="Wriing your book - Essential Markdown"></a>Wriing your book - Essential Markdown</h1><p>All the content can be written in <a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">markdown</a>, even the book structure. As its markdown, each section and sub-section of the book is human readable and have really minimal notation for style</p>
+<h2 id="Headings"><a href="#Headings" class="headerlink" title="Headings"></a>Headings</h2><p>To create headings, use the hash, <code>#</code>, character.  A single hash represents the biggest heading, equivalent to a H1 in html.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># This is a main H1 style heading</span><br><span class="line">This is the text that goes underneath the headding</span><br><span class="line"></span><br><span class="line">## This is a sub heading, equivalent to H2</span><br></pre></td></tr></table></figure>
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><p>The markdow to create hypertext link, a clickable link to another page in the book or external website.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Clickable Text for link](/path/to/linked-page.html)</span><br><span class="line">[Clickable Text for link](http://linked.com/page.html)</span><br></pre></td></tr></table></figure>
+<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><p>The markdown to include an image in your content is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![Image description](/path/to/image.png)</span><br><span class="line">![Image description](http://website.com/image.png)</span><br></pre></td></tr></table></figure>
+<p>This markdown will include a centred image in your content.  Positioning of the image is managed by the theme and can also be changed in the <code>styles/website.css</code> for the website or <code>styles/pdf</code> for the pdf version of the book.</p>
+<blockquote>
+<p>Images can be put in the book filespace and saved in Git along with the other content.  If you have very large images or thousands of images, it may be better to use an onlie image service , eg Amazon Web Services Bucket, especially if that service has a content delivery network (CDN) to provide a consistent download speed for images where ever someone is viewing your book website.</p>
+</blockquote>
+<h2 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a>Source code</h2><p>You can highlight short snippet of code inline with the content just by placing a single quote at the start and end of the code.</p>
+<p>Or you can highlight a block of code with three consecutive single quotes at the start and end of the code.</p>
+<h1 id="Gitbook-Plugins"><a href="#Gitbook-Plugins" class="headerlink" title="Gitbook Plugins"></a>Gitbook Plugins</h1><p>There are <a href="https://plugins.gitbook.com/" target="_blank" rel="noopener">over 300 plugins available</a> which help give a better experience in reading the book.</p>
+<ul>
+<li><p><code>toggle-chapters</code> - collapses all the sub-headings of the book in the website, except for the section you are currently viewing.  Really good for books longer than 10 sections.</p>
+</li>
+<li><p><code>disqus</code> - an discussion platform for enabling comments from your audience in your book, in a way thats easy to control.</p>
+</li>
+<li><p><code>ga</code> - a simple way to add Google Analytics to your book website.</p>
+</li>
+</ul>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>The hardest thing about writing a book should be writing something valuable and engaging, that is hard enough already.  Everthing elese should be trivial to do or you will have more reason to become demotivated.</p>
+<p>Using tools like Gitbook.io or <a href="https://readthedocs.org/" target="_blank" rel="noopener">ReadTheDocs</a> can make writing books and technical content much more fun.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/gitbook-logo.png" class="img-thumbnail">
+<p>The tools for writing books and workshops have become so much easier and open.  Even some enlightened publishing companies are moving with the times and not forcing you to write books in seperate word files.  However, having to manage the expectations of a publisher can make book writing very unattractive.</p>
+<p>Self publishing is much more fun and can be done at your own pace, using tools a developer can understand.  Its also much easier to talk to a publisher when the book is mostly done.</p>
+<p>I use <a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="noopener">GithubIO/gitbook</a>, a node.js project to create my books and workshops.  Gitbook generated a responsive design website as well as ebook formats in pdf, epub, etc.</p>
+<p>All the content is written in <a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">markdown</a> and can be managed with <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>.  There are also a range of <a href="https://plugins.gitbook.io" target="_blank" rel="noopener">Gitbook.io plugins</a> that enhance the readers experience in terms of content style and user interaction.</p>
+<blockquote>
+<p>You can also distribute your books via the self-publishing platform of <a href="https://gitbook.io" target="_blank" rel="noopener">Gitbook.io</a> where you can sell your books on its marketplace.</p>
+</blockquote>
+<h2 id="Advantages-of-Gitbook-io"><a href="#Advantages-of-Gitbook-io" class="headerlink" title="Advantages of Gitbook.io"></a>Advantages of Gitbook.io</h2><ul>
+<li>Simple to use tools, requiring only node.js to be installed</li>
+<li>Writing content in markdown keeps it human readable as you write it</li>
+<li>100+ plugsins help you style the book, applying different styles to the range of formats</li>
+<li>Content can be managed in Git and collaboration can be done in services such as Github or Bitbucket</li>
+<li>Website versions can be published on any webserver, Github Pages works well for these.</li>
+</ul>
+<p>Lets set up Gitbook.io and go through the content workflow.</p>]]>
+    
+    </summary>
+    
+      <category term="gitbook" scheme="http://jr0cket.co.uk/tags/gitbook/"/>
+    
+      <category term="github-pages" scheme="http://jr0cket.co.uk/tags/github-pages/"/>
+    
+      <category term="gitbook" scheme="http://jr0cket.co.uk/categories/gitbook/"/>
+    
+  </entry>
+  
+</feed>

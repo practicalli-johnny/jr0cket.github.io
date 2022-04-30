@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Configuring Assembla Git Repository for LSUG Scala Dojo | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is an outline of how I have set up the git repository on the London Scala user group dojo workspace, hosted on assembla.com.  See the lsug-dojo workspace for details of checking out dojo code.">
+<meta name="keywords" content="git,scala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuring Assembla Git Repository for LSUG Scala Dojo">
+<meta property="og:url" content="http://jr0cket.co.uk/2010/06/configuring-assembla-git-repository-for.html.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="This is an outline of how I have set up the git repository on the London Scala user group dojo workspace, hosted on assembla.com.  See the lsug-dojo workspace for details of checking out dojo code.">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/en/8/85/Scala_logo.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Configuring Assembla Git Repository for LSUG Scala Dojo">
+<meta name="twitter:description" content="This is an outline of how I have set up the git repository on the London Scala user group dojo workspace, hosted on assembla.com.  See the lsug-dojo workspace for details of checking out dojo code.">
+<meta name="twitter:image" content="http://upload.wikimedia.org/wikipedia/en/8/85/Scala_logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-configuring-assembla-git-repository-for.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2010/06/configuring-assembla-git-repository-for.html.html" class="article-date">
+  <time datetime="2010-06-01T16:28:00.000Z" itemprop="datePublished">1 Jun 2010</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Configuring Assembla Git Repository for LSUG Scala Dojo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://upload.wikimedia.org/wikipedia/en/8/85/Scala_logo.png" class="img-topic">
+<p>This is an outline of how I have set up the git repository on the London Scala user group dojo workspace, hosted on assembla.com.</p>
+<blockquote>
+<p>See the<a href="http://www.assembla.com/code/lsug-dojo/git/repo/instructions" target="_blank" rel="noopener"> lsug-dojo workspace for details of checking out dojo code</a>.</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="Configuring-access-to-the-code-repository"><a href="#Configuring-access-to-the-code-repository" class="headerlink" title="Configuring access to the code repository"></a>Configuring access to the code repository</h1><p>You need to add a public key to your assembla account in order to committing source code.&nbsp; This key is specific to the machine you created it on.</p>
+<p>To create the key on Ubuntu you use the the <code>ssh-keygen</code> command which is installed by default in Ubuntu.&nbsp; Use the ssh-kegen command in a terminal as follows:</p>
+<pre><code>ssh-keygen -t rsa -C your.email@address.com
+</code></pre><p>Accepting all the defaults will work correctly, optionally adding a password.&nbsp; A new file will be created in your home directory which holds your public key <code>~/.ssh/id_rsa.pub</code>.</p>
+<p>To add the generated key to your assembla.com account, open assembla.com in your browser and login.  Once logged in you will be on the <code>My Start Page</code>.  Select the <code>Start</code> &gt; <code>Profile</code> tab to edit your account settings.  Further down the profile page is a section called Git Settings, click the link called <code>Manage your public SSH keys</code>.  </p>
+<p>You can cut-n-paste the contents of the <code>~/.ssh/id_rsa.pub</code> file or browse to the file from the web page and add your public key file that was generated with the ssh-keygen command.</p>
+<p>Once you have added your public key to your account you can push changes to any of the git repositories you have created or been given write access to at assembla.com.</p>
+<h1 id="Installing-a-client-to-access-the-code-repository-git"><a href="#Installing-a-client-to-access-the-code-repository-git" class="headerlink" title="Installing a client to access the code repository (git)"></a>Installing a client to access the code repository (git)</h1><p>Install the package git-core using your favourite package manager or using the following command:</p>
+<pre><code>apt-get install git-core**&lt;/pre&gt;
+</code></pre><h1 id="Configure-a-git-client"><a href="#Configure-a-git-client" class="headerlink" title="Configure a git client"></a>Configure a git client</h1><p>You should introduce yourself to git by configuring a git user name and email address.&nbsp; This information is used when you push changes back to the central git repository, so you changes have identity.</p>
+<pre><code>git config --global user.name &quot;John Stevenson&quot;
+git config --global user.email john@jr0cket.com
+</code></pre><h1 id="Create-a-local-git-repository-only-for-a-new-git-repository"><a href="#Create-a-local-git-repository-only-for-a-new-git-repository" class="headerlink" title="Create a local git repository (only for a new git repository)"></a>Create a local git repository (only for a new git repository)</h1><p>At present the repository on the LSUG-dojo workspace on assembla.com is empty.&nbsp; To add files to the assembla.com git repository we first create a local git repository using the following commands:</p>
+<pre><code>mkdir lsug-dojo
+cd lsug-dojo
+git init
+</code></pre><p>A README file was created in the top level so that there was something to commit.</p>
+<blockquote>
+<p>Tip: Using a README file is very useful as the contents of this file is displayed when browsing the source code on the assembla.com website.</p>
+</blockquote>
+<p>Lets add the README file (and any other files/folders we could have created) to the local repository and commit that added file to the local repository with a suitable message representing the change we are making.</p>
+<pre><code>git add .
+git commit -m &quot;Initialising LSUG-dojo Git repository on Assembla&quot;
+</code></pre><h1 id="Push-changes-to-LSUG-dojo-git-repository"><a href="#Push-changes-to-LSUG-dojo-git-repository" class="headerlink" title="Push changes to LSUG-dojo git repository"></a>Push changes to LSUG-dojo git repository</h1><p>To push to the locally created files to the git repository on assembla.com, a push command is needed.&nbsp; However, the local repository first needs to be told about the remote git repository.</p>
+<p>Lets go ahead and add the changes locally and commit to the master on assembla.com with the following two commands:</p>
+<pre><code>git remote add origin git@git.assembla.com:lsug-dojo.git
+git push origin master
+</code></pre><p>The git push command will submit all the changes committed to the local git repository to the lsug-dojo git reposiory on assembla.com, using the branch called master.&nbsp; </p>
+<h1 id="Public-read-only-access-to-the-git-repository"><a href="#Public-read-only-access-to-the-git-repository" class="headerlink" title="Public read-only access to the git repository"></a>Public read-only access to the git repository</h1><p>The repository on assembla is open for anyone to read and download the source code.&nbsp; The code can be browsed via the LSUG-dojo site on assembla or downloaded locally using <code>git clone</code></p>
+<pre><code>git clone git://git.assembla.com/lsug-dojo.git
+</code></pre><p>This command will create a folder called lsug-dojo in the current folder path.&nbsp; The lsug-dojo contains a complete copy of the current version of all the dojo code.</p>
+<h1 id="Committer-access-to-the-git-repository"><a href="#Committer-access-to-the-git-repository" class="headerlink" title="Committer access to the git repository"></a>Committer access to the git repository</h1><p>In order to push changes to the lsug-dojo git repository, you must be assigned that priveleged by the owner of the lsug-dojo assembla.com workspace.</p>
+<p>Once you have been granted write access to the git repository, you have registered your private key with assembla (as detailed at the start of this article).</p>
+<p>You must also clone the assembla.com repository using the private address as follows</p>
+<pre><code>git clone git@git.assembla.com:lsug-dojo.git
+</code></pre><p>Using the private address of the lsug-dojo git repository allows the use of a secure shell connection to push changes to the lsug-dojo repository.</p>
+<p>Pushes to git for the dojo project code will be done on the evening of the dojo by one of the organisers of the dojo.</p>
+<h1 id="Post-dojo-updates"><a href="#Post-dojo-updates" class="headerlink" title="Post dojo updates"></a>Post dojo updates</h1><p>After a dojo has finished, the code will be added to the git repository on assembla.com.</p>
+<p>Lets check the status of git, this will tell us what changed files we have in our project structure</p>
+<pre><code>git status
+</code></pre><p>The  git status is tell us that we need to add the code changes to the local  copy of our git repository, then we can decide to commit those changes  to the master git repository on assembla.com.</p>
+<p>Here is an example output from git status after the second scala dojo:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line"># On branch master</span><br><span class="line"># Changed but not updated:</span><br><span class="line">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line">#</span><br><span class="line"># modified:   minesweeper-dojo/.idea/workspace.xml</span><br><span class="line"># modified:   minesweeper-dojo/minesweeper-dojo.iml</span><br><span class="line"># modified:   minesweeper-dojo/src/main/scala/com/assembla/lsug/dojo/minesweeper/Board.scala</span><br><span class="line"># modified:   minesweeper-dojo/src/test/scala/com/assembla/lsug/dojo/minesweeper/BoardReaderTest.scala</span><br><span class="line">#</span><br><span class="line"># Untracked files:</span><br><span class="line">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line">#</span><br><span class="line"># minesweeper-dojo/target/</span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+<h1 id="Add-the-files-to-the-local-repository"><a href="#Add-the-files-to-the-local-repository" class="headerlink" title="Add the files to the local repository"></a>Add the files to the local repository</h1><p>If we know that there are new files created from the dojo or if you are not sure, run the following command:</p>
+<pre><code>git add minesweeper-dojo
+</code></pre><p>This will tell git to add any new files within the minesweeper-dojo folder to the repository when you do a commit.</p>
+<p>To check what is to be added, run <code>git status</code> again</p>
+<h1 id="Excluding-files-and-folders"><a href="#Excluding-files-and-folders" class="headerlink" title="Excluding files and folders"></a>Excluding files and folders</h1><p>To exclude certain files and folders, create a file called .gitignore in the project folder (at the same level as the <code>.git</code> folder).</p>
+<p>Add folder names with a trailing / and include the relative folder path. The current <code>.gitignore</code> file contains the following lines:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">minesweeper-dojo/target/</span><br><span class="line">minesweeper-dojo/.idea/dictionaries/johnny.xml</span><br></pre></td></tr></table></figure>
+<h1 id="Reset-what-you-want-to-add-to-git"><a href="#Reset-what-you-want-to-add-to-git" class="headerlink" title="Reset what you want to add to git"></a>Reset what you want to add to git</h1><p>If you are not happy with the files that have been addded, you can tell git to forget them with the following command:</p>
+<pre><code>git reset HEAD .
+</code></pre><h1 id="Commit-the-changes-locally"><a href="#Commit-the-changes-locally" class="headerlink" title="Commit the changes locally"></a>Commit the changes locally</h1><p>Version the changed files from the dojo by committing them to the local repository, using a suitable commit message that represents the change or major activity from the dojo.&nbsp; The commit message defined here is used when we push the local changes to the public assembla.com repository.</p>
+<pre><code>git commit -m &quot;suitable commit message&quot;
+</code></pre><h1 id="Push-the-changes-to-assembla-com"><a href="#Push-the-changes-to-assembla-com" class="headerlink" title="Push the changes to assembla.com"></a>Push the changes to assembla.com</h1><p>Now that the file changes have been committed locally, we can share those changes publicly by pushing the master branch that holds the changes to the origin - the assembla.com git repository.</p>
+<pre><code>git push origin master
+</code></pre><h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Using Git is an easy way for developers to collaborate and share code during a coding dojo.  Online tools like Assembla.com allows any developer, even outside of the London Scala community, to take a look at what was created all any and all our dojo’s.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2010/06/configuring-assembla-git-repository-for.html.html" data-id="cl2mbqfuc005rzqmjqdmjc2s1" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2010/06/configuring-assembla-git-repository-for.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scala/">scala</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2010/06/compilation-daemon-issue-running-scala-on-ubuntu.html.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Compilation Daemon Issue Running Scala on Ubuntu
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2010/05/scala-dojo-setup-details.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Scala Dojo Setup Details - LSug Coding Dojo</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2010/06/configuring-assembla-git-repository-for.html.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

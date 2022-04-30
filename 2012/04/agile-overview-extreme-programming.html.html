@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Agile Overview - Extreme Programming | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="“If a thing like this is worth doing at all, it’s worth doing right” - Hunter S. Thompson, Fear and Loathing in Las Vegas.  This is my simplified way of describing the approach of extreme programmi">
+<meta name="keywords" content="agile">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agile Overview - Extreme Programming">
+<meta property="og:url" content="http://jr0cket.co.uk/2012/04/agile-overview-extreme-programming.html.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="“If a thing like this is worth doing at all, it’s worth doing right” - Hunter S. Thompson, Fear and Loathing in Las Vegas.  This is my simplified way of describing the approach of extreme programmi">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://1.bp.blogspot.com/-qneIw3F_ftM/T4vb6mCVcII/AAAAAAAAHaA/1EQiEvxTotQ/s1600/Fear_and_Loathing_in_Las_Vegas.jpg">
+<meta property="og:image" content="http://4.bp.blogspot.com/-akzobs3MO88/T4vaoqDR8bI/AAAAAAAAHZs/IXS-eJNgNFE/s1600/extreme-programming-practices-RonJeffries.jpg">
+<meta property="og:image" content="http://2.bp.blogspot.com/-ZankjAEvCco/T4vapUz6nRI/AAAAAAAAHZ0/6YVVO1XNDxs/s1600/extreme-programming-project.gif">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.290Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Agile Overview - Extreme Programming">
+<meta name="twitter:description" content="“If a thing like this is worth doing at all, it’s worth doing right” - Hunter S. Thompson, Fear and Loathing in Las Vegas.  This is my simplified way of describing the approach of extreme programmi">
+<meta name="twitter:image" content="http://1.bp.blogspot.com/-qneIw3F_ftM/T4vb6mCVcII/AAAAAAAAHaA/1EQiEvxTotQ/s1600/Fear_and_Loathing_in_Las_Vegas.jpg">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-agile-overview-extreme-programming.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/04/agile-overview-extreme-programming.html.html" class="article-date">
+  <time datetime="2012-04-16T12:24:00.000Z" itemprop="datePublished">16 Apr 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/agile/">agile</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Agile Overview - Extreme Programming
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://1.bp.blogspot.com/-qneIw3F_ftM/T4vb6mCVcII/AAAAAAAAHaA/1EQiEvxTotQ/s1600/Fear_and_Loathing_in_Las_Vegas.jpg" class="img-thumbnail"> 
+<blockquote>
+<p>“If a thing like this is worth doing at all, it’s worth doing right” - Hunter S. Thompson, <a href="http://www.imdb.com/title/tt0120669/" target="_blank" rel="noopener">Fear and Loathing in Las Vegas</a>.</p>
+</blockquote>
+<p>This is my simplified way of describing the approach of extreme programming.  Everything that is valuable is done all the time, because it is valuable.  So as creating a test has value for the design of your classes you should do it for all of your code.</p>
+<a id="more"></a>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>Extreme programming is a set of common sense practices that when used together can give you a better chance of having a software team that is can do what you want, tell you how much it would cost, deliver quality code with a robust set of tests, allow you change what you want when you want or change your mind at any time.</p>
+<img src="http://4.bp.blogspot.com/-akzobs3MO88/T4vaoqDR8bI/AAAAAAAAHZs/IXS-eJNgNFE/s1600/extreme-programming-practices-RonJeffries.jpg" class="img-topic">
+<p>In this article I’ll cover some of the more interesting and contentious aspects of extreme programming.</p>
+<h1 id="Unit-testing"><a href="#Unit-testing" class="headerlink" title="Unit testing"></a>Unit testing</h1><p>Its easy to add the JUnit (xunit, nunit) library to your project and start wringing code that tests your code.  Its easy to reach a whole test suite that will give you 90% code coverage, as measured by <a href="http://www.atlassian.com/software/clover/" target="_blank" rel="noopener">Clover</a>.  However, that is not where the value of unit testing really lies.</p>
+<p>If you believe tests are important, then why not do them before you write the code.  In fact why not create the tests to help test your assumptions of the story you are about to write.  If you cant understand how to test out your story before you write the code that implements it, do you really understand that story enough?</p>
+<p>You get the most out of unit testing when it is used as a design tool, helping the developer model the behaviour of the system before committing it to code that will end up in production.  Using unit testing as a design first tool helps you keep your code simple and elegant and far more maintainable.</p>
+<p>As a consequence, you get an automated set of tests for your code.  These automated tests will help manage regressions should you need to refactor, although if you have designed your code well then changing your code should be relatively straight forward and guide developers from introducing bugs.</p>
+<p>Writing good unit tests comes down to understanding the behaviour of the software you have been asked to develop.  A great way to validate this understanding is to talk to someone else about it.</p>
+<h1 id="Pair-programming"><a href="#Pair-programming" class="headerlink" title="Pair programming"></a>Pair programming</h1><p>Its unfortunate that many developers do not want to pair or that managers see this as a waste of resource.  Pairing (it can be more than two people) is an invaluable way to create code (and tests, documentation, design, etc) as you always have someone there to check your assumptions with.  Its very easy to get lost in the creative design of your software and loose the bigger picture, especially when you are in the coding zone.  Having someone with you to support and question what you are doing produces far greater understand, better designs and more elegant code.</p>
+<p>Pairing is also a great way to build collaboration in a team as well as share knowledge and experience throughout the project.  With all these benefits you would be crazy not to encourage this practice.</p>
+<p><strong><a href="https://bitbucket.org/spooning/" target="_blank" rel="noopener">Atlassian Bitbucket - spooning video</a></strong></p>
+<h1 id="Collective-code-ownership"><a href="#Collective-code-ownership" class="headerlink" title="Collective code ownership"></a>Collective code ownership</h1><p>When everyone owns the code and everyone is responsible for the quality of that code then you get better code.  Collective responsibility encourages the team to share design ideas, share understanding of the project, share their own experience and help each other learn more about the overall project.</p>
+<p>Its great to see that so many developers are getting back to the code review, using tools like Crucible which make it very easy to review in a more social way.  When commits are linked to stories or bug fixes then it enables the team to quickly check just the code that has changes, making reviews more productive.</p>
+<p>With the advent of dvcs and social code sharing, developers have become more comfortably sharing there code and learning from each other.  With easy branching (forking) it becomes trivial to experimentation with someone elses code and pull requests make it so much easier to share code changes, especially for distributed teams.</p>
+<h1 id="On-site-customer"><a href="#On-site-customer" class="headerlink" title="On site customer"></a>On site customer</h1><p>Some companies actually go out of their way to only work with a customer if they are on site as it makes such an impact on the risk and success probability of a project. </p>
+<p>Developers need a clear understanding of the work to be delivered and the priority in which the customer values it.  These aspects are in a constant flow of change, in the same way that the customers business is constantly changing (as there customers are also going through changes).</p>
+<p><a href="http://www.seibert-media.net/" target="_blank" rel="noopener">Seibert Media</a> are such a company using this and many other agile techniques to help them deliver with confidence and have highly satisfied customers.  They have had such a great success with on-site customers that they include this as a requirement for any project they engage with.</p>
+<h1 id="User-stories"><a href="#User-stories" class="headerlink" title="User stories"></a>User stories</h1><p>User stories are the agile way to define requirements for a project.  Instead of large unweildy documents, the agile approach is to use story cards of a fixed size that purposely limit the amount of detail.</p>
+<p>So user stories are the requirements broken down into small pieces of functionality, so they can be more easily understood by the whole team.  As the project functionality is broken down, conversations about the specific details and priority of things happen.</p>
+<p>User stories are a place holder for all the conversations that you want to have around that piece of functionality.</p>
+<h1 id="Creating-different-Persona"><a href="#Creating-different-Persona" class="headerlink" title="Creating different Persona"></a>Creating different Persona</h1><p>Teams often add context to user stories by also defining personas.  Personas are a caricature of a user role, that helps the whole team thing about what that person would do in a particular situation.</p>
+<p>A persona is give a memorable name (Alan the Accountant, Suzi the secretary, etc) and a general description of them is made.</p>
+<p>A persona, first introduced by <a href="http://www.cooper.com/" target="_blank" rel="noopener">Alan Cooper</a>, defines an archetypical user of a system, an example of the kind of person who would interact with it.  The idea is that if you want to design effective software, then it needs to be designed for a specific person.</p>
+<h1 id="Acceptance-tests"><a href="#Acceptance-tests" class="headerlink" title="Acceptance tests"></a>Acceptance tests</h1><p>How do you know when you are done? </p>
+<p>Acceptance tests are a natural language way to define the behaviour of the software to be developed.  As with Unit Tests these should be written before the code and are often done using tools like fitness or cucumber.  These “tests” are linked to and run on top of your code so its easy to see progress in a meaningful way for both customers and developers.</p>
+<p>Acceptance tests are also a great way to get feedback and enhance understanding between the development team and customer - <em>you dont have to wait for the demo to update customers</em>.</p>
+<h1 id="Small-releases"><a href="#Small-releases" class="headerlink" title="Small releases"></a>Small releases</h1><p>The smaller your releases the sooner you get feedback from the actual users of the system.</p>
+<blockquote>
+<p>The plan never survives the war - “Stormin” Norman Schwarzkopf</p>
+</blockquote>
+<p>Is it not always the case that no sooner has a project been delivered that the users want lots of new changes?  Instead of expending a massive effort to guard against this, why not embrace this challenge and just release your project in small pieces as often as possible to the users.  You will get all the feedback you need and will be in a better position to deliver a desirable solution that meets the actual needs of those user.</p>
+<p>Iterations should be inclusive of project delivery and real customer usage.</p>
+<img src="http://2.bp.blogspot.com/-ZankjAEvCco/T4vapUz6nRI/AAAAAAAAHZ0/6YVVO1XNDxs/s1600/extreme-programming-project.gif" class="img-code">
+<h1 id="Story-estimation"><a href="#Story-estimation" class="headerlink" title="Story estimation"></a>Story estimation</h1><p>Estimation is very decisive in general, so it merits its own article: <a href="http://blog.jr0cket.co.uk/2010/08/my-favourite-estimation-technique.html" target="_blank" rel="noopener">Estimates are not promises</a></p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>There is much more to extreme programming so I hope this has set the scene for why I believe these techniques are invaluable to software development.  Extreme programming practices are used in part or in full by the all the successful agile teams I have met.</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li><a href="http://www.extremeprogramming.org/" target="_blank" rel="noopener">Extreme programming: a gentle introduction</a></li>
+<li><a href="http://xprogramming.com/" target="_blank" rel="noopener">Ron Jeffries: XProgramming.com</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Extreme_programming" target="_blank" rel="noopener">Wikipedia: extreme programming</a></li>
+<li><a href="http://www.junit.org/" target="_blank" rel="noopener">Junit.org - unit testing framework for Java</a></li>
+</ul>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/04/agile-overview-extreme-programming.html.html" data-id="cl2mbqfzq00sizqmjj3i85hur" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/04/agile-overview-extreme-programming.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">agile</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/04/agile-overview-scrum.html.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Agile Overview - Scrum
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/04/my-favourite-estimation-technique.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">My Favourite Estimation Technique</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2012/04/agile-overview-extreme-programming.html.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

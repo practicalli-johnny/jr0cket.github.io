@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.290Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Beautiful Terminalation - Ohmyzsh on Ubuntu]]></title>
+    <link href="http://jr0cket.co.uk/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html"/>
+    <id>http://jr0cket.co.uk/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html</id>
+    <published>2017-08-19T12:58:08.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<p>I frequently use the command line because of its speed and am using <a href="http://ohmyz.sh/" target="_blank" rel="noopener">ohmyzsh</a> to make the experience more valuable and enjoyable.  I configure ohmyzsh to use the <a href="https://github.com/bhilburn/powerlevel9k" target="_blank" rel="noopener">powerlevel9k theme</a> which provides lots of useful information as well as looking fancy.</p>
+<p><img src="/images/ohmyzsh-powerlevel9k-theme-animated.gif" alt="Ohmyzsh with powerlevel9k theme in action"></p>
+<blockquote>
+<p>We are more connected to the work we do if its an enjoyable experience.</p>
+</blockquote>
+<p>Read on for details on how to configure Ubuntu with zsh, ohmyzsh and powerlevel9k theme.</p>
+<a id="more"></a>
+<h2 id="Install-zsh"><a href="#Install-zsh" class="headerlink" title="Install zsh"></a>Install zsh</h2><p>Ubuntu has a package for <code>zsh</code> so its easy to install</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install zsh</span><br></pre></td></tr></table></figure>
+<p>You could try this new shell by typing <code>zsh</code> in the terminal window, however its not going to be as nice without some configuration first.  So lets add that next.</p>
+<h2 id="Install-ohmyzsh"><a href="#Install-ohmyzsh" class="headerlink" title="Install ohmyzsh"></a>Install ohmyzsh</h2><p>Oh-My-Zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins and lots of themes to make your command line look fancy!</p>
+<p>Install <code>ohmyzsh</code> with either wget or curl.  I prefer wget on Ubuntu as its installed by default</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></span><br></pre></td></tr></table></figure>
+<p>See the <a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">ohmyzsh website</a> for alternative installation information.</p>
+<h2 id="Install-the-powerlevel9k-theme"><a href="#Install-the-powerlevel9k-theme" class="headerlink" title="Install the powerlevel9k theme"></a>Install the powerlevel9k theme</h2><p>Powerlevel9k is a theme for ZSH which is easy to customise and feature rich.  The theme works for your own custom zsh setup as well as ohmyzsh, prezto and other configuration.</p>
+<p>Clone the powerlevel9k theme into the existing <code>ohmyzsh</code> project</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</span><br></pre></td></tr></table></figure>
+<p>Edit the <code>./zshrc</code> file and set the theme to powerlevel9k</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ensure that there is only one theme set with this value.</p>
+</blockquote>
+<h2 id="Installing-Powerline-fonts"><a href="#Installing-Powerline-fonts" class="headerlink" title="Installing Powerline fonts"></a>Installing Powerline fonts</h2><p>The powerlevel9k theme uses Powerline Fonts so we need to install them too.</p>
+<p>There are several powerline packages in the ubuntu archives, so either install the powerline fonts or use the powerline meta-package to include powerline support for python too.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## just the fonts</span></span><br><span class="line">sudo apt install fonts-powerline</span><br><span class="line"></span><br><span class="line"><span class="comment">## or use the meta-package for python support too</span></span><br><span class="line">sudo apt install powerline</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>To find the packages I simply searched the Ubuntu archives using the command <code>apt-cache search --names-only powerline</code></p>
+</blockquote>
+<h2 id="Set-your-default-shell"><a href="#Set-your-default-shell" class="headerlink" title="Set your default shell"></a>Set your default shell</h2><p>Once you are happy with your new setup, you can make zsh the default for the Ubuntu terminal.  Run <code>terminal</code> and edit the profile you are using to run zsh:</p>
+<p><strong>Profile Preferences</strong> &gt; <strong>Command</strong> &gt; <strong>Custom command</strong> &gt; <code>/usr/bin/zsh</code></p>
+<p><img src="/images/ubuntu-terminal-profile-preferences-command-zsh.png" alt="Ubuntu Terminal - Profile Preferences - Custom Command - Zsh"></p>
+<p>Change the default login shell by running the <code>chsh</code> command.  This will prompt you for your login password and then show you the current login shell.  Type <code>/usr/bin/zsh</code> if the current shell is not zsh.</p>
+<p><img src="/images/ubuntu-change-login-shell.png" alt="Ubuntu - change login shell to zsh"></p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>With a few Ubuntu packages and two cloned repositories you can quickly create an enhanced experience in your command line.</p>
+<p>Take a look at <a href="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config" target="_blank" rel="noopener">how others have configured the powerlevel9k theme</a> for there own needs</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I frequently use the command line because of its speed and am using <a href="http://ohmyz.sh/" target="_blank" rel="noopener">ohmyzsh</a> to make the experience more valuable and enjoyable.  I configure ohmyzsh to use the <a href="https://github.com/bhilburn/powerlevel9k" target="_blank" rel="noopener">powerlevel9k theme</a> which provides lots of useful information as well as looking fancy.</p>
+<p><img src="/images/ohmyzsh-powerlevel9k-theme-animated.gif" alt="Ohmyzsh with powerlevel9k theme in action"></p>
+<blockquote>
+<p>We are more connected to the work we do if its an enjoyable experience.</p>
+</blockquote>
+<p>Read on for details on how to configure Ubuntu with zsh, ohmyzsh and powerlevel9k theme.</p>]]>
+    
+    </summary>
+    
+      <category term="zsh" scheme="http://jr0cket.co.uk/tags/zsh/"/>
+    
+      <category term="ohmyzsh" scheme="http://jr0cket.co.uk/tags/ohmyzsh/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="powerline" scheme="http://jr0cket.co.uk/tags/powerline/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Git 2.9 on Ubuntu 16.04]]></title>
+    <link href="http://jr0cket.co.uk/2016/06/git-2-9-on-ubuntu-16-04.html"/>
+    <id>http://jr0cket.co.uk/2016/06/git-2-9-on-ubuntu-16-04.html</id>
+    <published>2016-06-18T14:52:09.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="/images/git-logo.png" class="img-thumbnail">
+<p><a href="https://github.com/git/git/blob/master/Documentation/RelNotes/2.9.0.txt" target="_blank" rel="noopener">Git version 2.9 has been released</a> and it brings some <a href="https://github.com/blog/2188-git-2-9-has-been-released" target="_blank" rel="noopener">new features and performance benefits</a> when using git submodules.</p>
+<p>Here is how to install Git version 2.9 on the latest release of Ubuntu (16.04)</p>
+<a id="more"></a>
+<h2 id="Installing-on-Ubuntu"><a href="#Installing-on-Ubuntu" class="headerlink" title="Installing on Ubuntu"></a>Installing on Ubuntu</h2><p>Ubuntu 16.04 comes with Git 2.7.x, which is a little old now.  As versions 2.8 &amp; 2.9 are not part of the Ubuntu repositories, you need to add the git-core personal package archive.</p>
+<p>Open up a terminal and run the following commands, supplying your password when prompted.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:git-core/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<p>To check the new version of Git is working, use the following command:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h2 id="Whats-new"><a href="#Whats-new" class="headerlink" title="Whats new?"></a>Whats new?</h2><p>Rather than copy everything here, there is a very good <a href="https://github.com/blog/2188-git-2-9-has-been-released" target="_blank" rel="noopener">overview of the Git 2.9 release</a> on the <a href="https://github.com/blog/" target="_blank" rel="noopener">Github blog</a>.  Or take a look at the in-depth <a href="https://github.com/git/git/blob/master/Documentation/RelNotes/2.9.0.txt" target="_blank" rel="noopener">release notes</a>.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/git-logo.png" class="img-thumbnail">
+<p><a href="https://github.com/git/git/blob/master/Documentation/RelNotes/2.9.0.txt" target="_blank" rel="noopener">Git version 2.9 has been released</a> and it brings some <a href="https://github.com/blog/2188-git-2-9-has-been-released" target="_blank" rel="noopener">new features and performance benefits</a> when using git submodules.</p>
+<p>Here is how to install Git version 2.9 on the latest release of Ubuntu (16.04)</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="git" scheme="http://jr0cket.co.uk/tags/git/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu Gnome - Is It Better Than Ubuntu?]]></title>
+    <link href="http://jr0cket.co.uk/2013/10/ubuntu-gnome-is-it-better-than-ubuntu.html.html"/>
+    <id>http://jr0cket.co.uk/2013/10/ubuntu-gnome-is-it-better-than-ubuntu.html.html</id>
+    <published>2013-10-14T22:17:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://www.gnome.org/wp-content/themes/gnome-grass/images/gnome-logo.png" class="img-thumbnail">
+<p>With a new version of <a href="http://www.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a> this month, I asked myself if I would get more out of one of the many other Linux distributions.  Here is what I learnt.</p>
+<a id="more"></a>
+<p>I’ve used Ubuntu as my main Linux distribution since I changed from <a href="http://www.debian.org/" target="_blank" rel="noopener">Debian</a> in 2005.  I started using Debian in 1995, so if I did change distributions I wanted to stay with the <em>.deb</em> packaging system which I value so much.  </p>
+<p>Although I am weary of the reductions of features the Gnome team have made recently, <a href="http://ubuntugnome.org/" target="_blank" rel="noopener"><strong>Ubuntu Gnome</strong></a> was the first alternative distribution I tried and was surprised to find I quite like it.</p>
+<img src="http://3.bp.blogspot.com/-jRj631yZJzY/UlsS3eLBbrI/AAAAAAAAL3U/FKLSLdKGn_I/s1600/ubuntu-gnome-my-basic-desktop.png" class="img-code">
+<p>My Ubuntu Gnome desktop using Gnome Shell and a few extensions</p>
+<h2 id="Installing-Ubuntu-Gnome"><a href="#Installing-Ubuntu-Gnome" class="headerlink" title="Installing Ubuntu Gnome"></a>Installing Ubuntu Gnome</h2><p>This is not any different from the normal Ubuntu install and everything went well on my Lenovo x201T.</p>
+<p>I selected to install Ubuntu Gnome over the entire hard drive (SSD) and use an encrypted disk and LVM (just in case I want to re-organise partitions at a later date).  I chose to get updates and multi-media codecs (for playing music and videos) during the installation too.</p>
+<p>After about 20-30 minutes I had a new OS for my laptop, all ready to use.  A quick reboot and within 10 seconds I am logging in to Ubuntu Gnome.</p>
+<h2 id="First-Impressions"><a href="#First-Impressions" class="headerlink" title="First Impressions"></a>First Impressions</h2><p>Ubuntu Gnome uses Gnome shell and there is a lot of commonality between it and Ubuntu Unity desktop.  To my surprise though I found I quickly started liking Ubuntu Gnome for lots of little reasons.  It helped that I had a quick look at the <a href="https://wiki.gnome.org/GnomeShell/CheatSheet" target="_blank" rel="noopener">Gnome Shell cheat sheet</a> which gives a great overview of the main features.</p>
+<h2 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h2><p>Gnome shell is really fast and responsive and I haven’t had any slow-downs as I increase the amount of apps running. As Ubuntu Unity is pretty quick too, then I don’t see any speed advantage.</p>
+<p>Ubuntu Unity seems to use just a little bit more memory, but that may be due to more packages installed and extra services running (eg. UbuntuOne). Its not a significant difference.</p>
+<h3 id="Automatic-Virtual-Desktops"><a href="#Automatic-Virtual-Desktops" class="headerlink" title="Automatic Virtual Desktops"></a>Automatic Virtual Desktops</h3><p>Gnome shell automatically creates new virtual desktops as you add applications and deletes desktops when you close all apps on that desktop.  I like to keep one app per desktop, so its great that you can launch an app from the dash with the middle mouse button (the Lenovo laptops have 3 buttons) and it opens in a new desktop. When I close the app, Gnome shell tidies away my desktop, helping me keep more organised.  This is a feature I would love to have in Ubuntu.</p>
+<p>Gnome Shell has vertically arranged desktops, so each desktop is stacked one on top of the other.     I quickly came to prefer this over the default grid of Ubuntu Unity.  Although you can change Unity’s grid layout with Ubuntu Tweak, I haven’t seen the ability to automatically create an delete desktops.</p>
+<h2 id="The-Dash"><a href="#The-Dash" class="headerlink" title="The Dash"></a>The Dash</h2><p>The Gnome Shell launcher similar to Ubuntu Unity, however in Gnome Shell its attached to the overlay rather than being their on the desktop.  So with Gnome shell I only see the launcher when I press the Super key (as I always run my apps maximised).  This keeps my desktop very simple.</p>
+<p>Whilst the launcher in Ubuntu Unity has lots of great features to help you launch and switch to your apps, I found I didn’t really use them.  I just set Unity to auto-hide the launcher </p>
+<h2 id="Notifications"><a href="#Notifications" class="headerlink" title="Notifications"></a>Notifications</h2><p>Gnome shell displays notifications on the bottom of the desktop rather than the top right corner in Ubuntu Unity. I prefer the placement in Ubuntu Unity, although they both could be smaller so they are less intrusive.</p>
+<h2 id="Unwanted-software"><a href="#Unwanted-software" class="headerlink" title="Unwanted software"></a>Unwanted software</h2><p>There were a few packages and services that came with Ubuntu Gnome I didnt require, but not many.  The main packages I removed were:</p>
+<ul>
+<li>epiphany - an messaging client (I use Google for that)</li>
+<li>spamassassin - email spam service (again I use Google)</li>
+</ul>
+<p>To remove the packages I just used the command line, as I knew the specific package names it was quicker than launching the Ubuntu software center</p>
+<pre><code>apt-get remove --purge package-name
+</code></pre><p>To find out if there were any services running that I didnt need I use the command line again to list the status of all services currently installed:</p>
+<pre><code>sudo service --status-all
+</code></pre><p>From this command I discovered spam assassin and removed it as above.</p>
+<h2 id="Gnome-Shell-Extensions"><a href="#Gnome-Shell-Extensions" class="headerlink" title="Gnome Shell Extensions"></a><a href="https://extensions.gnome.org/" target="_blank" rel="noopener">Gnome Shell Extensions</a></h2><p>Gnome Shell allows customisations via extensions (written in JavaScript and possibly other languages) and there is <a href="https://extensions.gnome.org/" target="_blank" rel="noopener">a website full of them</a>.  The Gnome Shell extensions are really easy to use, its just like using the Chrome or Firefox extensions.</p>
+<p>Each extension on the website has an on/off switch.  Switching on prompts you to accept that the package will be installed.  For some extensions there is also a tool icon that you can press to configure the extensions once installed.  You can manage your installed extensions from <a href="https://extensions.gnome.org/local/" target="_blank" rel="noopener">https://extensions.gnome.org/local/</a>.</p>
+<p>These extensions give a really easy way to add features and Gnome Shell and without them it would have diminished the experience amd I would have stopped using Gnome Shell then and there.</p>
+<p>The only issue with these extensions is that they can become outdated and break, with each release of Gnome Shell.</p>
+<h3 id="Extensions-added"><a href="#Extensions-added" class="headerlink" title="Extensions added"></a>Extensions added</h3><p><strong>AppIndicator Status</strong></p>
+<p>I use Dropbox to sync important files between different laptops (Linux, Mac) and although its easy to install Dropbox in Ubuntu Gnome, the status panel indicator for dropbox does not display.  By adding AppIndicator extension then the dropbox icon appears and I can control syncing of my files again.</p>
+<p><strong><a href="https://extensions.gnome.org/extension/55/media-player-indicator/" target="_blank" rel="noopener">Media Player Indicator</a></strong></p>
+<p>In Ubuntu Unity you can start and control the default music player (Rhythmbox) from the volume indicator.  The Media Player Indicator adds that functionality in Gnome Shell.  It worked for Rhythmbox although the Playlists didnt show up in the volume indicator.</p>
+<p><strong> <a href="https://extensions.gnome.org/extension/545/hide-top-bar/" target="_blank" rel="noopener">Hide Top bar</a></strong></p>
+<p>The biggest thing that put me off Gnome Shell at first was the wasted space at the top of the screen.  First there is the Gnome Shell menu bar, then the window decoration for the application, then the application menu and then the content of the app. From what I have read (cheat sheet) Gnome Shell will go the same route as Ubuntu Unity and put app menus in the top panel, making better use of the space.  Until then, I find <a href="https://extensions.gnome.org/extension/545/hide-top-bar/" target="_blank" rel="noopener">Hide Tob Bar</a> very welcome.  I have it set to auto hide and only show when the mouse approaches it.</p>
+<p><strong><a href="https://extensions.gnome.org/extension/690/easyscreencast/" target="_blank" rel="noopener">EasyScreenCast</a></strong></p>
+<p>Gnome Shell as screen casting software built in so you can record your desktop using <code>Control+Shift+Alt+R</code>.  Rather than have to remember that keyboard combo, EasyScreenCast gives you and indicator to control the recording.</p>
+<p>EasyScreenCast seems to work really well and uses the <a href="http://www.webmproject.org/" target="_blank" rel="noopener">webm codec</a> by default, so you can just upload that straight to YouTube.</p>
+<h3 id="Extensions-to-look-at-later"><a href="#Extensions-to-look-at-later" class="headerlink" title="Extensions to look at later"></a>Extensions to look at later</h3><p><a href="https://extensions.gnome.org/extension/719/fast-user-switch/" target="_blank" rel="noopener">Fast user switch</a> - enables you to switch users without having to go via gdm</p>
+<p><a href="https://extensions.gnome.org/extension/584/taskbar/" target="_blank" rel="noopener">Task bar</a> - displays icons of running applications on the top panel.  If I run more than one app per desktop this may be useful.</p>
+<p><a href="https://extensions.gnome.org/extension/508/uptime-indicator/" target="_blank" rel="noopener">Uptime indicator</a> - shows how long in minutes it has been since the last boot.  Clicking on the indicator shows you the time Ubuntu Gnome was started.</p>
+<p><a href="https://extensions.gnome.org/extension/53/pomodoro/" target="_blank" rel="noopener">Pomodoro time</a> - gives you a countdown to timebox work into 25 minute sessions. This pomodoro technique helps you concentrate on one task and get it done well.</p>
+<p><a href="https://extensions.gnome.org/extension/11/monitor-status-indicator/" target="_blank" rel="noopener">Monitor status indicator</a> - a short-cut for the display controls to quickly manage your display settings.  I had a few problems with a second monitor, not sure if its this extension of Gnome Shell.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>I like Ubuntu Gnome and Gnome Shell enough to give it a try for a few more weeks until the final versions of <a href="http://www.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a> and <a href="http://ubuntugnome.org/" target="_blank" rel="noopener">Ubuntu Gnome</a> are released. My Lenovo X201T is my spare laptop, so it doesn’t matter if something breaks, I can still do work on my my Lenovo X1 carbon, running Ubuntu.</p>
+<p>Things in Ubuntu Gnome are changing quite a bit and there is a tendency for Gnome Shell extensions to break with new releases.  To see what is coming next have a look at the <a href="http://www.omgubuntu.co.uk/2013/09/10-best-features-gnome-3-10" target="_blank" rel="noopener">Gnome 3.10 features and changes</a>.</p>
+<p>One thing that may make a difference is that both distributions will be replacing X windows.  Ubuntu has created <a href="https://wiki.ubuntu.com/Mir/" target="_blank" rel="noopener">Mir</a> and the Gnome project is behind <a href="https://wiki.gnome.org/Wayland" target="_blank" rel="noopener">Wayland</a>.  Its going to be interesting to see which approach works out best over the next few releases.</p>
+<blockquote><p>I did try <a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> for a weekend and although there are some great things with the distribution, for now it just seems to eat too much time in setting everything up and learning the different tooling.  Although there is a lot of documentation, I found myself having to read pages and pages of content and not always finding the answers I was looking for.</p>
+</blockquote>
+<h2 id="6-month-later"><a href="#6-month-later" class="headerlink" title="6 month later"></a>6 month later</h2><p>I am still using Ubuntu as my prefered Linux distribution.  Gnome Shell has still a long way to come to offer the features I need and the extensions I want to use break to often to be fun fixing.</p>
+<p>When Gnome Shell becomes more evolved and incorporates Wayland, then it will be time to give it another try and see how it stacks up to Ubuntu, Unity and Mir.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.gnome.org/wp-content/themes/gnome-grass/images/gnome-logo.png" class="img-thumbnail">
+<p>With a new version of <a href="http://www.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a> this month, I asked myself if I would get more out of one of the many other Linux distributions.  Here is what I learnt.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Developing on MacOSX Is More Human With Ubuntu Fonts]]></title>
+    <link href="http://jr0cket.co.uk/2013/08/developing-on-macosx-more-human-with.html.html"/>
+    <id>http://jr0cket.co.uk/2013/08/developing-on-macosx-more-human-with.html.html</id>
+    <published>2013-08-12T19:50:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<p>As a developer you sit in front of your laptop all day (and night) so why not make it a more human experience by using the set of beautifully clear fonts from Ubuntu. &nbsp;Its really quick and simple to add them to your MacOSX machine (and probably windows), so give it a try.</p>
+<a id="more"></a>
+<h1 id="The-Ubuntu-font-family"><a href="#The-Ubuntu-font-family" class="headerlink" title="The Ubuntu font family"></a>The Ubuntu font family</h1><img src="http://3.bp.blogspot.com/-3zqHH9zVZ4s/Ugk10_CFuGI/AAAAAAAAK3Y/l06Tqnyb2o0/s1600/Ubuntu_Font_Family.png" class="img-topic"> 
+<p>The Ubuntu font family has been professionally designed and is freely available from <a href="http://font.ubuntu.com/" target="_blank" rel="noopener">font.ubuntu.com</a>.</p>
+<p>The fonts are available in a range of weights as well as different natural languages. &nbsp;As developers there is also a really beautiful mono-type font too called Ubuntu Mono!</p>
+<p>Here is a simple example of some Clojure code in the Ubuntu Mono font:</p>
+<img src="http://2.bp.blogspot.com/-eFL0wzEJQK0/Ugk7322THJI/AAAAAAAAK4k/3xLH4l_82pQ/s1600/ubuntu-fonts-core.clj-example.png" class="img-code"> 
+<p>And a further example of some markdown (as used by Github, etc.)</p>
+<img src="http://2.bp.blogspot.com/-9L5jxUlsc7A/Ugk8HVfwFWI/AAAAAAAAK4s/RD3lwVChM-8/s1600/ubutnu-fonts-index.md-example.png" class="img-code">
+<img src="http://2.bp.blogspot.com/--h8jdygzyyI/Ugk3gdRijiI/AAAAAAAAK30/cibAauJPaus/s1600/ubuntu-font-family-list.png" class="img-code">
+<h1 id="Adding-Fonts-to-MacOSX-is-a-simple-drag-and-drop"><a href="#Adding-Fonts-to-MacOSX-is-a-simple-drag-and-drop" class="headerlink" title="Adding Fonts to MacOSX is a simple drag and drop"></a>Adding Fonts to MacOSX is a simple drag and drop</h1><p>Download the Ubuntu fornts zip file and extract it (open the zip file in MacOSX extracts it).</p>
+<p>Drag and drop all the files with a .ttf extension (true type font) to the folder containing all the fonts on your Mac:</p>
+<img src="http://2.bp.blogspot.com/-ieiw0icjWdw/Ugk4JviIQtI/AAAAAAAAK38/Tj8OY04lP9I/s1600/ubuntu-fonts-macosx-library-fonts-path.png" class="img-code">
+<p>Now all your applications on the Mac should be able to use the Ubuntu fonts.</p>
+<h1 id="Tweaking-your-developer-tools"><a href="#Tweaking-your-developer-tools" class="headerlink" title="Tweaking your developer tools"></a>Tweaking your developer tools</h1><img src="http://1.bp.blogspot.com/-PLeobToC6lc/TzFJCfBSLPI/AAAAAAAAEbE/zSx1cOgHzZE/s1600/emacs128x128icon.png" class="img-topic">
+<p>I use Emacs for most of my development on the Mac, but any app should be able to pick up the Ubuntu fonts you have added. </p>
+<p>I have Emacs configured with the Emacs Live setup, so I simply add the Ubuntu Mono font as the default in the configuration file:</p>
+<pre><code>~/.live-packs/accountname-pack/init.el
+</code></pre><p>The Emacs Lisp code to set the font to Ubuntu Mono as a font size of 16 (good for demos) is:</p>
+<pre><code>(live-set-default-font &quot;Ubuntu Mono 16&quot;)
+</code></pre><p>This code looks much better in Emacs with the new Ubuntu Mono font of course.<br><img src="http://3.bp.blogspot.com/-Pb4STT7KHYI/Ugk6n6491LI/AAAAAAAAK4U/SZr9rieU8XE/s1600/ubuntu-font-emacs-init.el-example.png" class="img-code"></p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Chaning fonts may seem like a small change to make, but anything you can do to make your development environment as enaging and enjoyable as possible is worth doing.  After all I certainly spend a lot of time in my developer environment.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>As a developer you sit in front of your laptop all day (and night) so why not make it a more human experience by using the set of beautifully clear fonts from Ubuntu. &nbsp;Its really quick and simple to add them to your MacOSX machine (and probably windows), so give it a try.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="mac" scheme="http://jr0cket.co.uk/tags/mac/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Lenovo X1 Carbon - Unboxing Video]]></title>
+    <link href="http://jr0cket.co.uk/2013/03/lenovo-x1-carbon-unboxing-video.html.html"/>
+    <id>http://jr0cket.co.uk/2013/03/lenovo-x1-carbon-unboxing-video.html.html</id>
+    <published>2013-03-17T13:22:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<p>I have not found any Ubuntu related video’s for the Lenovo X1 Carbon, but here is an unboxing video that gives you some idea of how slim this laptop actually is.</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/KRLsanDdzGE" frameborder="0" allowfullscreen></iframe></div> 
+<p>Thank you.<br><a href="https://www.twitter.com/jr0cket" target="_blank" rel="noopener">@JR0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I have not found any Ubuntu related video’s for the Lenovo X1 Carbon, but here is an unboxing video that gives you some idea of how slim ]]>
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu on Lenovo X1 Carbon - Tweaking the Desktop]]></title>
+    <link href="http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-tweaking-the-desktop.html"/>
+    <id>http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-tweaking-the-desktop.html</id>
+    <published>2013-03-16T14:42:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://1.bp.blogspot.com/-pfixqqRGL5c/UUOcTFUeF4I/AAAAAAAAJLE/6sPtWcG4gEs/s1600/ubuntu-tweak-home-page.png" class="img-thumbnail">
+<p>There are a few little tweaks that I find make using <a href="Ubuntu">http://www.ubuntu.com</a> desktop just that little bit nicer.  The easiest way I have found to make these changes is using <a href="http://ubuntu-tweak.com/" target="_blank" rel="noopener">Ubuntu Tweak</a>.</p>
+<a id="more"></a>
+<h2 id="Installing-Ubuntu-Tweak"><a href="#Installing-Ubuntu-Tweak" class="headerlink" title="Installing Ubuntu Tweak"></a>Installing Ubuntu Tweak</h2><p>The easiest way is to go to the Ubuntu Tweak website and click on the Download Now button.  This asks you to save a .deb file.  Double clicking on this .deb file opens the Ubuntu software center and lets you install the software and any depenencies.</p>
+<h2 id="Natural-Scrolling-like-the-new-Mac-OSX"><a href="#Natural-Scrolling-like-the-new-Mac-OSX" class="headerlink" title="Natural Scrolling (like the new Mac OSX)"></a>Natural Scrolling (like the new Mac OSX)</h2><p>Having used a MacBook Pro for work for the last 6 months I got used to the <em>reversed</em> way of scrolling, introduced to make desktops scroll like tablets.  After a few weeks I grew to like this “reversed” scrolling so wanted it for the new laptop.</p>
+<p>In the next version of Ubuntu, 13.04, this reversed scrolling is called Natural Scrolling.  For Ubuntu 12.04 it can be switched on using Ubuntu Tweak in the section <strong>Tweaks &gt; Accessories</strong></p>
+<img src="http://3.bp.blogspot.com/-tXORsbuAXR8/UUOf11ZFPtI/AAAAAAAAJLM/qYLjs_kvQMw/s1600/ubuntu-tweak-natural-scrolling.png">
+<h2 id="Virtual-Desktops"><a href="#Virtual-Desktops" class="headerlink" title="Virtual Desktops"></a>Virtual Desktops</h2><p>I usually like to have one application running per desktop and often have quite a few apps running at any one time.  Whilst Ubuntu has 4 virtual desktops by default, I prefer to go one level bigger and have 9.  Again this is easily done with Ubuntu Tweak in section <strong>Tweaks &gt; Workspaces</strong>.</p>
+<img src="http://1.bp.blogspot.com/-BHqEWKbB6y4/UUOjQWG7ckI/AAAAAAAAJLU/AHQ-FE5ftsE/s1600/ubuntu-tweak-nine-workspaces.png">
+<p>With nine virtual desktops I can now get going with some coding, once I have set up my development environments.  That will be in the next post.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://1.bp.blogspot.com/-pfixqqRGL5c/UUOcTFUeF4I/AAAAAAAAJLE/6sPtWcG4gEs/s1600/ubuntu-tweak-home-page.png" class="img-thumbnail">
+<p>There are a few little tweaks that I find make using <a href="Ubuntu">http://www.ubuntu.com</a> desktop just that little bit nicer.  The easiest way I have found to make these changes is using <a href="http://ubuntu-tweak.com/" target="_blank" rel="noopener">Ubuntu Tweak</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu on Lenovo X1 Carbon - Let There Be Light and Sound]]></title>
+    <link href="http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-let-there-be-light-and-sound.html"/>
+    <id>http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-let-there-be-light-and-sound.html</id>
+    <published>2013-03-16T09:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-mIMpXCWQUw4/UUJJ1R0pADI/AAAAAAAAJJ8/oNaVgTQmlWA/s1600/lenovo-carbon1.jpg" class="img-thumbnail">
+<p>So I bought the Lenovo X1 Carbon for development and an important part of that is having some good tunes to listen too.  As I also travel a lot, its also useful to have a good display for movies and screen-casts.</p>
+<p>Well, the X1 Carbon give great results in both sound and vision.</p>
+<a id="more"></a>
+<h2 id="Testing-the-speakers"><a href="#Testing-the-speakers" class="headerlink" title="Testing the speakers"></a>Testing the speakers</h2><img src="http://1.bp.blogspot.com/-HBV4FJ9nfD8/UUN6M0NG16I/AAAAAAAAJKs/N83SXlOiA14/s1600/Rhythmbox-Is-the-Default-Player-for-Ubuntu-12-04.jpg" class="img-code">
+<p>Ubuntu comes with Rythmbox music player and manager installed by default, so all it took to test the sound was to copy over some mp3 and flac audio files. </p>
+<blockquote><p>When installing Ubuntu, I selected the option to install the software needed to play proprietary music formats like mp3</p>
+</blockquote>
+<p>The sound came through brilliantly through stereo speakers located near the front of each side of the laptop.  There are two thin slits that let produce great sound without letting any dirt in.</p>
+<p>As noted in <a href="http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-first.html">my first post on the X1 Carbon</a>, the volume controls work just fine in Ubuntu (although the mic mute button does not work).</p>
+<h2 id="Testing-video-playback"><a href="#Testing-video-playback" class="headerlink" title="Testing video playback"></a>Testing video playback</h2><p>To test the playback I fired up YouTube and played some HD def music videos.  I have been enjoying Lindsey Sterling the last few months, so I fired up a few of her videos.  There is a great one where she is in a man made giant ice structure.</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/aHjpOzsQ9YI" frameborder="0" allowfullscreen></iframe></div>
+<p>The video playback is just as great as the sound and not sign of jumping even with High Definition video.</p>
+<img src="http://3.bp.blogspot.com/-lQv0hasSvy8/UUN81JyKaWI/AAAAAAAAJK0/n_SMXLPXX9E/s1600/Lindsey-Sterling-Crystalise-video-dark-sky.png" class="img-code"> 
+<p>A screen grab of Lindsey Sterling, Crystallize from her <a href="http://www.youtube.com/user/lindseystomp" target="_blank" rel="noopener">YouTube channel</a>.  The screen-shot doesn’t really do the actual video playback justice.  Even on farily low brightness, the display really shows off the quality of the screen.</p>
+<p>With a matt screen in widescreen format and IPS giving lots of brightness, the Lenovo X1 Carbon will be a a great portal movie player on long trips.</p>
+<p>Finally I tested my <a href="http://www.amazon.co.uk/Logitech-981-000177-Gaming-Headset-G330/dp/B002KKM5GA/" target="_blank" rel="noopener">Logitech gaming headset</a> and Ubuntu detected them correctly and they show up in the Sound settings.</p>
+<p>More adventures with Ubuntu on Lenovo in future posts.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-mIMpXCWQUw4/UUJJ1R0pADI/AAAAAAAAJJ8/oNaVgTQmlWA/s1600/lenovo-carbon1.jpg" class="img-thumbnail">
+<p>So I bought the Lenovo X1 Carbon for development and an important part of that is having some good tunes to listen too.  As I also travel a lot, its also useful to have a good display for movies and screen-casts.</p>
+<p>Well, the X1 Carbon give great results in both sound and vision.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu on Lenovo X1 Carbon - Tweaking the Bios and Added Security]]></title>
+    <link href="http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-tweaking-bios-and-security.html"/>
+    <id>http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-tweaking-bios-and-security.html</id>
+    <published>2013-03-15T18:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-mIMpXCWQUw4/UUJJ1R0pADI/AAAAAAAAJKA/-3aHKq5wJwc/s1600/lenovo-carbon1.jpg" class="img-thumbnail"> 
+<p>I have a lovely new Lenovo X1 Carbon and to make it even better I am installing <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a>.  The installation should be a breeze as Lenovo laptops are usually well supported, the only thing I configured was in the BIOS.  I wanted to check the boot order and see what the boot menu key was so I could install Ubuntu from a USB memory stick (boot menu key is F12).</p>
+<a id="more"></a>
+<p>Pressing the little “Thinkpad” button next to the volume controls whist the laptop is first booting gives you an option to go into the bios. </p>
+<h2 id="Secure-Boot-and-the-boot-order"><a href="#Secure-Boot-and-the-boot-order" class="headerlink" title="Secure Boot and the boot order"></a>Secure Boot and the boot order</h2><p>Once the BIOS control panel had loaded up, In the overview section I noticed that Secure Boot was enabled.  So I looked through all the sections and found an option to turn it off.  I also changed the boot order so that USB memory sticks can be used to boot from.  Saving the changes rebooted the machine and I pressed F12 on restart to select the USB stick I had created for the Ubuntu installation.</p>
+<p>Apart from thinking of a good name for my new laptop, the install was really easy.  I decided to use the whole hard drive (SSD) space for Ubuntu and ditch windows 8 completely.  There were 3 recovery partitions that come with the laptop if I wanted to keep windows for a later date.  I did not.</p>
+<img src="http://3.bp.blogspot.com/-i09UXqkk_3E/UUMtyYQNciI/AAAAAAAAJKc/N1oz7QeNT5E/s1600/ubuntu-install-cfdisk.png" class="img-code">
+<p><em>Disk partition information from: sudo cfdisk</em></p>
+<h2 id="Added-security-and-partition-flexibility"><a href="#Added-security-and-partition-flexibility" class="headerlink" title="Added security and partition flexibility"></a>Added security and partition flexibility</h2><p>I decided to encrypt the whole laptop and this works really well.  For the rare occasion I shut down or restart the laptop, I get prompted as Ubuntu starts up to enter the password to unlock the encrypt drive.</p>
+<p>I also decided to install Logical Volume Managment (LVM), just in case I needed to play around with the partition sizes.  As I have a 180GB SSD hard drive, I probably wont need to but it should not add a noticeable overhead.</p>
+<p>One thing that is missing is a swap partition, but the only upshot of this on a laptop with 8GB is that hibernate has knowhere to write to, so its currently disabled.  I’ll probably manually partition the laptop when Ubuntu 13.04 comes out (25th April).</p>
+<p>To finish off the install I just chose a name for the laptop and the usual username/password and everything was done in less than 30 minutes. I didn’t need to do anything to boot into the installed version of Ubuntu.</p>
+<p>Next I’ll check out how well sound and video works.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-mIMpXCWQUw4/UUJJ1R0pADI/AAAAAAAAJKA/-3aHKq5wJwc/s1600/lenovo-carbon1.jpg" class="img-thumbnail"> 
+<p>I have a lovely new Lenovo X1 Carbon and to make it even better I am installing <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a>.  The installation should be a breeze as Lenovo laptops are usually well supported, the only thing I configured was in the BIOS.  I wanted to check the boot order and see what the boot menu key was so I could install Ubuntu from a USB memory stick (boot menu key is F12).</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu on Lenovo X1 Carbon - Great First Impressions]]></title>
+    <link href="http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-first.html.html"/>
+    <id>http://jr0cket.co.uk/2013/03/ubuntu-on-lenovo-x1-carbon-first.html.html</id>
+    <published>2013-03-14T23:21:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-mIMpXCWQUw4/UUJJ1R0pADI/AAAAAAAAJJ8/oNaVgTQmlWA/s1600/lenovo-carbon1.jpg" class="img-thumbnail">
+<p>After a bit of research on the level of <a href="Ubuntu">http://www.ubuntu.com</a> support, I decided to get a Lenovo X1 Carbon for my new development machine.  </p>
+<p>If you have never seen the X1 Carbon, its like a really special edition of a Mac Book Air, except much more awesome and more powerful.  Here are my impressions so far.</p>
+<a id="more"></a>
+<p>The things I value the most are:</p>
+<ul>
+<li>Fast Processor - i7 cpu @ 2GHz dual core &amp; hyperthreading CPU (virtual 4 cores)</li>
+<li>Decent size RAM - 8 Gb</li>
+<li>14” Matt screen display with IPS for a very bright screen</li>
+<li>Thin bezel around the display means the 14” screen sits in a typical 13” form factor</li>
+<li>High Definition resolution - 1600x900</li>
+<li>Decent battery life, between 4 to 6 hours and a 30 minute quick charge to ~80% full</li>
+<li>A really great keyboard - perfect for Emacs and command line junkies</li>
+<li>A hardware switch for WiFi and  Bluetooth</li>
+<li>It comes in black, as all technology should </li>
+</ul>
+<p>The most important thing is that it runs <a href="Ubuntu">http://www.ubuntu.com</a> and it runs Ubuntu very fast!!</p>
+<h1 id="Great-Ubuntu-support-so-far"><a href="#Great-Ubuntu-support-so-far" class="headerlink" title="Great Ubuntu support so far"></a>Great Ubuntu support so far</h1><img src="http://2.bp.blogspot.com/-2mypf120DAY/UUJbM-fswYI/AAAAAAAAJKE/DBZmPK7F9c0/s1600/ubuntulogo.png" class="img-topic">
+<p>I have not found anything that does not work as yet (although its only been 2 hours).</p>
+<p><strong>WiFi network</strong> - this worked without any problems (even after suspend).  I did pick up a USB ethernet connector just in case, but have not needed that as yet.  The WiFi is very fast, especially when connected to a 5GHz network.  The WiFi also works with 2.5GHz networks too.</p>
+<p><strong>Back-light keyboard</strong> - use <code>Fn + Space</code> keys to cycle through 2 different levels of brightness and off.  Unlike the Mac, there is no low-light level detector, but I can provide that service myself :)</p>
+<p><strong>Display brightness</strong> - use <code>Fn + F8 / F9</code> to change the brightness of the screen and there is a decent stepping range of brightness.</p>
+<p><strong>Volume level &amp; sound mute</strong> - these buttons all work, although the microphone mute button does not seem to work.</p>
+<p><strong>Suspend</strong> on closing the laptop lid works just fine and the WiFi network came back along with everything else when opening the lid.  The Ubuntu installer does not create a swap space by default (or this may be because I selected an encrypted disk partition), so hibernate does not work at present.</p>
+<p><strong>Lock Screen</strong> button <code>Fn + F3</code> works just fine and is a quick way to put the screen to sleep.</p>
+<p><strong>External monitor</strong> also tested okay.  I plugged in a Dell 24” monitor using the Display Port to VGA adaptor (additional purchase) and got the full 1920 x 1200 output.  The Lenovo display can also run its display of 1600x900 at the same time and I notice no loss of responsiveness in either display. </p>
+<p><strong>Web Camera</strong> works very well and I tested it out via a Google hangout with myself.</p>
+<img src="http://3.bp.blogspot.com/-KRS_H5QxupU/UUJbYAPH3aI/AAAAAAAAJKM/6j6wVSlJGjk/s1600/ubuntu1210installation-large_014.jpg" class="img-code">
+<h1 id="Impressions-overall"><a href="#Impressions-overall" class="headerlink" title="Impressions overall"></a>Impressions overall</h1><p>The Lenovo X1 Carbon laptop is a pretty impressive piece of kit on paper.  I was excite when I was reading about it and worried it would not live up to the hype.</p>
+<p>I didn’t have to worry.  From the moment I pulled it out of the box it has been a joy.  I still cant believe how light it is, it feels half the weight of any laptop I’ve ever held.  Despite the light weight, it feels very robust and seems like it will last a long time.</p>
+<p>Using the laptop is a joy, mainly down to the keyboard.  Its a full size keyboard and has the keys laid out in there correct places.  I dont have to go hunting for the <code>@ ~ |</code> and <code>#</code> keys.</p>
+<p>Battery life seems pretty good.  I have been writing this article on an off over the last 4 an a bit hours.  There is still an hour and a half left on the battery indicator.  Admittedly I haven’t run any websites running flash or played any games, but I am pretty sure I can last all day at a conference using WiFi.  I will test out the 30 minute quick charge over the next few days.</p>
+<blockquote><p>Update: The Lenovo X1 Carbon charges up really quickly, easily charging to over 80% capacity in 30 minutes and full charge in about 45 minutes.</p>
+</blockquote>
+<p>Compared to the Mac Book Pro I was given via the company I work for, the Lenovo X1 Carbon wins on every count.</p>
+<p>In the next few blogs I’ll cover setting up this great laptop to be an awesome development machine.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-mIMpXCWQUw4/UUJJ1R0pADI/AAAAAAAAJJ8/oNaVgTQmlWA/s1600/lenovo-carbon1.jpg" class="img-thumbnail">
+<p>After a bit of research on the level of <a href="Ubuntu">http://www.ubuntu.com</a> support, I decided to get a Lenovo X1 Carbon for my new development machine.  </p>
+<p>If you have never seen the X1 Carbon, its like a really special edition of a Mac Book Air, except much more awesome and more powerful.  Here are my impressions so far.</p>]]>
+    
+    </summary>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Java on Ubuntu - Time to Move to OpenJDK!]]></title>
+    <link href="http://jr0cket.co.uk/2012/02/java-on-ubuntu-time-to-move-to-openjdk.html.html"/>
+    <id>http://jr0cket.co.uk/2012/02/java-on-ubuntu-time-to-move-to-openjdk.html.html</id>
+    <published>2012-02-03T12:27:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<p>Oracle have had many ups and downs with the community over the last few years, although recently I though they seemed to be getting things right.</p>
+<p>On the one hand Oracle are supporting <a href="http://fosdem.org/2012/" target="_blank" rel="noopener">FOSDEM</a> but with the other hand are stopping the Sun JDK from being shipped freely by Linux distributions.</p>
+<p>Is this simply an aggressive way to move everyone over to the <a href="http://openjdk.java.net/" target="_blank" rel="noopener">OpenJDK</a> platform at a quicker pace?&nbsp; If it is then its a bit of a big stick to use, when you could just use the carrot of new features in OpenJDK 7 &amp; 8.</p>
+<p>Now Oracle has retired the ‘distributor license’ which allowed OS vendors to package Sun JDK (August 2011), the security board for Ubuntu  announced that it would be removing Sun JDK package&nbsp;from its ‘<em>Partner</em>‘  repository from 16th February 2012.</p>
+<blockquote>
+<p>“The  Sun JDK packages will remain installed on current systems with no  further security updates. On new systems, it will no longer be possible  to install the packages from the partner archive. “</p>
+</blockquote>
+<p>So if you want a new install of the Sun JDK after February  16th 2012 then you will need to do a manual install by downloading a .bin file from the Oracle website and installing it into <code>/opt</code> or <code>/usr/local/</code>.  Or you could have a look at the&nbsp; package from one enterprising Ubuntu user, <a href="http://blog.flexion.org/2012/01/16/install-sun-java-6-jre-jdk-from-deb-packages/" target="_blank" rel="noopener">Martin Wimpress</a>.</p>
+<h1 id="Moving-to-OpenJDK"><a href="#Moving-to-OpenJDK" class="headerlink" title="Moving to OpenJDK"></a>Moving to OpenJDK</h1><p>Instead of the fiddling with the Oracle version of Java, you could use this move as a good excuse to test drive your Java applications on OpenJDK which is currently available to install  through the <em>Ubuntu Software Centre</em>.</p>
+<p>I was concerned about moving over to OpenJDK at first until I realised that I had been using OpenJDK for everything for quite a while anyway.&nbsp; In the last year I have been doing <a href="http://www.atlassian.com/software/jira/overview" target="_blank" rel="noopener">JIRA</a> and <a href="http://www.atlassian.com/software/confluence/overview" target="_blank" rel="noopener">Confluence</a> <a href="https://developer.atlassian.com/" target="_blank" rel="noopener">plugin development</a>, using <a href="http://netbeans.org/" target="_blank" rel="noopener">Netbeans IDE</a> and coding with <a href="http://www.scala-lang.org/" target="_blank" rel="noopener">Scala</a> and <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> all on <a href="http://openjdk.java.net/" target="_blank" rel="noopener">OpenJDK 1.6</a> without any issues.&nbsp; So is it time for us to move over to the OpenJDK platform for good?</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Its a funny feeling that moving to <a href="http://openjdk.java.net/" target="_blank" rel="noopener">OpenJDK</a> is not only what a huge commercial organisation wants but also a great boost for open source projects in general and of course the OpenJDK project itself.&nbsp; The world has certainly changed in the last few years !!</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Oracle have had many ups and downs with the community over the last few years, although recently I though they seemed to be getting thing]]>
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="java" scheme="http://jr0cket.co.uk/tags/java/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Discover Ubuntu Linux]]></title>
+    <link href="http://jr0cket.co.uk/2011/04/discover-ubuntu-linux.html.html"/>
+    <id>http://jr0cket.co.uk/2011/04/discover-ubuntu-linux.html.html</id>
+    <published>2011-04-01T17:25:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<p>An overview of Ubuntu Linux, an open source operating system designed for people.</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/6i940n5H0iU" frameborder="0" allowfullscreen></iframe></div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>An overview of Ubuntu Linux, an open source operating system designed for people.</p>
+<div class="video-container"><iframe src="//www.you]]>
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu Unity - Switching Between Application Windows]]></title>
+    <link href="http://jr0cket.co.uk/2011/04/ubuntu-unity-switching-between.html.html"/>
+    <id>http://jr0cket.co.uk/2011/04/ubuntu-unity-switching-between.html.html</id>
+    <published>2011-04-01T14:48:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://static.arstechnica.com/unity-multi-selector.png" class="img-thumbnail">
+<p>I have really enjoyed trying out the new Ubuntu 11.04 beta release with the Unity gnome shell (desktop) and find it very fast and stable (after a quick upgrade).</p>
+<p>As Unity is now using Compiz to drive lots of cool 3D effects, there are lots of new keyboard shortcuts to make use of.&nbsp; Here are a selection of useful keyboard shortcuts using the “Super” key - the one that has either a windows logo or an Ubuntu sticker on it. </p>
+<a id="more"></a>
+<p><strong>Super + w</strong><br>Shows all the active windows across all your desktops</p>
+<p><strong>Super + s</strong><br>Displays your virtual desktops, allows you to select a desktop or an application window on that desktop</p>
+<p><strong>Super + [1 2 3 4 5 6 7 8 9]</strong><br>Pressing the super button plus a number will either launch an application or take you to the last active window of a currently running application.</p>
+<p><strong>Super</strong><br>Pressing the super key shows the Unity launcher with the dash.&nbsp; When you select the icon for your application (you need to click once to hide the dash and a second to show you application window) it will take you to your application - or show you all the application windows if there are multiple windows open</p>
+<p>Using the compiz configuration tool (ccsm) you can map these actions to other things if you so wish.&nbsp; I use ccsm to map Super + E to show me the windows just on the current desktop.</p>
+<p><strong>Desktop toggle - Super + d</strong><br>To toggle between the desktop an your applications, use Super + d key, once to hide all your applications and again to show those applications that were hidden.</p>
+<p>Hope this helps with your enjoyment of Ubuntu 11.04 and I am looking forward to the release just before the very long bank holiday here in the UK.</p>
+<p>Thank you</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://static.arstechnica.com/unity-multi-selector.png" class="img-thumbnail">
+<p>I have really enjoyed trying out the new Ubuntu 11.04 beta release with the Unity gnome shell (desktop) and find it very fast and stable (after a quick upgrade).</p>
+<p>As Unity is now using Compiz to drive lots of cool 3D effects, there are lots of new keyboard shortcuts to make use of.&nbsp; Here are a selection of useful keyboard shortcuts using the “Super” key - the one that has either a windows logo or an Ubuntu sticker on it. </p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="unity" scheme="http://jr0cket.co.uk/tags/unity/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Virtualbox Guest Editions for Ubuntu]]></title>
+    <link href="http://jr0cket.co.uk/2011/03/virtualbox-guest-additions-for-ubuntu.html.html"/>
+    <id>http://jr0cket.co.uk/2011/03/virtualbox-guest-additions-for-ubuntu.html.html</id>
+    <published>2011-03-01T12:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://upload.wikimedia.org/wikipedia/en/d/d5/Virtualbox_logo.png" class="img-thumbnail">
+<p>Using Virtualbox is a way to run an isolated environment on your desktop and help manage a consistent deployment process.  To have Virtualbox running efficiently on Ubuntu you really should install the utilities and drivers that come in the Virtualbox Guest Editions addon.</p>
+<a id="more"></a>
+<p>After you have installed your Linux Guest system, there are a few additional packages needed for the Guest Additions. These packages enables you to create specific kernel modules for Virtualbox on your Ubuntu virtual server.&nbsp; For Debian based distro’s like Ubuntu, you need to install the following packages or the installation of the guest additions will fail:</p>
+<pre><code>dkms
+build-essential
+linux-headers-generic
+</code></pre><p>In a terminal window, you can use the following command to install the neccesary packages</p>
+<pre><code>sudo apt-get install dkms build-essential linux-headers-generic
+</code></pre><h1 id="Mounting-the-guest-editions-with-Ubuntu-10-10-host-amp-guest-with-virtualbox-4"><a href="#Mounting-the-guest-editions-with-Ubuntu-10-10-host-amp-guest-with-virtualbox-4" class="headerlink" title="Mounting the guest editions with Ubuntu 10.10 (host &amp; guest) with virtualbox 4"></a>Mounting the guest editions with Ubuntu 10.10 (host &amp; guest) with virtualbox 4</h1><p>Using the virtualbox menu to mount the VirtualboxGuestEditions.iso image file is problematic.&nbsp; Just selecting the iso from the <em>Devices &gt; CD/DVD Devices</em> is not sufficient to get the image to mount.</p>
+<img src="http://lh5.googleusercontent.com/-6uGwUDgf5lw/TXjjP5bJvGI/AAAAAAAAASg/orOYA3UiEQ0/s1600/Virtualbox4-GuestEditions-menu.png">
+<p>First you should unmount any other iso images, especially the Ubuntu server install image.  Then run the following command to mount the guest editions image</p>
+<pre><code>sudo mount /dev/scd0 /media/cdrom
+</code></pre><p>Followed by selecting <em>Devices &gt; CD/DVD Devices &gt; VBoxGuestAdditions.iso</em> from the virtualbox menu</p>
+<p>This will then complete the mount command issued previously and you then have access to the mounted cd image.</p>
+<p>Run the guest editions installer using the following command</p>
+<pre><code>sudo /media/cdrom/VBoxLinuxAdditions.run
+</code></pre><p>Now that we have what is needed for the Guest Additions, it’s time to actually start installing what we want. If you haven’t done so already, mount the GA ISO to the VM. This is done using the Device Menu, then click on Install Guest Additions. See the screen shot.</p>
+<p>Make sure that no other CD is already loaded for the VM, like the install disk. Unmount that one first. The CD doesn’t always get mounted automatically, so you have to do that manually. Usually an icon appears on the Desktop with the name of the inserted CD. You can mount the disc from there, but if you don’t have a GUI, you have to mount it using the command line. The CLI can also be used if you have a GUI. Use a terminal emulator for that.</p>
+<p>On the command line, check if there is a valid mount point for the CD. This is usually <code>/media/cdrom</code>, but any empty folder can be used as mount point. Now to mount the CD, issue the following command:</p>
+<pre><code>mount /dev/scd0 /media/cdrom
+</code></pre><img src="http://lh3.googleusercontent.com/-3_FSEPKHWF8/TW0aBjkP5uI/AAAAAAAAARw/Ph3zbPg9nsE/s1600/VirtualBox-guest-edition-install-server.png">
+<h1 id="Using-Usb-and-shares"><a href="#Using-Usb-and-shares" class="headerlink" title="Using Usb and shares"></a>Using Usb and shares</h1><p>There is a good guide to using USB memory sticks and drive shares at:</p>
+<p><a href="http://blog.eviac.com/2010/07/oracle-virtualbox-tips.html" target="_blank" rel="noopener">http://blog.eviac.com/2010/07/oracle-virtualbox-tips.html</a></p>
+<p>For more configuration ideas, have a look at the <a href="http://forums.virtualbox.org/viewtopic.php?f=3&amp;t=15679" target="_blank" rel="noopener">virtualbox forum</a></p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://upload.wikimedia.org/wikipedia/en/d/d5/Virtualbox_logo.png" class="img-thumbnail">
+<p>Using Virtualbox is a way to run an isolated environment on your desktop and help manage a consistent deployment process.  To have Virtualbox running efficiently on Ubuntu you really should install the utilities and drivers that come in the Virtualbox Guest Editions addon.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Getting Creative - Creating a Wanted Poster]]></title>
+    <link href="http://jr0cket.co.uk/2011/01/getting-creative-creating-wanted-poster.html.html"/>
+    <id>http://jr0cket.co.uk/2011/01/getting-creative-creating-wanted-poster.html.html</id>
+    <published>2011-01-23T12:33:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://t1.gstatic.com/images?q=tbn:ANd9GcSsMo725V4wSrXaqNy5v4_UNt3FuiyU8iZzsbKi1flhniuIViQ&amp;t=1&amp;usg=__59rhKByjyIqqDytuLmnzHJ6uv9E=" class="img-thumbnail"> 
+<p>I help organise a monthly social for the London Java Community and am always on the lookout for way to get our members talking.&nbsp; One of the ways we do this at the social events is to have greeters, to help our new (to the event) members find people who know about the things they are interested in.</p>
+<p>In a moment of creativeness, I also thought about having posters on the wall of the social event, so people can see what other members are interested in talking about.&nbsp; I thought of kind of a rogues gallery, which kind of lead onto the idea of a western style wanted poster.</p>
+<img src="http://1.bp.blogspot.com/_yKz3swsAoNQ/TTweu_rH1wI/AAAAAAAAAOw/mpGADEHNyMs/s1600/LJC-Social-Wanted-Poster-JohnStevenson.png" class="img-code">
+<p>Using my favourite open source graphic design toolkit (<a href="http://ubuntu.jr0cket.co.uk/getting-software/digital-painting" target="_blank" rel="noopener">MyPaint</a> &amp; <a href="http://ubuntu.jr0cket.co.uk/getting-software/graphic-design/making-images" target="_blank" rel="noopener">Gimp</a> on <a href="http://ubuntu.jr0cket.co.uk/" target="_blank" rel="noopener">Ubuntu</a>) I created the a western style wanted poster of myself. </p>
+<p>I initially drew the poster in MyPaint and saved the concept as a portable network graphics (PNG) file. </p>
+<blockquote>
+<p>I export the mypaint drawing using the transparent background.</p>
+</blockquote>
+<p>Opening the concept drawing in Gimp, I cropped the size of the poster to what seemed to be the right dimensions, then added a suitably (less than happy) mugshot of myself.</p>
+<p>I wanted to have a paper feel to the poster and make it raggedy too, so it looked like the poster had been around for a while (as have I). I filled in the background of the poster with a medium dark brown colour, with a little bit of opacity, filling in any gaps in the text that the fill tool missed. </p>
+<p>Using the FX-Foundry filters in the Gimp, I used the Texturizer (FX-Foundary &gt; Selection Effects &gt; Texturizer) to apply a paper pattern.&nbsp; Then I added Berchovic Lomo effect (FX-Foundary &gt; Photo &gt; Effects &gt; Berchovic Lomo) to give a glowing boarder to the poster.&nbsp; This made the poster a little too orange around the boarder, so I also applied a Gothic Glow on top (FX-Foundary &gt; Light and Shadow &gt; Gothic Glow).</p>
+<p>To add some finishing touches to the poster, I saved it in Gimp again as a PNG file and opened the poster in MyPaint.&nbsp; Using the Ink Eraser tool I made the edges look like they has warn away and placed a few holes in the poster.&nbsp; Using a charcoal tool, I coloured around the edges of the holes I made to give them a wear and tear or burnt feel to them.</p>
+<p>To finish off I used the spray tool to add a little more ageing to the poster in general and saved the poster.&nbsp; Opening the poster back in Gimp one last time to check the poster is nicely cropped and the poster is done.</p>
+<p>From idea to finished poster took about 45 minutes, some of which was deciding what to write on the poster in the first place.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://t1.gstatic.com/images?q=tbn:ANd9GcSsMo725V4wSrXaqNy5v4_UNt3FuiyU8iZzsbKi1flhniuIViQ&amp;t=1&amp;usg=__59rhKByjyIqqDytuLmnzH]]>
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="gimp" scheme="http://jr0cket.co.uk/tags/gimp/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Unity Desktop Menu Arrives in Ubuntu]]></title>
+    <link href="http://jr0cket.co.uk/2011/01/unity-desktop-menu-arrives-in-ubuntu.html.html"/>
+    <id>http://jr0cket.co.uk/2011/01/unity-desktop-menu-arrives-in-ubuntu.html.html</id>
+    <published>2011-01-21T10:03:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/_yKz3swsAoNQ/TTlYIbAq3UI/AAAAAAAAAOo/gZWxwVE62c8/s1600/Unity-menu-natty-20010121.png" class="img-thumbnail">
+<p>A nice treat that came with this mornings upgrade on my laptop running <a href="Ubuntu">http://www.ubuntu.com</a> 11.04 was a first look at the new Unity application menu.</p>
+<p>Its a nice clean look to the menu and really easy to use, especially when I am using the touchscreen on my laptop.</p>
+<p>Its not feature complete yet as the top row just launches nautilus with the application list, but the bottom row of the menu launches the specific applications.</p>
+<p>I am looking forward to seeing the further enhancements to unity in the run up to alpha2 in the next few weeks.</p>
+<p>Thanks to the Ubuntu team for all your hard work.</p>
+<p><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/_yKz3swsAoNQ/TTlYIbAq3UI/AAAAAAAAAOo/gZWxwVE62c8/s1600/Unity-menu-natty-20010121.png" class="img-thumbnai]]>
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="unity" scheme="http://jr0cket.co.uk/tags/unity/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Trying Out Ubuntu 11.04 on Lenovo X201T]]></title>
+    <link href="http://jr0cket.co.uk/2010/12/trying-out-ubuntu-1104.html.html"/>
+    <id>http://jr0cket.co.uk/2010/12/trying-out-ubuntu-1104.html.html</id>
+    <published>2010-12-14T10:53:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://static.arstechnica.com/unity-multi-selector.png" class="img-thumbnail">
+<p>I am vastly more productive when I use Ubuntu as an Operating System as it is fast and gives me all the tools I need to get things done.  Unfortunately Lenovo dont support me in this requirement, shipping Windows with theiir products.  So to replace the incumbant Microsoft Windows software on my Lenovo Thinkpad X201T tablet, I intend to replace the 320GB hard disk with an <a href="http://www.ebuyer.com/product/225416" target="_blank" rel="noopener">OCZ Vertex 2E 128Gb solid state drive</a> (SSD).  The Lenovo lets you easily swap out the hard drive (great design).  This way I can simply put the original hard drive back in should I decide to sell the laptop.  Here is my approach.</p>
+<a id="more"></a>
+<p>Whilst I wait for the <a href="http://www.ebuyer.com/product/225416" target="_blank" rel="noopener">OCZ SSD from ebuyer</a>, I am running <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a> 11.04 from a nice and speedy SanDisk Cruzer 4Gb USB memory stick.</p>
+<p>I downloaded the <a href="http://cdimage.ubuntu.com/releases/11.04/alpha-1/natty-desktop-amd64.iso" target="_blank" rel="noopener">64-bit PC (AMD64) desktop CD alpha1 ISO image of Ubuntu 11.04</a> and used my Ubuntu 10.10 laptop to create a USB startup disk (Ubuntu live) on the first USB memory stick.</p>
+<p>Plugging in the first USB stick into one of the three USB ports on the Lenovo x201, I powered on and at the ThinkPad splashscreen pressed the F12 key to get the boot menu.  Selecting the Scandisk USB device, the laptop started to boot Ubuntu live.</p>
+<blockquote><p>Tip: When you see a purple screen with a picture of a white matchstick man and a keyboard, if you press select you can save yourself quite a few seconds of boot up time by using the basic menu to decide if you want to run Ubuntu Live or run an install.</p>
+</blockquote>
+<p>Plugging in a second Scandisk USB stick I am going to use to install Ubuntu onto, I select the Install Ubuntu option.  Following the default install options until I get to choose where to install Ubuntu, I selected to choose manual partition selection.</p>
+<p>At the bottom of the list was <code>/dev/sdc1</code> which represented the second USB stick I insterted.  The usb stick you are running the installation from will not show up in the list of devices to stop you from installing there.</p>
+<p>To install on the second USB I select <code>/dev/sdc1</code> and hit the change button.  Selecting <code>EXT4</code> as the partition type, using the full size of the USB stick, selecting to format the partition and selecting <code>/</code> (root) as the partition mount point.</p>
+<p>When selecting okay, the option as to where the Grub boot loader changes to the second USB stick, <code>/dev/sdc</code>, which is what I want in order to use the USB stick on any laptop.</p>
+<p>The rest of the install should be just clicking forward while all the files are copied across to the second USB stick, <code>/dev/sdc</code> SanDisk Cruzer Blade(4.0 GB).  As I connected my laptop to the wired network, Ubuntu worked out my location correctly and gave me decent settings for my keyboard automatically.</p>
+<p>The first boot from the new USB stick install did take about 45 seconds to start up, but subsequent boots are pretty quick and less than 25 seconds usually.</p>
+<p>Unity desktop is shaping up quite nicely and is very very fast, I mean really fast.  Amazing since its loading software from the USB memory stick.</p>
+<p>Try out <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a> for yourself, its very easy.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://static.arstechnica.com/unity-multi-selector.png" class="img-thumbnail">
+<p>I am vastly more productive when I use Ubuntu as an Operating System as it is fast and gives me all the tools I need to get things done.  Unfortunately Lenovo dont support me in this requirement, shipping Windows with theiir products.  So to replace the incumbant Microsoft Windows software on my Lenovo Thinkpad X201T tablet, I intend to replace the 320GB hard disk with an <a href="http://www.ebuyer.com/product/225416" target="_blank" rel="noopener">OCZ Vertex 2E 128Gb solid state drive</a> (SSD).  The Lenovo lets you easily swap out the hard drive (great design).  This way I can simply put the original hard drive back in should I decide to sell the laptop.  Here is my approach.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu on Lenovo X201T Tablet Laptop]]></title>
+    <link href="http://jr0cket.co.uk/2010/12/ubuntu-on-lenovo-x201t-tablet-laptop.html.html"/>
+    <id>http://jr0cket.co.uk/2010/12/ubuntu-on-lenovo-x201t-tablet-laptop.html.html</id>
+    <published>2010-12-13T00:25:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<p>I’ve just received my early holidays present to myself, a new Lenovo X201T tablet laptop.  Its a great piece of hardware and feels very robust and gives the feel of solid engineering which has created something will lasts a long time.</p>
+<p>I went for the top end version, Intel i7 processor, 8Gb RAM and top end Intel wireless network card.  Here are my experiences so far with the Lenovo X201T tablet latptop.</p>
+<a id="more"></a>
+<h2 id="Switching-to-Ubuntu"><a href="#Switching-to-Ubuntu" class="headerlink" title="Switching to Ubuntu"></a>Switching to Ubuntu</h2><p>Unfortunately the laptop is shipped with an operating system that requires a virus checker running continually.  So I have instead decided to use Ubuntu Linux so I can use all this new computing power to do things I really want.</p>
+<p>I am taking a calculated risk in running Ubuntu 11.04 as this version of Ubuntu will not be ready until April 2011.  I wanted to make use of the new Compiz powered Unity desktop that comes with Ubuntu 11.04 and all the latest touch screen software update, making the most out of the tablet form factor of the X201T laptop.</p>
+<p>I am starting with the alpha1 release of Ubuntu 11.04, made available on the 2nd December 2010.  This version seems stable and runs very well on the X201T.  Until I get the solid state hard drive, I am running Ubuntu from a USB memory stick</p>
+<h2 id="Lenovo-X201T-just-works-with-Ubuntu"><a href="#Lenovo-X201T-just-works-with-Ubuntu" class="headerlink" title="Lenovo X201T just works with Ubuntu"></a>Lenovo X201T just works with Ubuntu</h2><p>The following worked with the default install of Ubuntu, no hunt for drivers, patches or tweaks.</p>
+<ul>
+<li>Video card with 3D support, full screen HD playback from Vimeo</li>
+<li>Audio work fine and speakers give off a good level of sound</li>
+<li>Wired and Wireless network, bluetooth seems to be fine also</li>
+<li>Unity desktop is very responsive</li>
+<li>Volume control buttons</li>
+<li>Brightness function buttons (Fn-Home|End)</li>
+<li>Web page forward | back buttons - nice touch…</li>
+<li>Media control buttons work with media player (Fn-arrow keys)</li>
+<li>Touchpad with edge scrolling, all touch pad keys &amp; in keyboard mouse </li>
+<li>Battery life is reporting just shy of 8 hours which is what I was expecting</li>
+</ul>
+<h2 id="Multi-touch-touch-screen-support"><a href="#Multi-touch-touch-screen-support" class="headerlink" title="Multi-touch touch screen support"></a>Multi-touch touch screen support</h2><ul>
+<li>General left mouse actions, such as launching apps from Unity dock.</li>
+<li>Multi-touch scrolling and zooming pages in Firefox</li>
+<li>Multi-touch scrolling and zooming view in nautilus file manager There are still plenty of things to try with the multi-touch, but have found it very responsive so far.  You also get a pen that works with the multi-touch screen, so will be trying that out more as well. </li>
+</ul>
+<h2 id="Some-things-that-dont-work-out-of-the-box"><a href="#Some-things-that-dont-work-out-of-the-box" class="headerlink" title="Some things that dont work out of the box"></a>Some things that dont work out of the box</h2><ul>
+<li>Two finger scrolling on the touchpad - it seems be that only edge scrolling is supported by the hardware</li>
+<li>Buttons on the bottom of the screen (used when in tablet form)</li>
+<li>Sticky notes dont stick to the case - maybe I should just get better stickys</li>
+</ul>
+<p>I will be taking a trip over to the <a href="http://www.thinkwiki.org/wiki/ThinkWiki" target="_blank" rel="noopener">ThinkWiki</a> site to see if there are any tweaks I can do to make these buttons work.</p>
+<h2 id="In-summary"><a href="#In-summary" class="headerlink" title="In summary"></a>In summary</h2><p>The Lenovo X201 tablet is a wonderful laptop and I am very happy with the hardware.  Looking forward to testing the laptop more vigorously when I have the SSD fitted and Ubuntu installed.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I’ve just received my early holidays present to myself, a new Lenovo X201T tablet laptop.  Its a great piece of hardware and feels very robust and gives the feel of solid engineering which has created something will lasts a long time.</p>
+<p>I went for the top end version, Intel i7 processor, 8Gb RAM and top end Intel wireless network card.  Here are my experiences so far with the Lenovo X201T tablet latptop.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="lenovo" scheme="http://jr0cket.co.uk/tags/lenovo/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Ubuntu 10.10 Hibernate Suspend Bug Fix - Only for Some Laptops]]></title>
+    <link href="http://jr0cket.co.uk/2010/10/ubuntu-1010-hibernate-suspend-bug-fix.html.html"/>
+    <id>http://jr0cket.co.uk/2010/10/ubuntu-1010-hibernate-suspend-bug-fix.html.html</id>
+    <published>2010-10-23T13:20:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<p>I am really enjoying the new version of <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a>, 10.10 Maverick Meerkat.  I especially like the Unity desktop of the netbook edition.</p>
+<p>Unfortunately my Asus netbooks (Asus Eee PC1000, Asus Eee PC 1201N) are affected by the hibernate suspend bug that affects some machine.</p>
+<p>Good news though as there is a simple fix to this bug, documented in the <a href="https://wiki.ubuntu.com/MaverickMeerkat/ReleaseNotes" target="_blank" rel="noopener">Ubuntu 10.10 Maverick Meerkat release notes</a>.  Here are the details of the fix.</p>
+<a id="more"></a>
+<p><strong>When the XHCI module is loaded for USB 3.0 operation the system cannot suspend.</strong> </p>
+<p>Manually unloading XHCI will allow suspend to complete normally.  To avoid future suspend problems, the workaround is to add the following line to <code>/etc/pm/config.d/unload_module</code></p>
+<pre><code>SUSPEND_MODULES=&quot;xhci-hcd&quot;
+</code></pre><p>Ubuntu can then suspend normally - <a href="https://bugs.launchpad.net/bugs/522998" title="Bug" target="_blank" rel="noopener">see bug 522998</a>.</p>
+<blockquote><p>Please note: this fix only seems to work when using the closed source nVidia drivers.  Using the open source nouveau drivers gives a black screen when awoke from suspend or hibernate.</p>
+</blockquote>
+<p><strong>Implementing the fix - create a new configuration file</strong></p>
+<p>Open at terminal window <strong>Applications &gt; Accessories &gt; Terminal</strong></p>
+<p>Enter the following command into the terminal window:</p>
+<pre><code>gksudo gedit /etc/pm/config.d/unload_module
+</code></pre><p>In the editor window that pops up, paste the following text and save the new file. </p>
+<pre><code>SUSPEND_MODULES=&quot;xhci-hcd&quot;
+</code></pre><p>Suspend and hibernate should now work as normal for some people.  Good luck.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I am really enjoying the new version of <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a>, 10.10 Maverick Meerkat.  I especially like the Unity desktop of the netbook edition.</p>
+<p>Unfortunately my Asus netbooks (Asus Eee PC1000, Asus Eee PC 1201N) are affected by the hibernate suspend bug that affects some machine.</p>
+<p>Good news though as there is a simple fix to this bug, documented in the <a href="https://wiki.ubuntu.com/MaverickMeerkat/ReleaseNotes" target="_blank" rel="noopener">Ubuntu 10.10 Maverick Meerkat release notes</a>.  Here are the details of the fix.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Creating Posters With Inkscape - Open Source Drawing]]></title>
+    <link href="http://jr0cket.co.uk/2010/09/creating-posters-with-inkscape-open-source-drawing.html.html"/>
+    <id>http://jr0cket.co.uk/2010/09/creating-posters-with-inkscape-open-source-drawing.html.html</id>
+    <published>2010-09-23T10:15:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://inkscape.org/screenshots/gallery/thumbs/inkscape-0.48-blur_thumb.png)" class="img-topic" title="| [Home](http://inkscape.org/) | [Getting Started](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.html) | [Inkscape](http://inkscape.org/) is an Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format. I have been using [Inkscape](http://inkscape.org/) for a day and find it a really easy to use application and have create several posters for events I am running.&nbsp; Within about half an hour of starting with the tool I was pretty comfortable using Inkscape and being productive. {% img img-topic http://inkscape.org/screenshots/gallery/thumbs/inkscape-0.48-webdesign-text_thumb.png">
+<p>I do find it helpful to quickly sketch out what I want the poster to generally look like.&nbsp; I also found that using separate layers for background images, text boxes and text helped when building up more interesting designs. </p>
+<p>Once I’ve created my posters I can save them as a standard Adobe pdf file.&nbsp; You can of course save them as postscript as well as lots of other formats too.</p>
+<p>As the default file format of Inkscape is SVG, you can also view your posters using the <a href="http://www.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a> Image Viewer or <a href="http://www.gimp.org/" target="_blank" rel="noopener">The Gimp</a>.</p>
+<p>According to the <a href="http://inkscape.org/" target="_blank" rel="noopener">Inkscape</a> site:</p>
+<p>“<em>Inkscape supports many advanced SVG features (markers, clones, alpha blending, etc.) and great care is taken in designing a streamlined interface. It is very easy to edit nodes, perform complex path operations, trace bitmaps and much more.&nbsp; There is also a thriving user and developer community by using open, community-oriented development.</em>“ </p>
+<p>There is a great online guide to using Inkscape called <a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.html" target="_blank" rel="noopener">Inkscape: Guide to a Vector Drawing program</a> which is also available as a book.</p>
+<p>There are more features I’d like to learn with <a href="http://inkscape.org/" target="_blank" rel="noopener">Inkscape</a>, to make even better posters, but it shows how good the tool is in that I can be productive so quickly.&nbsp; Have a look at the <a href="http://inkscape.org/doc/advanced/tutorial-advanced.html" target="_blank" rel="noopener">Inkscape advanced tutorial</a> for making your posters even more snazzy.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://inkscape.org/screenshots/gallery/thumbs/inkscape-0.48-blur_thumb.png)" class="img-topic" title="| [Home](http://inkscape.or]]>
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="inkscape" scheme="http://jr0cket.co.uk/tags/inkscape/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Testing Upcoming Release of Ubuntu With TestDrive]]></title>
+    <link href="http://jr0cket.co.uk/2010/08/testing-ubuntu-with-testdrive.html.html"/>
+    <id>http://jr0cket.co.uk/2010/08/testing-ubuntu-with-testdrive.html.html</id>
+    <published>2010-08-22T16:48:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<blockquote><p><a href="https://launchpad.net/testdrive" target="_blank" rel="noopener">Launchpad</a> | <a href="https://blueprints.launchpad.net/ubuntu/+spec/desktop-maverick-testdrive-frontend-gsoc" target="_blank" rel="noopener">GUI</a> | <a href="http://blog.dustinkirkland.com/2009/11/introducing-testdrive.html" target="_blank" rel="noopener">Introducing</a> | <a href="http://blog.dustinkirkland.com/2010/02/have-you-taken-lucid-for-testrive-yet.html" target="_blank" rel="noopener">TestDrive Lucid</a> |</p>
+</blockquote>
+<img src="http://wiki.ubuntu.com/Testing?action=AttachFile&amp;do=get&amp;target=flask192x192.png" class="img-thumbnail">
+<p>One of the easiest ways to get involved with testing a new release of Ubuntu is to use TestDrive.  TestDrive makes it very easy to download and run the latest daily Ubuntu development snapshot in a virtual machine&nbsp; (KVM, Virtualbox, etc.) without affecting the rest of your system.</p>
+<p>Actually, TestDrive can be configured to download and run any URL-accessable ISO image in a virtual machine, although the primary goal is to provide feedback on the current Ubuntu release under development.  Here is how to get going with TestDrive.</p>
+<a id="more"></a>
+<p>If you are running Ubuntu 10.04 (Lucid Lynx) you can install TestDrive package using your favourite package manager, or by using the following command:</p>
+<pre><code>sudo apt-get install testdrive
+</code></pre><p>For older versions of Ubuntu, there is a personal package archive, which can be added using the following commands:</p>
+<pre><code>sudo add-apt-repository ppa:testdrive/ppa
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install testdrive
+</code></pre><h2 id="Change-the-TestDrive-configuration"><a href="#Change-the-TestDrive-configuration" class="headerlink" title="Change the TestDrive configuration"></a>Change the TestDrive configuration</h2><p>If you need to change the configuration of TestDrive, you can create your own configuration file</p>
+<pre><code>gedit ~/.testdriverc
+</code></pre><p>or edit the global configuration file</p>
+<pre><code>gksudo gedit /etc/testdriverc
+</code></pre><p>No changes are required unless you want to use a virtual machine other than KVM.</p>
+<h2 id="Running-TestDrive"><a href="#Running-TestDrive" class="headerlink" title="Running TestDrive"></a>Running TestDrive</h2><p>TestDrive is available from the menu Applications &gt; System Tools &gt; Testdrive or by running the command <code>testdrive</code>.</p>
+<p>After some checks you will be presented with a simple menu, where you choose which version of Ubuntu you wish to run (configurable in the TestDrive configuration file).  Once you have chosen the version of Ubuntu to run, TestDrive will download the image (or update any existing images you have) and run that image as a virtual machine.</p>
+<pre><code>~$ testdrive 
+INFO: version passed: False
+INFO: config passed: None
+INFO: Trying config in /etc/testdriverc
+INFO: Using configuration in /etc/testdriverc
+INFO: Trying config in /home/johnny/.testdriverc
+INFO: Trying config in /home/johnny/.config/testdrive/testdriverc
+INFO: Using KVM for virtual machine hosting...
+INFO: Retrieving the Ubuntu ISO list from cache...
+
+Welcome to Testdrive!
+
+ 1\. Ubuntu Desktop (maverick-amd64)
+ 2\. Ubuntu Desktop (maverick-i386)
+ 3\. Ubuntu Alternate (maverick-amd64)
+ 4\. Ubuntu Alternate (maverick-i386)
+ 5\. Ubuntu DVD (maverick-amd64)
+ 6\. Ubuntu DVD (maverick-i386)
+ 7\. Ubuntu Netbook (maverick-i386)
+             +-cache--&amp;gt; [2010-08-22 03:11:54] maverick-netbook-i386.iso
+ 8\. Ubuntu Server (maverick-amd64)
+ 9\. Ubuntu Server (maverick-i386)
+ 10\. Other (prompt for ISO URL)
+
+Select an image to testdrive [1]: 7
+INFO: Syncing the specified ISO...
+                 rsync://cdimage.ubuntu.com/cdimage/ubuntu-netbook/daily-live/current/maverick-netbook-i386.iso
+receiving file list ... 
+1 file to consider
+
+sent 139 bytes     received 100 bytes     478.00 bytes/sec
+total size is 768491520     speedup is 3215445.69
+INFO: Validating Virtualization Method....
+INFO: Setting up Virtual Machine...
+Creating disk image [/opt/ubuntu/cache/img/testdrive-disk-4HKyYB.img]...
+Formatting &apos;/opt/ubuntu/cache/img/testdrive-disk-4HKyYB.img&apos;, fmt=qcow2 size=6442450944 encryption=off cluster_size=0 
+INFO: Launching Virtual Machine...
+Running the Virtual Machine...`
+</code></pre><p>You should now have a running version of Ubuntu in a virtual machine, so you can try it out in safety and report any bugs you find to help with the next Ubuntu release.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote><p><a href="https://launchpad.net/testdrive" target="_blank" rel="noopener">Launchpad</a> | <a href="https://blueprints.launchpad.net/ubuntu/+spec/desktop-maverick-testdrive-frontend-gsoc" target="_blank" rel="noopener">GUI</a> | <a href="http://blog.dustinkirkland.com/2009/11/introducing-testdrive.html" target="_blank" rel="noopener">Introducing</a> | <a href="http://blog.dustinkirkland.com/2010/02/have-you-taken-lucid-for-testrive-yet.html" target="_blank" rel="noopener">TestDrive Lucid</a> |</p>
+</blockquote>
+<img src="http://wiki.ubuntu.com/Testing?action=AttachFile&amp;do=get&amp;target=flask192x192.png" class="img-thumbnail">
+<p>One of the easiest ways to get involved with testing a new release of Ubuntu is to use TestDrive.  TestDrive makes it very easy to download and run the latest daily Ubuntu development snapshot in a virtual machine&nbsp; (KVM, Virtualbox, etc.) without affecting the rest of your system.</p>
+<p>Actually, TestDrive can be configured to download and run any URL-accessable ISO image in a virtual machine, although the primary goal is to provide feedback on the current Ubuntu release under development.  Here is how to get going with TestDrive.</p>]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/tags/ubuntu/"/>
+    
+      <category term="ubuntu" scheme="http://jr0cket.co.uk/categories/ubuntu/"/>
+    
+  </entry>
+  
+</feed>

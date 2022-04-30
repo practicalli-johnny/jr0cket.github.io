@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Starting Nodejs Development on Ubuntu | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Outdated: please disregard this article as it is out of date.  I install node in my local filespace on Ubuntu now as its so much easier to manage.  Basicaly I download the Linux binaries and put the">
+<meta name="keywords" content="ubuntu,nodejs,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Starting Nodejs Development on Ubuntu">
+<meta property="og:url" content="http://jr0cket.co.uk/2013/03/starting-nodejs-development-on-ubuntu.html.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Outdated: please disregard this article as it is out of date.  I install node in my local filespace on Ubuntu now as its so much easier to manage.  Basicaly I download the Linux binaries and put the">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://4.bp.blogspot.com/-bIFaJwok1vI/UVA3jCluB-I/AAAAAAAAJM0/-rtRbVUQ4no/s1600/Nodejs_logo_light.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-WY7IRkhNpOU/UVA0m8Ly9cI/AAAAAAAAJMk/Sb1d7i8Mocs/s1600/nodejs-homepage-install.png">
+<meta property="og:image" content="http://3.bp.blogspot.com/-JJakqhflSfw/UVA4AMjSKAI/AAAAAAAAJM8/BbLzQXPlQbw/s1600/npm-logo.png">
+<meta property="og:image" content="http://1.bp.blogspot.com/-m6l3bhlBB-Q/UVAoqU5PTeI/AAAAAAAAJMU/7OwfgCtBlTY/s1600/nodejs-website-helloworld.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Starting Nodejs Development on Ubuntu">
+<meta name="twitter:description" content="Outdated: please disregard this article as it is out of date.  I install node in my local filespace on Ubuntu now as its so much easier to manage.  Basicaly I download the Linux binaries and put the">
+<meta name="twitter:image" content="http://4.bp.blogspot.com/-bIFaJwok1vI/UVA3jCluB-I/AAAAAAAAJM0/-rtRbVUQ4no/s1600/Nodejs_logo_light.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-starting-nodejs-development-on-ubuntu.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/03/starting-nodejs-development-on-ubuntu.html.html" class="article-date">
+  <time datetime="2013-03-25T14:37:00.000Z" itemprop="datePublished">25 Mar 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Starting Nodejs Development on Ubuntu
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://4.bp.blogspot.com/-bIFaJwok1vI/UVA3jCluB-I/AAAAAAAAJM0/-rtRbVUQ4no/s1600/Nodejs_logo_light.png" class="img-thumbnail"> 
+<p><strong>Outdated: please disregard this article as it is out of date.  I install node in my local filespace on Ubuntu now as its so much easier to manage.  Basicaly I download the Linux binaries and put them in ~/apps/nodejs/current, then add ~/apps/nodejs/current/bin to my path using my shell profile (~/.profile).  This makes using npm -g really easy and does not require the sudo command.</strong></p>
+<p><a href="http://nodejs.org/" target="_blank" rel="noopener">nodejs</a> is a very popular framework for JavaScript development, but as I found out at the <a href="http://www.meetup.com/London-MongoDB-User-Group/events/106898042/" target="_blank" rel="noopener">MongoDB hackathon</a>  its not that straight forward to get going.  So here is a quick guide to get going with Node.js on <a href="http://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu</a>.</p>
+<a id="more"></a>
+<h2 id="Installing-nodejs-on-Ubuntu"><a href="#Installing-nodejs-on-Ubuntu" class="headerlink" title="Installing nodejs on Ubuntu"></a>Installing nodejs on Ubuntu</h2><p>Whilst there is a nodejs package in Ubuntu, it is version 0.6.9 and therefore quite a way behind the current version on the nodejs website.  So lets do a manual install with the latest version, 0.10.1.</p>
+<blockquote>
+<p>I since found an <a href="http://slopjong.de/2012/10/31/how-to-install-the-latest-nodejs-in-ubuntu/" target="_blank" rel="noopener">alternative approach using ppa’s</a> but haven’t tried it out.</p>
+</blockquote>
+<img src="http://4.bp.blogspot.com/-WY7IRkhNpOU/UVA0m8Ly9cI/AAAAAAAAJMk/Sb1d7i8Mocs/s1600/nodejs-homepage-install.png" class="img-code">
+<p>Download the install archive file and extract it.  I chose to do this in a folder called apps in my home folder.  Alternatively you could install it in <code>/opt/</code> or <code>/usr/local</code></p>
+<pre><code>mkdir ~/apps/nodejs
+tar zvxf node-v0.10.1.tar.gz
+</code></pre><h2 id="Compile-nodejs"><a href="#Compile-nodejs" class="headerlink" title="Compile nodejs"></a>Compile nodejs</h2><p>As we are doing a manual install, we need to build nodejs to get the actual executable files.  This requires a C compiler on your laptop which is not installed by default.  So either use the Ubuntu software center to install the package <code>g++</code> or use the command line</p>
+<pre><code>sudo apt-get install g++
+</code></pre><p>To compile nodejs, first we run configuration to check all the neccessary external libraries are there and then we make node:</p>
+<pre><code>./configure
+make
+</code></pre><h2 id="Adding-node-to-your-command-path"><a href="#Adding-node-to-your-command-path" class="headerlink" title="Adding node to your command path"></a>Adding node to your command path</h2><p>Add the following to your environment in your <code>~/.bashrc</code> file (or <code>.zshrc</code> file if you are running zshell).  I moved the node executable file created by the compile process into a folder called bin, so I knew which was the right file to run.  Then I added that folder to the path.</p>
+<pre><code>export NODEJS_HOME=/home/jr0cket/apps/nodejs/bin
+export PATH=$PATH:$NODEJS_HOME
+</code></pre><p>I am using an environment variable called NODEJS_HOME as a convienience.  You can just add the whole path in one line.</p>
+<h2 id="Installing-NPM-the-node-package-manager"><a href="#Installing-NPM-the-node-package-manager" class="headerlink" title="Installing NPM - the node package manager"></a>Installing NPM - the node package manager</h2><img src="http://3.bp.blogspot.com/-JJakqhflSfw/UVA4AMjSKAI/AAAAAAAAJM8/BbLzQXPlQbw/s1600/npm-logo.png" class="img-thumbnail"> 
+<p>The node package manager is a great way to get additional libraries into  your node projects.  It does not come with node itself, so you have to install it seperately.  Npm also needs node installed first.</p>
+<p>On the node package manager website, the install process is defined as the following command:</p>
+<pre><code>curl https://npmjs.org/install.sh | sh
+</code></pre><p>In my manual install (not using Ubuntu packages) then node and npm are created in different folders.  So I put the npm executable file in the same bin folder I created previously for node, which I had already added that to the executable path.</p>
+<p>Once npm is installed you can search for and install packages.  If you the <code>-g</code> option for npm install then the modules will be installed globally, otherwise any modules will be local to your project in an npm-modules folder.</p>
+<p>Search for modules:</p>
+<pre><code>npm search mongodb native
+</code></pre><p>Install modules locally or globally:</p>
+<pre><code>npm install mongodb
+npm install -g mongodb
+</code></pre><h2 id="Testing-out-node-locally"><a href="#Testing-out-node-locally" class="headerlink" title="Testing out node locally"></a>Testing out node locally</h2><p>You can run an interactive session for nodejs (the node REPL) using the command:</p>
+<pre><code>node
+</code></pre><p>Then you can just enter JavaScript code and it is evaluated immediately.  You can also run code in files by using the command:</p>
+<pre><code>node filename.js
+</code></pre><p>So lets create a simple “Hello World” app for nodejs in a file called web.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express.createServer(express.logger());</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</span><br><span class="line">  response.send(<span class="string">'Hello World!'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> port = process.env.PORT || <span class="number">5000</span>;</span><br><span class="line">app.listen(port, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Listening on "</span> + port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Running this with <code>node web.js</code> we get “Hello World” as the output.</p>
+<h2 id="Testing-out-node-on-Heroku"><a href="#Testing-out-node-on-Heroku" class="headerlink" title="Testing out node on Heroku"></a>Testing out node on Heroku</h2><p>nodejs is one of the languages supported on Heroku (a cloud service that gives developers a sane way to deploy and scale their apps).  Deploying this nodejs app on Heroku is therefore really trivial.</p>
+<p>Heroku can usually work out what to do with many projects, based on the language and framework used.  However, just to be specific lets create a <code>Procfile</code> to tell node which is our entry point to our application.  In  this case we want node to start with the file <code>web.js</code></p>
+<pre><code>web: node web.js
+</code></pre><p>Lets version the project with git</p>
+<pre><code>git init
+git add .
+git commit -m &quot;Initial project setup&quot;
+</code></pre><p>Then we can create an app on Heroku that we can deploy too - you will need an <a href="http://www.heroku.com" target="_blank" rel="noopener">Heroku account</a> and download the <a href="http://toolbelt.heroku.com" target="_blank" rel="noopener">Heroku toolbelt</a>.</p>
+<pre><code>heroku create
+</code></pre><p>Heroku adds a new remote to our git project called heroku, so we can push our code to our app.</p>
+<p>Now that our project is ready to deploy, lets push all the code to the  heroku application you created using git push, specifying the branch you are pushing (usually <code>master</code>)</p>
+<pre><code>git push heroku master
+</code></pre><p>Now open the node website in a browser using the URL given after the upload of your code via git push, or just the command</p>
+<pre><code>heroku open
+</code></pre><img src="http://1.bp.blogspot.com/-m6l3bhlBB-Q/UVAoqU5PTeI/AAAAAAAAJMU/7OwfgCtBlTY/s1600/nodejs-website-helloworld.png" class="img-code">
+<p>There is a nice <a href="https://devcenter.heroku.com/articles/nodejs" target="_blank" rel="noopener">article about nodejs on heroku</a> with examples of wiring node up to various data sources too.</p>
+<h2 id="Learning-JavaScript-nodejs"><a href="#Learning-JavaScript-nodejs" class="headerlink" title="Learning JavaScript nodejs"></a>Learning JavaScript nodejs</h2><p>Now for the fun part, learning how to program in nodejs and seeing how much JavaScript I can remember.  Here are some resource I found in the few hours I spent trying to learn about nodejs.</p>
+<p>David Crockford has lots of great resources to help you write great JavaScript: </p>
+<ul>
+<li><a href="http://javascript.crockford.com/" target="_blank" rel="noopener">JavaScript website</a></li>
+<li><a href="http://www.youtube.com/results?search_query=crockford+on+javascript" target="_blank" rel="noopener">YouTube videos</a> </li>
+<li><a href="http://yuiblog.com/crockford/" target="_blank" rel="noopener">Crockford on Javascript video series</a></li>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">NodeJS</a></li>
+<li><a href="https://npmjs.org/" target="_blank" rel="noopener">Node Package Manager</a></li>
+<li><a href="http://net.tutsplus.com/tutorials/javascript-ajax/node-js-for-beginners/" target="_blank" rel="noopener">Nodejs for beginners</a></li>
+<li><a href="http://howtonode.org/" target="_blank" rel="noopener">HowToNode</a> - community supported blog to teach fundamental concepts for writing effective code along with various other tips.</li>
+<li><a href="http://requirejs.org/" target="_blank" rel="noopener">RequireJS</a> - optimising file and module loader for JavaScript, can combine all your code into one file for faster loading</li>
+<li><a href="https://github.com/dannycoates/node-inspector" target="_blank" rel="noopener">Node-inspector</a> - Web Inspector based nodeJS debugger</li>
+<li><a href="http://docs.nodejitsu.com/" target="_blank" rel="noopener">Nodejitsu</a> - a growing collection of node.js how-to articles from the community, range from basic to advanced.</li>
+<li><a href="http://superherojs.com/" target="_blank" rel="noopener">Superhero.js</a> - a collection of articles, presentations and videos </li>
+<li><a href="https://groups.google.com/forum/?fromgroups=#!forum/nodejs" target="_blank" rel="noopener">Nodejs google group</a>** </li>
+<li><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js" target="_blank" rel="noopener">Suggestions of learning materials on Stack Exchange</a></li>
+</ul>
+<h3 id="Some-semi-related-links"><a href="#Some-semi-related-links" class="headerlink" title="Some semi-related links"></a>Some semi-related links</h3><ul>
+<li><a href="http://blog.deadpansincerity.com/2011/05/setting-up-emacs-as-a-javascript-editing-environment-for-fun-and-profit/" target="_blank" rel="noopener">Setting up emacs as a javascript editing environment</a></li>
+<li><a href="http://playground.webflow.com/" target="_blank" rel="noopener">Webflow CSS3 playground</a></li>
+</ul>
+<p>Good luck with your JavaScript and node projects.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/03/starting-nodejs-development-on-ubuntu.html.html" data-id="cl2mbqfy500j9zqmjnmfcgb8t" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/03/starting-nodejs-development-on-ubuntu.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/06/hacking-for-good-at-accessibility.html.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hacking for Good at the Accessibility Hackathon
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/03/flying-planes-with-clojure-and.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Flying Planes With Clojure and FlightGear</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2013/03/starting-nodejs-development-on-ubuntu.html.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

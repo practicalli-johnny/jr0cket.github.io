@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/agile/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.302Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Innovation as Easy as Raspberry Pi]]></title>
+    <link href="http://jr0cket.co.uk/2012/05/innovation-as-easy-as-raspberry-pi.html.html"/>
+    <id>http://jr0cket.co.uk/2012/05/innovation-as-easy-as-raspberry-pi.html.html</id>
+    <published>2012-05-28T08:53:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<p>One use of the information radiator displays the Hindsight rapid board  view. This board has a column to show features branches (issues) that  need to be merged back to master and we conduct peer code reviews at  this stage (using pull requests) and the non-assignee will perform the  merge and close the issue. We use JIRA workflow rules to enforce this  with the help of the visual workflow designer.</p>
+<p><a href="http://hindsighttesting.com/" title="Hindsight testing software" target="_blank" rel="noopener">Hindsight</a>,  a startup in the London Silicon Roundabout, are a great example of how  Atlassian software has helped companies get productive quickly.  Our <a href="http://www.atlassian.com/software/greenhopper/" title="Greenhopper - Agile project management" target="_blank" rel="noopener">GreenHopper</a> and <a href="http://www.atlassian.com/software/jira/" title="JIRA" target="_blank" rel="noopener">JIRA</a> software  help Hindsight manage their work and focus on the most  valuable activities to gauge how much return they are getting from the investment they put into their ideas.</p>
+<a id="more"></a>
+<p>To keep everyone up to date and heading in the same direction, especially  with all the change happening within a start-up, can be a challenge.   Even great tools like JIRA benefit from the wider visualisation of key  information, helping drive engagement with the work as a whole and  getting faster feedback so the team can stay on track.  Hindsight saw  real advantage in adopting GreenHopper, giving them an easily way to  visualise their workflows and keep things on track.</p>
+<p>Using a <a href="http://www.atlassian.com/wallboards/information-radiators" target="_blank" rel="noopener">wallboard or information radiator</a> helps everyone on the team see, at a glance, the state of the project  and receive feedback from important systems.  They can visualise the  build pipeline, show the state of feature development for the team or  highlight real-time metrics for an online service.</p>
+<img src="http://blogs.atlassian.com/wp-content/uploads/story-iq-wallboard-rapidboard-600x142.png" class="img-code"> 
+<p>The Hindsight board via the <a href="https://marketplace.atlassian.com/23983" title="JIRA wallboard plugin" target="_blank" rel="noopener">JIRA Wallboard plugin</a>_</p>
+<p>These information radiators are often put together with what spare hardware,  then coupled to a large TV screen in a prominent work area.  Using the <a href="https://marketplace.atlassian.com/23983" title="JIRA wallboard plugin" target="_blank" rel="noopener">JIRA Wallboard plugin</a> you can easily turn any JIRA dashboard, including your GreenHopper  boards into an information radiator giving you constant valuable real-time feedback.</p>
+<p>Instead of wasting a lot of energy running  this information on older hardware however, Hindsighthad the idea to  create a low cost and highly energy efficient way of driving an  information radiator.  The recent release of the Raspberry PI gave them  the idea for their latest project.</p>
+<h1 id="The-Raspberry-Pi"><a href="#The-Raspberry-Pi" class="headerlink" title="The Raspberry Pi"></a>The Raspberry Pi</h1><img src="http://blogs.atlassian.com/wp-content/uploads/story-iq-raspberry-pi-assembly-300x172.png" class="img-code">
+<p>The <a href="http://www.raspberrypi.org/" title="Raspberry Pi - computer on a chip" target="_blank" rel="noopener">Raspberry Pi</a> a low-powered credit card sized computer on a chip that is really  capturing the imagination of developers and start-ups - and even  enterprise scale companies such as IBM.</p>
+<p>With PCs using between 60-300 watts of power they are not the most power efficient compared to  the Raspberry’s 2 watts. The Raspberry Pi also has interface point that  can be used to drive <a href="http://www.woodwardweb.com/gadgets/000434.html" target="_blank" rel="noopener">build bunnies</a> and other physical objects that warn you about failing tests and code.</p>
+<p>The physical size of the Raspberry Pi makes it easy to mount on the back of  the TV and a USB connection allows for a wireless mouse and keyboard to  be attached.  If you want to get really snazzy, you could even try wire  it up to a Microsoft Kinect and try the <a href="https://labs.atlassian.com/wiki/display/KINECT/Interactive+Wallboards+-+Quickstart+Guide" title="Greenhopper hands free wallboard" target="_blank" rel="noopener">hands free control of your GreeHopper board</a>.</p>
+<h1 id="The-Wallboard"><a href="#The-Wallboard" class="headerlink" title="The Wallboard"></a>The Wallboard</h1><p>The Hindsight  wallboard has two dashboards configured in JIRA and they run as a continuous slide-show.  The dashboards contain the following really  great JIRA gadgets to give just the right amount of information for the  team.</p>
+<p><a href="http://blogs.atlassian.com/wp-content/uploads/story-IQ-workflow-600x318.png" target="_blank" rel="noopener"><img src="!--￼2--&gt;/images/" alt></a>*   <a href="https://confluence.atlassian.com/display/GH/Using+the+Agile+Gadget" target="_blank" rel="noopener">GreenHopper Agile Gadget</a> (for a Sprint Burndown graph)</p>
+<ul>
+<li><a href="https://confluence.atlassian.com/display/GH/Using+the+Rapid+Board" target="_blank" rel="noopener">GreenHopper Rapid Board</a> (current sprint task in swim-lanes)</li>
+<li><a href="http://blogs.atlassian.com/2012/03/jira-5-activity-streams/" target="_blank" rel="noopener">Activity stream</a></li>
+<li>Several <a href="https://confluence.atlassian.com/display/JIRA/Advanced+Searching#AdvancedSearching-FunctionsReference" target="_blank" rel="noopener">JIRA Query Language</a> Filter Results</li>
+</ul>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Using  GreenHopper really helps get things done at Hindsight.  By visualising the  work it creates many opportunities for innovation and feedback on value delivered.</p>
+<p>Discover how to <a href="http://hindsighttesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor/" title="Raspberry Pi JIRA information radiator" target="_blank" rel="noopener">set up your own Raspberry Pi Information radiator</a>.</p>
+<p>Why not give <a href="http://www.atlassian.com/software/greenhopper/" title="Greenhopper - Agile project management" target="_blank" rel="noopener">GreenHopper</a>** a try and visualise your key tasks, sharing them with the whole team or wider enterprise using the <a href="https://marketplace.atlassian.com/23983" title="JIRA wallboard plugin" target="_blank" rel="noopener">JIRA Wallboards plugin</a>.  It’s amazing the kind of valuable feedback you can get.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>One use of the information radiator displays the Hindsight rapid board  view. This board has a column to show features branches (issues) that  need to be merged back to master and we conduct peer code reviews at  this stage (using pull requests) and the non-assignee will perform the  merge and close the issue. We use JIRA workflow rules to enforce this  with the help of the visual workflow designer.</p>
+<p><a href="http://hindsighttesting.com/" title="Hindsight testing software" target="_blank" rel="noopener">Hindsight</a>,  a startup in the London Silicon Roundabout, are a great example of how  Atlassian software has helped companies get productive quickly.  Our <a href="http://www.atlassian.com/software/greenhopper/" title="Greenhopper - Agile project management" target="_blank" rel="noopener">GreenHopper</a> and <a href="http://www.atlassian.com/software/jira/" title="JIRA" target="_blank" rel="noopener">JIRA</a> software  help Hindsight manage their work and focus on the most  valuable activities to gauge how much return they are getting from the investment they put into their ideas.</p>]]>
+    
+    </summary>
+    
+      <category term="atlassian" scheme="http://jr0cket.co.uk/tags/atlassian/"/>
+    
+      <category term="hindsight" scheme="http://jr0cket.co.uk/tags/hindsight/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[5 Industry Trends in UK Software Development]]></title>
+    <link href="http://jr0cket.co.uk/2012/05/5-industry-trends-for-uk-for-software.html.html"/>
+    <id>http://jr0cket.co.uk/2012/05/5-industry-trends-for-uk-for-software.html.html</id>
+    <published>2012-05-04T12:16:00.000Z</published>
+    <updated>2022-01-02T20:20:15.286Z</updated>
+    <content type="html"><![CDATA[<p>I was asked recently what were the agile trends at the moment and off the top of my head I came up with the following: Kanban, Functional Programming, DVCS in the Enterprise, Devops &amp; Continuous delivery and Data Visualisation.  Here is why I believe these areas are important.</p>
+<a id="more"></a>
+<h1 id="Kanban-adoption-keeps-growing"><a href="#Kanban-adoption-keeps-growing" class="headerlink" title="Kanban adoption keeps growing"></a>Kanban adoption keeps growing</h1><p>I see kanban being adopted by a range of teams and organisation, from IT  shops to recruitment agencies.&nbsp; Kanban is a natural fit for DevOps  teams and dev teams in maintenance mode.&nbsp; Although some agile software developers  are wedded to Scrum, as their approach matures many move more  toward a kanban approach with zero iterations (or even <a href="http://blog.jr0cket.co.uk/2010/01/personal-kanban-for-just-in-time-skills.html" target="_blank" rel="noopener">a just-in-time approach</a>)</p>
+<h1 id="Functional-programming-adoption-as-a-competitive-advantage"><a href="#Functional-programming-adoption-as-a-competitive-advantage" class="headerlink" title="Functional programming adoption as a competitive advantage"></a>Functional programming adoption as a competitive advantage</h1><img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-thumbnail"> 
+<p>The rise of the Scala language on the Java platform is no longer news,  however the <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> language (being a re-imagining of Lisp) has seen a  big increase in interest.  It has just had a big jump on the  <a href="http://www.thoughtworks.com/radar" target="_blank" rel="noopener">Thoughtworks TechRadar</a> and the community I am involved with is growing  very fast.  <a href="http://euroclojure.com/2012/" target="_blank" rel="noopener">EuroClojure</a> is the second major Clojure event in London in the last year and may established companies and startups are looking at Clojure.</p>
+<h1 id="DVCS-adoption-in-the-enterprise"><a href="#DVCS-adoption-in-the-enterprise" class="headerlink" title="DVCS adoption in the enterprise"></a>DVCS adoption in the enterprise</h1><img src="http://2.bp.blogspot.com/-cZVYpa-p0xg/T6PGGrNzb5I/AAAAAAAAH7U/hha9OqpwZtw/s1600/atlassian-stash.jpg" class="img-thumbnail"> 
+<p>Lots of developers are using GitHub for their open source projects,  leading to the desire to use DVCS tools for their day to day work.  GitHub and Atlassian have both online and behind the firewall solutions (<a href="https://enterprise.github.com/" target="_blank" rel="noopener">GitHub F1</a>, <a href="http://blogs.atlassian.com/2012/05/atlassian-stash-enterprise-git-repository-management/" target="_blank" rel="noopener">Atlassian Stash</a>) </p>
+<h1 id="DevOps-and-Continuous-delivery-deployment"><a href="#DevOps-and-Continuous-delivery-deployment" class="headerlink" title="DevOps and Continuous delivery / deployment"></a>DevOps and Continuous delivery / deployment</h1><p>The UK has many teams adopting a continuous delivery &amp; deployment approach (forward, uSwitch).&nbsp; Companies like <a href="http://carrenza.com/" target="_blank" rel="noopener">Carrenza</a> are using open source tools, cloud technology and lean startup  principles to construct effective build pipelines for software  development teams.&nbsp; A few larger organisations are picking up ideas from  the lean startup community to help them understand which projects  deliver the most value to their customers.</p>
+<h1 id="Data-Visualisation"><a href="#Data-Visualisation" class="headerlink" title="Data Visualisation"></a>Data Visualisation</h1><img src="http://2.bp.blogspot.com/-AfkEPeWNi6s/T5GZrTBXWoI/AAAAAAAAHps/zXD_vEDTw8o/s1600/open-processing-example-front-page.png" class="img-topic">
+<p>Organisations looking to understand the value customers get from them  (and are willing to pay for) are doing more Cohort analysis and to make  sense of this are eventually turning to data visualisation techniques.&nbsp; I  see this as an up coming trend in the UK and hope many organisations as  well as startups make use of these kind of tools to help them be  effective.</p>
+<p>Data visualisation is also encouraging developers to produce more creative and visually engaging experience with the websites and applications they deliver.&nbsp; A more engaged user is a more productive one!</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>Trends are a great way to quickly get a handle on technology and practices that may be of benefit.&nbsp; However, these trends are simply that, a trend, so you should question what value you will get from jumping in too deep.</p>
+<p>Keep an eye on startup companies and get an understanding of the appeal of their offering and see how you can enhance the experience of what you do.</p>
+<h1 id="Interesting-start-ups"><a href="#Interesting-start-ups" class="headerlink" title="Interesting start-ups"></a>Interesting start-ups</h1><p><a href="http://www.swiftkey.net/about/company" target="_blank" rel="noopener">TouchType</a> - the  creators of SwiftKey, an intelligent keyboard on the Android platform.&nbsp;  Looking to do more exciting products and services now they have a highly  popular product supporting their efforts.</p>
+<p><a href="http://www.livesheets.com/" target="_blank" rel="noopener">Live Sheets</a> - I have given a  little bit of coaching to this startup to help them become more agile.&nbsp;  The have the potential to change the way people deal with their data,  throwing away spreadsheets in favour of something much more interactive.  </p>
+<p><a href="http://www.atlassian.com/" target="_blank" rel="noopener">Atlassian</a> - a startup that has just had its 10th birthday.&nbsp; Investment  made by Accel partners to help grow via acquisition and organic growth.&nbsp;  Spent the last couple of years moving from 3 month iterations to  continuous delivery</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I was asked recently what were the agile trends at the moment and off the top of my head I came up with the following: Kanban, Functional Programming, DVCS in the Enterprise, Devops &amp; Continuous delivery and Data Visualisation.  Here is why I believe these areas are important.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Extreme Lean Startup Workshop]]></title>
+    <link href="http://jr0cket.co.uk/2012/04/extreme-lean-startup-workshop.html.html"/>
+    <id>http://jr0cket.co.uk/2012/04/extreme-lean-startup-workshop.html.html</id>
+    <published>2012-04-17T07:39:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://clojure.jr0cket.co.uk/workshops/extreme-startup/extreme-startup-ninja.jpeg" class="img-thumbnail">
+<p><a href="https://github.com/rchatley/extreme_startup" target="_blank" rel="noopener">Extreme startup</a> is a practical workshop which simulates the excitement and insanity of working for a high pressure startup company, where every decision (or lack of) can make or loose you money - or in this case points!  </p>
+<p>Lets delve deeper into the misteries of this kind of coding workshop.</p>
+<a id="more"></a>
+<p>Think of it as an extreme version of a coding dojo, where you are constantly challenged with new requirements and have to make quick decisions on what you should develop.  An extreme startup server is used to steadily grown requirements by asking you what seems to be simple questions at an increasing rate and complexity.  As these questions grow and change, just as a normal project would, you are continually driven to develop your code to meet these changes and keep earning points for correct answers.</p>
+<h1 id="Extreme-Startup-Leaderboard"><a href="#Extreme-Startup-Leaderboard" class="headerlink" title="Extreme Startup - Leaderboard"></a>Extreme Startup - Leaderboard</h1><img src="http://www.nilswloka.com/images/extreme-startup-2.jpg" class="img-topic"> 
+<p>Scores are displayed for each time in real time, so you can see your progression in terms of your competition.  Teams can choose any language they wish to implement their product and there are a number of <a href="https://github.com/bodil/extreme_startup_servers.git" target="_blank" rel="noopener">basic project templates</a> to help you get started.</p>
+<p>Teams will need to write an application that responds to HTTP GET requests and they should be prepared to parse some strings.  So the technical coding side is not the greatest challenge.</p>
+<p>The challenge is knowing where to spend the time on your software solution.  Questions that are easy to answer initially will grow in complexity so the design decisions you make may become invalid quite quickly.</p>
+<p>Like other dojos its best to run the extreme startup workshop with a number of pairs or very small teams, this makes sure that people are talking and involved in the decision making.</p>
+<h1 id="Setting-up-the-workshop"><a href="#Setting-up-the-workshop" class="headerlink" title="Setting up the workshop"></a>Setting up the workshop</h1><p>The facilitator of the workshop will setup an extreme startup hub server that will pump out questions and keep scores of all the answers.  </p>
+<h2 id="Extreme-Startup-hub"><a href="#Extreme-Startup-hub" class="headerlink" title="Extreme Startup hub"></a>Extreme Startup hub</h2><p>Install Ruby 1.9.2 (I suggest using <a href="http://rubysource.com/installing-ruby-with-rvm-on-ubuntu/" target="_blank" rel="noopener">RVM</a>) and get the <a href="https://github.com/rchatley/extreme_startup" target="_blank" rel="noopener">code from Github</a>.</p>
+<blockquote>
+<p>Ruby 1.9.2 is available as an Ubuntu package</p>
+</blockquote>
+<p>When testing the setup of the extreme startup hub, run the project using:</p>
+<pre><code>WARMUP=1 ruby web_server.rb
+</code></pre><p>When starting the extreme startup session, start up the server using:</p>
+<pre><code>ruby web_server.rb
+</code></pre><h2 id="Extreme-Startup-Company-1-per-team"><a href="#Extreme-Startup-Company-1-per-team" class="headerlink" title="Extreme Startup Company - 1 per team"></a>Extreme Startup Company - 1 per team</h2><p>Each team should create a project that will connect to the extreme startub hub and answer questions.  A team can used any language they like and there are a <a href="https://github.com/bodil/extreme_startup_servers.git" target="_blank" rel="noopener">range of templates</a> to get you started.</p>
+<h1 id="Clojure-based-startup-team"><a href="#Clojure-based-startup-team" class="headerlink" title="Clojure based startup team"></a>Clojure based startup team</h1><p>If you decide to use Clojure for your product development you will need:</p>
+<ul>
+<li>Java runtime environment or SDK - openjdk 6 and 7 have been tested successfully</li>
+<li>Leinigen2 - to manage the build of your project</li>
+<li>Emacs + Clojure-mode, Clojure-test, paredit</li>
+<li>A REPL - using <code>lein repl</code> or <code>M-x clojure-jack-in</code> from Emacs</li>
+</ul>
+<p>1) Download the example company web application templates from <a href="https://github.com/bodil/extreme_startup_servers.git" target="_blank" rel="noopener">Github</a> to give you a head start - you will need it, trust me!</p>
+<pre><code>git clone https://github.com/bodil/extreme_startup_servers.git extreme-startup
+</code></pre><p>2) Navigate to the Clojure project</p>
+<p>Navigate to one of the Noir Clojure project folders (or try Composure) and update any project dependencies:</p>
+<pre><code>cd extreme-startup/clojure/noir
+lein deps**
+</code></pre><p>Have a look at the code, the <code>extreme-startup/clojure/noir/rules.clj</code> is the most important file at this point.  Hint: look at the <code>dispatcher</code> function and consider using the tests, you may need them for your sanity :-)</p>
+<p>3) Load your code into the repl and fire up your browser</p>
+<pre><code>lein repl
+</code></pre><p>Running lein repl in the top level of the project directory should load the project code into the repl.  If not, then run</p>
+<pre><code>(load-file &apos;src/extremestartup/server.clj)
+(server/start 3000)
+</code></pre><p>3000 is the port number to run your server on, you can use anything that is available on your machine.  Open your browser at <a href="http://localhost:3000/" target="_blank" rel="noopener">localhost:3000</a> to see if it works.</p>
+<p>4) Register your team as a player</p>
+<p>The facilitator should provide you a URL to connect to.  Select the “I want to play!” link and register your team.</p>
+<p>Check your current IP address on your laptop and use that address for the URL.  To find your IP address, open a command line terminal and run <code>ifconfig</code> (Mac / Linux) or <code>ipconfig</code> (windows).  Make sure you use the port number you specified, if different from above.</p>
+<p>5) Get coding</p>
+<p>Load the <code>rules.clj</code> file and extend the dispatcher function to your heart’s content. Use the testrule macro to quickly unit test your dispatcher.</p>
+<blockquote>
+<p>Hint: you may want to have a look at the questions you are getting asked, so you can answer them!!</p>
+</blockquote>
+<h1 id="Using-a-web-server"><a href="#Using-a-web-server" class="headerlink" title="Using a web server"></a>Using a web server</h1><p>You can use <code>lein run</code> to fire up Jetty with your code - the only downside is you have to kill and run Jetty each time you make a change.  Jetty will run on port 8080 by default, so you would use that port value as the end part of the URL when adding a player - i.e. <a href="http://192.168.1.2:8080" target="_blank" rel="noopener">http://192.168.1.2:8080</a></p>
+<h1 id="Clojure-examples-and-experience-reports"><a href="#Clojure-examples-and-experience-reports" class="headerlink" title="Clojure examples and experience reports"></a>Clojure examples and experience reports</h1><ul>
+<li><a href="https://github.com/bodil/startuplol" target="_blank" rel="noopener">Bodil - StartupLoL</a></li>
+<li><a href="http://www.nilswloka.com/2011/08/17/code-dojo-extreme.html" target="_blank" rel="noopener">Nilswloka.com - Code dojo extreme</a></li>
+</ul>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://clojure.jr0cket.co.uk/workshops/extreme-startup/extreme-startup-ninja.jpeg" class="img-thumbnail">
+<p><a href="https://github.com/rchatley/extreme_startup" target="_blank" rel="noopener">Extreme startup</a> is a practical workshop which simulates the excitement and insanity of working for a high pressure startup company, where every decision (or lack of) can make or loose you money - or in this case points!  </p>
+<p>Lets delve deeper into the misteries of this kind of coding workshop.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Agile Overview - Scrum]]></title>
+    <link href="http://jr0cket.co.uk/2012/04/agile-overview-scrum.html.html"/>
+    <id>http://jr0cket.co.uk/2012/04/agile-overview-scrum.html.html</id>
+    <published>2012-04-16T13:06:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<p>Scrum is a framework for agile product development.  Products are built iteratively, with each Sprint creating an increment of the product, usually starting with the most valuable and riskiest.</p>
+<p>More and more Sprints create additional increments of  the product. Each increment is a potentially shippable slice of the  entire product. When enough increments have been created for the  Product to be of value, the product is released.</p>
+<a id="more"></a>
+<p>The official scrum guide states that Scrum is:</p>
+<ul>
+<li>a framework for optimising your own process</li>
+<li>grounded in process control theory</li>
+<li>iterative and incremental approach</li>
+<li>optimisation of predictability</li>
+<li>control of risksOther aspects of scrum theory include:</li>
+</ul>
+<p><strong>Transparency</strong> - visible to those managing the outcomes - complete work matches definition of done</p>
+<p><strong>Inspection</strong> - frequently enough to detect unacceptable variances (Note: Shrodingers cat)</p>
+<p><strong>Adaptation</strong> - correct process issues quickly<br>– Daily scrum meeting - sprint goal adaptation - optomise for next working day<br>– Sprint review (showcase) and Sprint planning - release goal adaptation - optomise the next sprint<br>– Sprint Retrospective - review the past sprint - adapt for next sprint</p>
+<img src="http://2.bp.blogspot.com/-mMG7A6jXFjM/T4vuruZzzsI/AAAAAAAAHaI/bQ2VcUmz1ng/s1600/scrum-cycle.JPG" class="img-code">
+<h1 id="Scrum-team-characteristics"><a href="#Scrum-team-characteristics" class="headerlink" title="Scrum team characteristics"></a>Scrum team characteristics</h1><ul>
+<li>Self organising</li>
+<li>Cross functional</li>
+<li>Iterative working</li>
+<li>Time boxed activities</li>
+</ul>
+<h1 id="Scrum-roles"><a href="#Scrum-roles" class="headerlink" title="Scrum roles"></a>Scrum roles</h1><p><strong>Scrum Master</strong> ensures that the scrum process (values, practices  &amp; rules) are understood and followed by the team. Encouraging  self-organisation and removing impediments for the team.  The scrum  master advises the team on how the scrum framework can be utilized  most effectively.</p>
+<p><strong>Product Owner</strong> is focused on maximising value that the team  delivers - manages priorities and solely responsible for the product  backlog priorities.</p>
+<p><strong>Team</strong> is the collection of people who have all the necessary  skills to get the work each sprint and are preferably cross functional  (everyone does everything).  Typical team size is 5-9 people, not  counting product owner &amp; scrum master</p>
+<p><span class="Apple-style-span"><span class="Apple-style-span" style="font-size: large;">Sprint Activities</span></span><br>The following activities in Scrum are time-boxed in help keep focus and remain effective.</p>
+<p><strong>Release planning meeting</strong> is to establish an overall plan and set  of goals for the project that the organisation can understand as see  value in.  Establishes the overall features (MMF’s) and major risks of  the project, indicating probable release date and costs.  The release  plan is reviewed (and modified if necessary) on a per sprint basis.</p>
+<p><strong>Sprint</strong> is the name for an iteration in the project.  During  the sprint the scrum master blocks changes that would affect the sprint  goal.  The team members are fixed for the duration of the sprint, as is  the goal of that sprint.  A sprint consists of a sprint planning  meeting, the work, the sprint review and sprint retrospective.  Sprints  occur one after another with no time in between and typically a sprint  duration is between 1 to 4 weeks long.</p>
+<p><strong>Sprint planning meeting</strong> is a just in time planning session for  each sprint.  Typically 2 hours per week of the sprint duration (2 week  sprint = ~4 hours sprint planning).  The meeting is split into two  parts: define the goal of the sprint (the “what”); create the sprint  backlog (the “how”).</p>
+<p><strong>Sprint review</strong> is held at the end of each sprint (2 week sprint =  ~2 hours sprint review).  Scrum team discusses with stakeholders the  work done in the sprint and what work could be done next.  The product  owner will give an update on the status of the project (product backlog,  velocity, release date).  It is important to show the working software  (i.e. a showcase) to get valuable feedback.  The sprint review provides  valuable input into the next sprint planning meeting.</p>
+<p><strong>Sprint retrospective</strong> occurs after the sprint review and before  the next planning meeting (2 week sprint = ~1.5 hours).  The scrum  master guides the team to improve the process for the next sprint,  reviewing how the last sprint went (people, relationships, process and  tools) and what actionable improvements could be made.</p>
+<p><strong>Daily scrum</strong> occurs daily at the same time (~15 minutes) to  inspect the progress towards the scrum goal and improve the teams’  chance of meeting that goal. Each team member states: what they  accomplished; what they are working on next; what obstacles are in there  way.  The scrum aims to improve communication by reducing other  meetings, identifying impediments, promote quick decision making  (without limiting options) and improve product knowledge.</p>
+<h1 id="Sprint-Artifacts"><a href="#Sprint-Artifacts" class="headerlink" title="Sprint Artifacts"></a>Sprint Artifacts</h1><p><strong>Product backlog</strong> is a dynamic list of requirements (user stories)  that could be done in for the project, managed and prioritised by the  product owner to deliver the most value.  In larger projects,  functionality is often grouped into feature sets.  The product backlog  lasts for the useful life of the product and dynamically changes  according to business or commercial needs.</p>
+<p><strong>Release burn-down</strong> records the remaining estimated effort of  the product backlog across the timeline of the release plan, usually  using a sprint length as the measure of time.  Initial estimates created  from the release planning meeting give a high level view of the work,  so you can project the work remaining based on the teams capacity for  doing the work (velocity).  Note: Burn-up charts have benefits when the  feature set of a project continually grows.</p>
+<p><strong>Sprint backlog</strong> is the set of tasks to be worked on for a  particular sprint, identified by the team mainly during the sprint  planning meeting, but also during the sprint.  Only the team can change  the sprint backlog during the sprint, but should do so only with respect  to the sprint goal.</p>
+<p><strong>Sprint burn-down</strong> records the remaining sprint backlog across the sprint by summing the backlog estimates every day of the sprint.</p>
+<h1 id="The-meaning-of-Done"><a href="#The-meaning-of-Done" class="headerlink" title="The meaning of Done"></a>The meaning of Done</h1><p>Scrum requires that a team build an increment of product functionality  during each sprint that is potentially shippable.  Therefore the increment should be a slice through the product (from user interface to back end services).  Each increment should be additive to all prior  increments and throughly tested, ensuring that all increments work  together.</p>
+<p>Everyone involved must have a shared understanding of what done means, therefore the term done must be defined by all involved.</p>
+<h1 id="Scrum-rules"><a href="#Scrum-rules" class="headerlink" title="Scrum rules"></a>Scrum rules</h1><ul>
+<li>Only the team can talk during a daily scrum</li>
+<li>The purpose of each sprint is to deliver increments of potentially  shippable functionality that adheres to a working definition of “done”.</li>
+</ul>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>Scrum master works with customers and management to establish a product  owner - SM teaches PO the role - PO manages team to optimise value</p>
+<p>The scrum master can be any member of the team - product owner though would have conflict of interest, so avoid</p>
+<p>The scrum master is a role and should be shared between the team where  possible to help maintain team cohesiveness and maintain a balanced  approach.</p>
+<p>Acceptance tests are often used as another product backlog item  attribute.  Often supplanting more detailed text descriptions of what  done is.</p>
+<p>Undone work is often accumulated in a product backlog item called undone  work or implementation work.  As this work accumulates, the product  backlog burndown remains more accurate than if it weren’t accumulated.</p>
+<h1 id="Not-part-of-Scrum"><a href="#Not-part-of-Scrum" class="headerlink" title="Not part of Scrum"></a>Not part of Scrum</h1><p>The following aspects of managing a project are not explicitly covered  in the scrum framework, although there are lots of complementary techniques that a team can use whist striving to become agile</p>
+<ul>
+<li>Estimation techniques</li>
+<li>Prioritisation techniques</li>
+<li>Visualisation of work activites (eg. Kanban)</li>
+<li>Managing work in progress</li>
+<li>Continual Improvement - Kaizen</li>
+</ul>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>My own view is that scrum is a great way to start making your  organisation a little more agile, especially if your organisation is  well ordered and used to a structured process.  It is a very light  process framework that can be effectively used to build the core of your  own agile process.   In essence it is an example of a <a href="http://en.wikipedia.org/wiki/PDCA" target="_blank" rel="noopener">plan,do,check,act cycle</a> to help manage change, adding specific activities, rules and roles to give a base structure for an agile way of working.</p>
+<p>It is important to get a solid grasp of what you are trying to achieve  with scrum (manage change effectively) and understand the reasons behind  the rules, roles and activities in scrum.  The specific practices are flexible enough to adapt to the circumstances of each organisation  without loosing the values and overall goals of scrum.</p>
+<p>Approaches such as Behaviour Driven Development, Kanban and XP are also  effective at managing change, having subtle differences in focus and defining variations and additions to the practices of scrum whilst sharing (in some cases extending) the agile principles that underpin  scrum.</p>
+<p>If any change is difficult to introduce when trying to improve a teams  effectiveness, then I recommend using Kanban to visualise the current  practices / process so that when discussions take place about change the  facts about the current situation are inescapable.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Scrum is a framework for agile product development.  Products are built iteratively, with each Sprint creating an increment of the product, usually starting with the most valuable and riskiest.</p>
+<p>More and more Sprints create additional increments of  the product. Each increment is a potentially shippable slice of the  entire product. When enough increments have been created for the  Product to be of value, the product is released.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Agile Overview - Extreme Programming]]></title>
+    <link href="http://jr0cket.co.uk/2012/04/agile-overview-extreme-programming.html.html"/>
+    <id>http://jr0cket.co.uk/2012/04/agile-overview-extreme-programming.html.html</id>
+    <published>2012-04-16T12:24:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://1.bp.blogspot.com/-qneIw3F_ftM/T4vb6mCVcII/AAAAAAAAHaA/1EQiEvxTotQ/s1600/Fear_and_Loathing_in_Las_Vegas.jpg" class="img-thumbnail"> 
+<blockquote>
+<p>“If a thing like this is worth doing at all, it’s worth doing right” - Hunter S. Thompson, <a href="http://www.imdb.com/title/tt0120669/" target="_blank" rel="noopener">Fear and Loathing in Las Vegas</a>.</p>
+</blockquote>
+<p>This is my simplified way of describing the approach of extreme programming.  Everything that is valuable is done all the time, because it is valuable.  So as creating a test has value for the design of your classes you should do it for all of your code.</p>
+<a id="more"></a>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>Extreme programming is a set of common sense practices that when used together can give you a better chance of having a software team that is can do what you want, tell you how much it would cost, deliver quality code with a robust set of tests, allow you change what you want when you want or change your mind at any time.</p>
+<img src="http://4.bp.blogspot.com/-akzobs3MO88/T4vaoqDR8bI/AAAAAAAAHZs/IXS-eJNgNFE/s1600/extreme-programming-practices-RonJeffries.jpg" class="img-topic">
+<p>In this article I’ll cover some of the more interesting and contentious aspects of extreme programming.</p>
+<h1 id="Unit-testing"><a href="#Unit-testing" class="headerlink" title="Unit testing"></a>Unit testing</h1><p>Its easy to add the JUnit (xunit, nunit) library to your project and start wringing code that tests your code.  Its easy to reach a whole test suite that will give you 90% code coverage, as measured by <a href="http://www.atlassian.com/software/clover/" target="_blank" rel="noopener">Clover</a>.  However, that is not where the value of unit testing really lies.</p>
+<p>If you believe tests are important, then why not do them before you write the code.  In fact why not create the tests to help test your assumptions of the story you are about to write.  If you cant understand how to test out your story before you write the code that implements it, do you really understand that story enough?</p>
+<p>You get the most out of unit testing when it is used as a design tool, helping the developer model the behaviour of the system before committing it to code that will end up in production.  Using unit testing as a design first tool helps you keep your code simple and elegant and far more maintainable.</p>
+<p>As a consequence, you get an automated set of tests for your code.  These automated tests will help manage regressions should you need to refactor, although if you have designed your code well then changing your code should be relatively straight forward and guide developers from introducing bugs.</p>
+<p>Writing good unit tests comes down to understanding the behaviour of the software you have been asked to develop.  A great way to validate this understanding is to talk to someone else about it.</p>
+<h1 id="Pair-programming"><a href="#Pair-programming" class="headerlink" title="Pair programming"></a>Pair programming</h1><p>Its unfortunate that many developers do not want to pair or that managers see this as a waste of resource.  Pairing (it can be more than two people) is an invaluable way to create code (and tests, documentation, design, etc) as you always have someone there to check your assumptions with.  Its very easy to get lost in the creative design of your software and loose the bigger picture, especially when you are in the coding zone.  Having someone with you to support and question what you are doing produces far greater understand, better designs and more elegant code.</p>
+<p>Pairing is also a great way to build collaboration in a team as well as share knowledge and experience throughout the project.  With all these benefits you would be crazy not to encourage this practice.</p>
+<p><strong><a href="https://bitbucket.org/spooning/" target="_blank" rel="noopener">Atlassian Bitbucket - spooning video</a></strong></p>
+<h1 id="Collective-code-ownership"><a href="#Collective-code-ownership" class="headerlink" title="Collective code ownership"></a>Collective code ownership</h1><p>When everyone owns the code and everyone is responsible for the quality of that code then you get better code.  Collective responsibility encourages the team to share design ideas, share understanding of the project, share their own experience and help each other learn more about the overall project.</p>
+<p>Its great to see that so many developers are getting back to the code review, using tools like Crucible which make it very easy to review in a more social way.  When commits are linked to stories or bug fixes then it enables the team to quickly check just the code that has changes, making reviews more productive.</p>
+<p>With the advent of dvcs and social code sharing, developers have become more comfortably sharing there code and learning from each other.  With easy branching (forking) it becomes trivial to experimentation with someone elses code and pull requests make it so much easier to share code changes, especially for distributed teams.</p>
+<h1 id="On-site-customer"><a href="#On-site-customer" class="headerlink" title="On site customer"></a>On site customer</h1><p>Some companies actually go out of their way to only work with a customer if they are on site as it makes such an impact on the risk and success probability of a project. </p>
+<p>Developers need a clear understanding of the work to be delivered and the priority in which the customer values it.  These aspects are in a constant flow of change, in the same way that the customers business is constantly changing (as there customers are also going through changes).</p>
+<p><a href="http://www.seibert-media.net/" target="_blank" rel="noopener">Seibert Media</a> are such a company using this and many other agile techniques to help them deliver with confidence and have highly satisfied customers.  They have had such a great success with on-site customers that they include this as a requirement for any project they engage with.</p>
+<h1 id="User-stories"><a href="#User-stories" class="headerlink" title="User stories"></a>User stories</h1><p>User stories are the agile way to define requirements for a project.  Instead of large unweildy documents, the agile approach is to use story cards of a fixed size that purposely limit the amount of detail.</p>
+<p>So user stories are the requirements broken down into small pieces of functionality, so they can be more easily understood by the whole team.  As the project functionality is broken down, conversations about the specific details and priority of things happen.</p>
+<p>User stories are a place holder for all the conversations that you want to have around that piece of functionality.</p>
+<h1 id="Creating-different-Persona"><a href="#Creating-different-Persona" class="headerlink" title="Creating different Persona"></a>Creating different Persona</h1><p>Teams often add context to user stories by also defining personas.  Personas are a caricature of a user role, that helps the whole team thing about what that person would do in a particular situation.</p>
+<p>A persona is give a memorable name (Alan the Accountant, Suzi the secretary, etc) and a general description of them is made.</p>
+<p>A persona, first introduced by <a href="http://www.cooper.com/" target="_blank" rel="noopener">Alan Cooper</a>, defines an archetypical user of a system, an example of the kind of person who would interact with it.  The idea is that if you want to design effective software, then it needs to be designed for a specific person.</p>
+<h1 id="Acceptance-tests"><a href="#Acceptance-tests" class="headerlink" title="Acceptance tests"></a>Acceptance tests</h1><p>How do you know when you are done? </p>
+<p>Acceptance tests are a natural language way to define the behaviour of the software to be developed.  As with Unit Tests these should be written before the code and are often done using tools like fitness or cucumber.  These “tests” are linked to and run on top of your code so its easy to see progress in a meaningful way for both customers and developers.</p>
+<p>Acceptance tests are also a great way to get feedback and enhance understanding between the development team and customer - <em>you dont have to wait for the demo to update customers</em>.</p>
+<h1 id="Small-releases"><a href="#Small-releases" class="headerlink" title="Small releases"></a>Small releases</h1><p>The smaller your releases the sooner you get feedback from the actual users of the system.</p>
+<blockquote>
+<p>The plan never survives the war - “Stormin” Norman Schwarzkopf</p>
+</blockquote>
+<p>Is it not always the case that no sooner has a project been delivered that the users want lots of new changes?  Instead of expending a massive effort to guard against this, why not embrace this challenge and just release your project in small pieces as often as possible to the users.  You will get all the feedback you need and will be in a better position to deliver a desirable solution that meets the actual needs of those user.</p>
+<p>Iterations should be inclusive of project delivery and real customer usage.</p>
+<img src="http://2.bp.blogspot.com/-ZankjAEvCco/T4vapUz6nRI/AAAAAAAAHZ0/6YVVO1XNDxs/s1600/extreme-programming-project.gif" class="img-code">
+<h1 id="Story-estimation"><a href="#Story-estimation" class="headerlink" title="Story estimation"></a>Story estimation</h1><p>Estimation is very decisive in general, so it merits its own article: <a href="http://blog.jr0cket.co.uk/2010/08/my-favourite-estimation-technique.html" target="_blank" rel="noopener">Estimates are not promises</a></p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>There is much more to extreme programming so I hope this has set the scene for why I believe these techniques are invaluable to software development.  Extreme programming practices are used in part or in full by the all the successful agile teams I have met.</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li><a href="http://www.extremeprogramming.org/" target="_blank" rel="noopener">Extreme programming: a gentle introduction</a></li>
+<li><a href="http://xprogramming.com/" target="_blank" rel="noopener">Ron Jeffries: XProgramming.com</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Extreme_programming" target="_blank" rel="noopener">Wikipedia: extreme programming</a></li>
+<li><a href="http://www.junit.org/" target="_blank" rel="noopener">Junit.org - unit testing framework for Java</a></li>
+</ul>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://1.bp.blogspot.com/-qneIw3F_ftM/T4vb6mCVcII/AAAAAAAAHaA/1EQiEvxTotQ/s1600/Fear_and_Loathing_in_Las_Vegas.jpg" class="img-thumbnail"> 
+<blockquote>
+<p>“If a thing like this is worth doing at all, it’s worth doing right” - Hunter S. Thompson, <a href="http://www.imdb.com/title/tt0120669/" target="_blank" rel="noopener">Fear and Loathing in Las Vegas</a>.</p>
+</blockquote>
+<p>This is my simplified way of describing the approach of extreme programming.  Everything that is valuable is done all the time, because it is valuable.  So as creating a test has value for the design of your classes you should do it for all of your code.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[My Favourite Estimation Technique]]></title>
+    <link href="http://jr0cket.co.uk/2012/04/my-favourite-estimation-technique.html.html"/>
+    <id>http://jr0cket.co.uk/2012/04/my-favourite-estimation-technique.html.html</id>
+    <published>2012-04-16T12:00:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://rules.ssw.com.au/Management/RulesToBetterScrumUsingTFS/PublishingImages/size-stories-bad-example.jpg" class="img-thumbnail">
+<p>Estimation is a dark art to start with and is often missuesed and abused to the detriment of the  development team.  As any valuable project has a level of uncertainty, estimates should never been seen as promises.</p>
+<a id="more"></a>
+<blockquote>
+<p>If I were to ask for an estimate of the walk from the DiBi Conference venue at The Stage to Newcastle Central station, most people would say 15 minutes.  With this information, would you leave the venue 15 minutes before your train departs?</p>
+<p>No, you would take that 15 minute estimation as a rough approximation of how long it should take for an average person if no problems arise.  You would still need to factor in issues like hills, waiting for bridges if they are raised, carrying heavy luggage that will slow you down and so on.</p>
+</blockquote>
+<p>So estimation gives you an assumption to work with, which you can evaluate and review throughout the project to be able to understand all the reasons why your estimation was wrong.</p>
+<img src="http://4.bp.blogspot.com/-RjBS6M-a100/T4vF5qBGFrI/AAAAAAAAHZI/bLn8leYWlS0/s1600/estimation-technique.jpg" class="img-code"> 
+<p><em>My favourite estimation technique</em></p>
+<p>Estimation in a project should be a challenge and something that is valued as no more and no less than an educated guess, dependant on the facts at hand.</p>
+<p>If you use estimation as a rod to beat up developers, they will  eventually learn to give longer and longer estimates, refuse to give time frames or in extreme cases just leave for a quieter life!</p>
+<p>In the worst case, estimation can seem easy because you don’t understand the full range of challenges ahead of you, those challenges that will lead the project to fail, over-run or not deliver the value they promised.</p>
+<p>If estimation is easy because you have done the same kind of project many times before, then you should consider why you are doing the same project again.  What added value will the project give to the stakeholders and organisation you work for?</p>
+<p>So estimation is just an educated guess based on the understanding of the current situation, the confidence a team has in its own abilities and the forces that will act on the team from project stakeholders and the wider organisation.  Trying to assign actual dates and times to estimations seem a very risky strategy.</p>
+<img src="http://3.bp.blogspot.com/-R9J5SrE2hPc/T4vKPL72nEI/AAAAAAAAHZQ/wLoRbMYeX-k/s1600/agile_tshirts-relative-sizing.png">
+<h2 id="T-Shirt-sizes"><a href="#T-Shirt-sizes" class="headerlink" title="T-Shirt sizes"></a>T-Shirt sizes</h2><p>Rather than get hung up arguing and blaming people for estimates based on time, use <strong>S,M,L,XL,XXL</strong> t-shirt sizes to describe the size and complexity of your project work (scenarios, user stories, use cases).</p>
+<p>Tshirt sizes allow you to quickly estimate work relative to all the other work for the project, including the work that has already been done.</p>
+<p>Tshirt sizes allow you to keep estimations as assumptions, so you can get on with the work and learn how well you understood that piece of work.  As the project progresses the relative sizing of the work becomes less of a challenge as you have gained experience from all the pieces already completed.</p>
+<p>You can even get <a href="http://scrumology.com/t-shirt-sized-estimating-cards/" target="_blank" rel="noopener">planning poker cards with tshirt sizes</a>. </p>
+<p><strong>Smaller pieces of work</strong><br>The most effective way to estimate a project is to make it very small or make all the pieces of work in the project very small.  This helps the development team estimate with less uncertainty due to the smaller scope. </p>
+<p>A focus on understanding the complexity of a project and an appreciation of the most valued aspects will help the team have a more open and meaningful discussion with the rest of the organisation.</p>
+<p>Thank you.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://rules.ssw.com.au/Management/RulesToBetterScrumUsingTFS/PublishingImages/size-stories-bad-example.jpg" class="img-thumbnail">
+<p>Estimation is a dark art to start with and is often missuesed and abused to the detriment of the  development team.  As any valuable project has a level of uncertainty, estimates should never been seen as promises.</p>]]>
+    
+    </summary>
+    
+      <category term="estimation" scheme="http://jr0cket.co.uk/tags/estimation/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Agile Humour - Dont Take This Seriously!]]></title>
+    <link href="http://jr0cket.co.uk/2011/09/agile-humour-dont-take-this-seriously.html.html"/>
+    <id>http://jr0cket.co.uk/2011/09/agile-humour-dont-take-this-seriously.html.html</id>
+    <published>2011-09-30T10:38:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://blog.gadodia.net/wp-content/uploads/2007/11/agile.jpg" class="img-thumbnail">
+<p>A man is in a hot air balloon and he realizes he is lost. He spots a man in the field below him and calls down:</p>
+<p>“Excuse me, can you help? I promised a friend I’d be somewhere half an hour ago but I’m completely lost. Can you tell me where I am?” </p>
+<p>The man replies:</p>
+<p>“You are about 30 feet above this field, you are between 40 and 42 degrees N. latitude, and between 58 and 60 W. longitude” </p>
+<p>“You must be an engineer” says the balloonist. </p>
+<p>“I am!” says the man, “How did you know?” </p>
+<p>The balloonist laughs, “well, everything you’ve told me is correct, but I don’t understand what you are talking about and I’m still lost” </p>
+<p>“Ah, you’re a manager” says the engineer </p>
+<p>“Indeed I am!” replies the balloonist, “How could you possibly know that?” </p>
+<p>“Well…” says the engineer, “you don’t know where you are and you don’t know where you are going. You’ve made a promise you can’t keep and you expect me to solve your problem. You are in exactly the same position as you were before we met, except now somehow it’s my fault!”</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://blog.gadodia.net/wp-content/uploads/2007/11/agile.jpg" class="img-thumbnail">
+<p>A man is in a hot air balloon and he reali]]>
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Two Years on Kanban]]></title>
+    <link href="http://jr0cket.co.uk/2011/09/two-years-on-kanban.html.html"/>
+    <id>http://jr0cket.co.uk/2011/09/two-years-on-kanban.html.html</id>
+    <published>2011-09-30T09:37:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/PDCA_Cycle.svg/800px-PDCA_Cycle.svg.png" class="img-thumbnail">
+<p>Having used kanban as a catalyst for continual improvement I feel more capable, confident and way more productive than I have ever been in my life.  Starting with a simple plan-doing-done approach to my kanban boards, I quickly evolved them to meet the needs of particular situations.  I’ll describe how I have used kanban to adapt my approach and get more things done.</p>
+<a id="more"></a> 
+<p>I have created many kanban style boards for managing specific areas of my life, such as my own career and skills development, moving house, preparing for 400km cycle rides and starting my own company.  Kanban really helped me pull in and evaluate other ideas to build on how I work and help me become more effective.</p>
+<p>Kanban is not a solution or silver bullet in itself, but this simple to use techniques allow you to develop an effective way to manage, to help you get things done!</p>
+<img src="http://ecx.images-amazon.com/images/I/51W2NXJAXHL._SL500_AA300_.jpg">
+<p>Lean practices, system thinking and theory of constraints all kick-started a big change and kanban was the technique that made it all come together. </p>
+<p>By encouraging me to look at what I was doing and how I was doing it, I had an every growing focus on how to deliver value to myself and to others.  I could no longer hide so easily from the truth and tell myself little white lies about a situation, the information on the kanban board kept me honest and encouraged me to evaluate my actions.</p>
+<h1 id="Situational-Awareness"><a href="#Situational-Awareness" class="headerlink" title="Situational Awareness"></a>Situational Awareness</h1><p>Just being aware of your circumstances is a major advancement for most individuals and organisations.  It is all to easy for us to get too wrapped up in today’s deadline without thinking of other concerns (such as if today’s deadline is actually of value and if you are doing the right thing to maximise that value).</p>
+<h1 id="Managing-myself"><a href="#Managing-myself" class="headerlink" title="Managing myself"></a>Managing myself</h1><img src="http://sites.google.com/site/leanagilemachine/_/rsrc/1315849156092/config/customLogo.gif">
+<p>It is often so much easier managing and advising other people than it is to manage yourself.  This is perhaps in part why CxO roles have personal assistance - a service that we could all use to help us focus.  As a consultant I feel that psychologically it is much easier to work with a customer to help them improve than it is to help myself improve.  Part of that ease is the excitement of learning something new and part is that I am working with someone else.</p>
+<p>Through personal kanban and associated lean techniques I have found my own way to manage myself effectively without adding any sense of burdon.  Psychologically, I now rarely find it a chore to manage myself as I can easily balance the time I spend being creative with the time I need to focus and deliver value.  I can make lots of small decisions throughout the day as to what I need to do to meet my goals, giving a great deal of flexibility.</p>
+<p>I can also quickly see what I have achieve and this gives a great boost as when we are busy we often forget the great things we have achieved that day.</p>
+<h1 id="Managing-others"><a href="#Managing-others" class="headerlink" title="Managing others"></a>Managing others</h1><img src="http://flowingdata.com/wp-content/uploads/2008/07/collaborate-530x424.jpg">
+<p>No one likes to be micro-managed and all good managers dont actually like to micro-manage people. </p>
+<p>Kanban can be used to focus groups of people (eg. project teams) towards a particular goal or business vision.  Kanban allows the group to not only be a part of the decision process of how to achieve these goals, but also visualise how effective those decisions are in sustainable achieving those goals.</p>
+<p>At any time, if there is a valuable reason the decisions taken previously could be changes or adapted to move with wider changes in the organisation. </p>
+<p>I feel that kanban can be used to help drive progress towards goals very effectively, leading to real management by everyone, or as I like to call it - leadership.</p>
+<h1 id="Getting-people-to-help-collaborative-delegation"><a href="#Getting-people-to-help-collaborative-delegation" class="headerlink" title="Getting people to help - collaborative delegation"></a>Getting people to help - collaborative delegation</h1><p>Kanban is a technique that shows real strength when it encourages people to collaborate and I have experience of kanban being a trigger to help cultural change.  By encouraging people to get involved, to use the knowledge and experiences to the full, to challenge them and make them much more responsible for the work they do really drives a sense of meaning within them.</p>
+<p>There is no need for motivational posters when people love the work they do, the way they work and know that the are delivering real value to the organisation every day.  People like to feel part of something bigger and get a kick from helping each other. </p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><img src="http://wiki.base22.com/download/attachments/34963523/greenhoppertaskboard.jpg">
+<p>Kanban is a great technique once you understand its context, and used with lean and kaizen ideas it is one of those things that really reflects what you put into it.  Like any good relationship, if you care about your kanban board it will care for you in return.</p>
+<p>Let me know about your experiences with Kanban.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/PDCA_Cycle.svg/800px-PDCA_Cycle.svg.png" class="img-thumbnail">
+<p>Having used kanban as a catalyst for continual improvement I feel more capable, confident and way more productive than I have ever been in my life.  Starting with a simple plan-doing-done approach to my kanban boards, I quickly evolved them to meet the needs of particular situations.  I’ll describe how I have used kanban to adapt my approach and get more things done.</p>]]>
+    
+    </summary>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[The Trouble With Being a Tyrant - by Darth Vader]]></title>
+    <link href="http://jr0cket.co.uk/2011/08/trouble-with-being-tyrant-by-darth.html.html"/>
+    <id>http://jr0cket.co.uk/2011/08/trouble-with-being-tyrant-by-darth.html.html</id>
+    <published>2011-08-28T09:47:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://images4.fanpop.com/image/photos/18700000/Darth-Vader-darth-vader-18734821-1024-768.jpg" class="img-thumbnail">
+<p>Being a tyrant can be very hard work.  It is easy to exploite most people as the world is full of people who want to be part of something and make their lives more meaningful.</p>
+<p>Its quite easy to take this drive and exploit it for your own benefit and it is amazing how much people will tolerate. </p>
+<p>Ah, but there is the rub.  People will tolerate a situation and maybe complain about it to each other but generally do nothing to make change happen.  There is general high tolerance for my tyrannical actions only encourages me to do more to see how far I can push things.  This is often fed by a few close individuals that I consider my loyal entourage.  Eventually I can push too hard and a few people of character get together and do something about my reign.</p>
+<p>But by the time this happens I am in deep doo-doo!  I have already gone too far and as a tyrant by nature I cant back down so I must go on fighting to the end, or preferably find somewhere else to go while my loyal troupe fight it out for me :-)</p>
+<p>Your friend,<br>Darth.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://images4.fanpop.com/image/photos/18700000/Darth-Vader-darth-vader-18734821-1024-768.jpg" class="img-thumbnail">
+<p>Being a t]]>
+    </summary>
+    
+      <category term="leadership" scheme="http://jr0cket.co.uk/tags/leadership/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[You Cant Always Get What You want...]]></title>
+    <link href="http://jr0cket.co.uk/2011/05/you-cant-always-get-what-you-want.html.html"/>
+    <id>http://jr0cket.co.uk/2011/05/you-cant-always-get-what-you-want.html.html</id>
+    <published>2011-05-10T22:01:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://www.barrystickets.com/images/rollingstones.jpg" class="img-thumbnail">
+<p>I find the lyrics of this classic Rolling Stones song to be very apt way to describe software development, especially when you take the agile approach to creating and delivering that software.</p>
+<blockquote><p>You cant always get what you want…<br>… but if you try sometimes, sometimes you get what you need</p>
+</blockquote>
+<a id="more"></a>
+<p>I saw her today at a reception<br>A glass of wine in her hand<br>I knew she would meet her connection<br>At her feet was her footloose man</p>
+<p>No, you can’t always get what you want<br>You can’t always get what you want<br>You can’t always get what you want<br>And if you try sometime you find<br>You get what you need</p>
+<p>I saw her today at the reception<br>A glass of wine in her hand<br>I knew she was gonna meet her connection<br>At her feet was her footloose man</p>
+<p>You can’t always get what you want<br>You can’t always get what you want<br>You can’t always get what you want<br>But if you try sometimes you might find<br>You get what you need</p>
+<p>Oh yeah, hey hey hey, oh…</p>
+<p>And I went down to the demonstration<br>To get my fair share of abuse<br>Singing, “We’re gonna vent our frustration<br>If we don’t we’re gonna blow a 50-amp fuse”<br>Sing it to me now…</p>
+<p>You can’t always get what you want<br>You can’t always get what you want<br>You can’t always get what you want<br>But if you try sometimes well you just might find<br>You get what you need</p>
+<p>Oh baby, yeah, yeah!</p>
+<p>I went down to the Chelsea drugstore<br>To get your prescription filled<br>I was standing in line with Mr. Jimmy<br>And man, did he look pretty ill<br>We decided that we would have a soda<br>My favorite flavor, cherry red<br>I sung my song to Mr. Jimmy<br>Yeah, and he said one word to me, and that was “dead”<br>I said to him</p>
+<p>You can’t always get what you want, no!<br>You can’t always get what you want (tell ya baby)<br>You can’t always get what you want (no)<br>But if you try sometimes you just might find<br>You get what you need</p>
+<p>Oh yes! Woo!</p>
+<p>You get what you need–yeah, oh baby!</p>
+<p>Oh yeah!</p>
+<p>I saw her today at the reception<br>In her glass was a bleeding man<br>She was practiced at the art of deception<br>Well I could tell by her blood-stained hands</p>
+<p>You can’t always get what you want<br>You can’t always get what you want<br>You can’t always get what you want<br>But if you try sometimes you just might find<br>You just might find<br>You get what you need</p>
+<p>You can’t always get what you want (no, no baby)<br>You can’t always get what you want<br>You can’t always get what you want<br>But if you try sometimes you just might find<br>You just might find</p>
+<p>You get what you need, ah yes…</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.barrystickets.com/images/rollingstones.jpg" class="img-thumbnail">
+<p>I find the lyrics of this classic Rolling Stones song to be very apt way to describe software development, especially when you take the agile approach to creating and delivering that software.</p>
+<blockquote><p>You cant always get what you want…<br>… but if you try sometimes, sometimes you get what you need</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Meaningful Work as a Motivator]]></title>
+    <link href="http://jr0cket.co.uk/2011/05/meaningful-work-as-motivator.html.html"/>
+    <id>http://jr0cket.co.uk/2011/05/meaningful-work-as-motivator.html.html</id>
+    <published>2011-05-10T07:43:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://talentedapps.files.wordpress.com/2009/08/middle-manager1.jpg" class="img-thumbnail"> I have experienced many people in middle management who have a delema over whether to provide training and how much budget to set aside.  All to often there has been an unwillingness to invest in people and sometimes there is just an expectation that no training is ever necessary.<br><br><a id="more"></a>
+<p>There is a now legendary comment from such a person in management:</p>
+<p>Manager: <em>“What if I train all my people and they leave”</em></p>
+<p>Agile coach: <em>“What if you dont train your people and they all stay!”</em></p>
+<p>If you train your people in the skills that they need to keep up to date with the advances in software development and the changes in business practices, then they are more capable of doing their work effectively.  The more investment the more potential for value returned to the business.</p>
+<p>If you train people and they still leave, then they were already planning to leave and all training has done is bring the bigger problem to a head.  A good manager would see this as an opportunity to understand and eliminate the root cause of people leaving. A poor manager would end up making all the team leave (until his manager fired him).</p>
+<h2 id="No-time-to-train-the-classic-excuse"><a href="#No-time-to-train-the-classic-excuse" class="headerlink" title="No time to train - the classic excuse"></a>No time to train - the classic excuse</h2><p>Manager: <em>“You cant go on a training course now, we have projects to deliver”</em></p>
+<p>One of the most abused excuses for not training your employees is time.  It is not just the financial cost of the course, but to management they see the cost of someone not being in the office.</p>
+<p>This unfortunately is a fundamental misunderstanding of how productive people are without the correct stimulus.  It is also a sign of command and control in action, limiting the productivity of the employees.</p>
+<p>By denying training you are saying that people you employ have limited value and you only care about today.  This demotivates employees and is a trigger for them to start looking else where for employment.</p>
+<h2 id="No-training-Demotivated-teams"><a href="#No-training-Demotivated-teams" class="headerlink" title="No training = Demotivated teams"></a>No training = Demotivated teams</h2><p>If you dont train people then you will be left with a team that is becoming steadily demotivated and less and less productive.</p>
+<p>You will be in the situation that you get less done for the same amount of investment.  You will not be able to easily ramp up productivity and even introducing good practices will be a struggle as your employees become more embittered.</p>
+<p>In more extreme cases this can lead to employees working negatively against the company because they have lost all empathy.</p>
+<h2 id="Cultural-demotivation"><a href="#Cultural-demotivation" class="headerlink" title="Cultural demotivation"></a>Cultural demotivation</h2><p>The culture of an organisation can be quite demotivating, not just  because there is a lack of training budget, but also in the type of work  people are tasked with.  It is far to common for people to be given  “meaningless” work - tasks that they know are either pointless (creating  reports that arent read, software that is never used) or tasks for  which they are not able to understand the purpose (how it fits in with  the company vision - if they have actually been told the company  vision).</p>
+<p>I feel “self learning” is important, being confident that you can learn  and adapt your thinking and understanding of a situation as it changes.   You do need to be positively motivated to be a self-learner - or at  least not de-motivated by an organisation.</p>
+<p>In the past I have experienced a de-motivating culture where no one  could really explain or understand why the daily tasks we were all doing  were important to the company.  This lead to a disconnect for many of  us and there was a bit of a mass exodus when we realised there were  companies out there where we would be doing more “meaningful” work.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://talentedapps.files.wordpress.com/2009/08/middle-manager1.jpg" class="img-thumbnail"> I have experienced many people in middle management who have a delema over whether to provide training and how much budget to set aside.  All to often there has been an unwillingness to invest in people and sometimes there is just an expectation that no training is ever necessary.<br><br>]]>
+    
+    </summary>
+    
+      <category term="motivation" scheme="http://jr0cket.co.uk/tags/motivation/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Physical Boards With Distributed Teams]]></title>
+    <link href="http://jr0cket.co.uk/2011/04/physical-boards-with-distributed-teams.html.html"/>
+    <id>http://jr0cket.co.uk/2011/04/physical-boards-with-distributed-teams.html.html</id>
+    <published>2011-04-25T14:37:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://farm7.static.flickr.com/6085/6087962477_8d2998c93a.jpg" class="img-thumbnail"> 
+<p>Wallboards are a great way to manage communication and tasks for any team.  There is always a decision as to whether to use a physical or online wallboard. Physical boards encourage a far greater interaction, however they are much harder to use with a distributed team.  </p>
+<p>For a physical board with distributed teams, here are some things I done successfully</p>
+<a id="more"></a>
+<h2 id="Have-a-board-buddy"><a href="#Have-a-board-buddy" class="headerlink" title="Have a board buddy"></a>Have a board buddy</h2><p>Someone local is a “buddy” for someone distributed.  So when the person they buddy with in the distributed team does something, they update the board for them.  This has an added bonus that there is more interaction and communication between the team members, especially if you change buddies every week or iteration.</p>
+<h2 id="Webcam-pointing-at-the-board"><a href="#Webcam-pointing-at-the-board" class="headerlink" title="Webcam pointing at the board"></a>Webcam pointing at the board</h2><p>The distributed team (and anyone working from home) can see the board status and activity by looking at the webcam feed.  A great example of this can be seen on the <a href="http://ultimatewallboard.com/" target="_blank" rel="noopener">UltimateWallboards</a> site, the entry by the <a href="http://ultimatewallboard.com/entries#89095" target="_blank" rel="noopener">Vodaphone team</a>.</p>
+<h2 id="Large-touch-screen-devices"><a href="#Large-touch-screen-devices" class="headerlink" title="Large touch screen devices"></a>Large touch screen devices</h2><p>Using an online board with a large touch screen device gives a slice of both physical and online board.  Using the touch screen you can move cards around the board giving you that psychological experience of interacting directly with the board.  At the same time, the board is capturing information about your activities which can be used for feedback and status updates.</p>
+<p>With the touch screen, you could also interact with the board in the same way as a physical board, by adding new cards, adding graphical artefacts to the board - such as a “help wanted” icon, updating who is working on which card and most other ways you would interact with a physical board.  You could also interact with the scheduling of the cards, by the online board having a slider for priority or T-Shirt size.</p>
+<p>As the board is also online, then someone can also update the board using their PC or tablet.  This enables anyone to remotely access the board at any time.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://farm7.static.flickr.com/6085/6087962477_8d2998c93a.jpg" class="img-thumbnail"> 
+<p>Wallboards are a great way to manage communication and tasks for any team.  There is always a decision as to whether to use a physical or online wallboard. Physical boards encourage a far greater interaction, however they are much harder to use with a distributed team.  </p>
+<p>For a physical board with distributed teams, here are some things I done successfully</p>]]>
+    
+    </summary>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Step Away From Your Work - Time to Evaluate]]></title>
+    <link href="http://jr0cket.co.uk/2011/03/continual-improvement-continual-value.html.html"/>
+    <id>http://jr0cket.co.uk/2011/03/continual-improvement-continual-value.html.html</id>
+    <published>2011-03-23T09:07:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="img-thumbnail">
+<p>There is a real challenge to improve the way you work whilst still retaining and increasing the amount of value you can deliver to your organisation.</p>
+<p>The more people have the opportunity to step back and consider how they “get things done” the more opportunity there is for improvement.  It is tragic that most people are of the mindset that they are too busy to consider how they work as they have deadlines, this mindset is often driven by the system that is the organisation.</p>
+<p>Until you can step back and really understand the work, you have little appreciation of the wasteful activities you do and therefore can really only “solutionise”. &nbsp;Anything you that is not based on some “fact finding” seems little more than guess work or just following a trend and hoping for the best.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="im]]>
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Smallest Responsible Change - a Lean Approach to Software Development]]></title>
+    <link href="http://jr0cket.co.uk/2011/03/smallest-responsible-change-was-minimal.html.html"/>
+    <id>http://jr0cket.co.uk/2011/03/smallest-responsible-change-was-minimal.html.html</id>
+    <published>2011-03-19T12:10:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="img-thumbnail"> 
+<p>Whilst discussing the merits of <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development" target="_blank" rel="noopener">Behaviour Driven Development</a> at one of the <a href="http://xpday-london.editme.com/eXtremeTuesdayClub" target="_blank" rel="noopener">XTC gatherings</a>, I started using the term <strong>minimal responsible feature</strong> as a way to express how to decide what piece of work to tackle next.  I promised <a href="http://lizkeogh.com/" target="_blank" rel="noopener">Liz Keogh</a> many moons ago that I would write a blog post about it, so here it is.</p>
+<a id="more"></a>
+<p>In the time it has taken me to write this post (its been kicking around in my backlog for a while) I have evolved my thinking on the term and now prefer to use <strong>smallest responsible change (SRC)</strong>.</p>
+<p>The smallest responsible name was triggered by looking at the term minimal marketable feature (MMF), considering what that term expressed and the values that I associated with it.  I still like the MMF term as a more specific way of expressing a similar concept.  With the smallest responsible change I have a term that I am happy to use in a wide range of contexts which helps promote discussion on how to be effective and make value flow.</p>
+<p>Smallest responsible change is a nice general expression of how I like to tackle the work I do, so that the work flows more smoothly and I get more done.  Creating a very effective way of turning large body of work into a series of value deliveries. </p>
+<h2 id="Smallest"><a href="#Smallest" class="headerlink" title="Smallest"></a>Smallest</h2><p>I try where ever to tackle a series of smaller tasks that one big task.  This approach tends to earlier feedback from the results of that work. </p>
+<p>For example, when writing some new functionality, I will pick out a single piece of behaviour from the requirements (user story, use case) and express that behaviour in a scenario / example (a.k.a acceptance test / unit test).  Once the behaviour is defined and implemented by code, I am already getting feedback on the work I am doing.  Any feedback from running the behaviour scenarios (a.k.a tests) I receive shapes the next task.  If a failing test still fails, I know I need to work on the implementation code.  If a passing test now fails, I know I have to look at the code and design and maybe refactor.</p>
+<h2 id="Responsible"><a href="#Responsible" class="headerlink" title="Responsible"></a>Responsible</h2><p>What does it mean to be responsible?  You ask ten people you will get 10 different answers.  This is not surprising as our experiences and feelings about a situation come from a unique history - our life to date.</p>
+<p>The decision on what is a responsible action to take is therefore based on our current circumstances and our previous history, with hopefully a good dash of holistic thinking.</p>
+<p>To be able to define and select the next most responsible action to take therefore requires you to think about your circumstances and base your actions on achieving value.</p>
+<p>For example, if you a person next to you collapsed it may be the most responsible thing to try and give them immediate attention if you had basic first aid training.  If you had no first aid training, then a cry for help may be the most responsible thing.  If there is no one around, then a call to the emergency services may be the most responsible thing to do.</p>
+<p>In software development, if you submit code that breaks the build and the build bunny shames you, it could be the most responsible thing to roll back you code.  It could equally be the most responsible thing to call over some of your team and ask them what is going on (someone may have forgotten to tell you about an API change).  It could also be possible that this issue is always happening with the team and you suggest the team get together and find the root cause to the problem.</p>
+<h2 id="Change"><a href="#Change" class="headerlink" title="Change"></a>Change</h2><p>Change is happening all the time around us and we need to manage and filter all those changes so we can actually move forward (without a break down).</p>
+<p>If you consider the way the brain works with the eye, the eye captures a constant stream of change so the brain has to filter out and focus on just what is important.  If it were not for this filtering effect our brain would be overwhelmed.</p>
+<p>It is important to limit the amount of change we are dealing with at any moment in time, so the changes are experienced at the rate we can acceptance and deal with them.  It may be seen as heroic to work 12 hours a day and multi-task like crazy, but that is less likely to deliver significant value to your company than if you work at a pace you can sustain.  If we can find a way to filter out changes (tasks) that are of no value at this time, then we can really focus on those few changes that have real value.</p>
+<h2 id="Example-from-a-personal-development-context"><a href="#Example-from-a-personal-development-context" class="headerlink" title="Example from a personal development context"></a>Example from a personal development context</h2><p>If I want to read a book, what is the smallest responsible change I can do.  Well, I often define a card on my kanban board to define the value I believe I will get from reading the book and some idea of how to attain and check that I gained that value (or perhaps see if there was anything else I gained).  This is the smallest thing I can do and it is probably the most responsible thing to do as well. </p>
+<p>Part of this first smallest responsible change may be to decide how to read the book and I have a common approach of reading chapter by chapter and also treating the book as if I were reviewing it for others.  So the next smallest responsible change would be to read the first chapter and start to write down my impression of the book and anything important I had learnt.</p>
+<p>The feedback from reading the first chapter may be that I think the book has mislead me about the value I would gain and I would therefore abandon reading any further.  This feedback would then save me much time in the future, as not only would I skip read the rest of the book but I would have a reason as to why I dont want to try read the book at a later date.</p>
+<p>If I tried to do this with several books at the same time, increasing the amount of change I was dealing with, there would be a lot of context switching between the information in each book, even more so if the books were on different topics.  I would have to unload and reload different ideas from each book as I switched over.  It would be very easy to mix my impressions and feedback from one book with another and hence make an incorrect value judgement.</p>
+<p>Hope you enjoy the concept of Smallest Responsible Change and find it useful in your work.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="img-thumbnail"> 
+<p>Whilst discussing the merits of <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development" target="_blank" rel="noopener">Behaviour Driven Development</a> at one of the <a href="http://xpday-london.editme.com/eXtremeTuesdayClub" target="_blank" rel="noopener">XTC gatherings</a>, I started using the term <strong>minimal responsible feature</strong> as a way to express how to decide what piece of work to tackle next.  I promised <a href="http://lizkeogh.com/" target="_blank" rel="noopener">Liz Keogh</a> many moons ago that I would write a blog post about it, so here it is.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="lean" scheme="http://jr0cket.co.uk/tags/lean/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Lean Agile Machine - What's in a Name]]></title>
+    <link href="http://jr0cket.co.uk/2011/03/whats-in-name-lean-agile-machine.html.html"/>
+    <id>http://jr0cket.co.uk/2011/03/whats-in-name-lean-agile-machine.html.html</id>
+    <published>2011-03-19T11:04:00.000Z</published>
+    <updated>2022-01-02T20:20:15.310Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="img-thumbnail">
+<p>I have coach team in agile for a while and decided to venture out with my own company.  Choosing a good name for the company was important as I wanted a way to simply define what service I offered.  I chose the name <em>lean agile machine</em> for my company in part as a parody on the term <em>lean mean machine</em>.  I was looking for something that expressed the concepts I was interested in at the time lean system thinking and agile software development.</p>
+<a id="more"></a>
+<p>I try approach everything in a lean manner, by focusing on those tasks that provide the most value and guide me towards my goals.  Goals are set in terms of my own direction but also along the lines of reciprocity, aiming to deliver as much value to my clients and to colleagues I work with.</p>
+<p>The agile aspects of my approach get people involved as they are best placed to achieve goals when they are empowered and are allowed to define and carry out meaningful work.</p>
+<p>These two practices combine to drive much of the social interaction of my life (work, play, cycling, etc.) and help me define my values and goals in life.  They also just happen to be useful approaches to software development and IT in general, which is lucky as that is the world in which I mainly work in.</p>
+<p>Lean and agile principles provide many practices to help shape the effectiveness of the services I provide to a customer or employer.  To me, delivering a software solution is a consequence of social interaction and understanding generated with clients and colleagues.  The actual goal being to build relationships that are productive and help those people involved reach there respective goals, whether that be a big house in the country, married with children, a global traveller or a successful and sustainable business.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="img-thumbnail">
+<p>I have coach team in agile for a while and decided to venture out with my own company.  Choosing a good name for the company was important as I wanted a way to simply define what service I offered.  I chose the name <em>lean agile machine</em> for my company in part as a parody on the term <em>lean mean machine</em>.  I was looking for something that expressed the concepts I was interested in at the time lean system thinking and agile software development.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Kanban Elevator Pitch]]></title>
+    <link href="http://jr0cket.co.uk/2011/02/kanban-elevator-pitch.html.html"/>
+    <id>http://jr0cket.co.uk/2011/02/kanban-elevator-pitch.html.html</id>
+    <published>2011-02-16T14:48:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="http://www.angelinvestmentnetwork.net/wp-content/uploads/2011/06/elevator-pitch.png" class="img-thumbnail"> 
+<p>My elevator pitch for kanban would be along the following lines..</p>
+<p><em>“Kanban is a way to incrementally and continually improve your approach to meeting your goals, by understanding the&nbsp;situation&nbsp;clearly, identifying the real challenges and testing out your chosen options for resolving those challenges.”</em></p>
+<p>As with everything Lean and Agile, this elevator pitch will most likely evolve and can be made more specific depending on different audiences, but I am fairly happy with this general pitch.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.angelinvestmentnetwork.net/wp-content/uploads/2011/06/elevator-pitch.png" class="img-thumbnail"> 
+<p>My elevator pitch ]]>
+    </summary>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Faiding Cards to Improve Focus on Kanban Board]]></title>
+    <link href="http://jr0cket.co.uk/2011/01/faiding-cards-to-improve-focus-on.html.html"/>
+    <id>http://jr0cket.co.uk/2011/01/faiding-cards-to-improve-focus-on.html.html</id>
+    <published>2011-01-25T11:20:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://1.bp.blogspot.com/_7rvcxWUYlQs/TT6xjlRwlyI/AAAAAAAAAFI/g4bzsRM2Fjo/s1600/LeanKitKanban-Options-Filter-DateDue.png" class="img-thumbnail">
+<p>I am using <a href="http://leankitkanban.com/" target="_blank" rel="noopener">Lean Kit Kanban</a> as my online kanban board and I just tried out a neat feature that is helping me focus on important time dependant tasks.</p>
+<a id="more"></a>
+<p>On the Lean Kit Kanban board you can set all kinds of filters to only show certain cards or you can use the filters to fade all other cards that would otherwise be filtered out.  I am using a time based filter fade any card that does not need to be completed in the next 10 days.</p>
+<img src="http://3.bp.blogspot.com/_7rvcxWUYlQs/TT6vV7ZCuQI/AAAAAAAAAFE/hlk-9IVsX8g/s1600/LeanKitKanban-Fade-Dateless-Tasks.png" class="img-code"> 
+<p>With the filter now applied I have more visual information about what may be important to me and therefore can make quicker decisions about which card to tackle next.</p>
+<p>This quick visual queue is one of many techniques I used to reduce up front planning.  If I know when something is due (or a date passed when the card has significantly less value) then I can plan “just in time” more effectively.</p>
+<p>If none of the time dependent cards are of value or I feel that there may be others of greater value I can quickly switch off the filter with a couple of mouse clicks and see the full board.</p>
+<p>If I still am not sure about the next valuable card then I can dive into the backlog.</p>
+<p>As an aside, I am wondering if it is worth recording how often I dip into the backlog.  From an emotional stance, it feels like I only go into my backlog three or four times a month and only for a few minutes each time.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://1.bp.blogspot.com/_7rvcxWUYlQs/TT6xjlRwlyI/AAAAAAAAAFI/g4bzsRM2Fjo/s1600/LeanKitKanban-Options-Filter-DateDue.png" class="img-thumbnail">
+<p>I am using <a href="http://leankitkanban.com/" target="_blank" rel="noopener">Lean Kit Kanban</a> as my online kanban board and I just tried out a neat feature that is helping me focus on important time dependant tasks.</p>]]>
+    
+    </summary>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Pattern Matching and Kanban]]></title>
+    <link href="http://jr0cket.co.uk/2011/01/pattern-matching-and-kanban.html.html"/>
+    <id>http://jr0cket.co.uk/2011/01/pattern-matching-and-kanban.html.html</id>
+    <published>2011-01-12T13:35:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://personalkanban.com/wp-content/uploads/2010/10/iron-chef-300x300.jpg" class="img-thumbnail">
+<p>Pattern recognition - <a href="http://www.personalkanban.com/pk/primers/the-iron-chef-paradox/" target="_blank" rel="noopener">the iron chief paradox</a></p>
+<p>As our experience grows with some activity, our ability to automatically recognise situations grow - we become what people generally term an expert.</p>
+<p>Pattern recognition lets experienced people process information very quickly and so reduces time wasted thinking, reviewing or planning where its not needed.</p>
+<p>If you can see you are on the right track, or just know you are almost subconsciously then you can get more done.</p>
+<p>By visualising work on the kanban, you can also use pattern recognition to quickly plan your activities, recognise upcoming issues.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://personalkanban.com/wp-content/uploads/2010/10/iron-chef-300x300.jpg" class="img-thumbnail">
+<p>Pattern recognition - <a hre]]>
+    </summary>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[TDD Kanban for Deliberate Practice]]></title>
+    <link href="http://jr0cket.co.uk/2011/01/tdd-kanban-for-deliberate-practice.html.html"/>
+    <id>http://jr0cket.co.uk/2011/01/tdd-kanban-for-deliberate-practice.html.html</id>
+    <published>2011-01-08T17:39:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://picasaweb.google.com/johnstevenson1970/JR0cketJumpstart?authkey=Gv1sRgCKz2_cn7sLXg_QE#5559499396863261842" class="img-thumbnail">
+<p>To help keep you in a good flow when you are learning or practising the <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">TDD</a> test first approach, it can be useful to use a simple kanban board to manage your flow.  Here is a guide to this simple technique.</p>
+<a id="more"></a>
+<p>The <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">TDD</a> kanban helps you to focus on each step, helping you to stick to test-code-refactor.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">TDD</a> kanban board has three lanes as follows</p>
+<p><strong>Test</strong> - you are writing a single test</p>
+<p><strong>Code</strong> - you are writing code to pass a particular test that is failing</p>
+<p><strong>Refactor</strong> - you are changing the internal workings of your code</p>
+<p>You only have one card on your kanban board (this is your work in  progress limit), this reminds you which activity you should be working  on and should help you get into the test-code-refactor routine.</p>
+<p>The card itself is blank and does not refer to any required behaviour or example code.</p>
+<h2 id="Using-the-TDD-Kanban-board"><a href="#Using-the-TDD-Kanban-board" class="headerlink" title="Using the TDD Kanban board"></a>Using the TDD Kanban board</h2><p>To start, place your one and only card on the test lane of the kanban board.</p>
+<p>Once  you have written a failing test and run your tests, move the card on  the kanban board to the code lane and write just enough code to make the  test pass.  </p>
+<p>Once you have written enough code to make the test  pass (running all tests), move the card on the kanban board to the  refactor lane.</p>
+<p>When you have finished your refactor work and have  run the tests, move the card back to the test lane and write another  failing test.</p>
+<p><strong>Credits</strong></p>
+<p>The <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">TDD</a> Kanban concept is from the <a href="http://jonjagger.blogspot.com/2010/12/agile-lean-and-kanban-exchange.html" target="_blank" rel="noopener">mini kanban display at Jon Jagger’s cyberdojo</a> (that’s my hand) at the <a href="http://skillsmatter.com/" target="_blank" rel="noopener">SkillsMatter</a> Lean Agile exchange 2010.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://picasaweb.google.com/johnstevenson1970/JR0cketJumpstart?authkey=Gv1sRgCKz2_cn7sLXg_QE#5559499396863261842" class="img-thumbnail">
+<p>To help keep you in a good flow when you are learning or practising the <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">TDD</a> test first approach, it can be useful to use a simple kanban board to manage your flow.  Here is a guide to this simple technique.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="kanban" scheme="http://jr0cket.co.uk/tags/kanban/"/>
+    
+      <category term="tdd" scheme="http://jr0cket.co.uk/tags/tdd/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Change at the Speed of Acceptance]]></title>
+    <link href="http://jr0cket.co.uk/2010/12/change-at-speed-of-acceptance.html.html"/>
+    <id>http://jr0cket.co.uk/2010/12/change-at-speed-of-acceptance.html.html</id>
+    <published>2010-12-30T13:51:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<p>Change driven through command and control or positional power has a tendency to fail rapidly.</p>
+<p>People can only truly accept and embrace a change when they understand the value of that change.  Acceptance of change comes much more eaily if a person understands how that change will benefit them.</p>
+<p>Change is hard for an individual, even harder for a team or organisation.</p>
+<a id="more"></a>
+<img src="http://farm4.static.flickr.com/3196/3010943147_cab86f567d.jpg" class="img-topic">
+<p>Change can happen when enough people realise others want change too.  If there is agreement on how that change happens then a positive outcome is more likely.  If there is tension and opposition to a change, conflicting views and value perceptions, then pain goes up and productivity goes down.</p>
+<p>For management to introduce change successfully, they must persuade their employees that the change is valuable to the employees and not just the company (or manager).  </p>
+<p>Thank you<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Change driven through command and control or positional power has a tendency to fail rapidly.</p>
+<p>People can only truly accept and embrace a change when they understand the value of that change.  Acceptance of change comes much more eaily if a person understands how that change will benefit them.</p>
+<p>Change is hard for an individual, even harder for a team or organisation.</p>]]>
+    
+    </summary>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/tags/agile/"/>
+    
+      <category term="agile" scheme="http://jr0cket.co.uk/categories/agile/"/>
+    
+  </entry>
+  
+</feed>

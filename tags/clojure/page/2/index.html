@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Tag: clojure | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Clojure, Community and developer tools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jr0cket">
+<meta property="og:url" content="http://jr0cket.co.uk/tags/clojure/page/2/index.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Clojure, Community and developer tools">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jr0cket">
+<meta name="twitter:description" content="Clojure, Community and developer tools">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-clojure-with-lighttable-in-emacs-mode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/clojure-with-lighttable-in-emacs-mode.html" class="article-date">
+  <time datetime="2015-01-03T14:08:38.000Z" itemprop="datePublished">3 Jan 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/clojure-with-lighttable-in-emacs-mode.html">Clojure With Light Table and Emacs Keybindings</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p>  When I <a href="http://clojure.practical.li" target="_blank" rel="noopener">teach people Clojure</a> I use <a href="http://lighttable.com/" target="_blank" rel="noopener">Light Table</a> because it is really simple to use and its <em>Instarepl</em> gives instant feedback of the code as you type it.  This feedback helps you understand Clojure quickly and gives you more confidence when coding.</p>
+<p>  As I do most of my Clojure development (and most everything else) in <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> I really miss the excellent Emacs keybindings when I use Light Table.  Luckily there is an <a href="https://github.com/LightTable/Emacs" target="_blank" rel="noopener">Emacs plugin for Light Table</a>, so here is a quick guide on how to install &amp; use this Emacs plugin.</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/01/clojure-with-lighttable-in-emacs-mode.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2015/01/clojure-with-lighttable-in-emacs-mode.html" data-id="cl2mbqfty004szqmjwsw2lclh" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2015/01/clojure-with-lighttable-in-emacs-mode.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lighttable/">lighttable</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-add-colour-to-your-clojure-repl-with.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/08/add-colour-to-your-clojure-repl-with.html.html" class="article-date">
+  <time datetime="2013-08-30T08:18:00.000Z" itemprop="datePublished">30 Aug 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/08/add-colour-to-your-clojure-repl-with.html.html">Add Colour to Your Clojure REPL With Leiningen and ASCII Codes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://4.bp.blogspot.com/-pc_s02W-R9w/TzFLaS-sQcI/AAAAAAAAEbU/xWhovBljYE8/s1600/clojure-logo-with-name.png" class="img-topic"> 
+<p>Sometimes its the little things that make a difference and after seeing how easily customise the Clojure REPL prompt with <a href="http://leiningen.org/" target="_blank" rel="noopener">Leiningen</a> I had a little hack with words, symbols and colours and came up with something nicer (in my opinion).</p>
+        
+          <p class="article-more-link">
+            <a href="/2013/08/add-colour-to-your-clojure-repl-with.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/08/add-colour-to-your-clojure-repl-with.html.html" data-id="cl2mbqfs4000szqmj842b74qu" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/08/add-colour-to-your-clojure-repl-with.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leiningen/">leiningen</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flying-planes-with-clojure-and.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/03/flying-planes-with-clojure-and.html.html" class="article-date">
+  <time datetime="2013-03-21T21:33:00.000Z" itemprop="datePublished">21 Mar 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/03/flying-planes-with-clojure-and.html.html">Flying Planes With Clojure and FlightGear</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Dale Thatcher from the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> created a <a href="https://github.com/dalethatcher/flightgear" target="_blank" rel="noopener">Clojure project</a> that allows you to fly a plane in real time.  Now, Dale has not yet connected this to a real plane, instead he is using the open source flight simulator, <a href="http://www.flightgear.org/" target="_blank" rel="noopener">FlightGear</a>.</p>
+<p>I took Dale’s project for a test flight and here are my experiences!</p>
+        
+          <p class="article-more-link">
+            <a href="/2013/03/flying-planes-with-clojure-and.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/03/flying-planes-with-clojure-and.html.html" data-id="cl2mbqfv7008wzqmjsgv03gns" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/03/flying-planes-with-clojure-and.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/events/">events</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-leiningen-quick-peek-underneath-defproject-Clojure-macro.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html" class="article-date">
+  <time datetime="2013-02-21T21:30:00.000Z" itemprop="datePublished">21 Feb 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html">Leiningen - Quick Peek Underneath the Defproject Clojure Macro</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://1.bp.blogspot.com/-rxD8__T6tzA/TzFNNTKKLwI/AAAAAAAAEb8/k10iLxa3I70/s1600/leiningen-face.jpg" class="img-thumbnail">
+<p><a href="http://leiningen.org/" target="_blank" rel="noopener">Leiningen</a> is a project automation tool (think build tool and them some) that uses a <a href="http://clojure.org/reference/macros" target="_blank" rel="noopener">Clojure macro</a> to make it easy for <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> developers to manage their project lifecycle.</p>
+<p>A Clojure project managed by Leiningen uses a simple clojure file called <code>project.clj</code> which allows developers to define a whole range of stuff about their projects.  To get started you only have to define a name, a version of Clojure and any dependencies in your <code>project.clj</code> and Leininge does the rest.  </p>
+<p>So lets take a quick look under the hood of Leiningen and its defproject macro to see what is going on.</p>
+        
+          <p class="article-more-link">
+            <a href="/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html" data-id="cl2mbqfwn00e9zqmjxubxwlxq" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leiningen/">leiningen</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-emacs-live-instant-clojure-development-environment.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/01/emacs-live-instant-clojure-development-environment.html.html" class="article-date">
+  <time datetime="2013-01-14T23:36:00.000Z" itemprop="datePublished">14 Jan 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/emacs/">emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/01/emacs-live-instant-clojure-development-environment.html.html">Emacs Live - Instant Clojure Development Environment</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/emacs-logo.png" class="img-thumbnail">
+<p>Emacs is a really powerful tool for Clojure development, although without a guiding hand it can be a bit of a learning curve.  Using the <a href="https://github.com/overtone/emacs-live" target="_blank" rel="noopener">Emacs Live</a> its really simple to get a fully featured development environment for Clojure.  I will show you how to get Emacs Live installed and how to start using it for Clojure.</p>
+        
+          <p class="article-more-link">
+            <a href="/2013/01/emacs-live-instant-clojure-development-environment.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/01/emacs-live-instant-clojure-development-environment.html.html" data-id="cl2mbqfv3008ezqmjkge9cmmn" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/01/emacs-live-instant-clojure-development-environment.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacslive/">emacslive</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-tweeking-emacs-modeline-for-clojure.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/01/tweeking-emacs-modeline-for-clojure.html.html" class="article-date">
+  <time datetime="2013-01-04T11:01:00.000Z" itemprop="datePublished">4 Jan 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/emacs/">emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/01/tweeking-emacs-modeline-for-clojure.html.html">Tweeking Emacs Modeline for Clojure Development</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://1.bp.blogspot.com/-PLeobToC6lc/TzFJCfBSLPI/AAAAAAAAEbE/zSx1cOgHzZE/s1600/emacs128x128icon.png" class="img-thumbnail">
+<p>Emacs is fun to configure and if you have the basics of LISP or Clojure then its pretty easy too.  After reading how to <a href="http://www.masteringemacs.org/articles/2012/09/10/hiding-replacing-modeline-strings/" target="_blank" rel="noopener">replace the text on the modeline</a> I decided to customise my mode-line to make it more efficient for Clojure development.  I’ll cover how I tweaked the mode line and added this customisation to my <a href="https://github.com/overtone/emacs-live" target="_blank" rel="noopener">Emacs Live</a> based configuration.</p>
+        
+          <p class="article-more-link">
+            <a href="/2013/01/tweeking-emacs-modeline-for-clojure.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2013/01/tweeking-emacs-modeline-for-clojure.html.html" data-id="cl2mbqfyi00kqzqmjbapfft08" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2013/01/tweeking-emacs-modeline-for-clojure.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-gitignore-for-clojure-and-emacs.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/12/gitignore-for-clojure-and-emacs.html.html" class="article-date">
+  <time datetime="2012-12-13T08:00:00.000Z" itemprop="datePublished">13 Dec 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/git/">git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/12/gitignore-for-clojure-and-emacs.html.html">GitIgnore for Clojure and Emacs - Ignore Emacs Backup &amp; Temp Files</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://git-scm.com/images/logo.png" class="img-thumbnail">
+<p>Even though I use <code>.gitignore</code> files to control common files that should not be committed to a git repository, its very easy to forget about the backup or temporary files that my development tools generate.  As these auto-generated files are development tool specific, they are not always included in a <code>.gitignore</code> file.</p>
+<p>Especially when you are under pressure to commit changes or deploy your code its easy to include a few things you dont need, especially when using the commands <code>git add .</code> or <code>git commit -am &quot;&quot;</code>.</p>
+<p>So when I discovered the idea of using a <code>.gitignore_global</code> file, I quicky adopted this and saved myself a lot of time with this simple approach.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/12/gitignore-for-clojure-and-emacs.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/12/gitignore-for-clojure-and-emacs.html.html" data-id="cl2mbqfvg00a1zqmjy67kkuld" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/12/gitignore-for-clojure-and-emacs.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-lighttable-023-even-more-light-for-clojure.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/12/lighttable-023-even-more-light-for-clojure.html.html" class="article-date">
+  <time datetime="2012-12-06T15:31:00.000Z" itemprop="datePublished">6 Dec 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/12/lighttable-023-even-more-light-for-clojure.html.html">LightTable 0.2.3 - Even More Light for Clojure</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>So as soon as I decided to <a href="http://blog.jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html" target="_blank" rel="noopener">write about LightTable</a>, the developers go and improve a whole bunch of things.  With the 0.2.3 release that happened earlier today the configuration of LightTable now works correctly.</p>
+<p>This change is going to make it so much easier to use LightTable for demo’s and coding dojo’s.   The has been an update to the default solarized light theme that looks very pretty to me.</p>
+        
+          <p class="article-more-link">
+            <a href="/2012/12/lighttable-023-even-more-light-for-clojure.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/12/lighttable-023-even-more-light-for-clojure.html.html" data-id="cl2mbqfwm00e5zqmj6kacr9uj" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/12/lighttable-023-even-more-light-for-clojure.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lighttable/">lighttable</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-clojure-development-with-lighttable-02x.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/12/clojure-development-with-lighttable-02x.html.html" class="article-date">
+  <time datetime="2012-12-04T19:13:00.000Z" itemprop="datePublished">4 Dec 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/12/clojure-development-with-lighttable-02x.html.html">Clojure Development With LightTable 0.2.x</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p><a href="http://www.lighttable.com/" target="_blank" rel="noopener">LightTable</a> is a <a href="http://www.kickstarter.com/projects/ibdknox/light-table" target="_blank" rel="noopener">kickstarter project</a> to create new kind of developer tool for Clojure development, inspired by the <a href="http://www.youtube.com/watch?v=PUv66718DII" target="_blank" rel="noopener">Inventing on Principle talk by Bret Victor</a>.</p>
+<p>LightTable aims to give developers instant feedback about their code, showing how any change affects their applications. Giving you a developer “surface” to work on, which will bring information to the places you need it the most.  The principles of the LightTable design include:</p>
+<ul>
+<li>Documentation there when you need it, no need to search</li>
+<li>Edit anywhere and anything - not just text and not just as files</li>
+<li>Discover by doing, changes produces instantaneous results</li>
+<li>Shine a light on related pieces of code</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2012/12/clojure-development-with-lighttable-02x.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html.html" data-id="cl2mbqftv004jzqmjv4rny3i9" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lighttable/">lighttable</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-managing-multiple-ssh-keys-to-avoid.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/11/managing-multiple-ssh-keys-to-avoid.html.html" class="article-date">
+  <time datetime="2012-11-03T12:04:00.000Z" itemprop="datePublished">3 Nov 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/managing-multiple-ssh-keys-to-avoid.html.html">Managing Multiple SSH Keys to Avoid Heroku Permission Issues</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-WbaI8XNIuc4/UJPNtGsJ8gI/AAAAAAAAIgQ/O-QkJLcoS9s/s1600/ssh-private-public-keys2.jpg" class="img-thumbnail"> 
+<p>I was a little surprised to have an access issue with <a href="http://www.heroku.com/" target="_blank" rel="noopener">Heroku</a> when using my new Mac Book Pro, as its always been really easy to deploy my applications to Heroku in the past.&nbsp; I kicked myself when I realised I’d only set up a public key specifically for my Github account.</p>
+<p>This got me to wondering the best way to set up keys given I am using different services for both personal project and work. </p>
+        
+          <p class="article-more-link">
+            <a href="/2012/11/managing-multiple-ssh-keys-to-avoid.html.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/11/managing-multiple-ssh-keys-to-avoid.html.html" data-id="cl2mbqfx800g0zqmj9tnsmn2r" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/11/managing-multiple-ssh-keys-to-avoid.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/heroku/">heroku</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/tags/clojure/">&laquo; Prev</a><a class="page-number" href="/tags/clojure/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/clojure/page/3/">3</a><a class="page-number" href="/tags/clojure/page/4/">4</a><a class="extend next" rel="next" href="/tags/clojure/page/3/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

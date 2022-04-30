@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Clacks Interpreter - Going Postal at London Clojure Dojo | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="At the March 2016 London Clojurians code dojo at uSwitch our group created a Clacks Interpreter in honor of Terry Pratchett, the author of the amazing Discworld series of books (and a few TV shows of">
+<meta name="keywords" content="clojure,terry-pratchett">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Clacks Interpreter - Going Postal at London Clojure Dojo">
+<meta property="og:url" content="http://jr0cket.co.uk/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="At the March 2016 London Clojurians code dojo at uSwitch our group created a Clacks Interpreter in honor of Terry Pratchett, the author of the amazing Discworld series of books (and a few TV shows of">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://jr0cket.co.uk/images/clojure-logo.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/discworld-clacks-alphabet.jpg">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.290Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clacks Interpreter - Going Postal at London Clojure Dojo">
+<meta name="twitter:description" content="At the March 2016 London Clojurians code dojo at uSwitch our group created a Clacks Interpreter in honor of Terry Pratchett, the author of the amazing Discworld series of books (and a few TV shows of">
+<meta name="twitter:image" content="http://jr0cket.co.uk/images/clojure-logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-clacks-interpreter-going-postal-at-london-clojure-dojo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html" class="article-date">
+  <time datetime="2016-03-08T23:06:50.000Z" itemprop="datePublished">8 Mar 2016</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Clacks Interpreter - Going Postal at London Clojure Dojo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>At the March 2016 London Clojurians code dojo at uSwitch our group created a Clacks Interpreter in honor of <a href="https://en.wikipedia.org/wiki/Terry_Pratchett" target="_blank" rel="noopener">Terry Pratchett</a>, the author of the amazing <a href="https://en.wikipedia.org/wiki/Discworld" target="_blank" rel="noopener">Discworld</a> series of books (and a few TV shows of those books too).</p>
+<p>In the 33rd Discworld novel called <a href="https://en.wikipedia.org/wiki/Going_Postal" target="_blank" rel="noopener">Going Postal</a>, messages are sent faster than a speeding horse via the <a href="https://en.wikipedia.org/wiki/Technology_of_the_Discworld#The_clacks" target="_blank" rel="noopener">Clacks</a> system.  This composes of a series of towers that cross a continent and pass messages on via combinations of lights.  Each tower sees a grid of lights from a distant tower and sends the message on to the next tower.</p>
+<blockquote>
+<p>The Clacks system was actually introduced in the 24th Discworld novel called “The Fith Elephant”, however its the “Going Postal” book where we learn the full history of the Clacks system.</p>
+</blockquote>
+<p>We created a Clacks Interpreter that converts any English message into its corresponding clacks signal, based on the <a href="https://boardgamegeek.com/image/1670734/clacks-discworld-board-game" target="_blank" rel="noopener">Clacks alphabet</a> as defined by the board game of the same name.  The board game defines the alphabet as a 2 by 3 grid (although in the Discworld its actually 8 large squares).  Naturally, the interpreter also converts the Clacks signal back into an English message too.</p>
+<p><img src="/images/discworld-clacks-alphabet.jpg" alt="Clacks: The board game - Clacks Alphabet"></p>
+<p>The code is available on Github at: <a href="https://github.com/liamjtaylor/clacks-messenger" target="_blank" rel="noopener">https://github.com/liamjtaylor/clacks-messenger</a> and read on for a walk through of how we came up with the solution.</p>
+<a id="more"></a>
+<h1 id="The-Challenge"><a href="#The-Challenge" class="headerlink" title="The Challenge"></a>The Challenge</h1><p>We wanted to be able to take any English language messages and transmit it across the clacks network, then </p>
+<h1 id="Representing-a-Clack"><a href="#Representing-a-Clack" class="headerlink" title="Representing a Clack"></a>Representing a Clack</h1><p>For each clack, we read the pattern from the top of the first column to the botton, then from the top of the second column to the bottom.  A light in a position represents a 1 value and no light represents a 0 value.  This gives us our 6 number pattern for each clack in the alphabet.</p>
+<h2 id="Deciding-the-data-structure"><a href="#Deciding-the-data-structure" class="headerlink" title="Deciding the data structure"></a>Deciding the data structure</h2><p>The initial data structure chosen was essentially just modelling each individual clack.  Since a clack is a 2x3 structure, the simplest way to represent a clacks is to have a vector that contains 2 vectors, each with three elements.</p>
+<p>So a simple expression of the letter a in the clacks alphabet would be:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>][<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+<p>Therefore we could define a single letter of our alphabet as follows: </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> a [[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>][<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+<p>Before we define the complete alphabet using this data structure, lets test if we have the right data structure for our conversion process.</p>
+<h2 id="Testing-a-simple-conversion-with-our-data-structure"><a href="#Testing-a-simple-conversion-with-our-data-structure" class="headerlink" title="Testing a simple conversion with our data structure"></a>Testing a simple conversion with our data structure</h2><p>Lets try the simplest way to convert a character into a clack:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> character-&gt;clack [character]</span><br><span class="line">  (<span class="name"><span class="builtin-name">if</span></span> (<span class="name"><span class="builtin-name">=</span></span> character <span class="string">"a"</span>)</span><br><span class="line">    a</span><br><span class="line">    (<span class="name"><span class="builtin-name">str</span></span> <span class="string">"Sorry, character is not yet in the alphabet, please create a pull request"</span>)))</span><br></pre></td></tr></table></figure>
+<p>Calling the function converts a string into the corresponding clack</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">character-&gt;clack</span> <span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
+<p>Although the code is simple for 1 character, it does hightlight the problem of converting the whole alphabet.  We would need either a deeply nested set of if statements or a very long case statement, neither of which seems to be a particularly functional approach or idiomatic Clojure.</p>
+<p>Even if we did use a case statement, how would we convert a clack back into a character?</p>
+<p>So perhaps we need to change the data structure, one that provides an easy way to map to values together.</p>
+<p>Also, there seems no value in mapping values to a 2x3 grid as long as we consistently express a clack.</p>
+<h2 id="Defining-the-alphabet-with-a-map"><a href="#Defining-the-alphabet-with-a-map" class="headerlink" title="Defining the alphabet with a map"></a>Defining the alphabet with a map</h2><p>A map data structure in Clojure is a hash map (a key &amp; value paring) for example I could define myself as a map </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">:name</span> <span class="string">"john"</span> <span class="symbol">:age</span> <span class="string">"21"</span> <span class="symbol">:twitter</span> <span class="string">"jr0cket"</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>Its very common to use Clojure keywords for the keys, to make it easy to look up a particular value by refering to the keyword.</p>
+<p>So the new design for our clacks data structure is as follows </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">:a</span> [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]&#125;</span><br></pre></td></tr></table></figure>
+<p>To help with testing this new data structure desing, we crated enough letters of the clacks alphabet to make some simple words, i.e bat</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> alphabet &#123;<span class="symbol">:a</span> [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">               <span class="symbol">:b</span> [<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line">               <span class="symbol">:t</span> [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Testing-the-map-design"><a href="#Testing-the-map-design" class="headerlink" title="Testing the map design"></a>Testing the map design</h2><p>We can use the keyword to lookup the value of its clack code</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">alphabet</span> <span class="symbol">:a</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; [0 1 0 0 0 1]</span></span><br></pre></td></tr></table></figure>
+<p>Then we created a simple function to convert a string to a sequence of clacks</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> character-&gt;clack [letter]</span><br><span class="line">  (<span class="name"><span class="builtin-name">if</span></span> (<span class="name"><span class="builtin-name">=</span></span> letter <span class="string">"a"</span>)</span><br><span class="line">    (<span class="name">alphabet</span> <span class="symbol">:a</span>)</span><br><span class="line">    (<span class="name"><span class="builtin-name">str</span></span> <span class="string">"Sorry, character is not yet in the alphabet, please create a pull request"</span>)))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>The <code>-&gt;</code> character is part of the function name.  This is a Clojure naming convention used when the function you are defining converts from one type to another.</p>
+</blockquote>
+<p>And call the function as follows</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">character-&gt;clack</span> <span class="string">"a"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; [0 1 0 0 0 1]</span></span><br></pre></td></tr></table></figure>
+<h1 id="Converting-a-word"><a href="#Converting-a-word" class="headerlink" title="Converting a word"></a>Converting a word</h1><p>Now we want to convert a whole word to a clacks sequence.  It seemed the easiest way to convert a whole word was to convert each letter at a time using the map to look up each clack code, returning all the clacks codes in a sequence.</p>
+<p>So we redefined the <code>string-&gt;clacks</code> function to take in a whole word.  </p>
+<p>We used the <code>map</code> function to apply a conversion function over each element in the word (each element of the string).  This conversion function called <code>clacksify</code>.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clacksify [letter]</span><br><span class="line">  (<span class="name"><span class="builtin-name">let</span></span> [character (<span class="name"><span class="builtin-name">str</span></span> letter)]</span><br><span class="line">  (<span class="name">alphabet</span> (<span class="name"><span class="builtin-name">keyword</span></span> character))))</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> string-&gt;clacks [word]</span><br><span class="line">  (<span class="name"><span class="builtin-name">map</span></span> clacksify word))</span><br></pre></td></tr></table></figure>
+<p>Now we could convert any workd that used the letters of our limted alphabet.  We chose bat as a simple word.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">string-&gt;clacks</span> <span class="string">"bat"</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>As we are passing a string and not a keyword to the <code>clacksify</code> function, then we first convert the string to a keyword using the <code>keyword</code> function.</p>
+</blockquote>
+<h1 id="Converting-the-clack-to-a-string"><a href="#Converting-the-clack-to-a-string" class="headerlink" title="Converting the clack to a string"></a>Converting the clack to a string</h1><p>Is there a simple way to look up a key given a value that is unique in the map?  </p>
+<p>All Clack codes are unique in the map, but there did not seem to be a simple expression to find the key when given a value.</p>
+<p>We could have created a second mapping, however having two maps seemed redundant and a potential cause for silly bugs.</p>
+<p>The answer was simple once we found it.  As the clack codes are unique, they could be used as keys for the letter values, we just needed to swap the map around.  Swapping a map’s keys and values was done by writing a <code>reverse-map</code> function.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> reverse-map</span><br><span class="line">  <span class="string">"Reverse the keys and value pairs in a map.</span></span><br><span class="line"><span class="string">  Allows the map to be used to convert from a clack to a letter without defining a second map"</span></span><br><span class="line">  [m]</span><br><span class="line">  (<span class="name"><span class="builtin-name">into</span></span> &#123;&#125; (<span class="name"><span class="builtin-name">map</span></span> (<span class="name"><span class="builtin-name">fn</span></span> [[a b]] [b a]) m)))</span><br></pre></td></tr></table></figure>
+<p>So we defined the function <code>declacksify</code> which takes a clack code and returns its corresponding character.  The clack code returns the corresponding keyword rather than a character, so we use the <code>name</code> function to convert the keyword into a character name.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> declacksify [clack]</span><br><span class="line">  (<span class="name"><span class="builtin-name">name</span></span> ((<span class="name">reverse-map</span> alphabet) clack)))</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clacks-&gt;string [clacks]</span><br><span class="line">  (<span class="name"><span class="builtin-name">map</span></span> declacksify clacks))</span><br></pre></td></tr></table></figure>
+<p>So calling these functions with a clacks </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">declacksify</span>  [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>])</span><br><span class="line"><span class="comment">;; =&gt; "t"</span></span><br><span class="line"></span><br><span class="line">(<span class="name">clacks-&gt;string</span> [[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>] [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]])</span><br><span class="line"><span class="comment">;; =&gt; ("b" "a" "t")</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Its probably at this point we should have realised that we didnt need to use keywords to represent the characters of the alphabet.  In fact, using keywords made a little more work for us.</p>
+</blockquote>
+<h1 id="Tyding-up-the-output"><a href="#Tyding-up-the-output" class="headerlink" title="Tyding up the output"></a>Tyding up the output</h1><p>Our <code>clacks-&gt;string</code> function returns the right result, but not quite in the format we want.  Rather than a single string, we get the individual characters.</p>
+<p>Using the <code>reduce</code> function we can apply the <code>str</code> function over the resulting characters to give a single string.  So our function becomes</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clacks-&gt;string [clacks]</span><br><span class="line">(<span class="name"><span class="builtin-name">map</span></span> str (<span class="name"><span class="builtin-name">map</span></span> declacksify clacks)))</span><br></pre></td></tr></table></figure>
+<h1 id="Working-with-another-language"><a href="#Working-with-another-language" class="headerlink" title="Working with another language"></a>Working with another language</h1><p>Thanks to a flexible design with no side effects or side causes then its really easy to replace the English language alphabet with another language that can be encoded into Clack codes.  So languages based on the greek, latin or cyrilic alphabet could be send if a suitable alphabet with clack codes is supplied.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>We were quite happy with the code produced in this dojo.  The code is pretty readable we believe and we have taken a fairly simple approach to the design.  In hindsight we could have made the code even easier if we had tested out the map data structure a little more and used a string character for each letter in the alphabet.</p>
+<p>Working in an editor attached to a REPL worke well (Vim in this case, but not relevant to the development of the code).  The behaviour of the code was tested with almost every expression, so we gained a good understanding of each line of code.</p>
+<p>There are ideas to take this further and show a visual representation of a message passing through a chain of clack tower, showing how the message would pass through the system at a human speed.  This woud assume a fixed time to show a clacks between each clack tower and a minimum level of speed by the human part of the clacks tower.</p>
+<p>No REPL’s were harmed in the making of this code, although one REPL was heavily used.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html" data-id="cl2mbqfzt00sozqmj206sipfw" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/terry-pratchett/">terry-pratchett</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/Using-Github-Gists-from-Spacemacs.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Using Github Gists From Spacemacs
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/growing-your-developer-career.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Growing Your Developer Career</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

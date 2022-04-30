@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Working with StagingRemoving changes from StagingSometimes you add things to staging that you change your minde about.   If a file is untracked by git (its never been part of a commit) then you can re">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jr0cket">
+<meta property="og:url" content="http://jr0cket.co.uk/git-workshop/wip.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Working with StagingRemoving changes from StagingSometimes you add things to staging that you change your minde about.   If a file is untracked by git (its never been part of a commit) then you can re">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.326Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jr0cket">
+<meta name="twitter:description" content="Working with StagingRemoving changes from StagingSometimes you add things to staging that you change your minde about.   If a file is untracked by git (its never been part of a commit) then you can re">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/git-workshop/wip.html" class="article-date">
+  <time datetime="2022-01-02T20:20:15.326Z" itemprop="datePublished">2 Jan 2022</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Working-with-Staging"><a href="#Working-with-Staging" class="headerlink" title="Working with Staging"></a>Working with Staging</h1><h2 id="Removing-changes-from-Staging"><a href="#Removing-changes-from-Staging" class="headerlink" title="Removing changes from Staging"></a>Removing changes from Staging</h2><p>Sometimes you add things to staging that you change your minde about.  </p>
+<p>If a file is untracked by git (its never been part of a commit) then you can remove it from staging using the command</p>
+<p>git rm –cached filename</p>
+<p>If the file has been tracked by git, then the above command will cause the file to be removed from the repository should a further commit take place.</p>
+<p>Therefore, for tracked file that you want to unstage, you should use the command</p>
+<p>git reset HEAD filename</p>
+<h1 id="creating-branches"><a href="#creating-branches" class="headerlink" title="creating branches"></a>creating branches</h1><h2 id="commiting"><a href="#commiting" class="headerlink" title="commiting"></a>commiting</h2><h2 id="merging"><a href="#merging" class="headerlink" title="merging"></a>merging</h2><h2 id="remote-branches"><a href="#remote-branches" class="headerlink" title="remote branches"></a>remote branches</h2><h2 id="deleting-remote-branches"><a href="#deleting-remote-branches" class="headerlink" title="deleting remote branches"></a>deleting remote branches</h2><h2 id="deleting-local-branches"><a href="#deleting-local-branches" class="headerlink" title="deleting local branches"></a>deleting local branches</h2><h2 id="git-remote-purge"><a href="#git-remote-purge" class="headerlink" title="git remote purge"></a>git remote purge</h2><h1 id="Working-with-Tags"><a href="#Working-with-Tags" class="headerlink" title="Working with Tags"></a>Working with Tags</h1><h2 id="creating-Tags"><a href="#creating-Tags" class="headerlink" title="creating Tags"></a>creating Tags</h2><h2 id="git-push-–tags"><a href="#git-push-–tags" class="headerlink" title="git push –tags"></a>git push –tags</h2><h1 id="Commits"><a href="#Commits" class="headerlink" title="Commits"></a>Commits</h1><h2 id="discarding-a-local-Commits"><a href="#discarding-a-local-Commits" class="headerlink" title="discarding a local Commits"></a>discarding a local Commits</h2><h2 id="discarding-a-remote-commit-and-resetting-your-local-working-copy"><a href="#discarding-a-remote-commit-and-resetting-your-local-working-copy" class="headerlink" title="discarding a remote commit and resetting your local working copy"></a>discarding a remote commit and resetting your local working copy</h2><p>git reset –hard HEAD^<br>git checkout master</p>
+<h1 id="Git-Log-Updating-details-about-Remotes"><a href="#Git-Log-Updating-details-about-Remotes" class="headerlink" title="Git Log - Updating details about Remotes"></a>Git Log - Updating details about Remotes</h1><p>(see git-live script)</p>
+<p>Use git fetch –all or git remote update to get details of all the changes from every remote repository attached to the local git repository you call the command from.</p>
+<h1 id="Testing-branches"><a href="#Testing-branches" class="headerlink" title="Testing branches"></a>Testing branches</h1><p>Say you want to test out your branch you have been working on but your setup is only configured to work on master, then you can push a branch from one repository to the master (or any other branch) of another repository.</p>
+<p>For example, heroku only deploys from master.  You can use git to deploy your <em>developing</em> branch to your <em>heroku-test</em> application using the following notation:</p>
+<pre><code>git push repository local-branch:remote-branch
+
+git push heroku-test developing:master
+</code></pre><p>In this example we are pushing the local <em>developing</em> branch to the master branch of the heroku-test remote repository.  This allows you to use heroku-test application to run some web application tests (eg. selinum).  </p>
+<p>You dont need to merge your developing branch until after you are happy with oyour testing.</p>
+<h1 id="Rebase-or-not-rebase-that-is-the-question"><a href="#Rebase-or-not-rebase-that-is-the-question" class="headerlink" title="Rebase or not rebase, that is the question"></a>Rebase or not rebase, that is the question</h1><h2 id="what-is-Rebasing"><a href="#what-is-Rebasing" class="headerlink" title="what is Rebasing"></a>what is Rebasing</h2><p>Rebasing is a way to do merging without including specific commits that would otherwise appear due to a merge.</p>
+<p>Some teams decide that having extra commits just for merges polutes the history of the project and makes it harder to understand.</p>
+<h2 id="Why-would-you-do-it"><a href="#Why-would-you-do-it" class="headerlink" title="Why would you do it"></a>Why would you do it</h2><p>If you are just starting with Git, then you probably dont want to do this yet.  Make sure you are comfortable with branching and merging before starting to rebase.</p>
+<p>Rebasing can work well with short lived branches where merges would otherwise happen very often, leading to a high ratio of merge commits.  For these shor lived branches, using rebase helps keep a clean history.</p>
+<p>If you want to keep a branch up to date from master and dont want to include lots of commits only there because of a merge, then rebase will tidily keep your branch up to date.  This makes sence if the branch is going to be around for a little while or there is active development on the master that you need to keep up with.</p>
+<p>For branches that have been around for days or weeks, its more likey that you will benefit from a merge.  With a merge you get the full history detail, so its easier to see where things come from if there is a problem merging.</p>
+<p>Use rebase with care as you are re-writing history and loosing some information about where changes have come from.  Make sure you dont need to know the information you are ommitting with rebase.  </p>
+<h1 id="Interactive-Rebasing"><a href="#Interactive-Rebasing" class="headerlink" title="Interactive Rebasing"></a>Interactive Rebasing</h1><h2 id="merging-two-commits-together"><a href="#merging-two-commits-together" class="headerlink" title="merging two commits together"></a>merging two commits together</h2><p>If you have done two commits that should really be one, then you can use rebase interactive to join those commits (squash them in git terms).</p>
+<p>‘’’’’’</p>
+<h1 id="intractively-rebase-the-last-three-commits"><a href="#intractively-rebase-the-last-three-commits" class="headerlink" title="intractively rebase the last three commits"></a>intractively rebase the last three commits</h1><p>git rebase -i HEAD~2<br>‘’’’</p>
+<h1 id="an-editor-opens-up-and-lets-you-edit-the-commits-in-this-case-the-last-commit-will-be-merged-into-the-one-before-it"><a href="#an-editor-opens-up-and-lets-you-edit-the-commits-in-this-case-the-last-commit-will-be-merged-into-the-one-before-it" class="headerlink" title="an editor opens up and lets you edit the commits, in this case, the last commit will be merged into the one before it."></a>an editor opens up and lets you edit the commits, in this case, the last commit will be merged into the one before it.</h1><p>pick 4b65a5a Add tests<br>pick f239187 Implement poodles<br>squash c3f863f Add title to poodle page</p>
+<h1 id="Git-attributes-file"><a href="#Git-attributes-file" class="headerlink" title="Git attributes file"></a>Git attributes file</h1><p>Tell git how to manage particular file types</p>
+<p>For example:</p>
+<ul>
+<li>text=auto<br><em>.rb text
+</em>.js text<br><em>.bat text eol=crlf 
+</em>.sh text eol=lf</li>
+</ul>
+<p>*.png binary</p>
+<h1 id="Submodules"><a href="#Submodules" class="headerlink" title="Submodules"></a>Submodules</h1><h2 id="Avoid-double-pushing"><a href="#Avoid-double-pushing" class="headerlink" title="Avoid double pushing"></a>Avoid double pushing</h2><p>As we have seen, when you make changes to a submodule, as well as pushing the changes in that submodule you also need to push the parent repository.  The parent has a reference to a SHA of what it knows as the latest commit for the submodule.  If the parent is pushed without the submodule, then the new commit refered to by the parent is not present in everyone elses repository.</p>
+<p>Manage this automatically using the –recurse-submodules option on-demand</p>
+<pre><code>git push --recurse-submodules=on-demand
+</code></pre><p>Create an alias for this option so that you dont have to type it all (or remember it all if you pick a meaningful alias)</p>
+<pre><code>git config alias.pushall &apos;push --recurse-submodules=on-demand&apos;    
+</code></pre><p>additional topics</p>
+<pre><code>Repositories
+Commits
+Viewing changes
+Alias
+Going forward to fix mistakes
+Tags
+Remotes
+Github
+Branching &amp; merging - when to do it
+Stashing
+Rebasing is evil !!!
+Cherry picking
+Patches
+Bisect
+Rerere
+Blame
+Common workflows
+Continuous Integration with Travis
+</code></pre>
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/git-workshop/wip.html" data-id="cl2mbqfud005vzqmj9vj05cau" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/git-workshop/wip.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/git-workshop/wip.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

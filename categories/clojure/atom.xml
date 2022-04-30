@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jr0cket]]></title>
+  <subtitle><![CDATA[community developer]]></subtitle>
+  <link href="categories/clojure/atom.xml" rel="self"/>
+  <link href="http://jr0cket.co.uk/"/>
+  <updated>2022-01-02T20:20:15.290Z</updated>
+  <id>http://jr0cket.co.uk/</id>
+  
+  <author>
+    <name><![CDATA[John Stevenson]]></name>
+    <email><![CDATA[john@jr0cket.co.uk]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Call for Speakers: London Clojurian Conference 2016]]></title>
+    <link href="http://jr0cket.co.uk/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html"/>
+    <id>http://jr0cket.co.uk/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html</id>
+    <published>2016-08-05T10:50:20.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>December 2016 we celebrate the sixth birthday of <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016" target="_blank" rel="noopener">ClojureX</a>, a two-day conference organised by the <a href="http://www.meetup.com/London-Clojurians/" target="_blank" rel="noopener">London Clojurians</a> and <a href="https://skillsmatter.com/" target="_blank" rel="noopener">SkillsMatter</a>.  Submit your talk ideas by 30th August to take part in the fun. </p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLScnCDLTwQkwLnC-HFDHzI1rs-oUovOhP9VR9Y5QW2rXNR7DVg/viewform?c=0&amp;w=1" target="_blank" rel="noopener"><img src="/images/clojurex-cfp-deadline-button.png" alt="ClojureX CFP deadline - 30th August"></a></p>
+<p><a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016#other_conferences" target="_blank" rel="noopener">Previous conferences</a> have included a diverse range of topics and speakers in the areas of Clojure, Clojurescript and Functional Programming.  At last years conference we were quite surprised how many people are already using Clojure at work.  In 2014 we ran a poll of our audience and 18% were using Clojure on a daily basis.  For the same poll in 2015, 78% were using Clojure for their daily work.  What will the 2016 poll reveal?</p>
+<p>The London Clojure community continues to grow and we want to hear all your stories and learn from your experiences, no matter how long you have been working with Clojure.  So please consider <a href="https://docs.google.com/forms/d/e/1FAIpQLScnCDLTwQkwLnC-HFDHzI1rs-oUovOhP9VR9Y5QW2rXNR7DVg/viewform?c=0&amp;w=1" target="_blank" rel="noopener">submitting a talk</a> (or several talks) to the <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016" target="_blank" rel="noopener">ClojureX conference</a> in London on the 1st &amp; 2nd December.</p>
+<p>If you have never spoken before or want some handy hints on presenting and getting your talk accepted for Clojure eXchange, then join our workshop on <a href="http://www.meetup.com/London-Clojurians/events/232445819/" target="_blank" rel="noopener">Giving your first Meetup or Clojure eXchange talk</a> on 2nd August, 2016 (video coming soon).</p>
+<blockquote>
+<p>Anyone accepted to speak at the Clojure eXchange conference gets a free ticket, or re-imbursed if you have already purchased a ticket.  You also get a free ticket for a friend.  A 25% discount on ticket purchase for anyone who submits to the CFP but does not get accepted.</p>
+</blockquote>
+<a id="more"></a>
+<p><a href="http://www.meetup.com/London-Clojurians/" target="_blank" rel="noopener"><img src="/images/london-clojurians-banner.png" alt="Join in the fun of functional programming with the London Clojurians"></a></p>
+<h1 id="Conference-day-s"><a href="#Conference-day-s" class="headerlink" title="Conference day(s)"></a>Conference day(s)</h1><p>The conference is a single track over two days.  Each day starts with a 45 minute keynote and then 30 minute talks for the rest of the day, with 10 minute lightning talks after lunch.  There is also the option of having a discussion panel at the end of each day.</p>
+<p><img src="/images/clojurex-talk-henry-garner.png" alt="ClojureX 2016 talks on the big screen"></p>
+<h1 id="Why-attend"><a href="#Why-attend" class="headerlink" title="Why attend"></a>Why attend</h1><p>Of course we try and get a wide range of excellent talks for you to absorb during the two days.  As well as new speakers, we also get many well known speakers and developers from the community and its a chance to ask them all your burning questions in person.</p>
+<p><img src="/images/clojurex-audience-questions.png" alt="ClojureX 2016 audience interaction"></p>
+<p>There is a chance to hack along with other developers and plenty of space at the venue to create your own adhoc hacking area.  Last year we also had an improptu lunchtime hack session where a challenge was set and we paired and grouped up to see how far we could get solving that challenge.</p>
+<p><img src="/images/clojurex-2016-hacking-session.png" alt="ClojureX 2016 adhoc hacking session"></p>
+<p>Actually being at the event also allows you to talk with other developers about their experiences with Clojure, swapping tips and tricks, discussing libraries and whether your web frameworks should implement the whole of the HTTP specification.</p>
+<p>Many of the conference sponsors are hiring as are many of the developers attending, so its also a chance to look for new opportunities with companies and development teams using Clojure and functional programming</p>
+<p>As organisers we alway look to make it as easy as possible to make new friends and meet others from the London Clojurian community.  We are a friendly group and welcome anyone at any level (if you have had experences otherwise, please let me know and we will fix it).</p>
+<p><img src="/images/clojurex-2016-lunchtime-gathering.png" alt="ClojureX 2016 conference lunchtime gathering"></p>
+<h1 id="Why-submit-a-talk"><a href="#Why-submit-a-talk" class="headerlink" title="Why submit a talk"></a>Why submit a talk</h1><img src="/images/clojurex-speaker-animated.png" class="img-topic">
+<p>Apart from getting a free ticket if you get accepted, its a great opportunity to discover what ideas and topics interest you the most.  What do you care about?  What challenges do you have at work?  What iches do you want to (programmatically) scratch?  These questions are ways to focus on things you would like to talk about.</p>
+<p>If you want more talk ideas, then take a look at our past conferences to see the kinds of talks we have had before.  You may find something interesting to trigger your own ideas or find something that we havent talked about enough.</p>
+<p>Public speaking is a great way to ground your understanding of a topic and give you more confidence.  Its also great for your career and getting you noticed with prospective employers.</p>
+<p>If you want to do a talk but need some help or a confidence boost (its scary for everyone at first) then come along to the London Clojurian meetup on 2nd August where we are running a workshop on speaking at meetups and conferences.</p>
+<h1 id="Experience-reports-wanted"><a href="#Experience-reports-wanted" class="headerlink" title="Experience reports wanted"></a>Experience reports wanted</h1><img src="/images/clojurex-audience-clapping.png" class="img-topic">
+<p>Anyone can give an interesting talk and some of the most valuable are based on your own experiences and that of your team.</p>
+<p>Last year we had a great talk by William Hamilton, a lead developer at <a href="https://www.fundingcircle.com/uk/" target="_blank" rel="noopener">Funding Circle</a> who took the decision to re-architect all their software using Clojure and Clojurescript, coming from mainly a Ruby background. William talked about why such a change was valuable to the company, what the challenges were, how they trained people and helped them make the switch.  William also discussed the new Clojure &amp; Kafka based architect for their back-end services.  It was a facinating way to round of the conference.</p>
+<h1 id="Previous-conferences"><a href="#Previous-conferences" class="headerlink" title="Previous conferences"></a>Previous conferences</h1><p>All the content from our <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016#other_conferences" target="_blank" rel="noopener">previous conferences</a> are available via the <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016#other_conferences" target="_blank" rel="noopener">ClojureX Conference page</a> on the SkillsMatter website.  This includes videos of the sessions and pictures from the event to help you get a sense of what it will be like.</p>
+<p><img src="/images/clojurex-social-with-bruce.png" alt="Getting social with Bruce, the father and hugmaster of the London Clojure community"></p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>Help make <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016" target="_blank" rel="noopener">ClojureX 2016</a> our best conference so far by <a href="https://docs.google.com/forms/d/e/1FAIpQLScnCDLTwQkwLnC-HFDHzI1rs-oUovOhP9VR9Y5QW2rXNR7DVg/viewform?c=0&amp;w=1" target="_blank" rel="noopener">submitting a talk</a> (or as many talks as you want).</p>
+<p>If you have never spoken before or want some handy hints on presenting and getting your talk accepted for Clojure eXchange, then join our workshop on <a href="http://www.meetup.com/London-Clojurians/events/232445819/" target="_blank" rel="noopener">Giving your first Meetup or Clojure eXchange talk</a> on 2nd August, 2016.</p>
+<p>Anyone accepted to speak at the Clojure eXchange conference gets a free ticket, or re-imbursed if you have already purchased a ticket.  If accepted you also get a free ticket for someone else.  </p>
+<p>There is a 25% discount on tickets for anyone who submits a session but does not get accepted.</p>
+<p><a href="http://www.meetup.com/London-Clojurians/" target="_blank" rel="noopener"><img src="/images/london-clojurians-banner.png" alt="Join in the fun of functional programming with the London Clojurians"></a></p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>December 2016 we celebrate the sixth birthday of <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016" target="_blank" rel="noopener">ClojureX</a>, a two-day conference organised by the <a href="http://www.meetup.com/London-Clojurians/" target="_blank" rel="noopener">London Clojurians</a> and <a href="https://skillsmatter.com/" target="_blank" rel="noopener">SkillsMatter</a>.  Submit your talk ideas by 30th August to take part in the fun. </p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLScnCDLTwQkwLnC-HFDHzI1rs-oUovOhP9VR9Y5QW2rXNR7DVg/viewform?c=0&amp;w=1" target="_blank" rel="noopener"><img src="/images/clojurex-cfp-deadline-button.png" alt="ClojureX CFP deadline - 30th August"></a></p>
+<p><a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016#other_conferences" target="_blank" rel="noopener">Previous conferences</a> have included a diverse range of topics and speakers in the areas of Clojure, Clojurescript and Functional Programming.  At last years conference we were quite surprised how many people are already using Clojure at work.  In 2014 we ran a poll of our audience and 18% were using Clojure on a daily basis.  For the same poll in 2015, 78% were using Clojure for their daily work.  What will the 2016 poll reveal?</p>
+<p>The London Clojure community continues to grow and we want to hear all your stories and learn from your experiences, no matter how long you have been working with Clojure.  So please consider <a href="https://docs.google.com/forms/d/e/1FAIpQLScnCDLTwQkwLnC-HFDHzI1rs-oUovOhP9VR9Y5QW2rXNR7DVg/viewform?c=0&amp;w=1" target="_blank" rel="noopener">submitting a talk</a> (or several talks) to the <a href="https://skillsmatter.com/conferences/7430-clojure-exchange-2016" target="_blank" rel="noopener">ClojureX conference</a> in London on the 1st &amp; 2nd December.</p>
+<p>If you have never spoken before or want some handy hints on presenting and getting your talk accepted for Clojure eXchange, then join our workshop on <a href="http://www.meetup.com/London-Clojurians/events/232445819/" target="_blank" rel="noopener">Giving your first Meetup or Clojure eXchange talk</a> on 2nd August, 2016 (video coming soon).</p>
+<blockquote>
+<p>Anyone accepted to speak at the Clojure eXchange conference gets a free ticket, or re-imbursed if you have already purchased a ticket.  You also get a free ticket for a friend.  A 25% discount on ticket purchase for anyone who submits to the CFP but does not get accepted.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Clojure Dojo: Celebrity Name Smash - June 2016]]></title>
+    <link href="http://jr0cket.co.uk/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html"/>
+    <id>http://jr0cket.co.uk/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html</id>
+    <published>2016-06-28T21:29:04.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>The June 2016 edition of the London Clojurians coding dojo set the challenge of building a celebrity name smash, taking two “celebrities” and smashing their names together to make a weird or ammusing gestalt name.</p>
+<p>For bonus points the challenge would include this celebrity name smash as a service and even more bonus points if using the new <code>clojure.spec</code> library to put specifications around data structures and functions.</p>
+<blockquote>
+<p>Bonus points are non-redeemable, sorry!</p>
+</blockquote>
+<p>Although our group didnt get get any of the bonus levels, here is the blow by blow development of our code for the Celebrity Name Smash.</p>
+<a id="more"></a>
+<p><a href="http://www.meetup.com/London-Clojurians/" target="_blank" rel="noopener"><img src="/images/london-clojurians-banner.png" alt="Join in the fun of functional programming with the London Clojurians"></a></p>
+<h1 id="A-simple-leiningen-project-to-start"><a href="#A-simple-leiningen-project-to-start" class="headerlink" title="A simple leiningen project to start"></a>A simple leiningen project to start</h1><p>We created a default Clojure project to start using the following leiningen command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lein new celebrity-name-smash</span><br></pre></td></tr></table></figure>
+<p>This created a simple project using Clojure 1.8.0.  If we had chosen to use <code>clojure.spec</code> as well then we would have updated the <code>project.clj</code> file to use Clojure 1.9.x as a dependency instead. </p>
+<h1 id="Modeling-the-Celebrities"><a href="#Modeling-the-Celebrities" class="headerlink" title="Modeling the Celebrities"></a>Modeling the Celebrities</h1><p>The simplest way to represent a celebrity name is in a string.  So we bount a name called <code>celebrities</code> to a string containing the first celebrity we could think of</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> celbrties <span class="string">"Brad Pitt"</span>)</span><br></pre></td></tr></table></figure>
+<p>As we want to have two celebrties then we changed the data structure into a Clojure vector.  A vector is the most flexible data structure in Clojure.  So we redefined the name <code>celebrities</code> to be bound to a vector of strings containing the first celebrity couple we could think of.</p>
+<figure class="highlight clj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> celebrities [<span class="string">"Brad Pitt"</span> <span class="string">"Angelina Jolie"</span>])</span><br></pre></td></tr></table></figure>
+<h1 id="Splitting-names"><a href="#Splitting-names" class="headerlink" title="Splitting names"></a>Splitting names</h1><p>Each celebrity has a first and last name, so we need to split them into individual strings first.</p>
+<blockquote>
+<p>We decided to exclude celebrities with just a single name.</p>
+</blockquote>
+<p>From a quick Google we found the <a href="https://clojuredocs.org/clojure.string/split" target="_blank" rel="noopener">clojure.string/split</a> function that will split a string on a given pattern, that pattern being a regular expression (regex).</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">clojure.string/split</span> <span class="string">"Clojure is awesome!"</span> #<span class="string">" "</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; ["Clojure" "is" "awesome!"]</span></span><br></pre></td></tr></table></figure>
+<p>The regular expression pattern <code>&quot; &quot;</code> matches the space characters.  We could have also used <code>#&quot;+s&quot;</code> for the same results in this example, although it was felt that the space was clearer in intent.</p>
+<p>So we wrote a function called <code>name-split</code> to take a first and last name as a string and return two seperate strings, one for the first name and one for the last name.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> name-split</span><br><span class="line">  <span class="string">"Splits a celebrity name into their first &amp; last names"</span></span><br><span class="line">  [name]</span><br><span class="line">  (<span class="name">str/split</span> name #<span class="string">" "</span>))</span><br></pre></td></tr></table></figure>
+<p>We tested the <code>name-split</code> function in the repl</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">name-split</span> <span class="string">"Brad Pitt"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt;["Brad" "Pitt"]</span></span><br></pre></td></tr></table></figure>
+<p>We could now succesfully split the full name of a celebrity into their first and last names.</p>
+<blockquote>
+<p>A more advanced example of splitting up words would be to use re-seq with a regex patter, as in the <a href="https://github.com/practicalli/clojure-through-code/blob/master/src/clojure_through_code/xx-hhgttg-book.clj" target="_blank" rel="noopener">HHGTTG book processing example in clojure-through-code</a>.</p>
+</blockquote>
+<h1 id="Creating-sub-strings-of-names-the-long-way"><a href="#Creating-sub-strings-of-names-the-long-way" class="headerlink" title="Creating sub-strings of names the long way"></a>Creating sub-strings of names the long way</h1><p>As the aim of our code is to create silly and weird names from celebrity names, we wont get the desired results with just the first and last names.  So we take those and split them.</p>
+<p>At first we decided to split them in half, rounding down for odd lenght names.</p>
+<p>As a Clojure String can be used like a collection of characters, we could simply <code>take</code> the first x number of characters.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">take</span></span> <span class="number">2</span> <span class="string">"Brad"</span>)</span><br><span class="line"><span class="comment">;; =&gt; (\B \r)</span></span><br></pre></td></tr></table></figure>
+<p>The value returned is a list of characters, so we would have to combine them back into a string.  Just using the <code>str</code> function on the result of the <code>take</code> function returned a lazy sequence.  To get a string we needed to <code>apply</code> or <code>reduce</code> with the <code>str</code> function</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">;; (str (take 2 "Brad")) </span></span><br><span class="line"><span class="comment">;; =&gt; "clojure.lang.LazySeq@c31"</span></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">apply</span></span> str (<span class="name"><span class="builtin-name">take</span></span> <span class="number">2</span> <span class="string">"Brad"</span>))   <span class="comment">;; =&gt; "Br"</span></span><br><span class="line">(<span class="name"><span class="builtin-name">reduce</span></span> str (<span class="name"><span class="builtin-name">take</span></span> <span class="number">2</span> <span class="string">"Brad"</span>))  <span class="comment">;; =&gt; "Br"</span></span><br></pre></td></tr></table></figure>
+<p>To do this for a name of any length we would need to <code>count</code> the string characters and divide by 2.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">take</span></span> (/ (<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Brad"</span>) <span class="number">2</span>) <span class="string">"Brad"</span>)</span><br><span class="line"><span class="comment">;; =&gt; (\B \r)</span></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">apply</span></span> str (<span class="name"><span class="builtin-name">take</span></span> (/ (<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Brad"</span>) <span class="number">2</span>) <span class="string">"Brad"</span>))</span><br><span class="line"><span class="comment">;; =&gt; "Br"</span></span><br></pre></td></tr></table></figure>
+<p>This code also works for names that have an odd number of characters.  When the odd number of characters is divided by two, a Clojure ratio type is used to hold the result rather than return a decimal value.  The <code>take</code> function calculated the value of the ratio type and rounds it to the nearest whole number.</p>
+<p>Here is a breakdown of how this code works with a name containing an odd number of characters.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Bradley"</span>)</span><br><span class="line"><span class="comment">;; =&gt; 7</span></span><br><span class="line"></span><br><span class="line">(/ (<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Bradley"</span>) <span class="number">2</span>)</span><br><span class="line"><span class="comment">;; =&gt; 7/2</span></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">take</span></span> (/ (<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Bradley"</span>) <span class="number">2</span>) <span class="string">"Bradley"</span>)</span><br><span class="line"><span class="comment">;; =&gt; (\B \r \a \d)</span></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">apply</span></span> str (<span class="name"><span class="builtin-name">take</span></span> (/ (<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Bradley"</span>) <span class="number">2</span>) <span class="string">"Bradley"</span>))</span><br><span class="line"><span class="comment">;; =&gt; "Brad"</span></span><br></pre></td></tr></table></figure>
+<h1 id="Creating-sub-strings-the-short-way"><a href="#Creating-sub-strings-the-short-way" class="headerlink" title="Creating sub-strings the short way"></a>Creating sub-strings the short way</h1><p>After reviewing this code it seemed a little complex for what we wanted, so a quick Google gave us the <code>subs</code> function.  The <code>subs</code> function takes a string and a starting point for the split, with an optional end point</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">subs</span> <span class="string">"Brad"</span> <span class="number">0</span> <span class="number">2</span>)</span><br><span class="line"><span class="comment">;; =&gt; "Br"</span></span><br><span class="line"></span><br><span class="line">(<span class="name">subs</span> <span class="string">"Brad"</span> <span class="number">2</span>)</span><br><span class="line"><span class="comment">;; =&gt; "ad"</span></span><br><span class="line"></span><br><span class="line">(<span class="name">subs</span> <span class="string">"Bradley"</span> <span class="number">0</span> (/ (<span class="name"><span class="builtin-name">count</span></span> <span class="string">"Bradley"</span>) <span class="number">2</span>))</span><br><span class="line"><span class="comment">;; =&gt; "Bra"</span></span><br></pre></td></tr></table></figure>
+<p>So when we want the first part of the name we give the <code>subs</code> function a start point and an end point for the sub-division.  For the last part of a name we simply give the start point for the sub-division.</p>
+<blockquote>
+<p><strong>Hint</strong> If the <code>take</code> or <code>subs</code> function did not deal with odd numbers of characters, then instead of dividing by 2 we could have used the <code>quot</code> function.  The <code>quote</code> function divides the first argument by the second argument, returning the result as a whole number.</p>
+</blockquote>
+<h1 id="Creating-a-subname-function-for-the-first-name"><a href="#Creating-a-subname-function-for-the-first-name" class="headerlink" title="Creating a subname function for the first name"></a>Creating a subname function for the first name</h1><p>We created a function that takes the name as a argument and returns the substring for the first half of the name</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> first-celeb-subname [name]</span><br><span class="line">  (<span class="name"><span class="builtin-name">let</span></span> [end (/ (<span class="name"><span class="builtin-name">count</span></span> name) <span class="number">2</span>)]</span><br><span class="line">    (<span class="name">subs</span> name <span class="number">0</span> end)))</span><br><span class="line"></span><br><span class="line"><span class="comment">;; calling the function with an odd lenght name</span></span><br><span class="line">(<span class="name">first-celeb-subname</span> <span class="string">"Bradley"</span>)</span><br><span class="line"><span class="comment">;; =&gt; "Bra"</span></span><br></pre></td></tr></table></figure>
+<p>We used the <code>let</code> function to create a local name (symbol) called <code>end</code> that points to the end position in the string, based on dividing the name by 2.  Then we call the <code>subs</code> fuction to get the substring from 0 to the value of <code>end</code>.</p>
+<h1 id="Creating-a-more-random-sub-name-function"><a href="#Creating-a-more-random-sub-name-function" class="headerlink" title="Creating a more random sub-name function"></a>Creating a more random sub-name function</h1><p>Just talking the half way point for our substring only gives one result.  If we add a random element to creating our substring then we should get many more variations in results.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> first-celeb-subname [name]</span><br><span class="line">  (<span class="name"><span class="builtin-name">let</span></span> [end (<span class="name"><span class="builtin-name">+</span></span> <span class="number">1</span> (<span class="name"><span class="builtin-name">rand-int</span></span> (<span class="name"><span class="builtin-name">count</span></span> name)))]</span><br><span class="line">    (<span class="name">subs</span> name <span class="number">0</span> end)))</span><br></pre></td></tr></table></figure>
+<p>A slight refinement can be made by replacing <code>+ 1</code> with the <code>inc</code> function </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> first-celeb-subname [name]</span><br><span class="line">  (<span class="name"><span class="builtin-name">let</span></span> [end (<span class="name"><span class="builtin-name">inc</span></span> (<span class="name"><span class="builtin-name">rand-int</span></span> (<span class="name"><span class="builtin-name">count</span></span> name)))]</span><br><span class="line">    (<span class="name">subs</span> name <span class="number">0</span> end)))</span><br></pre></td></tr></table></figure>
+<h1 id="A-subname-function-for-the-second-celebrity"><a href="#A-subname-function-for-the-second-celebrity" class="headerlink" title="A subname function for the second celebrity"></a>A subname function for the second celebrity</h1><p>We wanted to combine two first names and two last names to make a new first &amp; last name.  So we need a similar function to create the lastname subname</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> last-celeb-subname [name]</span><br><span class="line">  (<span class="name"><span class="builtin-name">let</span></span> [start (<span class="name"><span class="builtin-name">inc</span></span> (<span class="name"><span class="builtin-name">rand-int</span></span> (<span class="name"><span class="builtin-name">count</span></span> name)))]</span><br><span class="line">    (<span class="name">subs</span> name start)))</span><br></pre></td></tr></table></figure>
+<p>This function is almost identical to the first function, however only a start position is provided to <code>subs</code> function, creating a substring from the <code>start</code> position to the end of the name.</p>
+<h1 id="Putting-it-all-together"><a href="#Putting-it-all-together" class="headerlink" title="Putting it all together"></a>Putting it all together</h1><p>Finally we call these functions from a main function named <code>celeb-name-smash</code>, which takes two celebrity names as string arguments and returns a string containing the smashed name.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> celeb-name-smash</span><br><span class="line">  <span class="string">"Smashes to celebrity names together"</span></span><br><span class="line">  [celeb-one celeb-two]</span><br><span class="line">  (<span class="name"><span class="builtin-name">str</span></span> (<span class="name">first-celeb-subname</span> (<span class="name"><span class="builtin-name">first</span></span> (<span class="name">name-split</span> celeb-one)))</span><br><span class="line">       (<span class="name">second-celeb-subname</span> (<span class="name"><span class="builtin-name">first</span></span> (<span class="name">name-split</span> celeb-two)))</span><br><span class="line">       <span class="string">" "</span></span><br><span class="line">       (<span class="name">first-celeb-subname</span> (<span class="name"><span class="builtin-name">last</span></span> (<span class="name">name-split</span> celeb-one)))</span><br><span class="line">       (<span class="name">second-celeb-subname</span> (<span class="name"><span class="builtin-name">last</span></span> (<span class="name">name-split</span> celeb-two)))))</span><br><span class="line"></span><br><span class="line"><span class="comment">;; call the celeb-name-smash function with example data</span></span><br><span class="line">(<span class="name">name-smash-strings</span> <span class="string">"Brad Pitt"</span> <span class="string">"Angelina Jolie"</span>)</span><br><span class="line"><span class="comment">;; =&gt; "Brana Pitie"</span></span><br><span class="line"><span class="comment">;; =&gt; "Brelina Pie"</span></span><br><span class="line"><span class="comment">;; =&gt; "Brelina Piolie"</span></span><br><span class="line"><span class="comment">;; =&gt; "Brlina Pi"</span></span><br></pre></td></tr></table></figure>
+<p>The <code>celeb-name-smash</code> function has a lot of duplication, so should probably be refactored to make it more elegant.  However, we ran out of time at the dojo, so I will have a look at refactoring this function as homework.</p>
+<p>Thanks to everyone that took part in the <a href="http://www.meetup.com/London-Clojurians/events/231239358/" target="_blank" rel="noopener">London Clojurians dojo at Thoughworks in June 2016</a>, especially to the organisers for getting us together and feeding us lots of pizza.</p>
+<p><a href="http://www.meetup.com/London-Clojurians/" target="_blank" rel="noopener"><img src="/images/london-clojurians-banner.png" alt="Join in the fun of functional programming with the London Clojurians"></a></p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>The June 2016 edition of the London Clojurians coding dojo set the challenge of building a celebrity name smash, taking two “celebrities” and smashing their names together to make a weird or ammusing gestalt name.</p>
+<p>For bonus points the challenge would include this celebrity name smash as a service and even more bonus points if using the new <code>clojure.spec</code> library to put specifications around data structures and functions.</p>
+<blockquote>
+<p>Bonus points are non-redeemable, sorry!</p>
+</blockquote>
+<p>Although our group didnt get get any of the bonus levels, here is the blow by blow development of our code for the Celebrity Name Smash.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="dojo" scheme="http://jr0cket.co.uk/tags/dojo/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Transducers in Clojure: Getting Started]]></title>
+    <link href="http://jr0cket.co.uk/2016/06/transducers-in-clojure-getting-started.html"/>
+    <id>http://jr0cket.co.uk/2016/06/transducers-in-clojure-getting-started.html</id>
+    <published>2016-06-15T11:34:06.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="/images/clojure-logo-thumbnail.png" class="img-thumbnail">
+<p>Transducers are built upon the design princlple in Clojure of composing functions together, allowing you to elegantly abstract functional composition and create a workflow that will transform data without being tied to a specific context.  So what does that actually mean and what does the code look like?  Is there a transducer function or is it just extensions to existing functions.  These are the questions we will explore and answer.</p>
+<blockquote>
+<p>If you are in the early stages of learning Clojure, then I suggest getting your head around functions such as map &amp; reduce and composing functions with the threading macros before diving into Transducers.</p>
+</blockquote>
+<p>This is my interpretation of the really great introduction to Transducers from <a href="https://funcool.github.io/clojurescript-unraveled/" target="_blank" rel="noopener">Clojurescript Unraveled</a>, expanded with additional code and my own comments.</p>
+<a id="more"></a>
+<h2 id="Defining-a-data-structure"><a href="#Defining-a-data-structure" class="headerlink" title="Defining a data structure"></a>Defining a data structure</h2><p>Defining a data structure that will represent our fruit, including whether that fruit is rotten or clean.  We have two collections of grapes, one green, one black.  Each cluster has 2 grapes on it (not a very big cluster in this example)</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> grape-clusters</span><br><span class="line">  [&#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">             &#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]</span><br><span class="line">    <span class="symbol">:colour</span> <span class="symbol">:green</span>&#125;</span><br><span class="line">   &#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">             &#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]&#125;</span><br><span class="line">   <span class="symbol">:colour</span> <span class="symbol">:black</span>])</span><br></pre></td></tr></table></figure>
+<p>Each grape cluster has the following structure</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">          &#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]</span><br><span class="line"> <span class="symbol">:colour</span> <span class="symbol">:green</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Splitting-into-grape-clusters"><a href="#Splitting-into-grape-clusters" class="headerlink" title="Splitting into grape clusters"></a>Splitting into grape clusters</h2><p>We want to split the grape clusters into individual grapes, discarding the rotten grapes.  The remaing grapes will be checked to see if they are clean.  We should be left with one green and one black grape.</p>
+<p>First lets define a function that returns a collection of grapes, given a specific grape cluster.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> split-cluster</span><br><span class="line"><span class="string">"Takes a grape cluster and returns the vector of all the grapes in that cluster"</span></span><br><span class="line">  [cluster]</span><br><span class="line">  (<span class="symbol">:grapes</span> cluster))</span><br></pre></td></tr></table></figure>
+<p>The body of this function returns the value pointed to by the <code>:grapes</code> keyword, which will be a collection of grapes.  We do not ask for the value of :colours as in this case the colour of the grape is irelevant.</p>
+<h2 id="Testing-our-code-in-the-REPL"><a href="#Testing-our-code-in-the-REPL" class="headerlink" title="Testing our code in the REPL"></a>Testing our code in the REPL</h2><p>The grape-clusters data structure is a vector of two grape clusters.  To see what a grape cluster is, get the first element of that data structure</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">first</span></span> grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; &#123;:grapes [&#123;:rotten? false, :clean? false&#125; &#123;:rotten? true, :clean? false&#125;], :colour :green&#125;</span></span><br></pre></td></tr></table></figure>
+<p>For each cluster in grape-clusters, return just the :grapes data, ignoring the colour information</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">split-cluster</span> &#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">                         &#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]</span><br><span class="line">                <span class="symbol">:colour</span> <span class="symbol">:green</span>&#125;)</span><br><span class="line"><span class="comment">;; =&gt;[&#123;:rotten? false, :clean? false&#125; &#123;:rotten? true, :clean? false&#125;]</span></span><br></pre></td></tr></table></figure>
+<h2 id="A-filter-for-rotten-grapes"><a href="#A-filter-for-rotten-grapes" class="headerlink" title="A filter for rotten grapes"></a>A filter for rotten grapes</h2><p>We dont want to include any rotten grapes after we have processed all our clusters, so here we define a simple filter to only return grapes where <code>:rotten?</code> is false.</p>
+<p>This filter will be used on each individual grape extracted from the cluster.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> not-rotten</span><br><span class="line">  <span class="string">"Given a grape, only return it if it is not rotten.  A grape is defined as &#123;:rotten? true|false :clean? true|false&#125;"</span></span><br><span class="line">  [grape]</span><br><span class="line">  (<span class="name"><span class="builtin-name">not</span></span> (<span class="symbol">:rotten?</span> grape)))</span><br></pre></td></tr></table></figure>
+<h2 id="Cleaning-all-the-grapes"><a href="#Cleaning-all-the-grapes" class="headerlink" title="Cleaning all the grapes"></a>Cleaning all the grapes</h2><p>Any grapes we have left should be cleaned.  Rather than model the cleaning process, we have simply written a function that updates all the grapes with a value of <code>true</code> for the key <code>:clean?</code> </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clean-grape</span><br><span class="line">  <span class="string">"Given a grape, updating the grapes :clean? value to true regardless of its current value.  A grape is defined as &#123;:rotten? true|false :clean? true|false&#125;"</span></span><br><span class="line">  [grape]</span><br><span class="line">  (<span class="name"><span class="builtin-name">assoc</span></span> grape <span class="symbol">:clean?</span> <span class="literal">true</span>))</span><br></pre></td></tr></table></figure>
+<p>Lets give our clean grape function a quick test in the REPL.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">clean-grape</span> &#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;)</span><br><span class="line"><span class="comment">;; =&gt; &#123;:rotten? false, :clean? true&#125;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Functional-composition-using-the-thread-last-macro"><a href="#Functional-composition-using-the-thread-last-macro" class="headerlink" title="Functional composition using the thread last macro."></a>Functional composition using the thread last macro.</h1><p>Each line passes its evaluate value to the next line as its last argument.  Here is the algorithm we want to create with our code:</p>
+<ul>
+<li>evaluate the name grape-clusters and return the data structure it points to.</li>
+<li>use mapcat to map the split-clusters function over each element in grape-clusters, returning 4 grapes concatinated into one collection</li>
+<li>filter the 4 grapes, dropping the grapes where :rotten? equals true, returning 2 grapes</li>
+<li>update each grape to have a :clean? value of true</li>
+</ul>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">-&gt;&gt;</span></span> grape-clusters</span><br><span class="line">     (<span class="name"><span class="builtin-name">mapcat</span></span> split-cluster)</span><br><span class="line">     (<span class="name"><span class="builtin-name">filter</span></span> not-rotten)</span><br><span class="line">     (<span class="name"><span class="builtin-name">map</span></span> clean-grape))</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; (&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;)</span></span><br></pre></td></tr></table></figure>
+<h1 id="Using-partial-to-compose-functions-together"><a href="#Using-partial-to-compose-functions-together" class="headerlink" title="Using partial to compose functions together"></a>Using partial to compose functions together</h1><p>  Composing functions are read in the lisp way, so we pass the grape-clusters collection to the last composed function first</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> process-clusters</span><br><span class="line">  <span class="string">"Takes clusters of grapes and returns only the nice ones, that have been cleaned.  Using comp, read the function from the bottom up to understand the argument."</span></span><br><span class="line">  (<span class="name"><span class="builtin-name">comp</span></span></span><br><span class="line">   (<span class="name"><span class="builtin-name">partial</span></span> map clean-grape)</span><br><span class="line">   (<span class="name"><span class="builtin-name">partial</span></span> filter not-rotten)</span><br><span class="line">   (<span class="name"><span class="builtin-name">partial</span></span> mapcat split-cluster)))</span><br></pre></td></tr></table></figure>
+<p>Now lets call this composite function again…</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">process-clusters</span> grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; (&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>The <code>process-clusters</code> definition above uses the lisp way of evaluation - inside-out.</p>
+<p>Here is a simple example of evaluating a maths expression from inside-out.  Each line is the same expression, but with the innermost expression replaced by its value.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">+</span></span> <span class="number">2</span> <span class="number">3</span> (<span class="name"><span class="builtin-name">+</span></span> <span class="number">4</span> <span class="number">5</span> (/ <span class="number">24</span> <span class="number">6</span>)))   <span class="comment">;; (/ 24 6)   =&gt; 4</span></span><br><span class="line">(<span class="name"><span class="builtin-name">+</span></span> <span class="number">2</span> <span class="number">3</span> (<span class="name"><span class="builtin-name">+</span></span> <span class="number">4</span> <span class="number">5</span> <span class="number">4</span>))          <span class="comment">;; (+ 4 5 4)  =&gt; 13</span></span><br><span class="line">(<span class="name"><span class="builtin-name">+</span></span> <span class="number">2</span> <span class="number">3</span> <span class="number">13</span>)                 <span class="comment">;; (+ 2 3 13) =&gt; 18</span></span><br><span class="line"><span class="number">18</span></span><br></pre></td></tr></table></figure>
+<h1 id="Transducers-in-Clojure"><a href="#Transducers-in-Clojure" class="headerlink" title="Transducers in Clojure"></a>Transducers in Clojure</h1><p>There are several functions that work on sequences (collections) which will return what is refered to as a transducer if they are not passed a sequence as an argument.  For example, if you only pass map a function and not a collector, it returns a transducer that can be used with a collection that is passed to it later.</p>
+<p>Using the transduce feature of each of the functions in process-clusters, we can actually remove the partial function from our code and redefine a simpler version of process-clusters</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> process-clusters</span><br><span class="line">  (<span class="name"><span class="builtin-name">comp</span></span></span><br><span class="line">   (<span class="name"><span class="builtin-name">mapcat</span></span> split-cluster)</span><br><span class="line">   (<span class="name"><span class="builtin-name">filter</span></span> not-rotten)</span><br><span class="line">   (<span class="name"><span class="builtin-name">map</span></span> clean-grape)))</span><br></pre></td></tr></table></figure>
+<p>A few things changed since our previous definition process-clusters. First of all, we are using the transducer-returning versions of mapcat, filter and map instead of partially applying them for working on sequences.</p>
+<p>Also you may have noticed that the order in which they are composed is reversed, they appear in the order they are executed. Note that all map, filter and mapcat return a transducer. filter transforms the reducing function returned by map, applying the filtering before proceeding; mapcat transforms the reducing function returned by filter, applying the mapping and catenation before proceeding.</p>
+<p>One of the powerful properties of transducers is that they are combined using regular function composition. What’s even more elegant is that the composition of various transducers is itself a transducer! This means that our process-cluster is a transducer too, so we have defined a composable and context-independent algorithmic transformation.</p>
+<p>Many of the core ClojureScript functions accept a transducer, let’s look at some examples with our newly defined version of <code>process-cluster</code>:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">into</span></span> [] process-clusters grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; [&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">sequence</span></span> process-clusters grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; (&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">reduce</span></span> (<span class="name">process-clusters</span> conj) [] grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; [&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;]</span></span><br></pre></td></tr></table></figure>
+<p>Since using reduce with the reducing function returned from a transducer is so common, there is a function for reducing with a transformation called transduce. We can now rewrite the previous call to reduce using transduce:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">transduce</span> process-clusters conj [] grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; [&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;]</span></span><br></pre></td></tr></table></figure>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>This was just a brief taste of Transducers in Clojure and I hope to create more examples of their use over time.  I dont see Transducers being used too much for my own code initially, but its a useful way to abstract functional composition and make your code more reusable within your project.</p>
+<p>If you need more time for this concept to sink in, its quite alright to stay with threading macros and the partial function, or even just applying map.  I find Clojure more rewarding when you first get more comfortable with the core concepts and build on them when you are ready.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/clojure-logo-thumbnail.png" class="img-thumbnail">
+<p>Transducers are built upon the design princlple in Clojure of composing functions together, allowing you to elegantly abstract functional composition and create a workflow that will transform data without being tied to a specific context.  So what does that actually mean and what does the code look like?  Is there a transducer function or is it just extensions to existing functions.  These are the questions we will explore and answer.</p>
+<blockquote>
+<p>If you are in the early stages of learning Clojure, then I suggest getting your head around functions such as map &amp; reduce and composing functions with the threading macros before diving into Transducers.</p>
+</blockquote>
+<p>This is my interpretation of the really great introduction to Transducers from <a href="https://funcool.github.io/clojurescript-unraveled/" target="_blank" rel="noopener">Clojurescript Unraveled</a>, expanded with additional code and my own comments.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="transducers" scheme="http://jr0cket.co.uk/tags/transducers/"/>
+    
+      <category term="functional-composition" scheme="http://jr0cket.co.uk/tags/functional-composition/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Thinking Functional With Clojure at DevoxxUK 2016]]></title>
+    <link href="http://jr0cket.co.uk/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html"/>
+    <id>http://jr0cket.co.uk/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html</id>
+    <published>2016-06-08T22:01:30.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>Many languages new and old provide a way to write code using functional programming concepts, however learning those concepts can take a little time especially when they are joined with OO concepts in the same language.</p>
+<p>As Clojure has a simple syntax, many find it easier to focus on learning the concepts and design of functional programming.  Then either taking those concepts back to other languages or continuing with Clojure.</p>
+<p>At DevoxxUK 2016 I have the pleasure of running a workshop where I can help developers understand the core functional concepts, using Clojure (and Spacemacs) as simple tools.</p>
+<a id="more"></a>
+<h1 id="Who-is-the-workshop-for"><a href="#Who-is-the-workshop-for" class="headerlink" title="Who is the workshop for?"></a>Who is the workshop for?</h1><img src="https://danielpecos.com/assets/2015/04/02/xkcd-functional-252x300.png" class="img-topic">
+<p>Any developer starting to learning functional programing or interested to understand the concepts should join in.  No prior experience of Clojure is required, although you should get even more out of the workshop if you have a little experience with the language.</p>
+<p>As its DevoxxUK I’m assuming most people will have a Java background, but this is not a requirement either.</p>
+<h1 id="Workshop-Requirements"><a href="#Workshop-Requirements" class="headerlink" title="Workshop Requirements"></a>Workshop Requirements</h1><p>The requirements for the “Thinking functional” workshop are quite small and setup is relatively simple.  You will need:</p>
+<ul>
+<li><a href="https://www.java.com/en/" target="_blank" rel="noopener">Java Runtime Environment (JRE)</a> or the <a href="https://www.oracle.com/uk/java/" target="_blank" rel="noopener">Java Software Development Kit (JDK)</a> - version 8 is preferable (7 or 6 should still work)</li>
+<li><a href="http://leiningen.org/" target="_blank" rel="noopener">Leiningen.org</a> build automation tool - like Maven but without the XML (project configuration is in Clojure too)</li>
+<li>A Clojure aware editor (not essentai, but recommended)<ul>
+<li><a href="http://lighttable.com/" target="_blank" rel="noopener">LightTable.com</a> is lightweight &amp; simple to use (written in Clojure / Clojurescript)</li>
+<li><a href="http://spacemacs.org/" target="_blank" rel="noopener">Spacemacs</a> / <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> - a modern classic all powerful editor come operating system</li>
+<li><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">InteliJ idea</a> &amp; <a href="https://cursive-ide.com/" target="_blank" rel="noopener">Cursive</a> - a Java IDE that fully supports Clojure development</li>
+</ul>
+</li>
+</ul>
+<p>See my simple <a href="https://practicalli.github.io/clojure/development-environments/" target="_blank" rel="noopener">Clojure development environment guide</a> for details on setting up Java 8, Leiningen &amp; LightTable.</p>
+<h1 id="The-workshop-topics"><a href="#The-workshop-topics" class="headerlink" title="The workshop topics"></a>The workshop topics</h1><p><img src="https://d3nulzlctd9uky.cloudfront.net/blog/wp-content/uploads/2012/05/fp1.png" alt="Puur rogramming Functionally by okeef creations"></p>
+<p>With plenty of opportunity to try code out for yourself, this workshop will discuss and provide examples of the following functional programming concepts.</p>
+<ul>
+<li>Pure &amp; impure Functions</li>
+<li>Immutability &amp; persistent data structures </li>
+<li>Higher Order / First Class functions</li>
+<li>Functional composition / chaining functions</li>
+<li>Functors / map / reduce</li>
+<li>Recursion / iteration</li>
+<li>Sequence / List comprehension</li>
+<li>Lazy Evaluation (Ratios)</li>
+<li>Destructuring / pattern matching</li>
+<li>Polymorphism</li>
+<li>Tail recursion</li>
+<li>Managine state change safely</li>
+</ul>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>By the end of <a href="https://practicalli.github.io/clojure/" target="_blank" rel="noopener">this workshop</a> you should know much more about Functional Programming, wether you decide to continue with Clojure or take these concepts to another language.</p>
+<p><em>Update: The workshop is now available online, so please take a look at the <a href="https://practicalli.github.io/clojure/thinking-functionally/" target="_blank" rel="noopener">thinking functionally</a> section</em>.</p>
+<p>There are plenty of follow-on resources for Clojure &amp; functional programming included in the workshop and all code will be available in the <a href="https://github.com/practicalli" target="_blank" rel="noopener">Practicalli Github organization</a>.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>Many languages new and old provide a way to write code using functional programming concepts, however learning those concepts can take a little time especially when they are joined with OO concepts in the same language.</p>
+<p>As Clojure has a simple syntax, many find it easier to focus on learning the concepts and design of functional programming.  Then either taking those concepts back to other languages or continuing with Clojure.</p>
+<p>At DevoxxUK 2016 I have the pleasure of running a workshop where I can help developers understand the core functional concepts, using Clojure (and Spacemacs) as simple tools.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Clacks Interpreter - Going Postal at London Clojure Dojo]]></title>
+    <link href="http://jr0cket.co.uk/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html"/>
+    <id>http://jr0cket.co.uk/2016/03/clacks-interpreter-going-postal-at-london-clojure-dojo.html</id>
+    <published>2016-03-08T23:06:50.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>At the March 2016 London Clojurians code dojo at uSwitch our group created a Clacks Interpreter in honor of <a href="https://en.wikipedia.org/wiki/Terry_Pratchett" target="_blank" rel="noopener">Terry Pratchett</a>, the author of the amazing <a href="https://en.wikipedia.org/wiki/Discworld" target="_blank" rel="noopener">Discworld</a> series of books (and a few TV shows of those books too).</p>
+<p>In the 33rd Discworld novel called <a href="https://en.wikipedia.org/wiki/Going_Postal" target="_blank" rel="noopener">Going Postal</a>, messages are sent faster than a speeding horse via the <a href="https://en.wikipedia.org/wiki/Technology_of_the_Discworld#The_clacks" target="_blank" rel="noopener">Clacks</a> system.  This composes of a series of towers that cross a continent and pass messages on via combinations of lights.  Each tower sees a grid of lights from a distant tower and sends the message on to the next tower.</p>
+<blockquote>
+<p>The Clacks system was actually introduced in the 24th Discworld novel called “The Fith Elephant”, however its the “Going Postal” book where we learn the full history of the Clacks system.</p>
+</blockquote>
+<p>We created a Clacks Interpreter that converts any English message into its corresponding clacks signal, based on the <a href="https://boardgamegeek.com/image/1670734/clacks-discworld-board-game" target="_blank" rel="noopener">Clacks alphabet</a> as defined by the board game of the same name.  The board game defines the alphabet as a 2 by 3 grid (although in the Discworld its actually 8 large squares).  Naturally, the interpreter also converts the Clacks signal back into an English message too.</p>
+<p><img src="/images/discworld-clacks-alphabet.jpg" alt="Clacks: The board game - Clacks Alphabet"></p>
+<p>The code is available on Github at: <a href="https://github.com/liamjtaylor/clacks-messenger" target="_blank" rel="noopener">https://github.com/liamjtaylor/clacks-messenger</a> and read on for a walk through of how we came up with the solution.</p>
+<a id="more"></a>
+<h1 id="The-Challenge"><a href="#The-Challenge" class="headerlink" title="The Challenge"></a>The Challenge</h1><p>We wanted to be able to take any English language messages and transmit it across the clacks network, then </p>
+<h1 id="Representing-a-Clack"><a href="#Representing-a-Clack" class="headerlink" title="Representing a Clack"></a>Representing a Clack</h1><p>For each clack, we read the pattern from the top of the first column to the botton, then from the top of the second column to the bottom.  A light in a position represents a 1 value and no light represents a 0 value.  This gives us our 6 number pattern for each clack in the alphabet.</p>
+<h2 id="Deciding-the-data-structure"><a href="#Deciding-the-data-structure" class="headerlink" title="Deciding the data structure"></a>Deciding the data structure</h2><p>The initial data structure chosen was essentially just modelling each individual clack.  Since a clack is a 2x3 structure, the simplest way to represent a clacks is to have a vector that contains 2 vectors, each with three elements.</p>
+<p>So a simple expression of the letter a in the clacks alphabet would be:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>][<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+<p>Therefore we could define a single letter of our alphabet as follows: </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> a [[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>][<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+<p>Before we define the complete alphabet using this data structure, lets test if we have the right data structure for our conversion process.</p>
+<h2 id="Testing-a-simple-conversion-with-our-data-structure"><a href="#Testing-a-simple-conversion-with-our-data-structure" class="headerlink" title="Testing a simple conversion with our data structure"></a>Testing a simple conversion with our data structure</h2><p>Lets try the simplest way to convert a character into a clack:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> character-&gt;clack [character]</span><br><span class="line">  (<span class="name"><span class="builtin-name">if</span></span> (<span class="name"><span class="builtin-name">=</span></span> character <span class="string">"a"</span>)</span><br><span class="line">    a</span><br><span class="line">    (<span class="name"><span class="builtin-name">str</span></span> <span class="string">"Sorry, character is not yet in the alphabet, please create a pull request"</span>)))</span><br></pre></td></tr></table></figure>
+<p>Calling the function converts a string into the corresponding clack</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">character-&gt;clack</span> <span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
+<p>Although the code is simple for 1 character, it does hightlight the problem of converting the whole alphabet.  We would need either a deeply nested set of if statements or a very long case statement, neither of which seems to be a particularly functional approach or idiomatic Clojure.</p>
+<p>Even if we did use a case statement, how would we convert a clack back into a character?</p>
+<p>So perhaps we need to change the data structure, one that provides an easy way to map to values together.</p>
+<p>Also, there seems no value in mapping values to a 2x3 grid as long as we consistently express a clack.</p>
+<h2 id="Defining-the-alphabet-with-a-map"><a href="#Defining-the-alphabet-with-a-map" class="headerlink" title="Defining the alphabet with a map"></a>Defining the alphabet with a map</h2><p>A map data structure in Clojure is a hash map (a key &amp; value paring) for example I could define myself as a map </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">:name</span> <span class="string">"john"</span> <span class="symbol">:age</span> <span class="string">"21"</span> <span class="symbol">:twitter</span> <span class="string">"jr0cket"</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>Its very common to use Clojure keywords for the keys, to make it easy to look up a particular value by refering to the keyword.</p>
+<p>So the new design for our clacks data structure is as follows </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">:a</span> [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]&#125;</span><br></pre></td></tr></table></figure>
+<p>To help with testing this new data structure desing, we crated enough letters of the clacks alphabet to make some simple words, i.e bat</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> alphabet &#123;<span class="symbol">:a</span> [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">               <span class="symbol">:b</span> [<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line">               <span class="symbol">:t</span> [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Testing-the-map-design"><a href="#Testing-the-map-design" class="headerlink" title="Testing the map design"></a>Testing the map design</h2><p>We can use the keyword to lookup the value of its clack code</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">alphabet</span> <span class="symbol">:a</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; [0 1 0 0 0 1]</span></span><br></pre></td></tr></table></figure>
+<p>Then we created a simple function to convert a string to a sequence of clacks</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> character-&gt;clack [letter]</span><br><span class="line">  (<span class="name"><span class="builtin-name">if</span></span> (<span class="name"><span class="builtin-name">=</span></span> letter <span class="string">"a"</span>)</span><br><span class="line">    (<span class="name">alphabet</span> <span class="symbol">:a</span>)</span><br><span class="line">    (<span class="name"><span class="builtin-name">str</span></span> <span class="string">"Sorry, character is not yet in the alphabet, please create a pull request"</span>)))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>The <code>-&gt;</code> character is part of the function name.  This is a Clojure naming convention used when the function you are defining converts from one type to another.</p>
+</blockquote>
+<p>And call the function as follows</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">character-&gt;clack</span> <span class="string">"a"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; [0 1 0 0 0 1]</span></span><br></pre></td></tr></table></figure>
+<h1 id="Converting-a-word"><a href="#Converting-a-word" class="headerlink" title="Converting a word"></a>Converting a word</h1><p>Now we want to convert a whole word to a clacks sequence.  It seemed the easiest way to convert a whole word was to convert each letter at a time using the map to look up each clack code, returning all the clacks codes in a sequence.</p>
+<p>So we redefined the <code>string-&gt;clacks</code> function to take in a whole word.  </p>
+<p>We used the <code>map</code> function to apply a conversion function over each element in the word (each element of the string).  This conversion function called <code>clacksify</code>.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clacksify [letter]</span><br><span class="line">  (<span class="name"><span class="builtin-name">let</span></span> [character (<span class="name"><span class="builtin-name">str</span></span> letter)]</span><br><span class="line">  (<span class="name">alphabet</span> (<span class="name"><span class="builtin-name">keyword</span></span> character))))</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> string-&gt;clacks [word]</span><br><span class="line">  (<span class="name"><span class="builtin-name">map</span></span> clacksify word))</span><br></pre></td></tr></table></figure>
+<p>Now we could convert any workd that used the letters of our limted alphabet.  We chose bat as a simple word.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">string-&gt;clacks</span> <span class="string">"bat"</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>As we are passing a string and not a keyword to the <code>clacksify</code> function, then we first convert the string to a keyword using the <code>keyword</code> function.</p>
+</blockquote>
+<h1 id="Converting-the-clack-to-a-string"><a href="#Converting-the-clack-to-a-string" class="headerlink" title="Converting the clack to a string"></a>Converting the clack to a string</h1><p>Is there a simple way to look up a key given a value that is unique in the map?  </p>
+<p>All Clack codes are unique in the map, but there did not seem to be a simple expression to find the key when given a value.</p>
+<p>We could have created a second mapping, however having two maps seemed redundant and a potential cause for silly bugs.</p>
+<p>The answer was simple once we found it.  As the clack codes are unique, they could be used as keys for the letter values, we just needed to swap the map around.  Swapping a map’s keys and values was done by writing a <code>reverse-map</code> function.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> reverse-map</span><br><span class="line">  <span class="string">"Reverse the keys and value pairs in a map.</span></span><br><span class="line"><span class="string">  Allows the map to be used to convert from a clack to a letter without defining a second map"</span></span><br><span class="line">  [m]</span><br><span class="line">  (<span class="name"><span class="builtin-name">into</span></span> &#123;&#125; (<span class="name"><span class="builtin-name">map</span></span> (<span class="name"><span class="builtin-name">fn</span></span> [[a b]] [b a]) m)))</span><br></pre></td></tr></table></figure>
+<p>So we defined the function <code>declacksify</code> which takes a clack code and returns its corresponding character.  The clack code returns the corresponding keyword rather than a character, so we use the <code>name</code> function to convert the keyword into a character name.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> declacksify [clack]</span><br><span class="line">  (<span class="name"><span class="builtin-name">name</span></span> ((<span class="name">reverse-map</span> alphabet) clack)))</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clacks-&gt;string [clacks]</span><br><span class="line">  (<span class="name"><span class="builtin-name">map</span></span> declacksify clacks))</span><br></pre></td></tr></table></figure>
+<p>So calling these functions with a clacks </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">declacksify</span>  [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>])</span><br><span class="line"><span class="comment">;; =&gt; "t"</span></span><br><span class="line"></span><br><span class="line">(<span class="name">clacks-&gt;string</span> [[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>] [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]])</span><br><span class="line"><span class="comment">;; =&gt; ("b" "a" "t")</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Its probably at this point we should have realised that we didnt need to use keywords to represent the characters of the alphabet.  In fact, using keywords made a little more work for us.</p>
+</blockquote>
+<h1 id="Tyding-up-the-output"><a href="#Tyding-up-the-output" class="headerlink" title="Tyding up the output"></a>Tyding up the output</h1><p>Our <code>clacks-&gt;string</code> function returns the right result, but not quite in the format we want.  Rather than a single string, we get the individual characters.</p>
+<p>Using the <code>reduce</code> function we can apply the <code>str</code> function over the resulting characters to give a single string.  So our function becomes</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clacks-&gt;string [clacks]</span><br><span class="line">(<span class="name"><span class="builtin-name">map</span></span> str (<span class="name"><span class="builtin-name">map</span></span> declacksify clacks)))</span><br></pre></td></tr></table></figure>
+<h1 id="Working-with-another-language"><a href="#Working-with-another-language" class="headerlink" title="Working with another language"></a>Working with another language</h1><p>Thanks to a flexible design with no side effects or side causes then its really easy to replace the English language alphabet with another language that can be encoded into Clack codes.  So languages based on the greek, latin or cyrilic alphabet could be send if a suitable alphabet with clack codes is supplied.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>We were quite happy with the code produced in this dojo.  The code is pretty readable we believe and we have taken a fairly simple approach to the design.  In hindsight we could have made the code even easier if we had tested out the map data structure a little more and used a string character for each letter in the alphabet.</p>
+<p>Working in an editor attached to a REPL worke well (Vim in this case, but not relevant to the development of the code).  The behaviour of the code was tested with almost every expression, so we gained a good understanding of each line of code.</p>
+<p>There are ideas to take this further and show a visual representation of a message passing through a chain of clack tower, showing how the message would pass through the system at a human speed.  This woud assume a fixed time to show a clacks between each clack tower and a minimum level of speed by the human part of the clacks tower.</p>
+<p>No REPL’s were harmed in the making of this code, although one REPL was heavily used.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>At the March 2016 London Clojurians code dojo at uSwitch our group created a Clacks Interpreter in honor of <a href="https://en.wikipedia.org/wiki/Terry_Pratchett" target="_blank" rel="noopener">Terry Pratchett</a>, the author of the amazing <a href="https://en.wikipedia.org/wiki/Discworld" target="_blank" rel="noopener">Discworld</a> series of books (and a few TV shows of those books too).</p>
+<p>In the 33rd Discworld novel called <a href="https://en.wikipedia.org/wiki/Going_Postal" target="_blank" rel="noopener">Going Postal</a>, messages are sent faster than a speeding horse via the <a href="https://en.wikipedia.org/wiki/Technology_of_the_Discworld#The_clacks" target="_blank" rel="noopener">Clacks</a> system.  This composes of a series of towers that cross a continent and pass messages on via combinations of lights.  Each tower sees a grid of lights from a distant tower and sends the message on to the next tower.</p>
+<blockquote>
+<p>The Clacks system was actually introduced in the 24th Discworld novel called “The Fith Elephant”, however its the “Going Postal” book where we learn the full history of the Clacks system.</p>
+</blockquote>
+<p>We created a Clacks Interpreter that converts any English message into its corresponding clacks signal, based on the <a href="https://boardgamegeek.com/image/1670734/clacks-discworld-board-game" target="_blank" rel="noopener">Clacks alphabet</a> as defined by the board game of the same name.  The board game defines the alphabet as a 2 by 3 grid (although in the Discworld its actually 8 large squares).  Naturally, the interpreter also converts the Clacks signal back into an English message too.</p>
+<p><img src="/images/discworld-clacks-alphabet.jpg" alt="Clacks: The board game - Clacks Alphabet"></p>
+<p>The code is available on Github at: <a href="https://github.com/liamjtaylor/clacks-messenger" target="_blank" rel="noopener">https://github.com/liamjtaylor/clacks-messenger</a> and read on for a walk through of how we came up with the solution.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="terry-pratchett" scheme="http://jr0cket.co.uk/tags/terry-pratchett/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Clojure Templates Are Easy With Leiningen]]></title>
+    <link href="http://jr0cket.co.uk/2015/03/clojure-templates-are-easy-with-leiningen.html"/>
+    <id>http://jr0cket.co.uk/2015/03/clojure-templates-are-easy-with-leiningen.html</id>
+    <published>2015-03-09T22:58:28.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>  Using templates to create your Clojure projects can save you a lot of setup time and ensure your team is using the same base configuration and dependencies.  There are <a href="https://clojars.org/search?q=lein-template" target="_blank" rel="noopener">templates on Clojars.org</a>, however I’ll show you how easy it is to create your own with <a href="http://leiningen.org" target="_blank" rel="noopener">Leiningen</a>.</p>
+<p>  I’ll create a simple template based on the leiningen default template, adding a section in the project.clj to give a custom propmt when run in the repl.</p>
+<blockquote>
+<p>Templates used to be a Leinigen pluging called <a href="https://github.com/Raynes/lein-newnew" target="_blank" rel="noopener">lein-newnew</a> and its repo was the only doucmentation I found and was a little outdated.  The plugin is now part of Leiningen and there are a few <a href="https://github.com/technomancy/leiningen/tree/master/src/leiningen/new" target="_blank" rel="noopener">built in templates</a>.  There is also information via <code>lein help new</code>.</p>
+</blockquote>
+<blockquote>
+<p>If you want to create a template in a more automatic way from a more complete project you created, take a look at the <a href="https://github.com/tcw/lein-create-template" target="_blank" rel="noopener">lein-create-template</a> Leinignen plugin.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Creating-templates"><a href="#Creating-templates" class="headerlink" title="Creating templates"></a>Creating templates</h2><p>  A Clojure template is created in the same was as a Clojure project, however a template called <code>template</code> is used</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lein new template your-template-name</span><br></pre></td></tr></table></figure>
+<p>  I created a new template called <code>jr0cket-prompt</code>, so where you see this name in the following commands, substitue your own template name</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lein new template jr0cket-prompt</span><br></pre></td></tr></table></figure>
+<p><img src="/images/leiningen-template-new-jr0cket-prompt.png" alt></p>
+<blockquote>
+<p>The documentation for <em>lein-newnew</em> uses the <code>--to-dir</code> to specify the name of a directory to create the template in.  This is only useful if you want to give the directory a different name to the template name.</p>
+</blockquote>
+<h2 id="Overview-of-the-template"><a href="#Overview-of-the-template" class="headerlink" title="Overview of the template"></a>Overview of the template</h2><p><img src="/images/leiningen-template-new-jr0cket-prompt-tree.png" alt="Directory structure of jr0cket-prompt template"></p>
+<p><code>project.clj</code> - this is the same as any other project.clj file, except the project name has <code>/lein-template</code> after it.  This allows leiningen find it on <a href="http://clojars.org" target="_blank" rel="noopener">Clojars.org</a>.</p>
+<p><code>source/leiningen/new/clj_jr0cket_dojo_template.clj</code> - defines how a project is created from this template.  For example, defining which files the template generates and how it creates them.</p>
+<p><code>resources/leiningen/new/clj_jr0cket_dojo/</code> - this is where you put all the source &amp; project files that make up your template, using tags where the name of a new project should be substituted.</p>
+<h2 id="Configure-the-template-definition"><a href="#Configure-the-template-definition" class="headerlink" title="Configure the template definition"></a>Configure the template definition</h2><p>  My template will have a customised <code>project.clj file</code>.  The rest of the template is the same as the default Leiningen template. So I edited the <code>src/leiningen/new/jr0cket_prompt.clj</code> and added code to create the threee files for my project, in the correct paths.</p>
+<blockquote>
+<p> The project contains a <code>project.clj</code> file containing my prompt modifications and the <code>core.clj</code> file for the <code>src</code> and <code>test</code> branch.</p>
+</blockquote>
+<blockquote>
+<p>The <code>sanitized</code> tag is used to change any <code>-</code> characters in the project name to <code>_</code> characters, so the directory names do not cause issues for Java.  The <code>render</code> specifies which file in the <code>resources</code> directory a new file is generated from.</p>
+</blockquote>
+<p><img src="/images/leiningen-template-new-jr0cket-prompt-definition.png" alt="Leiningen template definition - files to be generated by the template"></p>
+<h2 id="Copy-files-into-the-template"><a href="#Copy-files-into-the-template" class="headerlink" title="Copy files into the template"></a>Copy files into the template</h2><p>  I now add the files to the <code>resources</code> directory that my new project files are generated from, configuring each file to substitute the namespace and any other project specific information.</p>
+<p>  From a project I previosly created with <code>lein new</code>, I copied over a <code>project.clj</code> file along with a <code>core.clj</code> file for <code>src</code> and <code>core_test.clj</code> for <code>test</code> directories.  These files all reside under <code>resources/leiningen/new/jr0cket_prompt/</code>.</p>
+<h2 id="Add-placeholder-names-to-the-template"><a href="#Add-placeholder-names-to-the-template" class="headerlink" title="Add placeholder names to the template"></a>Add placeholder names to the template</h2><p>  When a new Clojure project is created with your template, in this case using <code>lein new jr0cket-prompt new-project</code>, the name needs to be substitued into the new Clojure files so they have the correct namespace for the project.  The new <code>project.clj</code> file also needs to use the name of the new Clojure project.</p>
+<p>  I edited the <code>project.clj</code> file to add the custom prompt information and a placeholder for the new project name.</p>
+<p><img src="/images/leiningen-template-new-jr0cket-prompt-project.png" alt="Leiningen template - custom project.clj file"></p>
+<p>  For the <code>src/project/core.clj</code> and <code>test/project/core.clj</code> I add the name tag to the namespace definition.</p>
+<p><img src="/images/leiningen-template-new-jr0cket-prompt-core.png" alt="Leiningen template - src core.clj file"></p>
+<p><img src="/images/leiningen-template-new-jr0cket-prompt-core_test.png" alt="Leiningen template - test core_test.clj file"></p>
+<h2 id="Testing-the-template"><a href="#Testing-the-template" class="headerlink" title="Testing the template"></a>Testing the template</h2><p>  Build the template project into a <code>.jar</code> file using leiningen by running the following command within the template directory:</p>
+<pre><code>lein jar
+</code></pre><p>  Now change to the <code>target</code> directory and create a new project using leiningen.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> target</span><br><span class="line">lein new myproject-template new-project-name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>By changing into the target directory, you are placing the jar file of the template onto the Java class path and therefore making it avaialble to leiningen.</p>
+</blockquote>
+<h2 id="Installing-the-template"><a href="#Installing-the-template" class="headerlink" title="Installing the template"></a>Installing the template</h2><p>  Once you are happy with the template, you can use it locally by installing it into your library cache - <code>~/.m2/repository/</code>.  From the root of the template project, run the following command:</p>
+<pre><code>lein install
+</code></pre><h2 id="Publishing-the-template"><a href="#Publishing-the-template" class="headerlink" title="Publishing the template"></a>Publishing the template</h2><p>  Once the template is ready to share with others, you can publish the jar on <a href="http://clojars.org" target="_blank" rel="noopener">Clojars.org</a> using the following command from the root of the template project:</p>
+<pre><code>lein deploy clojars
+</code></pre><blockquote>
+<p>You should clean the project and rebuild it before publishing to Clojars to make sure there are no testing files remaining - <code>lein clean ; lein jar</code></p>
+</blockquote>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>  This has been just the simplest template I could think of.  There are many useful <a href="https://github.com/technomancy/leiningen/blob/de06302d28cfadcced25067e6ac04480f18789c5/src/leiningen/new/templates.clj" target="_blank" rel="noopener">helper functions</a> as part of Leiningen templates</p>
+<ul>
+<li><a href="https://github.com/Raynes/lein-newnew" target="_blank" rel="noopener">Lein-new project</a> - this project was merged into Leiningen.  The documentation gives a good overview, however there are smoe things that are less than ceear.</li>
+<li><a href="https://github.com/technomancy/leiningen/tree/master/src/leiningen/new" target="_blank" rel="noopener">Leiningen example templates</a> - examples of how to define a template</li>
+<li><a href="https://github.com/technomancy/leiningen/blob/de06302d28cfadcced25067e6ac04480f18789c5/src/leiningen/new/templates.clj" target="_blank" rel="noopener">Leiningen template helper functions</a> - useful functions you can call in your template definition</li>
+</ul>
+<h2 id="Community-templates-of-note"><a href="#Community-templates-of-note" class="headerlink" title="Community templates of note"></a>Community templates of note</h2><p>  Templates others have created can be <a href="https://clojars.org/search?q=lein-template" target="_blank" rel="noopener">found on Clojars.org</a>.  For example, <a href="https://github.com/james-henderson/splat" target="_blank" rel="noopener">Splat</a> is a template to create a ClojureScript single page web applications by <a href="https://github.com/james-henderson" target="_blank" rel="noopener">James Hendersons</a>.  Malcolm Sparks has templates for his <a href="http://modularity.org/" target="_blank" rel="noopener">Modularity.org projects</a>.</p>
+<p>  Got and create your own templates and contribute them back via Clojars.org.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/clojure-logo.png" class="img-thumbnail">
+<p>  Using templates to create your Clojure projects can save you a lot of setup time and ensure your team is using the same base configuration and dependencies.  There are <a href="https://clojars.org/search?q=lein-template" target="_blank" rel="noopener">templates on Clojars.org</a>, however I’ll show you how easy it is to create your own with <a href="http://leiningen.org" target="_blank" rel="noopener">Leiningen</a>.</p>
+<p>  I’ll create a simple template based on the leiningen default template, adding a section in the project.clj to give a custom propmt when run in the repl.</p>
+<blockquote>
+<p>Templates used to be a Leinigen pluging called <a href="https://github.com/Raynes/lein-newnew" target="_blank" rel="noopener">lein-newnew</a> and its repo was the only doucmentation I found and was a little outdated.  The plugin is now part of Leiningen and there are a few <a href="https://github.com/technomancy/leiningen/tree/master/src/leiningen/new" target="_blank" rel="noopener">built in templates</a>.  There is also information via <code>lein help new</code>.</p>
+</blockquote>
+<blockquote>
+<p>If you want to create a template in a more automatic way from a more complete project you created, take a look at the <a href="https://github.com/tcw/lein-create-template" target="_blank" rel="noopener">lein-create-template</a> Leinignen plugin.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="leiningen" scheme="http://jr0cket.co.uk/tags/leiningen/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Faster Clojure REPL Startup With Java 9 Snapshot]]></title>
+    <link href="http://jr0cket.co.uk/2015/01/faster-clojure-repl-startup-with-java-9-snapshot.html"/>
+    <id>http://jr0cket.co.uk/2015/01/faster-clojure-repl-startup-with-java-9-snapshot.html</id>
+    <published>2015-01-03T20:18:13.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="/images/java-logo.png" class="img-thumbnail">
+<p>  After upgrading to Java 8, Clojure development seemed faster due to quicker REPL startup times.  So when I saw a snapshot of Java 9 had been released I was hopeful that startup performance would be even faster.</p>
+<blockquote>
+<p>As Clojure runs on the Java Virtual machine (JVM), each time you start a REPL then you wait for a new JVM to start.  Other than this REPL startup, Clojure feels faster than developing with Java directly.</p>
+</blockquote>
+<p>  Here is how I set up Java 9 Snapshot on my Linux laptop (Ubuntu 14.10), it should be the same for any decent operating system.</p>
+<a id="more"></a>
+<h4 id="Installing-Java-9-Snapshot"><a href="#Installing-Java-9-Snapshot" class="headerlink" title="Installing Java 9 Snapshot"></a>Installing Java 9 Snapshot</h4><blockquote>
+<p>I could have built Java 9 from source and made a <code>.deb</code> file of it for a nice install, however the manual install is a lot quicker.</p>
+</blockquote>
+<p>  <a href="https://jdk9.java.net/download/" target="_blank" rel="noopener">Download the Java 9 snapshot</a> from the OpenJDK9 website.</p>
+<p>  I extracted the .tar.gz file into the directory <code>~/apps/openjdk</code> and created a symbolic link called <code>current</code> that pointed to the extracted directory </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar zvxf ~/Downloads/jdk-9-ea-bin-b44-linux-x64-23_dec_2014.tar.gz ~/apps/openjdk</span><br><span class="line"><span class="built_in">cd</span> ~/apps/openjdk</span><br><span class="line">ln -s jdk-9-ea-bin-b44-linux-x64-23_dec_2014 current</span><br></pre></td></tr></table></figure>
+<h4 id="Add-Java-9-to-the-system-PATH"><a href="#Add-Java-9-to-the-system-PATH" class="headerlink" title="Add Java 9 to the system PATH"></a>Add Java 9 to the system PATH</h4><p>  I currently have Java 8 installed and its picked up by the alternatives system in Ubuntu, which has java in the <code>/usr/bin</code> path.  So to run Java 9 without removing Java 8 or creating an Ubuntu package, I can simply add Java 9 executable to the start of the system path so it is picked up first.</p>
+<p>  To make the manual adding of Java to the path more robust, I use the environment vairable <code>JAVA_HOME</code> and set that to the location pointed to by the <code>current</code> symbolic link.  If I want to try a new version of Java I can simply change the symbolic link.</p>
+<p>  Add the environment variable to your shell resource configuration, eg <code>~/.bashrc</code> or <code>~/.zshrc</code> as follows</p>
+<pre><code class="bash"><span class="comment">### Java9 - from https://jdk9.java.net/download/</span>
+<span class="built_in">export</span> JAVA_HOME=/home/jr0cket/apps/openjdk/current
+<span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span>
+</code></pre>
+<p>  Now when ever I open a new command line terminal I can run Java 9 as the default Java.  I could also use <code>source ~/.bashrc</code> or <code>source ~/.zshrc</code> command to update the path in the current command line terminal. </p>
+<h4 id="Testing-Java-9"><a href="#Testing-Java-9" class="headerlink" title="Testing Java 9"></a>Testing Java 9</h4><p>  To test I have successfulling installed Java 9 I run the following commands:</p>
+<pre><code>java -version
+javac -version
+</code></pre><p>  To test the speed performance of Java 9 over Java 8 I used Light Table, a modern and easy to use development environment for Clojure.  For my performance test I opened a small project in Light Table and opened its main Clojure file.  I then started an Instarepl in Light Table for the current file.  </p>
+<p>  Using Java 8 the Instarepl took 17 seconds to start up.  Using Java 9 the Instarepl took 14 seconds to start up.</p>
+<blockquote>
+<p>The time taken for the REPL to start included checking for dependencies each time I ran it.  In each test the dependencies were all ready present so time difference is not due to downloading libraries.  There are many more tests I could run, but the biggest difference for me is in REPL startup time.</p>
+</blockquote>
+<p>  So in this basic test there is a visible improvement in REPL startup time with Java 9.  I hope that this startup time can be further reduced as Java 9 develops and the componentisation of Java via Project Jigsaw helps make Java smaller and quicker to start.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="/images/java-logo.png" class="img-thumbnail">
+<p>  After upgrading to Java 8, Clojure development seemed faster due to quicker REPL startup times.  So when I saw a snapshot of Java 9 had been released I was hopeful that startup performance would be even faster.</p>
+<blockquote>
+<p>As Clojure runs on the Java Virtual machine (JVM), each time you start a REPL then you wait for a new JVM to start.  Other than this REPL startup, Clojure feels faster than developing with Java directly.</p>
+</blockquote>
+<p>  Here is how I set up Java 9 Snapshot on my Linux laptop (Ubuntu 14.10), it should be the same for any decent operating system.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="dev-tools" scheme="http://jr0cket.co.uk/tags/dev-tools/"/>
+    
+      <category term="lighttable" scheme="http://jr0cket.co.uk/tags/lighttable/"/>
+    
+      <category term="java" scheme="http://jr0cket.co.uk/tags/java/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Clojure With Light Table and Emacs Keybindings]]></title>
+    <link href="http://jr0cket.co.uk/2015/01/clojure-with-lighttable-in-emacs-mode.html"/>
+    <id>http://jr0cket.co.uk/2015/01/clojure-with-lighttable-in-emacs-mode.html</id>
+    <published>2015-01-03T14:08:38.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[ <img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p>  When I <a href="http://clojure.practical.li" target="_blank" rel="noopener">teach people Clojure</a> I use <a href="http://lighttable.com/" target="_blank" rel="noopener">Light Table</a> because it is really simple to use and its <em>Instarepl</em> gives instant feedback of the code as you type it.  This feedback helps you understand Clojure quickly and gives you more confidence when coding.</p>
+<p>  As I do most of my Clojure development (and most everything else) in <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> I really miss the excellent Emacs keybindings when I use Light Table.  Luckily there is an <a href="https://github.com/LightTable/Emacs" target="_blank" rel="noopener">Emacs plugin for Light Table</a>, so here is a quick guide on how to install &amp; use this Emacs plugin.</p>
+<a id="more"></a>
+<h4 id="Install-Emacs-plugin-for-Light-Table"><a href="#Install-Emacs-plugin-for-Light-Table" class="headerlink" title="Install Emacs plugin for Light Table"></a>Install Emacs plugin for Light Table</h4><p>  Light Table has many plugins available and the easiest way to install them is with the plugin manager.  In Light Table, open the command bar with <code>Ctrl-Space</code> (<code>Cmd-Space</code> on MacOSX) and type <code>plugin</code></p>
+<p>  Select the plugin manager and a new window opens, listing all the currently installed plugins.  Select the <code>available</code> tab in this window.  </p>
+<p>  There are many plugins, so type <code>emacs</code> to quickly find the plugin.  Then select <code>install</code> on the Emacs plugin</p>
+<p><img src="/images/lighttable-plugins-emacs-install.png" alt="Light Table plugin manager - Emacs install"></p>
+<p>  At the time of writing, installing this plugin generates a warning message due to a format change in Light Table 0.7.0.  The plugin still works correctly however.</p>
+<p><img src="/images/lighttable-plugins-emacs-install-error-vector-map.png" alt="Light Table Emacs plugin - warning message"></p>
+<h4 id="Add-Emacs-plugin-to-Light-Table-user-behavior"><a href="#Add-Emacs-plugin-to-Light-Table-user-behavior" class="headerlink" title="Add Emacs plugin to Light Table user.behavior"></a>Add Emacs plugin to Light Table user.behavior</h4><p>  Finally, we need to edit the Light Table user behaviours to use the Emacs keybindings with the editor.</p>
+<p>  Open the command bar with <code>Ctrl-Space</code> (<code>Cmd-Space</code> on MacOSX) and type <code>behavior</code>, selecting on the <code>Settings: user Behaviours</code> command.</p>
+<p>  In the user behaviours window that opens, edit the configuration by adding the following line to the <code>editor</code> section</p>
+<pre><code>[:editor :lt.plugins.emacs/activate-emacs]
+</code></pre><p>  The user behaviors configuration should look something like this:</p>
+<p><img src="/images/lighttable-plugins-emacs-behaviors-user-editor-emacs-activate.png" alt="Light Table user behaviors configuration - Emacs activate"></p>
+<blockquote>
+<p>The format of user.behaviour has changed from Light Table version 0.7.0 onwards.  Configuration is now defined using vectors or maps, rather than lists as before.  At the time of writing, the configuration line on the Github repository README.md is incorrect (a <a href="https://github.com/LightTable/Emacs/pull/25" target="_blank" rel="noopener">pull request</a> has been created).</p>
+</blockquote>
+<h4 id="Using-Emacs-keybindings-with-Light-Table"><a href="#Using-Emacs-keybindings-with-Light-Table" class="headerlink" title="Using Emacs keybindings with Light Table"></a>Using Emacs keybindings with Light Table</h4><p>  The Emacs keybindings seem to be exactly what you would expect in Emacs.  Obviously there are a few differences between the design of Light Table and Emacs, although conceptually things seem to work the same.</p>
+<p>  Here are a few keybindings that may not be immediately obvious:</p>
+<p><code>Alt-x</code> - opens the command bar so you can find the command you want by typing - in the same way as you use <code>meta-x</code> in Emacs.</p>
+<p><code>C-x f</code> - open a file using the system file manager (Ctrl-Shift-o in Light Table default keybinding)</p>
+<p><code>C-x C-f</code> - select a file from those added to the Light Table workspace - the Light Table <code>Navigate: Open Navigate</code> command is called.</p>
+<p><code>C-x o</code> - switch to next window tab on the right - similar to the next buffer window in Emacs.</p>
+<p><code>C-x k</code> - close the current tab - similar to killing a buffer, but without a choice.</p>
+<p><code>Alt-g g</code> - go to line.</p>
+<p><code>C-x h</code> - select all.</p>
+<p><code>C-x C-e</code> - evaluate all the code in the current tab.</p>
+<p>  You can see all the Emacs keybindings at the <a href="https://github.com/LightTable/Emacs/blob/master/emacs.keymap" target="_blank" rel="noopener">Emacs Plugin Github repository</a>.</p>
+<p>  Have fun with Light Table and Emacs keybindings.  If you have any modifications of the Emacs keybindings you find useful, please share them in the comments.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p>  When I <a href="http://clojure.practical.li" target="_blank" rel="noopener">teach people Clojure</a> I use <a href="http://lighttable.com/" target="_blank" rel="noopener">Light Table</a> because it is really simple to use and its <em>Instarepl</em> gives instant feedback of the code as you type it.  This feedback helps you understand Clojure quickly and gives you more confidence when coding.</p>
+<p>  As I do most of my Clojure development (and most everything else) in <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> I really miss the excellent Emacs keybindings when I use Light Table.  Luckily there is an <a href="https://github.com/LightTable/Emacs" target="_blank" rel="noopener">Emacs plugin for Light Table</a>, so here is a quick guide on how to install &amp; use this Emacs plugin.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="dev-tools" scheme="http://jr0cket.co.uk/tags/dev-tools/"/>
+    
+      <category term="lighttable" scheme="http://jr0cket.co.uk/tags/lighttable/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Flying Planes With Clojure and FlightGear]]></title>
+    <link href="http://jr0cket.co.uk/2013/03/flying-planes-with-clojure-and.html.html"/>
+    <id>http://jr0cket.co.uk/2013/03/flying-planes-with-clojure-and.html.html</id>
+    <published>2013-03-21T21:33:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<p>Dale Thatcher from the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> created a <a href="https://github.com/dalethatcher/flightgear" target="_blank" rel="noopener">Clojure project</a> that allows you to fly a plane in real time.  Now, Dale has not yet connected this to a real plane, instead he is using the open source flight simulator, <a href="http://www.flightgear.org/" target="_blank" rel="noopener">FlightGear</a>.</p>
+<p>I took Dale’s project for a test flight and here are my experiences!</p>
+<a id="more"></a>
+<h1 id="Getting-set-up"><a href="#Getting-set-up" class="headerlink" title="Getting set up"></a>Getting set up</h1><p>I am using Ubuntu 12.10 and FlightGear is in the software center, so its easy to add it.  Be aware that the file is 635MB in size (1.3GB once installed), so you need a decent Internet connection and a fair bit of space.</p>
+<p>You can of course use <code>apt-get</code> on the command line too:</p>
+<pre><code>sudo apt-get install flightgear
+</code></pre><img src="http://3.bp.blogspot.com/-xbgiADIrEtI/UUtjzKwkFwI/AAAAAAAAJLk/3CWfbfuBtRQ/s1600/flight-gear-ubuntu-software-center.png" class="img-code">
+<h1 id="Running-FlightGear"><a href="#Running-FlightGear" class="headerlink" title="Running FlightGear"></a>Running FlightGear</h1><img src="http://1.bp.blogspot.com/-9ILGm7ZzlQg/UUtrWInCpRI/AAAAAAAAJL0/AAnahKbG9jg/s1600/flight-gear-telnet-port.png" class="img-topic">
+<p>Whilst there are GUI tools to run FlightGear, I just went for the command line.  Following Dale’s guide, I ran the emulator with a specific Telnet port.  I am assuming this is what the library uses to communicate with.</p>
+<p>Now you should see a plane cockpit, ready and waiting for you to jump into the controls.</p>
+<img src="http://4.bp.blogspot.com/-7N9oGY9vJxw/UUtscbmeA7I/AAAAAAAAJL8/cwUFirHQW4A/s1600/flight-gear-cockpit.png" class="img-code">
+<h1 id="Setting-up-the-Clojure-project"><a href="#Setting-up-the-Clojure-project" class="headerlink" title="Setting up the Clojure project"></a>Setting up the Clojure project</h1><p>I created a basic Clojure project using Leingen, of course.</p>
+<pre><code>lein new my-flight
+</code></pre><p>Editing the <code>my-flight/project.clj</code> project file, I added a dependency on Dale’s flightgear project</p>
+<figure class="highlight clojure"><figcaption><span>project.clj</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">:dependencies</span> [[org.clojars.dalethatcher/flightgear <span class="string">"0.1.0-SNAPSHOT"</span>]]</span><br></pre></td></tr></table></figure>
+<p>The project file should look like this: </p>
+<img src="http://3.bp.blogspot.com/-M1XTODPYNx0/UUts21J6I7I/AAAAAAAAJME/Pp81KaVtJMM/s1600/my-flight-project.clj.png" class="img-code"> 
+<blockquote>
+<p>You may have a newer version of Clojure than in the above example.</p>
+</blockquote>
+<p>I could write a few Clojure functions to control the airplane, but I dont know how responsive it will be.  So instead I fired up the REPL, connected to the flight simulator over the telnet port and started issuing command.</p>
+<p>Much more fun and much faster feedback.</p>
+<figure class="highlight clojure"><figcaption><span>Clojure REPL</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">use</span></span> 'flightgear.api)</span><br><span class="line">(<span class="name">connect</span> <span class="string">"localhost"</span> <span class="number">5401</span>)</span><br><span class="line">(<span class="name">starter!</span> <span class="literal">true</span>) <span class="comment">; wait until engine started</span></span><br><span class="line">(<span class="name">starter!</span> <span class="literal">false</span>)</span><br><span class="line">(<span class="name">flaps!</span> <span class="number">0.5</span>)</span><br><span class="line">(<span class="name">throttle!</span> <span class="number">1</span>)  <span class="comment">; wait for a little while and you should be airbourne</span></span><br><span class="line">(<span class="name">rudder!</span> <span class="number">0.1</span>) <span class="comment">; steer a bit to the right (single props tend to veer to one side)</span></span><br></pre></td></tr></table></figure>
+<p>It works.  I am controlling the plane and am trundling off down the runway.</p>
+<p>I am assuming this control interface mimics what you have to do in the simulator, as otherwise I’d have prefered the starter motor to turn itself off.  I know very little about flying planes.</p>
+<h1 id="Learning-to-fly"><a href="#Learning-to-fly" class="headerlink" title="Learning to fly"></a>Learning to fly</h1><p>All this has been fairly easy so far.  Well easy compared to actually being able to fly the plane without crashing after 30 seconds.</p>
+<p>Using the Clojure REPL I can issue commands to tweak the flight of the plane, adusting thrust, flaps, etc.  As its a single propeller plane, it tends to vere about a bit, so needs constant input to keep it flying. </p>
+<p>I think the best chance of flying this plane is to write a Clojure program to do it for me.  Luckily, Dale’s project included Telemetry information such as position, velocity and orientation.</p>
+<p>Its going to be great fun learning to fly and I havent even looked at the game options such as weather (I may turn all that off at first!).</p>
+<p>The FlightGear game and Dale’s Clojure project should give me hours of fun (assuming I can find the time).</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Dale Thatcher from the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> created a <a href="https://github.com/dalethatcher/flightgear" target="_blank" rel="noopener">Clojure project</a> that allows you to fly a plane in real time.  Now, Dale has not yet connected this to a real plane, instead he is using the open source flight simulator, <a href="http://www.flightgear.org/" target="_blank" rel="noopener">FlightGear</a>.</p>
+<p>I took Dale’s project for a test flight and here are my experiences!</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Leiningen - Quick Peek Underneath the Defproject Clojure Macro]]></title>
+    <link href="http://jr0cket.co.uk/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html"/>
+    <id>http://jr0cket.co.uk/2013/02/leiningen-quick-peek-underneath-defproject-Clojure-macro.html.html</id>
+    <published>2013-02-21T21:30:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="http://1.bp.blogspot.com/-rxD8__T6tzA/TzFNNTKKLwI/AAAAAAAAEb8/k10iLxa3I70/s1600/leiningen-face.jpg" class="img-thumbnail">
+<p><a href="http://leiningen.org/" target="_blank" rel="noopener">Leiningen</a> is a project automation tool (think build tool and them some) that uses a <a href="http://clojure.org/reference/macros" target="_blank" rel="noopener">Clojure macro</a> to make it easy for <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> developers to manage their project lifecycle.</p>
+<p>A Clojure project managed by Leiningen uses a simple clojure file called <code>project.clj</code> which allows developers to define a whole range of stuff about their projects.  To get started you only have to define a name, a version of Clojure and any dependencies in your <code>project.clj</code> and Leininge does the rest.  </p>
+<p>So lets take a quick look under the hood of Leiningen and its defproject macro to see what is going on.</p>
+<a id="more"></a>
+<h1 id="The-defproject-macro"><a href="#The-defproject-macro" class="headerlink" title="The defproject macro"></a>The defproject macro</h1><p>The defproject macro when run creates a simple map of your project to work with.&nbsp; Here is an example map for my project, generated by the command</p>
+<pre><code>lein pprint project.clj
+</code></pre><img src="http://4.bp.blogspot.com/-kGfaBdi_Tj8/USp12muKPKI/AAAAAAAAJG8/XVRCj23X89Q/s1600/clojure-leiningen-pprint-project-map-whats-my-salary.png" class="img-code">
+<p>If you add something to your <code>project.clj</code> file and wonder what is has changed underneath, then looking at the project map is very useful.</p>
+<p>Using the project map to understand what dependencies you have pulled in could be a great way to streamline your project, or help debug it if something when wrong after adding a new dependency.</p>
+<p>Leiningen also merges your profile configuration <code>~/.lein/profiles.clj</code> along with your <code>project.clj</code> settings when creating the project map.&nbsp; This can be seen in the above example.&nbsp; Near the end of the file is a <code>:plugins keyword</code>, the following 3 lines are plugins I defined in my profile.&nbsp; Leiningen will work out the smartest way to merge your <code>profile.clj</code> and <code>project.clj</code>.  If in doubt, you can check the project map.</p>
+<h1 id="The-defproject-macro-code"><a href="#The-defproject-macro-code" class="headerlink" title="The defproject macro code"></a>The defproject macro code</h1><p>Here is the source code for the <code>defproject</code> macro:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defmacro</span></span> defproject</span><br><span class="line">  <span class="string">"The project.clj file must either def a project map or call this macro.</span></span><br><span class="line"><span class="string">  See `lein help sample` to see what arguments it accepts."</span></span><br><span class="line">  [project-name version &amp; args]</span><br><span class="line">  `(<span class="name"><span class="builtin-name">let</span></span> [args# ~(<span class="name">unquote-project</span> (<span class="name">argument-list-&gt;argument-map</span> args))</span><br><span class="line">         root# ~(<span class="name">.getParent</span> (<span class="name">io/file</span> *file*))]</span><br><span class="line">     (<span class="name"><span class="builtin-name">def</span></span> ~'project</span><br><span class="line">       (<span class="name">make</span> args# '~project-name ~version root#))))</span><br></pre></td></tr></table></figure>
+<p>You can also see the <a href="https://github.com/technomancy/leiningen/blob/master/leiningen-core/src/leiningen/core/project.clj" target="_blank" rel="noopener">source code of the defproject macro</a> in context of the Leingingen project at its Github repository.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://1.bp.blogspot.com/-rxD8__T6tzA/TzFNNTKKLwI/AAAAAAAAEb8/k10iLxa3I70/s1600/leiningen-face.jpg" class="img-thumbnail">
+<p><a href="http://leiningen.org/" target="_blank" rel="noopener">Leiningen</a> is a project automation tool (think build tool and them some) that uses a <a href="http://clojure.org/reference/macros" target="_blank" rel="noopener">Clojure macro</a> to make it easy for <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure</a> developers to manage their project lifecycle.</p>
+<p>A Clojure project managed by Leiningen uses a simple clojure file called <code>project.clj</code> which allows developers to define a whole range of stuff about their projects.  To get started you only have to define a name, a version of Clojure and any dependencies in your <code>project.clj</code> and Leininge does the rest.  </p>
+<p>So lets take a quick look under the hood of Leiningen and its defproject macro to see what is going on.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="leiningen" scheme="http://jr0cket.co.uk/tags/leiningen/"/>
+    
+      <category term="dev-tools" scheme="http://jr0cket.co.uk/tags/dev-tools/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Clojure Development With LightTable 0.2.x]]></title>
+    <link href="http://jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html.html"/>
+    <id>http://jr0cket.co.uk/2012/12/clojure-development-with-lighttable-02x.html.html</id>
+    <published>2012-12-04T19:13:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p><a href="http://www.lighttable.com/" target="_blank" rel="noopener">LightTable</a> is a <a href="http://www.kickstarter.com/projects/ibdknox/light-table" target="_blank" rel="noopener">kickstarter project</a> to create new kind of developer tool for Clojure development, inspired by the <a href="http://www.youtube.com/watch?v=PUv66718DII" target="_blank" rel="noopener">Inventing on Principle talk by Bret Victor</a>.</p>
+<p>LightTable aims to give developers instant feedback about their code, showing how any change affects their applications. Giving you a developer “surface” to work on, which will bring information to the places you need it the most.  The principles of the LightTable design include:</p>
+<ul>
+<li>Documentation there when you need it, no need to search</li>
+<li>Edit anywhere and anything - not just text and not just as files</li>
+<li>Discover by doing, changes produces instantaneous results</li>
+<li>Shine a light on related pieces of code</li>
+</ul>
+<a id="more"></a>
+<h1 id="Status-of-the-LightTable-Project"><a href="#Status-of-the-LightTable-Project" class="headerlink" title="Status of the LightTable Project"></a>Status of the LightTable Project</h1><img src="http://1.bp.blogspot.com/-SU2JlT8A9Kw/UL9Jclni9-I/AAAAAAAAIqc/9ELhASNZrXo/s1600/lighttable-game-example.png" class="img-code">
+<p>LightTable 0.1.x of LightTable showed of  some of the concepts that this tool will eventually have.  It moved away  from the concepts of files and allowed you to work with individual  parts of your code - functions and definitions.</p>
+<p>LightTable  0.2.x has fewer concepts implemented than 0.1.0 and may seem like a backward step on the outside.  However the rewrite decision taken for this version allows the team to have a solid code base to bring back all the innovative  features.  This rewrite includes a proper packaging approach making updates become almost transparent, with LightTable grabbing updates behind the scenes and informing you when you need to restart.</p>
+<img src="http://4.bp.blogspot.com/-9LOuNwvoNE4/UL5RooIZrwI/AAAAAAAAIqA/0xqL_7jufyU/s1600/lighttable-update-notices.png" class="img-code"> 
+<p>LightTable still has a long way to go to implement all the ideas it has, but at present it is a usable tool for discovering and developing Clojure code.  In fact it is now at a stage where the team are using LightTable to develop itself, so they are well aware of features that need adding.  There  is quite a list of feature requests over at the <a href="https://github.com/Kodowa/Light-Table-Playground/issues" target="_blank" rel="noopener">Github Issue tracker for the project</a>.</p>
+<img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-code">
+<h1 id="Language-support-in-LightTable"><a href="#Language-support-in-LightTable" class="headerlink" title="Language support in LightTable"></a>Language support in LightTable</h1><p>By release time, LightTable will support Clojure, ClojureScript, JavaScript (nodejs) and Python.</p>
+<p>Currently LightTable only supports Clojure, but ClojureScript will be the next one to be supported and sounds like its not far away.</p>
+<h1 id="Getting-started-with-LightTable"><a href="#Getting-started-with-LightTable" class="headerlink" title="Getting started with LightTable"></a>Getting started with LightTable</h1><img src="http://4.bp.blogspot.com/-vgIvECRudu4/UL4AKSsztzI/AAAAAAAAIoc/yNVe3sFkUj8/s1600/lighttable-welcome-screen-update-message.png" class="img-code">
+<p><a href="http://lighttable.com/" target="_blank" rel="noopener">Download LightTable</a> as</p>
+<ul>
+<li>a tar file for 32bit or 64bit Linux</li>
+<li>an app file for MacOSX</li>
+<li>a zip file for windows</li>
+</ul>
+<p>Running LightTable gives you a welcome screen that gives you details of all the keyboard controls.  There are only a few controls to learn, most should be familiar.  You will need to learn these command as LightTable is very keyboard focused, just like Vi and Emacs.</p>
+<p>Commands are entered in a small window at the bottom of the screen.  A menu pops up to show you want commands are available, but this is only a guide and you cannot select items on the menu with a mouse. </p>
+<h1 id="Creating-Clojure-projects"><a href="#Creating-Clojure-projects" class="headerlink" title="Creating Clojure projects"></a>Creating Clojure projects</h1><p>You can work with Leinignen created Clojure projects, loading exiting ones or creating a new ones.  Or you can fire up the REPL, using Instarepl.</p>
+<p>Typically I use Leiningen via the command line to create a new project with the command</p>
+<pre><code>lein new my-project
+</code></pre><p>This allows me to then put the project into version control using Git with the command <code>git init</code></p>
+<h1 id="Working-with-Projects"><a href="#Working-with-Projects" class="headerlink" title="Working with Projects"></a>Working with Projects</h1><p>Connect allows you to work with a Leiningen projects.</p>
+<pre><code>C-k connect ~/projects/clojure/my-project/src/core.clj
+</code></pre><p>Like with emacs and the Unix command line, LightTable lets you tab through your folder structure to save typing.  Selecting a Clojure file will trigger LightTable to connect to a Clojure REPL environment via Leiningen.  If more than one REPL is running you can choose the project from which the REPL was run.  If no REPL is running you can connect to a leiningen project, which will import all the dependencies and load the namespaces into LightTable.</p>
+<p>With a source file you can evaluate directly and the results are displayed on the far right hand side.  These results carry over between all tabs.  This unfortunately can block other code, especially in the Instarepl output.  However, clicking on the output bubbles will get rid of each one.</p>
+<p>You can connect to multiple projects within LightTable and when you fire up Instarepl you can decide which one you want to connect to. </p>
+<h2 id="Using-Instarepl"><a href="#Using-Instarepl" class="headerlink" title="Using Instarepl"></a>Using Instarepl</h2><img src="http://4.bp.blogspot.com/-nc5cPfRiLOI/UL5KemAA0DI/AAAAAAAAIpU/AL64k4Ilh1I/s1600/lighttable-instarepl-connect.png" class="img-code">
+<p>This is the REPL environment for LightTable.  It allows you to run any code that LightTable knows about.  Instarepl is started with:</p>
+<pre><code>C-k Instarepl
+</code></pre><p>As soon as you type code into the REPL, it will look for a place to evaluate your code.  If you are already connected to a project then it will allow you to select that.  Otherwise you can either connect to another existing Leiningen project or start a local client.   </p>
+<p>When you connect to a project then LightTable is aware of the namespace and you can call the functions and use the definitions within it.</p>
+<img src="http://2.bp.blogspot.com/-_ZzAf7Q2HX0/UL5Kfkh3nZI/AAAAAAAAIpY/-r6CKiHl4d4/s1600/lighttable-instarepl-connecting.png" class="img-code">
+<p>I my opinion, the <strong>Live evaluation</strong> is the most interesting feature of Instarepl.  This not only gives you the results of you functions but also shows evaluations of the aspects of functions all the way through the code.</p>
+<p>I used the Instarepl recently as a great way to introduce 100 Java developers to Clojure and it was really useful to see what was happening underneath.</p>
+<img src="http://4.bp.blogspot.com/-mEvULZ0TaPc/UL4n855xogI/AAAAAAAAIo4/7ffBhvUgh3g/s1600/lighttable-instarepl-examples.png" class="img-code">
+<h1 id="Customising-LightTable"><a href="#Customising-LightTable" class="headerlink" title="Customising LightTable"></a>Customising LightTable</h1><p>There are some basic customisations available for LightTable using the <code>set</code> command, but they are not persistent (not yet anyway).  Essentially you can change the theme and switch on/off line numbers using the command</p>
+<p>Theme and line number changes do not take immediate effect, you need to open a new tab before you see the change. The Welcome screen is never effected by theme changes.</p>
+<p>You can resize the font at any time and it even resizes the command line font.  I found a good size for presentation is 14 or 16. </p>
+<pre><code>set line-numbers true
+set line-numbers false
+set font-size 12
+set theme solarized light
+set theme solarized dark
+set theme default
+set skin light
+set skin dark
+</code></pre><p>All the <a href="http://codemirror.net/demo/theme.html" target="_blank" rel="noopener">codemirror</a> themes are also included, although on my Mac with OSX10.7 they didn’t all display exactly the same in LightTable as they did on the demo page.</p>
+<h1 id="LightTable-Resources"><a href="#LightTable-Resources" class="headerlink" title="LightTable Resources"></a>LightTable Resources</h1><ul>
+<li><a href="http://www.lighttable.com/" target="_blank" rel="noopener">Project home and downloads</a></li>
+<li><a href="https://groups.google.com/forum/?fromgroups=#%21forum/light-table" target="_blank" rel="noopener">LightTable announcements</a> </li>
+<li><a href="https://groups.google.com/forum/?fromgroups#%21forum/light-table-discussion" target="_blank" rel="noopener">LightTable discussion group</a>      </li>
+<li><a href="https://github.com/Kodowa/Light-Table-Playground/issues" target="_blank" rel="noopener">Github project issues</a>        </li>
+<li><a href="http://github.com/ibdknox/live-cljs" target="_blank" rel="noopener">Live game editor</a> </li>
+</ul>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://www.lighttable.com/images/logo.png" class="img-thumbnail">
+<p><a href="http://www.lighttable.com/" target="_blank" rel="noopener">LightTable</a> is a <a href="http://www.kickstarter.com/projects/ibdknox/light-table" target="_blank" rel="noopener">kickstarter project</a> to create new kind of developer tool for Clojure development, inspired by the <a href="http://www.youtube.com/watch?v=PUv66718DII" target="_blank" rel="noopener">Inventing on Principle talk by Bret Victor</a>.</p>
+<p>LightTable aims to give developers instant feedback about their code, showing how any change affects their applications. Giving you a developer “surface” to work on, which will bring information to the places you need it the most.  The principles of the LightTable design include:</p>
+<ul>
+<li>Documentation there when you need it, no need to search</li>
+<li>Edit anywhere and anything - not just text and not just as files</li>
+<li>Discover by doing, changes produces instantaneous results</li>
+<li>Shine a light on related pieces of code</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="dev-tools" scheme="http://jr0cket.co.uk/tags/dev-tools/"/>
+    
+      <category term="lighttable" scheme="http://jr0cket.co.uk/tags/lighttable/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Clojure Poetry in Motion - Developers Get Creative Again at London Coding Dojo]]></title>
+    <link href="http://jr0cket.co.uk/2012/09/clojure-poetry-in-motion-developers-get.html.html"/>
+    <id>http://jr0cket.co.uk/2012/09/clojure-poetry-in-motion-developers-get.html.html</id>
+    <published>2012-09-03T04:58:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-2eAwzw2-ujM/T4q6G9NelbI/AAAAAAAAHQk/wecy_sHn7K8/s1600/ldncljdojo.jpg" class="img-thumbnail"> 
+<p>The August 2012 coding dojo for the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> brought some creativity to bear, in terms of Clojure, artistic sentiment and a little bare face cheek.</p>
+<p>After the usual round of votes for the evenings challenge - which included grand ideas such as re-implementing Emacs in Clojure! - we settled on a poem generator.  Here is what we got up to.</p>
+<a id="more"></a>
+<p>Team 4 (<a href="https://github.com/weavejester" target="_blank" rel="noopener">James</a>, <a href="https://github.com/markuskobler" target="_blank" rel="noopener">Markus</a>, Daniel and myself) used a massively parallel algorithm with a diverse biological origin for the basis of our Haiku poetry generator.  In other words we used the crowd sourcing of Twitter to source all our Haiku poems.</p>
+<p>This was not quite the easy and blatant cheat you may think.  As these Haiku poemes were crowd sourced, then we had to develop our own flitering sytem to get rid of retweets, mentions and lots other stuff in each tweet.  Should we decide to go for funding, the filtering will be a big part of our Intellectual Property!</p>
+<h1 id="Anatomy-of-our-solution"><a href="#Anatomy-of-our-solution" class="headerlink" title="Anatomy of our solution"></a>Anatomy of our solution</h1><img src="http://3.bp.blogspot.com/-oG4of753dRs/UFVh0TBZkGI/AAAAAAAAIWA/dXuANaoqakE/s1600/clojure-dojo-poetry.png" class="img-code"> 
+<p>To connect to the Internet we used the really nice <a href="https://clojars.org/clj-http" target="_blank" rel="noopener">clj-http</a> project.  There are some twitter specific projects on Github, but we wanted to go for the simplest approach.  Results were obtained from twitter by specifying a <em>twitter-url</em> and using <a href="https://clojars.org/clj-http" target="_blank" rel="noopener">clj-http</a> to pull back the results and automatically convert them to a json  format.  In fact you get back a persistent map of json results.</p>
+<p>Using the magic of the <code>:keyword</code> syntax we just pulled out the information we needed from the json results, specifically the <code>:text</code> keyword.  As it was sourced from twitter, there was a lot of additional information with each tweet such as name, time of tweet, etc which we wanted to strip out.</p>
+<p>As each haiku is supposed to be three lines, we used the clojure function <code>split-lines</code> to break up the haiku and check the line count equalled 3.</p>
+<p>Once we have some haikus that are the right form, we tidied them up using the handy <code>coljure.string.replace</code> function.  We could have done some regex, but again in terms of simplicity then the replace function worked for us.</p>
+<h2 id="Adding-some-graphics"><a href="#Adding-some-graphics" class="headerlink" title="Adding some graphics"></a>Adding some graphics</h2><p>To add a bit more excitement to our poem  output we decided to put a box around the text.  This was much easier when we used the <code>pad</code> function from <code>clojure.string</code>.</p>
+<img src="http://2.bp.blogspot.com/-LHdZ4nUosw4/UFVh-ZipsRI/AAAAAAAAIWI/2_QxwDEVEJ8/s1600/clojure-dojo-poetry-poem.png" class="img-code"> 
+<p>Reusing an ansii colour map from <code>clj-logging</code>, we quickly added a bit of colour to our box, making it a lovely green colour.</p>
+<p>We also considered <a href="https://github.com/quil/quil" target="_blank" rel="noopener">quil</a> (a clojure library for graphics <a href="http://processing.org/" target="_blank" rel="noopener">processing</a>) and <a href="https://github.com/jr0cket/clansi" target="_blank" rel="noopener">clanci</a> (ansi colour and style codes), but as we only had about 30 seconds left using the colour map was the only option we could finish in time.</p>
+<h1 id="Readable-code-using-Threading-gt-gt-gt"><a href="#Readable-code-using-Threading-gt-gt-gt" class="headerlink" title="Readable code using Threading (-&gt; -&gt;&gt;)"></a>Readable code using Threading (-&gt; -&gt;&gt;)</h1><p>We decided to use the threading operator in some of our functions to help us keep the code readable.  Using <code>-&gt;</code> and <code>-&gt;&gt;</code> helps us chain functions together in a particular order.  </p>
+<p>Using <code>-&gt;</code> threading macro the resulting value from the evaluation of one function is passed as the first argument to the next function in the list.  This is the same as the <code>doto</code> function (often used to chain events, objects and swing components together). </p>
+<p>Using the <code>-&gt;&gt;</code> threading macro, the resulting value from the evaluation of one function is passed as the last argument to the next function in the list.</p>
+<h1 id="Using-swarm-coding-is-fun-and-effective"><a href="#Using-swarm-coding-is-fun-and-effective" class="headerlink" title="Using swarm coding is fun and effective"></a>Using swarm coding is fun and effective</h1><p>Swarm coding is where you all code on your own machines, but are actually sharing the same session, in this case Emacs running in the terminal window.  James had an environment ready so we all connected to his machine over secure shell (SSH).  Everyone set an environment variable once connected and then James created the clojure project and opened it with Emacs using the no window option which runs emacs in the console window.</p>
+<pre><code>lein new poetry          ; Create a new clojure project
+cd poetry                
+git init                 ; Set up version control with git
+emacs -nw project.clj    ; Run emacs in the terminal window
+</code></pre><p>As we all had the code on our screens we didnt have to squeeze together to see the screen.  With more room its easier to show the REPL and more of the code .  As we all have control over the cursor, we could jump in at any time when we have something to contribute.</p>
+<p>I like this approach and can see it working well for a team that communicates well.</p>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>The Clojure dojo still remains one of the best ways to really learn clojure and become more confident when writing applications.  I like the use of the <code>-&gt;</code> and <code>-&gt;&gt;</code> threading operators to help readability, but do wonder if they detract from the functional style.  I guess some more coding will help me decide.</p>
+<blockquote>
+<p>Update: after doing more clojure coding, I feel that the threading operator is a really great way to keep your code readable.  If you have several nested functions, then code can take longer to read and comprehend.  Using the threading operator then code is very quickly understood.</p>
+</blockquote>
+<blockquote>
+<p>As you are not changing the design of the code then I dont see the threading macro as detracting from the functional style of Clojure.</p>
+</blockquote>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-2eAwzw2-ujM/T4q6G9NelbI/AAAAAAAAHQk/wecy_sHn7K8/s1600/ldncljdojo.jpg" class="img-thumbnail"> 
+<p>The August 2012 coding dojo for the <a href="http://londonclojurians.org/" target="_blank" rel="noopener">London Clojure community</a> brought some creativity to bear, in terms of Clojure, artistic sentiment and a little bare face cheek.</p>
+<p>After the usual round of votes for the evenings challenge - which included grand ideas such as re-implementing Emacs in Clojure! - we settled on a poem generator.  Here is what we got up to.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[EuroClojure - Developers Get Musical With Overtone]]></title>
+    <link href="http://jr0cket.co.uk/2012/05/euroclojure-developers-get-musical-with.html.html"/>
+    <id>http://jr0cket.co.uk/2012/05/euroclojure-developers-get-musical-with.html.html</id>
+    <published>2012-05-24T10:02:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://1.bp.blogspot.com/-Wo6T3gjQpAA/Tzeu0e4laKI/AAAAAAAAEeQ/xbyWBx246qc/s1600/overtone-logo-rounded-corners.png" class="img-thumbnail"> 
+<p>Sam Aaron and Jeff Rose gave a whirlwind tour of creating music with Overtone, an open source music generator written in Clojure. </p>
+<p>You can define your own instruments, map keyboards and other synthesiser hardware, all to make some funky sounds - although you probably want to have headphones on when experimenting!</p>
+<blockquote>
+<p><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@samaaron</a> with overtone you can sit on a train and make musicI had fun creating my first overtone project from scratch at the last Overtone Hackday.  Have a look at <a href="http://jr0cket.co.uk/2012/02/developers-making-music-together-london.html">how I set up my environment</a>.</p>
+</blockquote>
+<h1 id="The-Design-of-Overtone"><a href="#The-Design-of-Overtone" class="headerlink" title="The Design of Overtone"></a>The Design of Overtone</h1><img src="http://1.bp.blogspot.com/-zi_tjIry5n0/TzetrkxV1XI/AAAAAAAAEeI/CVhhVWK-oHM/s1600/overtone-logo.png" class="img-topic"> 
+<p>Music is not a very easy concept to define in software.  Typically you start with a synthesiser and work your way up to notes and chords.  Eventually you may get to a music piece, but this is often driven by a hardware keyboard and recorded.</p>
+<p>The difficulty is that everyone has a different idea of how to describe music.</p>
+<p>Overtone comes in two parts.  The Super-Collider generates all the sounds from over 500 midi building blocks, essentially you create a directed graph that returns values to represent those sounds.  The clojure project part allows you to define instruments (synthesisers) and orchestrate these instruments together.</p>
+<h1 id="Basic-approach-to-making-music"><a href="#Basic-approach-to-making-music" class="headerlink" title="Basic approach to making music"></a>Basic approach to making music</h1><p>Overtone generally works on the principle of subtractive synthesis.  You create a number of different sounds by defining individual instruments and by adjusting the time and frequency of the sound wave to vary the sounds produced.</p>
+<p>Once you have some instruments, then adding an envelope generator will give you a changing sound through time by, essentially multiplying the sound by the envelope.</p>
+<p>Join sounds together by creating a player function that takes a time and plays the instruments - adding durations to the sound.  </p>
+<p>To spice up your sounds you can then experiment with playing two different frequencies at the same time, referred to as multi-channel expansion.  A resident low pass filter is also fun to experiment with.</p>
+<img src="http://3.bp.blogspot.com/-0rI8wFPDhPA/T74BOseE1RI/AAAAAAAAIEM/eIjoBNil-bk/s1600/twiki-from-buck-rogers1.jpg" class="img-topic">
+<p>Sam and Geoff showed off what they call <em>the stepinator</em>, which seems to emulate a square wave form which steps through a series of values over time.  This created some Buck Rogers style music.</p>
+<img src="http://2.bp.blogspot.com/-VkwWleTTwuI/TzfwcibV8QI/AAAAAAAAEeY/uwjAdgtY3dw/s1600/novation-launchpad-music-control-surface_1.jpg" class="img-topic">
+<p>Eventually you will want to use an external keyboard or some hardware device to pay your music as calling functions over and over again from within the REPL will only get you so far.  If you map functions, frequencies, etc to the external player controls then you can play your clojure code..</p>
+<h1 id="Getting-Visual"><a href="#Getting-Visual" class="headerlink" title="Getting Visual"></a>Getting Visual</h1><img src="http://2.bp.blogspot.com/-NmIbHt43IE0/T74EEoWjzcI/AAAAAAAAIEY/VPDM_0NLrMs/s1600/overtone-graphics-samaaron.png" class="img-topic"> 
+<p>To make the music come alive even more, you can use the <a href="http://processing.org/" target="_blank" rel="noopener">Java processing framework</a>.  Instead of calling processing directly, you can use the clojure project <a href="https://github.com/quil/quil" target="_blank" rel="noopener">Quil</a> to visualise the overtone sounds, creating a sphere and controlling the size of the sphere with the different frequencies of the sounds.</p>
+<h1 id="Get-collaborative"><a href="#Get-collaborative" class="headerlink" title="Get collaborative"></a>Get collaborative</h1><img src="http://3.bp.blogspot.com/-ZvjBQPJ0xFc/T74F49jxpAI/AAAAAAAAIEg/UwD1s9smJFE/s1600/freesound-logo.png" class="img-topic">
+<p>Sam and Geoff are trying out different ways of sharing the REPL so they can jam together.  Many people are sharing their sounds on <a href="http://freesound.org/" target="_blank" rel="noopener">freesound.org</a>, a collaborative database of Creative Commons Licensed sounds. Browse, download and share sounds</p>
+<h1 id="Get-started"><a href="#Get-started" class="headerlink" title="Get started"></a>Get started</h1><p>Read the <a href="https://github.com/overtone/overtone/wiki" target="_blank" rel="noopener">Overtone documentation</a> to get started or have a look at <a href="http://jr0cket.co.uk/2012/02/developers-making-music-together-london.html">my setup on Ubuntu</a>.  Dont forget to experiment.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://1.bp.blogspot.com/-Wo6T3gjQpAA/Tzeu0e4laKI/AAAAAAAAEeQ/xbyWBx246qc/s1600/overtone-logo-rounded-corners.png" class="img-thum]]>
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="euroclojure" scheme="http://jr0cket.co.uk/tags/euroclojure/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Keep Calm and Use Clojure]]></title>
+    <link href="http://jr0cket.co.uk/2012/04/keep-calm-and-use-clojure.html.html"/>
+    <id>http://jr0cket.co.uk/2012/04/keep-calm-and-use-clojure.html.html</id>
+    <published>2012-04-01T18:13:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="http://2.bp.blogspot.com/-0McXtCCKO48/T3iYGCTh99I/AAAAAAAAHIc/N2Gcjifias8/s1600/keep-calm-and-use-clojure.png" class="img-thumbnail">
+<p>A really nice <a href="http://www.cakesolutions.net/teamblogs/2012/04/01/truth-about-scala-2/" target="_blank" rel="noopener">april fools from Cake Solutions</a>. I actually think this works quite nice as a sound-byte for the <a href="http://clojure.org/" target="_blank" rel="noopener">Clojure functional programming language</a> on the JVM. </p>
+<p>There are lots of <a href="http://slashdot.org/index2.pl?section=&amp;color=green&amp;index=1&amp;view=stories&amp;duration=-1&amp;startdate=201204m&amp;index=1" target="_blank" rel="noopener">scarily possible april fools stories</a> on Slashdot, although they are funny its disturbing how close some of them are to the truth.</p>
+<img src="http://3.bp.blogspot.com/-6mkqKPafV0o/T3iZ61QvfuI/AAAAAAAAHIk/Rq_cDDqscHY/s1600/iTee2TN.png" class="img-code">
+<p>My favourite <a href="https://bitbucket.org/spooning/" target="_blank" rel="noopener">april fools video</a> is from the <a href="https://bitbucket.org/" target="_blank" rel="noopener">Bitbucket team</a>, making light of developers who are weary of pair programming… I definitely have to get myself one of these t-shirts.</p>
+<p>Thank you.<br><a href="https://www.twitter.com/jr0cket" target="_blank" rel="noopener">@JR0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://2.bp.blogspot.com/-0McXtCCKO48/T3iYGCTh99I/AAAAAAAAHIc/N2Gcjifias8/s1600/keep-calm-and-use-clojure.png" class="img-thumbnai]]>
+    </summary>
+    
+      <category term="atlassian" scheme="http://jr0cket.co.uk/tags/atlassian/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ClojureScript - the Hard Truth - London Clojurians March 2012 Dojo]]></title>
+    <link href="http://jr0cket.co.uk/2012/03/clojurescript-the-hard-truth-london-clojurians.html.html"/>
+    <id>http://jr0cket.co.uk/2012/03/clojurescript-the-hard-truth-london-clojurians.html.html</id>
+    <published>2012-03-28T15:30:00.000Z</published>
+    <updated>2022-01-02T20:20:15.298Z</updated>
+    <content type="html"><![CDATA[<img src="http://4.bp.blogspot.com/-2cr1Ig4KeS8/T2DECGVqQbI/AAAAAAAAGKg/t8crLWDICgA/s1600/clojure-dojo-logo.png" class="img-thumbnail"> 
+<p>The March edition of the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> coding dojo all the suggested dojo challenges were to be carried out with  ClojureScript.  After a long list of ideas we voted to do either Conway’s Game of Life or Monty  Carlo graphics.</p>
+<p>Getting started with ClojureScript seemed reminiscent of the challenge the group faced a couple of years ago when first trying out Clojure.  Although getting started with Clojure itself is pretty easy these days, it feels like ClojureScript still has a way to go in terms of a great developer experience.</p>
+<p>I looked at <a href="http://clojurescriptone.com/" target="_blank" rel="noopener">ClojureScript One</a> and was put off a little by the amount of git projects it was downloading as part of its bootstrap process.  I am sure its a great project, but seemed too much for the dojo and my netbook!</p>
+<p>We settled on <a href="https://github.com/emezeske/lein-cljsbuild" target="_blank" rel="noopener">lein-cljsbuild</a> project and used the simple example that comes with it.  We fired the example up okay and had a working webserver thanks to some Ring Clojure magic and a tiny bit of JavaScript.</p>
+<pre><code>lein deps
+lein ring server-headless 3000
+</code></pre><p>Whilst we could display text in a web page and a JavaScript popup, we could not do anything that required working with the DOM - specifically setting up a graphic area or adding buttons.</p>
+<p>In hindsight, perhaps we should have looked at the advanced example that came with lein-cljsbuild, although we would probably have also run out of time with that too…  </p>
+<p>Perhaps if we had spent a bit of time before the dojo with the basics things would have gone better, however it was good to discover as a group the level of challenge involved and it made it easier to get started as we could draw from a range of experiences.</p>
+<p>So what else did I learn?</p>
+<h1 id="You-need-a-JavaScript-resource"><a href="#You-need-a-JavaScript-resource" class="headerlink" title="You need a JavaScript resource"></a>You need a JavaScript resource</h1><p>I started to become a bit weary when it was mentioned that we should have someone in the team with JavaScript experience.  Even though we had someone with experience we still had lots of challenges.</p>
+<h1 id="Google-Closure-libraries"><a href="#Google-Closure-libraries" class="headerlink" title="Google Closure libraries"></a>Google Closure libraries</h1><img src="http://2.bp.blogspot.com/-qHb-QXI9CRY/T2HA8BHP6tI/AAAAAAAAGPA/H4kUBrgm6Vc/s1600/Google-developers-logo.png" class="img-topic"> 
+<p>The <a href="http://code.google.com/closure/library/docs/gettingstarted.html" target="_blank" rel="noopener">Closure Library</a> is a JavaScript library that provides cross-browser functions for DOM manipulations and events, <a href="http://en.wikipedia.org/wiki/AJAX" title="AJAX" target="_blank" rel="noopener">AJAX</a> and <a href="http://en.wikipedia.org/wiki/JSON" title="JSON" target="_blank" rel="noopener">JSON</a>, as well as more high-level objects such as User Interface widgets and controls. </p>
+<p>The Google Closure library looks really great, but there seems to be a few challenges to get it to work with ClojureScript.  Again this is down to our limited time to get to grips with several APIs, so we had little luck finding something that worked.</p>
+<h1 id="Where’s-my-DOM"><a href="#Where’s-my-DOM" class="headerlink" title="Where’s my DOM"></a>Where’s my DOM</h1><p>Our group got stuck on trying to find elements in the DOM via ClojureScript, repeatedly getting nil when asking for elements in the DOM.  We postulated that is was a timing problem, but were not able to code around the problem.</p>
+<p>We fired up the <a href="http://code.google.com/chrome/devtools/" target="_blank" rel="noopener">Chrome browser developer tools</a> to see the errors, but couldn’t get any of the many fixes we found on Google to work. </p>
+<h1 id="Using-jQuery-to-load-things-up"><a href="#Using-jQuery-to-load-things-up" class="headerlink" title="Using jQuery to load things up"></a>Using jQuery to load things up</h1><p>By the end of the night I had a strong impression that you cant do ClojureScript without knowing a lot of JavaScript.  This goes against what I thought was possible, to write a Clojure style syntax that you could run inside a JavaScript engine.  Yes, I expected quite a bit of interop, having lots of doto calls to chain some JavaScript calls, but didnt figure on jQuery being there or so essential.</p>
+<h1 id="Find-an-example-that-works"><a href="#Find-an-example-that-works" class="headerlink" title="Find an example that works"></a>Find an example that works</h1><p>Find an example ClojureScript project that works and is easy enough to understand - without having to spend an hour setting up Leiningen plugins and dependencies or having to download lots of things from the Internet.  This was tricky to find in the time we had.</p>
+<h1 id="Some-blogs-to-and-projects-to-review"><a href="#Some-blogs-to-and-projects-to-review" class="headerlink" title="Some blogs to and projects to review"></a>Some blogs to and projects to review</h1><ul>
+<li><a href="http://jng.imagine27.com/articles/2011-07-23-101007_clojurescript_demo_convex_hull.html" target="_blank" rel="noopener">Convex Hull ClojureScript demo - imagine27.com</a> </li>
+<li><a href="https://github.com/clojure/clojurescript/tree/master/samples" target="_blank" rel="noopener">ClojureScript sample apps</a></li>
+<li><a href="http://www.sitepoint.com/google-closure-how-not-to-write-javascript/" target="_blank" rel="noopener">Google Closure: How not to write JavaScript</a></li>
+<li><a href="https://developers.google.com/closure/library/docs/gettingstarted" target="_blank" rel="noopener">Google Closure: Getting Started</a></li>
+<li><a href="http://closure-library.googlecode.com/svn/docs/index.html" target="_blank" rel="noopener">Google Closure API documentation</a></li>
+</ul>
+<h1 id="In-Summary"><a href="#In-Summary" class="headerlink" title="In Summary"></a>In Summary</h1><p>So first impressions of the experience suggest I need to read some good tutorials on the subject and review code of some more projects.  I plan on doing some more projects around Noir, so I’ll try and see where the advantages of using ClojureScript are when using a set of Clojure web frameworks.</p>
+<p>I am still excited about ClojureScript, but its one of those things where I need to find more time than I have to get to grips with it. If anyone has any other blog or project recomendations, please let me know.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://4.bp.blogspot.com/-2cr1Ig4KeS8/T2DECGVqQbI/AAAAAAAAGKg/t8crLWDICgA/s1600/clojure-dojo-logo.png" class="img-thumbnail"> 
+<p>]]>
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojurescript" scheme="http://jr0cket.co.uk/tags/clojurescript/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Learning Clojure Through Practice - London Clojurians February Dojo]]></title>
+    <link href="http://jr0cket.co.uk/2012/02/learning-clojure-through-practice.html.html"/>
+    <id>http://jr0cket.co.uk/2012/02/learning-clojure-through-practice.html.html</id>
+    <published>2012-02-29T22:30:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="http://4.bp.blogspot.com/-2cr1Ig4KeS8/T2DECGVqQbI/AAAAAAAAGKg/t8crLWDICgA/s1600/clojure-dojo-logo.png" class="img-thumbnail">
+<p>Another chance to practice Clojure with the help of the great people that are part of the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians community</a>.  Each person at the dojo has a different experience with Clojure and functional programming, so there is always something different to learn.  It still amazes me how much I learn and how confident each dojo makes me (by the end of the night anyway).</p>
+<a id="more"></a>
+<h1 id="Getting-the-coding-dojo-organised"><a href="#Getting-the-coding-dojo-organised" class="headerlink" title="Getting the coding dojo organised"></a>Getting the coding dojo organised</h1><p>We are all put in teams by our beloved leader, Bruce Durling.  There is always a full house so you never get teamed up with the same people, giving great variety in what you learn each time.  After your first dojo you realise its okay not to have the answers, all that is required is that you try writing code (and know how to find the Clojure docs).</p>
+<p>I also had a chance to shore up my <strong>Emacs</strong> skills by helping others get started, although remembering all the paredit short-cuts is still work in progress.  Perhaps a paredit workshop would be a good idea!</p>
+<img src="http://github.com/downloads/overtone/live-coding-emacs/live-coding-config-in-use.png" class="img-code"> 
+<p>After having seen Bruce show off some code at the end, I saw the amazing <a href="http://overtone.github.io/emacs-live/" target="_blank" rel="noopener">Emacs Live</a> setup created by Sam Aaron.  Sam has created a great Clojure setup for his Overtone live coding sessions which are great for a dojo (autocomplete, clojure docs, undo tree, etc).  Sam sent me a link to his <a href="http://overtone.github.io/emacs-live/" target="_blank" rel="noopener">Github repo</a> am forking it as I blog!</p>
+<h1 id="The-Clojure-Challenge-4Clojure"><a href="#The-Clojure-Challenge-4Clojure" class="headerlink" title="The Clojure Challenge - 4Clojure"></a>The Clojure Challenge - 4Clojure</h1><p>The challenge our team took for the evening was to complete some of the reasonably challenging <a href="http://www.4clojure.com/" target="_blank" rel="noopener">4Clojure</a> problems and the ones we picked certainly were a challenge.</p>
+<img src="http://1.bp.blogspot.com/-RSf3af3jKmM/TuiXKNczIoI/AAAAAAAABJ4/hK-axvLFAeU/s1600/4clj-logo-small.png" class="img-code"> 
+<p>Our team picked some “medium” strength challenges and we managed to get two and a half problems solved in the hour and a half of the dojo.</p>
+<p>The <a href="http://www.4clojure.com/" target="_blank" rel="noopener">4Clojure website</a> is a great way to learn clojure by practising, i.e. deliberate  practice.  If you create a free account, you can also compete in the  shortest solution competition, affectionately known as <a href="http://lbrandy.com/blog/2008/09/what-code-golf-taught-me-about-python/" target="_blank" rel="noopener">code golf</a> as the lower your score the better your rank.</p>
+<p>Our coding efforts were pushed up onto <a href="https://gist.github.com/1968416" target="_blank" rel="noopener">Github Gist</a> and I am looking forward to trying out some more 4Clojure problems to keep me going until the next dojo.</p>
+<blockquote>
+<p>Github Gists are a simple way to share code that can be forked and easily become the basis of a versioned project.</p>
+</blockquote>
+<p>Hope to see you at the next <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> event at Thoughtworks on 27th March from 6.30pm (every last Tuesday of the month).</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://4.bp.blogspot.com/-2cr1Ig4KeS8/T2DECGVqQbI/AAAAAAAAGKg/t8crLWDICgA/s1600/clojure-dojo-logo.png" class="img-thumbnail">
+<p>Another chance to practice Clojure with the help of the great people that are part of the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians community</a>.  Each person at the dojo has a different experience with Clojure and functional programming, so there is always something different to learn.  It still amazes me how much I learn and how confident each dojo makes me (by the end of the night anyway).</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="emacslive" scheme="http://jr0cket.co.uk/tags/emacslive/"/>
+    
+      <category term="4clojure" scheme="http://jr0cket.co.uk/tags/4clojure/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Battleships at London Clojure Coding Dojo - January 2012]]></title>
+    <link href="http://jr0cket.co.uk/2012/02/battleships-at-london-clojure-coding.html.html"/>
+    <id>http://jr0cket.co.uk/2012/02/battleships-at-london-clojure-coding.html.html</id>
+    <published>2012-02-07T16:15:00.000Z</published>
+    <updated>2022-01-02T20:20:15.290Z</updated>
+    <content type="html"><![CDATA[<img src="http://3.bp.blogspot.com/-dHDGQemeztI/TzFK4RV4_zI/AAAAAAAAEbM/AQn4UlfVuWQ/s1600/220px-Battleship_game_board.svg.png" class="img-thumbnail">
+<p>Its not quite <a href="http://en.wikipedia.org/wiki/WarGames" target="_blank" rel="noopener">Global Thermo Nuclear War</a>, but battleships was a great choice for a coding dojo topic.  Its a simple enough game and therefore a challenge that you feel you can tackle within one evening.  Its also a game that most people know and have fond memories, so the discussions have lots of context.</p>
+<p>If you are not familiar with the Battleships game, please see the <a href="http://en.wikipedia.org/wiki/Battleships_%28game%29" target="_blank" rel="noopener">Wikipedia page on Battleships</a>. </p>
+<p>At the January 2012 dojo we used a <a href="https://github.com/NeillAlexander/battleships" target="_blank" rel="noopener">battleships server created by Neill Alexander</a> and Robert Rees kindly facilitated the night. The battleships server allows you to submit your “player” and proceeds to play battleship games against is own player - CPU1 (shame the player is not called Master Control Program so I could slip in a Tron reference).</p>
+<img src="http://1.bp.blogspot.com/-qlVcL6zWbjY/TzFMw8PPiGI/AAAAAAAAEbs/-Ozv0X_6mrQ/s1600/github-logo.png" class="img-topic"> 
+<p>To get started with the dojo I forked the project on Github to my own account and cloned the project repository to my local machine.  I still use the command line to clone remote repositories, its pretty straight forward:</p>
+<pre><code>git clone url local-folder-name
+</code></pre><p>For my fork of the battleships game the command becomes</p>
+<pre><code>git clone https://github.com/jr0cket/battleships
+</code></pre><blockquote>
+<p>When I clone a github repository that I have forked from someone elses repository I prefix the local folder name with my username so I know its my fork and not the original - saves a lot of hassle wondering why I cant push changes back to github directly</p>
+</blockquote>
+<img src="http://1.bp.blogspot.com/-rxD8__T6tzA/TzFNNTKKLwI/AAAAAAAAEb8/k10iLxa3I70/s1600/leiningen-face.jpg" class="img-topic"> 
+<p>The project is on my local computer I can fire up leiningen build tool and get the project running.  First thing to do is to make sure I have all the libraries the project depends upon.  Leiningen will download the Internet of jars for me (just like maven) with the following command:</p>
+<pre><code>lein deps
+</code></pre><p>The battleships project uses Clojail to create a sandbox, so its important to set the Java runtime environment security permissions.  There is a handy lein task for this courtesy of Robert Rees that creats a <code>.java-policy</code> document in the … file:</p>
+<pre><code>lein policy
+</code></pre><p>Or you can just create the file with any handy text editor.</p>
+<img src="http://1.bp.blogspot.com/-PLeobToC6lc/TzFJCfBSLPI/AAAAAAAAEbE/zSx1cOgHzZE/s1600/emacs128x128icon.png" class="img-topic"> 
+<p>I then fire up Emacs from within the top level project directory (makes it quicker to find my project files) and opened emacs with the <code>project.clj</code> file to see how the project is set up. </p>
+<pre><code>emacs project.clj &amp;
+</code></pre><p>Clojure has a repl for working with the language dynamically, so I fire the REPL server up using emacs (of course).  Adding <strong>clojure-mode</strong> to emacs 24 gives you the swank REPL server - allowing you to call <code>clojure-jack-in</code> and fire up a swank REPl server using the lein project.clj project definition.  I defined a keyboard shortcut <code>Ctrl-c, Ctrl-j</code> for the <code>M-x clojure-jack-in</code> command in the <code>.emacs.d/config.el</code> emacs configuration file.</p>
+<p>I then open the relevant clojure code using the keyboard shortcut <code>Ctrl-c Ctrl-f</code>.  For the dojo I just needed to work with the <code>demo.clj</code> file that defines a battleship player: <code>jr0cket-battleships/src/battleships/demo.clj</code></p>
+<p>Once the project is loaded into emacs and swank is running, load the battleships namespace into the swank server using the <code>(use ...)</code> function.</p>
+<p>Note that <code>(use)</code> will load in all the required dependencies at once whereas <code>(requires)</code> will also require you add all the dependencies yourself.</p>
+<pre><code>user+&gt; (use :reload-all &apos;[battleships.client :as client])
+nil
+</code></pre><p>For the dojo we had a central server that we all submitted to.  I also spun up a local battleships server so I could do some testing.</p>
+<pre><code>lein ring server
+</code></pre><p>Now I am in the namespace I can submit the player I created - initially this was just the default demo.clj player as I was interested in a baseline player to work with.  By default the demo.clj player will shoot and place your ships at random, with no intelligence to these<br>actions</p>
+<pre><code>user&gt; (submit-player &quot;src/battleships/demo.clj&quot; &quot;baseline&quot; &quot;http://localhost:3000&quot;)
+Submitting to http://localhost:3000/create
+    {:status 200, :headers {&quot;date&quot; &quot;Tue, 31 Jan 2012 21:24:18 GMT&quot;, &quot;content-type&quot; &quot;text/html; charset=utf-8&quot;, &quot;connection&quot; &quot;close&quot;, &quot;server&quot; &quot;Jetty(6.1.25)&quot;}, :body &quot;player1912&quot;}
+</code></pre><p>When submitting your “enhanced” player you should give it a name you will remember, different from other players.  As the game does not replay any matches, its probably worth submitting a new player rather than updating an existing one (there would have to be a lot of players to overload the server!).</p>
+<pre><code>user&gt; **(submit-player &quot;src/battleships/demo.clj&quot; &quot;Masher001&quot; &quot;http://localhost:3000&quot;)**
+Submitting to http://localhost:3000/create
+{:status 200, :headers {&quot;date&quot; &quot;Tue, 31 Jan 2012 21:24:18 GMT&quot;,
+&quot;content-type&quot; &quot;text/html; charset=utf-8&quot;, &quot;connection&quot; &quot;close&quot;,
+&quot;server&quot; &quot;Jetty(6.1.25)&quot;}, :body &quot;player1912&quot;}
+</code></pre><p>If you are playing against each other in teams, then the server address will be the  IP address of a shared server.</p>
+<img src="http://3.bp.blogspot.com/-te_MuKdFBTQ/TzFLahe2BxI/AAAAAAAAEbY/Bn_JPN_s3qU/s1600/clojure-logo-500x.png" class="img-thumbnail"> 
+<p>Now the clojure fun begins.  Using the demo.clj as a basis, modify your player so it wins all the games, or at least stop it from sucking more than everyone else’s player.</p>
+<p>So if you want to have some Clojure fun with Battleships, go make your own fork of the <a href="https://github.com/NeillAlexander/battleships" target="_blank" rel="noopener">Battleships server</a> and get coding!</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://3.bp.blogspot.com/-dHDGQemeztI/TzFK4RV4_zI/AAAAAAAAEbM/AQn4UlfVuWQ/s1600/220px-Battleship_game_board.svg.png" class="img-th]]>
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Super Special London Clojure Dojo]]></title>
+    <link href="http://jr0cket.co.uk/2011/12/super-special-london-clojure-dojo.html.html"/>
+    <id>http://jr0cket.co.uk/2011/12/super-special-london-clojure-dojo.html.html</id>
+    <published>2011-12-14T12:51:00.000Z</published>
+    <updated>2022-01-02T20:20:15.306Z</updated>
+    <content type="html"><![CDATA[<img src="http://4.bp.blogspot.com/-NgZYY3DRA4E/TuiXocmSOcI/AAAAAAAABKA/OGxF3j1o0Sk/s1600/20110617091837-ldncljdojo.png" class="img-thumbnail"> 
+<p>My brain was really challenged last night at the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> super special dojo event.  The challenge for the evening was the really hard <a href="http://www.4clojure.com/" target="_blank" rel="noopener">4Clojure</a> problems and they certainly were a challenge.</p>
+<a id="more"></a>
+<img src="http://1.bp.blogspot.com/-RSf3af3jKmM/TuiXKNczIoI/AAAAAAAABJ4/hK-axvLFAeU/s1600/4clj-logo-small.png">
+<p>Our team picked some “medium” strength challenges and we managed to get one and a half problems solved in the hour and a half of the dojo.</p>
+<p>The <a href="http://www.4clojure.com/" target="_blank" rel="noopener">4Clojure website</a> is a great way to learn clojure by practising, i.e. deliberate practice.  If you create a free account, you can also compete in the shortest solution competition, affectionately known as <a href="http://lbrandy.com/blog/2008/09/what-code-golf-taught-me-about-python/" target="_blank" rel="noopener">code golf</a> as the lower your score the better your rank.</p>
+<p>Our coding efforts were pushed up onto <a href="https://github.com/ppotter/december-dojo" target="_blank" rel="noopener">Phillip Potters Github account</a> and I am looking forward to trying out some more 4Clojure problems over the holidays.</p>
+<p>Hope to see you at the next <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> event, usually every last Tuesday of the month (except December obviously).</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://4.bp.blogspot.com/-NgZYY3DRA4E/TuiXocmSOcI/AAAAAAAABKA/OGxF3j1o0Sk/s1600/20110617091837-ldncljdojo.png" class="img-thumbnail"> 
+<p>My brain was really challenged last night at the <a href="http://groups.google.com/group/london-clojurians" target="_blank" rel="noopener">London Clojurians</a> super special dojo event.  The challenge for the evening was the really hard <a href="http://www.4clojure.com/" target="_blank" rel="noopener">4Clojure</a> problems and they certainly were a challenge.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[London Clojure Dojo - 27th September 2011]]></title>
+    <link href="http://jr0cket.co.uk/2011/09/london-clojure-dojo-27th-september-2011.html.html"/>
+    <id>http://jr0cket.co.uk/2011/09/london-clojure-dojo-27th-september-2011.html.html</id>
+    <published>2011-09-27T22:59:00.000Z</published>
+    <updated>2022-01-02T20:20:15.302Z</updated>
+    <content type="html"><![CDATA[<img src="http://ldncljdojo.eventwax.com/uploaded/logo//early-may-2011-london-clojure-dojo/20110419095837-ldncljdojo.png" class="img-thumbnail">
+<p>As always the dojo started with a feast of pizza and drinks courtesy of ThoughWorks, the perennial favorite it seems with developers (I use it at my Scala dojos for the same effect).  A good turn out tonight meant the pizza went down quickly and we got onto the intros, with the monthly mystery question “If your names’ not Bruce, what would it be” nicely stolen from Monty Python.</p>
+<p>Here are the details of what happend at the dojo this time around.</p>
+<a id="more"></a>
+<p>Tonight’s challenge was a children’s classic - 20 Questions.  We set up a server to hold a expert system style data structure to help the teams play the game.  The challenge was two fold in playing the game in the first place and then adding to the question/answer data structure.</p>
+<p>With enough people for 5 teams we split up into our groups and cracked on with the challenge.  Team two were using my trusty Lenovo laptop running Ubuntu, with the timeless classic emacs editor.  Emacs had the obligatory starter kick installed and the project was set up with Lein for the dependency management and Swank for the REPL.</p>
+<p>Once we hooked up Emacs to the local swank server we were off…  well once we figured out what on earth to do first.</p>
+<p>The challenges of a dojo are the blank project, what do we do first.  You either pontificate for a while, come up with 5 different opinions or if you are very lucky decide to jump at the first idea you have and crack on with it - knowing you will refactor it with in about 5 minutes - but thats the fun of the dojo…</p>
+<p>Change is good… fast feedback is good… putting stuff in the REPL is a life saver…</p>
+<p>To connect to the 20 Questions server we used the CLJ-HTTP library, pretty easy to use with simple get and put commands and a standard require statement for the library.  Adding the library to the project.clj and running lein deps brought down the relevant libraries and dependencies (just like a mini maven, but without half the Internet).</p>
+<p>A few of different routes were quickly tried out but we quickly settled on an atom based data structure - as we were going to do updates to it.  We could have done something more elegant though this route was good enough for what we needed.</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Working in a tight knit group for about two hours working on a challenge is a very effective ways of exploring and getting a handle on a new language.  With a group of people who all have different ideas and experiences you take away a lot of things to think about.  I can see why people are driven to do more straight after a dojo and re-do the challenge in some of the different ways discussed.  I always get a great confidence boost for my clojure efforts, even though (or maybe because) I am far from proficient.</p>
+<p>The code is up on GitHub for the world to see and its interesting to understand what a random group with a little bit of knowledge and <a href="http://clojuredocs.org/" target="_blank" rel="noopener">clojuredocs.org</a> can achieve in under two hours…</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<img src="http://ldncljdojo.eventwax.com/uploaded/logo//early-may-2011-london-clojure-dojo/20110419095837-ldncljdojo.png" class="img-thumbnail">
+<p>As always the dojo started with a feast of pizza and drinks courtesy of ThoughWorks, the perennial favorite it seems with developers (I use it at my Scala dojos for the same effect).  A good turn out tonight meant the pizza went down quickly and we got onto the intros, with the monthly mystery question “If your names’ not Bruce, what would it be” nicely stolen from Monty Python.</p>
+<p>Here are the details of what happend at the dojo this time around.</p>]]>
+    
+    </summary>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/tags/clojure/"/>
+    
+      <category term="events" scheme="http://jr0cket.co.uk/tags/events/"/>
+    
+      <category term="coding" scheme="http://jr0cket.co.uk/tags/coding/"/>
+    
+      <category term="clojure" scheme="http://jr0cket.co.uk/categories/clojure/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Tweaking Light Table for a Great Clojure Experience | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Light Table provides a great development environment for Clojure, ClojureScript &amp;amp; JavaScript.  With a few tweaks and some of the many plugins you can make Light Table do even more.  Here are a">
+<meta name="keywords" content="clojure,git,lighttable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tweaking Light Table for a Great Clojure Experience">
+<meta property="og:url" content="http://jr0cket.co.uk/2015/01/tweaking-light-table-for-a-great-clojure-experience.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Light Table provides a great development environment for Clojure, ClojureScript &amp;amp; JavaScript.  With a few tweaks and some of the many plugins you can make Light Table do even more.  Here are a">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://jr0cket.co.uk/images/lighttable-logo.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/lighttable-plugin-git-status-bar.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/lighttable-gitlight-commands.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/lighttable-gitlight-status-window.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/lighttable-gitlight-diff-visual.png">
+<meta property="og:image" content="http://jr0cket.co.uk/images/lighttable-plugin-modific-example.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tweaking Light Table for a Great Clojure Experience">
+<meta name="twitter:description" content="Light Table provides a great development environment for Clojure, ClojureScript &amp;amp; JavaScript.  With a few tweaks and some of the many plugins you can make Light Table do even more.  Here are a">
+<meta name="twitter:image" content="http://jr0cket.co.uk/images/lighttable-logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-tweaking-light-table-for-a-great-clojure-experience" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/tweaking-light-table-for-a-great-clojure-experience.html" class="article-date">
+  <time datetime="2015-01-03T22:27:09.000Z" itemprop="datePublished">3 Jan 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dev-tools/">dev-tools</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Tweaking Light Table for a Great Clojure Experience
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/lighttable-logo.png" class="img-thumbnail">
+<p>  <a href="http://lighttable.com" target="_blank" rel="noopener">Light Table</a> provides a great development environment for Clojure, ClojureScript &amp; JavaScript.  With a few tweaks and some of the many plugins you can make Light Table do even more.  Here are a few of the tweaks and plugins I use for my development with Light Table.</p>
+<a id="more"></a>
+<h4 id="Ubuntu-Fonts"><a href="#Ubuntu-Fonts" class="headerlink" title="Ubuntu Fonts"></a>Ubuntu Fonts</h4><p>  The <a href="http://font.ubuntu.com/" target="_blank" rel="noopener">Ubuntu fonts</a> are very clear and easy on the eyes, so are great for coding with.  I use the Ubuntu Mono font for all my editors by adding the following line to my user behaviors</p>
+<p>  Open the command panel in Light Table with <code>Ctrl-Space</code> and type <code>user behaviors</code>.  Then edit the file that opens and add the following line</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">:editor</span> <span class="symbol">:lt.objs.style/font-settings</span> <span class="string">"Ubuntu Mono"</span> <span class="number">16</span> <span class="number">1.2</span>]</span><br></pre></td></tr></table></figure>
+<p>  When I run workshops or other demos I increase the font size to 20, to make the code easier to read from a distance.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">:editor</span> <span class="symbol">:lt.objs.style/font-settings</span> <span class="string">"Ubuntu Mono"</span> <span class="number">20</span> <span class="number">1.2</span>]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>You can use Ubuntu Fonts with operating systems other than Ubuntu by downloading the fonts from <a href="http://font.ubuntu.com/" target="_blank" rel="noopener">font.ubuntu.com</a></p>
+</blockquote>
+<h4 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h4><p>  The default theme for Light Table is pretty good, however my prefered Light Table font is called <em>Tommorow Night</em> and I configure my user behaviors to use this theme by adding the following line:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">:editor</span> <span class="symbol">:lt.objs.style/set-theme</span> <span class="string">"tomorrow-night"</span>]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>There is also an Ubuntu theme plugin that I have just spotted, so I am trying that out although I want to tweak some of the colours before I make the switch.</p>
+</blockquote>
+<h4 id="Bracket-fun"><a href="#Bracket-fun" class="headerlink" title="Bracket fun"></a>Bracket fun</h4><p>From Light Table 0.7.0 onwards parens are not auto-closed anymore, so when you type <code>(</code> then you have to also type <code>)</code>.  Coming from Emacs, I find this limiting, so luckily you can add this behaviour back in by editing your user behaviors.  </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">:app</span> <span class="symbol">:lt.objs.settings/pair-keymap-diffs</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="Emacs-keybindings"><a href="#Emacs-keybindings" class="headerlink" title="Emacs keybindings"></a>Emacs keybindings</h4><p>  The Emacs plugin is a wrapper around the Code Mirror keybindings for Emacs.  Installing the Emacs plugin with give you many of the Emacs keybindings you enjoy and you can easily customise them by changing the keybindings mapping in the plugin.</p>
+<p>  See my previous post on how to use the <a href="http://localhost:4004/2015/01/clojure-with-lighttable-in-emacs-mode.html" target="_blank" rel="noopener">Emacs plugin with Light Table</a>. </p>
+<h4 id="Git-Status-Bar"><a href="#Git-Status-Bar" class="headerlink" title="Git Status Bar"></a>Git Status Bar</h4><p>  The Git status bar plugin simply indicates the Git branch your current editors’ file is in, assuming it is under version control.</p>
+<img src="/images/lighttable-plugin-git-status-bar.png" class="img-code">
+<p>  Install using the plugin manager and restart Light Table (you may just be able to select “Reload App Behaviours” from the Light Table commands).  Then open a file under version control and you will see its Git branch in the right corner of the status bar (the bar at the bottom of Light Table).</p>
+<blockquote>
+<p>Git branch / status will only show for files that are in repositories whose root is in your workspace.</p>
+</blockquote>
+<h4 id="Gitlight"><a href="#Gitlight" class="headerlink" title="Gitlight"></a>Gitlight</h4><p>  Gitlight plugin provides a visual Git client that can stage and commit changes, push &amp; pull changes with remote repositories and show visual diffs of changes.  Install Gitlight from the Light Table plugin manager and restart Light Table (you may just be able to select “Reload App Behaviours” from the Light Table commands).</p>
+<p>  Use Gitlight by opening the command panel and type <code>gitlight</code>, you will see a list of available commands</p>
+<img src="/images/lighttable-gitlight-commands.png" class="img-code">
+<p>  If you open a file from a project managed by git you can see the status of all the files in that project using the command <code>gitlight-status</code></p>
+<img src="/images/lighttable-gitlight-status-window.png" class="img-code">  
+<p>  If you select diff for any of the files in the project, you get a nice visual comparison of the changes between what is committed and your working copy.</p>
+<img src="/images/lighttable-gitlight-diff-visual.png" class="img-code">    
+<h4 id="Modific-show-changes-since-last-Git-commit"><a href="#Modific-show-changes-since-last-Git-commit" class="headerlink" title="Modific - show changes since last Git commit"></a>Modific - show changes since last Git commit</h4><p>  When you save a file, any changes you made since it was last commited to Git are marked by coloured lines at the left hand side of the editor window, also known as <em>gutter marks</em>. </p>
+<img src="/images/lighttable-plugin-modific-example.png" class="img-code">
+<blockquote>
+<p>modific example with red, green and yellow highlights</p>
+</blockquote>
+<ul>
+<li>Red    = lines have been deleted  </li>
+<li>Green  = new lines have been added</li>
+<li>Yellow = text that has be modified</li>
+</ul>
+<p>You can jump between changes using <code>Ctrl+Shift+PageUp/PageDown</code>, show the original version by putting the cursor on a changed line and hit <code>Ctrl+Alt+c</code> and revert a change by putting the cursor on a changed line and hit <code>Ctrl+Alt+r</code></p>
+<p>  Install modific from the Light Table plugin manager and restart Light Table.  Then open a file from workspace project that is under version control.  Now any change you make will be highlighted.</p>
+<h4 id="Plugins-to-try-next"><a href="#Plugins-to-try-next" class="headerlink" title="Plugins to try next"></a>Plugins to try next</h4><p>  There are lots of other plugins I have not tried yet.  Many plugins also provide additional language support.</p>
+<p>  Here are a few plugins I plan to try next: </p>
+<ul>
+<li><a href="https://github.com/chadhq/slamhound-lt" target="_blank" rel="noopener">Slamhound</a> - refactor your Clojure namespace</li>
+<li><a href="https://github.com/vgrichina/lt-howdoi" target="_blank" rel="noopener">howdoi</a> - pull in code solutions from the web</li>
+<li><a href="https://github.com/joshuafcole/recall" target="_blank" rel="noopener">recall</a> - workspace Persistence </li>
+<li><a href="https://github.com/bfabry/workspace-nav" target="_blank" rel="noopener">workspace nav</a> - Navigate the workspace view via the keyboard </li>
+</ul>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>  Light Table provides a lot of great features out of the box, expecially for Clojure, ClojureScript and JavaScript development.  Using tweaks and plugins, Light Table is easy to tailor int a more personalised development experience.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2015/01/tweaking-light-table-for-a-great-clojure-experience.html" data-id="cl2mbqfyf00kjzqmjoyq70ost" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2015/01/tweaking-light-table-for-a-great-clojure-experience.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lighttable/">lighttable</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/getting-started-with-cider-repl-for-clojure-on-emacs-live.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Getting Started With Cider Repl for Clojure on Emacs Live
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/faster-clojure-repl-startup-with-java-9-snapshot.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Faster Clojure REPL Startup With Java 9 Snapshot</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2015/01/tweaking-light-table-for-a-great-clojure-experience.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

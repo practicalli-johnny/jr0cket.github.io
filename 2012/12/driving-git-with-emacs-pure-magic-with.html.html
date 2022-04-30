@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Driving Git With Emacs - Pure Magic With Magit - Part One | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Getting to grips with Git was not to much of a learning curve, although I found it quicker to work on the command line than using graphical tools.  Using git status and git log made it easy to keep a">
+<meta name="keywords" content="emacs,dev-tools,git,magit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Driving Git With Emacs - Pure Magic With Magit - Part One">
+<meta property="og:url" content="http://jr0cket.co.uk/2012/12/driving-git-with-emacs-pure-magic-with.html.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Getting to grips with Git was not to much of a learning curve, although I found it quicker to work on the command line than using graphical tools.  Using git status and git log made it easy to keep a">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://jr0cket.co.uk/images/emacs-logo.png">
+<meta property="og:image" content="http://2.bp.blogspot.com/-Nw-UkZubf-Y/UNys45ExNRI/AAAAAAAAIzI/QLRPlj5FV7g/s1600/Emacs-magit-status-example.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-oUwbRIUgdlo/UNxyktDH5OI/AAAAAAAAItU/XO06glOlP5Y/s1600/Emacs-eshell-dired.png">
+<meta property="og:image" content="http://1.bp.blogspot.com/-HJnxJ3bJ114/UNx0DQtn7hI/AAAAAAAAIt0/QmYrPaaUkus/s1600/Emacs-lein-project-file.png">
+<meta property="og:image" content="http://3.bp.blogspot.com/-qgsSf1fsSXE/UNx09qHRzMI/AAAAAAAAIuA/a0FGNvoHXek/s1600/Emacs-git-init-dired.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-6N14SH8fsgs/UNx2fFspJUI/AAAAAAAAIus/qbsV5QO2RLM/s1600/Emacs-git-status-new-project.png">
+<meta property="og:image" content="http://3.bp.blogspot.com/-X8zLwi7bNgo/UNx5cVnKAhI/AAAAAAAAIvg/i0GL7duEEIk/s1600/Emacs-git-status-stage-file-details.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-sLsSvcPbvyE/UNyK2zrCbbI/AAAAAAAAIv8/9jg5Vsr7woM/s1600/Emacs-git-status-stage-kill-file.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-7mcatVIm5qg/UNyLogdSGkI/AAAAAAAAIwE/xynukqLEgd4/s1600/Emacs-git-status-stage-kill-file-results.png">
+<meta property="og:image" content="http://1.bp.blogspot.com/-glgNVoMJXzg/UNyOYH28SVI/AAAAAAAAIwg/o3O6ZhosJoA/s1600/Emacs-git-commit-message-buffer.png">
+<meta property="og:image" content="http://2.bp.blogspot.com/-Oae6fn9zVPU/UNyPn78KNvI/AAAAAAAAIw8/qQuIYmaf25E/s1600/Emacs-git-commit-head-commit-message.png">
+<meta property="og:image" content="http://2.bp.blogspot.com/-9Z9vXI3w07s/UNyiMCUADeI/AAAAAAAAIxY/WoioDklNaOw/s1600/Emacs-git-remote-add-command.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-crHzv5Tsyzk/UNyiMm3Bl3I/AAAAAAAAIxc/8cAnjBK_qi0/s1600/Emacs-git-remote-add-name.png">
+<meta property="og:image" content="http://4.bp.blogspot.com/-AtaTiTJepzs/UNyiNUl-IAI/AAAAAAAAIxk/RHR-fbpLJlM/s1600/Emacs-git-remote-add-url.png">
+<meta property="og:image" content="http://1.bp.blogspot.com/-3jP05aBrmg4/UNylwaRMJRI/AAAAAAAAIyI/R4eJ9cdpNaw/s1600/Emacs-git-remote-add-results.png">
+<meta property="og:image" content="http://3.bp.blogspot.com/-rdjgD_2CzeA/UNzw95Qg8CI/AAAAAAAAIzo/QIM2S544CuU/s1600/Emacs-git-remote-push-menu.png">
+<meta property="og:image" content="http://1.bp.blogspot.com/-ouTos7VRIZo/UNyp0k-4_lI/AAAAAAAAIyo/aIpVnOsbEgs/s1600/Emacs-git-remote-add-remote-line.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Driving Git With Emacs - Pure Magic With Magit - Part One">
+<meta name="twitter:description" content="Getting to grips with Git was not to much of a learning curve, although I found it quicker to work on the command line than using graphical tools.  Using git status and git log made it easy to keep a">
+<meta name="twitter:image" content="http://jr0cket.co.uk/images/emacs-logo.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-driving-git-with-emacs-pure-magic-with.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/12/driving-git-with-emacs-pure-magic-with.html.html" class="article-date">
+  <time datetime="2012-12-27T20:29:00.000Z" itemprop="datePublished">27 Dec 2012</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/emacs/">emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Driving Git With Emacs - Pure Magic With Magit - Part One
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/emacs-logo.png" class="img-thumbnail">
+<p>Getting to grips with Git was not to much of a learning curve, although I found it quicker to work on the command line than using graphical tools.  Using <code>git status</code> and <code>git log</code> made it easy to keep a handle on my code changes.</p>
+<p>As I do most of my Clojure development in Emacs, it was great to discover I could drive git from Emacs using Magit.  What follows is a flow through the first steps with Magit.</p>
+<blockquote>
+<p>In part two I look at <a href="/2012/12/driving-git-with-emacs-part-two-may-log.html.html">Git logs with Magit</a><br><a id="more"></a></p>
+</blockquote>
+<img src="http://2.bp.blogspot.com/-Nw-UkZubf-Y/UNys45ExNRI/AAAAAAAAIzI/QLRPlj5FV7g/s1600/Emacs-magit-status-example.png" class="img-code">
+<p>I use <a href="https://github.com/overtone/emacs-live" target="_blank" rel="noopener">Emacs Live</a> from <a href="http://plus.google.com/104881409052969541540" target="_blank" rel="noopener">Sam Aaron</a> as my Emacs configuration (Emacs 24 from <a href="http://emacsformacosx.com/" target="_blank" rel="noopener">Emacs for MacOSX</a>), so the packages and <code>key-bindings</code> mentioned here are all available in this configuration unless otherwise stated.</p>
+<h1 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h1><p>I start a new Clojure project using Leiningen, using the command line to do so.  Instead of having a seperate terminal window for this, I can open up a command line shell window in Emacs </p>
+<pre><code>M-x eshell
+</code></pre><p>I then navigate to my projects folder using `cd ~/projects/clojure and then create a new Clojure project using Leiningen, the build automation tool for Clojure. </p>
+<pre><code>lein new project-name
+</code></pre><p>I could continue to use the terminal to manage the git repository, although once I got used to magit then using git inside Emacs seems more natural.</p>
+<p>Using eshell, you can also easily open files using <code>find-file</code>filename<code>and see all the files and folders using</code>dired folder`.  So lets see what Leiningen has created for us</p>
+<pre><code>dired project-name
+</code></pre><img src="http://4.bp.blogspot.com/-oUwbRIUgdlo/UNxyktDH5OI/AAAAAAAAItU/XO06glOlP5Y/s1600/Emacs-eshell-dired.png" class="img-code"> 
+<p>You can use the mouse or cursor to open any file listed, or navigate to sub-folders.  In this case lets select the Leiningen project configuration file, <code>project.clj</code>.</p>
+<img src="http://1.bp.blogspot.com/-HJnxJ3bJ114/UNx0DQtn7hI/AAAAAAAAIt0/QmYrPaaUkus/s1600/Emacs-lein-project-file.png" class="img-code">
+<h1 id="Initialising-a-repository-in-git"><a href="#Initialising-a-repository-in-git" class="headerlink" title="Initialising a repository in git"></a>Initialising a repository in git</h1><p>Now I have a Clojure project, I can put that project under git version control</p>
+<pre><code>M-x magit-init
+</code></pre><p>The emacs mini-buffer will prompt you for the top level folder of the files you want to version with git.  If you are still in the top level project folder in the shell, magit-init will pick up the path, saving you some typing.</p>
+<p>You will now be able to see the <code>.git</code> folder inside your project directory.</p>
+<img src="http://3.bp.blogspot.com/-qgsSf1fsSXE/UNx09qHRzMI/AAAAAAAAIuA/a0FGNvoHXek/s1600/Emacs-git-init-dired.png" class="img-code">
+<h1 id="Git-Status-in-Emacs"><a href="#Git-Status-in-Emacs" class="headerlink" title="Git Status in Emacs"></a>Git Status in Emacs</h1><p>The most commonly used git command is <code>git status</code> - showing you what files have changes, which are staged, untracked files, pending commits and remote updates. To see the git status of your project in Emacs</p>
+<pre><code>M-x magit-status
+</code></pre><p>Short-cut key-binding: <code>C-x g</code></p>
+<p>Keyboard shortcuts are defined in <code>~/emacs.d/packs/dev/bindings-pack/config/default-bindings.el</code> </p>
+<pre><code>(global-set-key (kbd &quot;C-x g&quot;) &apos;magit-status)
+</code></pre><p>You will be prompted for the location of the git repository (the one you just created).  Magit does a good job of guessing the folder assuming you already have a file open that is somewhere in a folder hierachy that has a <code>.git</code> folder in it. </p>
+<p>With a newly versioned project then there will not be that much to see, except all the files not yet put under version control (untracked files).</p>
+<p>The <code>Local:</code> line show the branch you are working on (master) and location of your project.</p>
+<p>The <code>Head:</code> line shows you the last commit you made to your repository.     </p>
+<img src="http://4.bp.blogspot.com/-6N14SH8fsgs/UNx2fFspJUI/AAAAAAAAIus/qbsV5QO2RLM/s1600/Emacs-git-status-new-project.png" class="img-code"> 
+<h1 id="Staging-changes"><a href="#Staging-changes" class="headerlink" title="Staging changes"></a>Staging changes</h1><p>To version control your files you need to tell git about them.  This is done by <em>staging</em> the files using the <code>git add</code> command.  You can add individual files or all files that are untracked.  Using magit, this is even easier.</p>
+<p>In the magit-status buffer in Emacs, you can use the following key shortcuts to stage and unstage files</p>
+<p><code>s</code> - stage a specific untracked file highlighted by cursor (stage all untracked files when cursor over <em>Untracked files</em> title)</p>
+<p><code>k</code> - delete a specific untracked file highlighted by cursor (delete all untracked files when cursor over “Untracked files” title).  See <em>Delete really deletes</em> section below.</p>
+<p><code>i</code> - add file to the project <code>.gitignore</code> file</p>
+<p><code>u</code> - unstage a specific staged change highlighted by cursor </p>
+<p><code>C-u s</code> - stages everything - tracked and untracked changes (<em>Note: this failed when I tried it</em>)</p>
+<img src="http://3.bp.blogspot.com/-X8zLwi7bNgo/UNx5cVnKAhI/AAAAAAAAIvg/i0GL7duEEIk/s1600/Emacs-git-status-stage-file-details.png" class="img-code">
+<h1 id="Under-the-hood"><a href="#Under-the-hood" class="headerlink" title="Under the hood"></a>Under the hood</h1><p>Using the <code>$</code> key opens another buffer that shows you the command happening when you press keys in the <em>magit-status</em> window.  Its a handy way to learn the command syntax and confirm magit is doing what you expected.</p>
+<blockquote>
+<p>Note: All the files matching pattern in the project .gitignore or personal ~/.gitignore_global files will not be shown as untracked files.<strong>Delete really deletes</strong></p>
+</blockquote>
+<p>Using the <code>k</code> command in <em>magit-status</em> really deletes the local file, so be sure that is what you want.  You get a prompt in the mini-buffer to confirm the delete though.</p>
+<img src="http://4.bp.blogspot.com/-sLsSvcPbvyE/UNyK2zrCbbI/AAAAAAAAIv8/9jg5Vsr7woM/s1600/Emacs-git-status-stage-kill-file.png" class="img-code">
+<p>Testing this delete out, I noticed that not only was the file deleted but so was the folder that contained the file.  As you can see in the dired my-project buffer, the doc folder has gone.  If you delete files then this buffer may need a refresh, using <code>g</code>.</p>
+<img src="http://4.bp.blogspot.com/-7mcatVIm5qg/UNyLogdSGkI/AAAAAAAAIwE/xynukqLEgd4/s1600/Emacs-git-status-stage-kill-file-results.png" class="img-code">
+<h1 id="Committing-your-changes"><a href="#Committing-your-changes" class="headerlink" title="Committing your changes"></a>Committing your changes</h1><p>Before you make too many changes you should commit them to your local repository.  The more commits you make the smaller and easier they will be to mange.</p>
+<p>On the command line you would run <code>git commit -m &quot;useful commit message&quot;</code>, from the <em>magit-status</em> buffer its much easier:</p>
+<p><code>c</code></p>
+<p>This pops up another buffer for you to type in your commit message.  Once you have typed your message then <code>C-c C-c</code> commits all the changes to your local repository.  <code>C-c C-k</code> cancels the commit.</p>
+<img src="http://1.bp.blogspot.com/-glgNVoMJXzg/UNyOYH28SVI/AAAAAAAAIwg/o3O6ZhosJoA/s1600/Emacs-git-commit-message-buffer.png" class="img-code">
+<p>Now all our staged files have been added as a commit to our local repository.  We can see this by looking at the Head: line in the magit-status window.  We can also see that there are no changes (tracked or otherwise) shown.</p>
+<img src="http://2.bp.blogspot.com/-Oae6fn9zVPU/UNyPn78KNvI/AAAAAAAAIw8/qQuIYmaf25E/s1600/Emacs-git-commit-head-commit-message.png" class="img-code">
+<h1 id="Working-with-a-remote-Github-repository"><a href="#Working-with-a-remote-Github-repository" class="headerlink" title="Working with a remote Github repository"></a>Working with a remote Github repository</h1><p>Assuming we have created a repository on Github it can be added as a remote source very easily</p>
+<pre><code>M-x magit-add-remote
+</code></pre><img src="http://2.bp.blogspot.com/-9Z9vXI3w07s/UNyiMCUADeI/AAAAAAAAIxY/WoioDklNaOw/s1600/Emacs-git-remote-add-command.png" class="img-code">
+<p>You are prompted for the name you want to give the remote, origin, upstream or github are common names depending on your context.  The name acts as an alias for the address of the Github repository, so keep it short but meaningful.</p>
+<img src="http://4.bp.blogspot.com/-crHzv5Tsyzk/UNyiMm3Bl3I/AAAAAAAAIxc/8cAnjBK_qi0/s1600/Emacs-git-remote-add-name.png" class="img-code">
+<p>Now you are prompted for the Internet address of your repository.  On the Github website your repository name is shown at the top of the page.  Use the SSH version of the address, the one that starts <code>git@github:...</code>.</p>
+<img src="http://4.bp.blogspot.com/-AtaTiTJepzs/UNyiNUl-IAI/AAAAAAAAIxk/RHR-fbpLJlM/s1600/Emacs-git-remote-add-url.png" class="img-code">
+<p>Magit will now add the remote name and address to the project <code>.git/config</code> file.</p>
+<img src="http://1.bp.blogspot.com/-3jP05aBrmg4/UNylwaRMJRI/AAAAAAAAIyI/R4eJ9cdpNaw/s1600/Emacs-git-remote-add-results.png" class="img-code">
+<p>You can now push your local commits up to Github using the key:  <code>P</code></p>
+<p>The first time you press <code>P</code> the push menu appears.</p>
+<img src="http://3.bp.blogspot.com/-rdjgD_2CzeA/UNzw95Qg8CI/AAAAAAAAIzo/QIM2S544CuU/s1600/Emacs-git-remote-push-menu.png" class="img-code">
+<p>Pressing <code>P</code> again pushes to the remote repository.</p>
+<img src="http://1.bp.blogspot.com/-ouTos7VRIZo/UNyp0k-4_lI/AAAAAAAAIyo/aIpVnOsbEgs/s1600/Emacs-git-remote-add-remote-line.png" class="img-code">
+<h1 id="And-there-is-more-magit"><a href="#And-there-is-more-magit" class="headerlink" title="And there is more magit"></a>And there is more magit</h1><p>There is a lot more you can do with magit, next up is <a href="/2012/12/driving-git-with-emacs-part-two-may-log.html.html">Git logs with Magit</a>.  </p>
+<p>If you are really keen you can have a look at the <a href="http://philjackson.github.com/magit/magit.html" target="_blank" rel="noopener">Magit documentation</a>, or if you know what you want to do then the <a href="http://daemianmack.com/magit-cheatsheet.html" target="_blank" rel="noopener">Magit cheet sheet</a> may be more useful.</p>
+<h1 id="Magit-not-cutting-the-mustard"><a href="#Magit-not-cutting-the-mustard" class="headerlink" title="Magit not cutting the mustard ?"></a>Magit not cutting the mustard ?</h1><p>For situations when Magit doesn’t do everything you need, you can run raw Git commands using <code>:</code> (colon). This will prompt for a Git command, run it, and refresh the status buffer. The output can be viewed by typing <code>$</code>.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2012/12/driving-git-with-emacs-pure-magic-with.html.html" data-id="cl2mbqg0300t8zqmj8rxjmywt" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2012/12/driving-git-with-emacs-pure-magic-with.html.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-tools/">dev-tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/magit/">magit</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/12/driving-git-with-emacs-part-two-may-log.html.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Driving Git With Emacs - Part Two - May the Log Be With You
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/12/gitignore-for-clojure-and-emacs.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">GitIgnore for Clojure and Emacs - Ignore Emacs Backup &amp; Temp Files</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2012/12/driving-git-with-emacs-pure-magic-with.html.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>

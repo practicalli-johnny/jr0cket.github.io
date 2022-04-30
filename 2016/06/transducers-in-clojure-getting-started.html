@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Transducers in Clojure: Getting Started | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Transducers are built upon the design princlple in Clojure of composing functions together, allowing you to elegantly abstract functional composition and create a workflow that will transform data wi">
+<meta name="keywords" content="clojure,transducers,functional-composition">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Transducers in Clojure: Getting Started">
+<meta property="og:url" content="http://jr0cket.co.uk/2016/06/transducers-in-clojure-getting-started.html">
+<meta property="og:site_name" content="jr0cket">
+<meta property="og:description" content="Transducers are built upon the design princlple in Clojure of composing functions together, allowing you to elegantly abstract functional composition and create a workflow that will transform data wi">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://jr0cket.co.uk/images/clojure-logo-thumbnail.png">
+<meta property="og:updated_time" content="2022-01-02T20:20:15.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Transducers in Clojure: Getting Started">
+<meta name="twitter:description" content="Transducers are built upon the design princlple in Clojure of composing functions together, allowing you to elegantly abstract functional composition and create a workflow that will transform data wi">
+<meta name="twitter:image" content="http://jr0cket.co.uk/images/clojure-logo-thumbnail.png">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28030709-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/developer-guides">DevGuides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.co.uk/slides">Slides</a>
+        
+          <a class="main-nav-link" href="/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="/clojure">Clojure</a>
+        
+          <a class="main-nav-link" href="/hexo">Hexo</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket" target="_blank"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket" target="_blank"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket" target="_blank"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/117080433375668558463" target="_blank"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jr0cket.co.uk"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-transducers-in-clojure-getting-started" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/transducers-in-clojure-getting-started.html" class="article-date">
+  <time datetime="2016-06-15T11:34:06.000Z" itemprop="datePublished">15 Jun 2016</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/clojure/">clojure</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Transducers in Clojure: Getting Started
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/images/clojure-logo-thumbnail.png" class="img-thumbnail">
+<p>Transducers are built upon the design princlple in Clojure of composing functions together, allowing you to elegantly abstract functional composition and create a workflow that will transform data without being tied to a specific context.  So what does that actually mean and what does the code look like?  Is there a transducer function or is it just extensions to existing functions.  These are the questions we will explore and answer.</p>
+<blockquote>
+<p>If you are in the early stages of learning Clojure, then I suggest getting your head around functions such as map &amp; reduce and composing functions with the threading macros before diving into Transducers.</p>
+</blockquote>
+<p>This is my interpretation of the really great introduction to Transducers from <a href="https://funcool.github.io/clojurescript-unraveled/" target="_blank" rel="noopener">Clojurescript Unraveled</a>, expanded with additional code and my own comments.</p>
+<a id="more"></a>
+<h2 id="Defining-a-data-structure"><a href="#Defining-a-data-structure" class="headerlink" title="Defining a data structure"></a>Defining a data structure</h2><p>Defining a data structure that will represent our fruit, including whether that fruit is rotten or clean.  We have two collections of grapes, one green, one black.  Each cluster has 2 grapes on it (not a very big cluster in this example)</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> grape-clusters</span><br><span class="line">  [&#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">             &#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]</span><br><span class="line">    <span class="symbol">:colour</span> <span class="symbol">:green</span>&#125;</span><br><span class="line">   &#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">             &#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]&#125;</span><br><span class="line">   <span class="symbol">:colour</span> <span class="symbol">:black</span>])</span><br></pre></td></tr></table></figure>
+<p>Each grape cluster has the following structure</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">          &#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]</span><br><span class="line"> <span class="symbol">:colour</span> <span class="symbol">:green</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Splitting-into-grape-clusters"><a href="#Splitting-into-grape-clusters" class="headerlink" title="Splitting into grape clusters"></a>Splitting into grape clusters</h2><p>We want to split the grape clusters into individual grapes, discarding the rotten grapes.  The remaing grapes will be checked to see if they are clean.  We should be left with one green and one black grape.</p>
+<p>First lets define a function that returns a collection of grapes, given a specific grape cluster.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> split-cluster</span><br><span class="line"><span class="string">"Takes a grape cluster and returns the vector of all the grapes in that cluster"</span></span><br><span class="line">  [cluster]</span><br><span class="line">  (<span class="symbol">:grapes</span> cluster))</span><br></pre></td></tr></table></figure>
+<p>The body of this function returns the value pointed to by the <code>:grapes</code> keyword, which will be a collection of grapes.  We do not ask for the value of :colours as in this case the colour of the grape is irelevant.</p>
+<h2 id="Testing-our-code-in-the-REPL"><a href="#Testing-our-code-in-the-REPL" class="headerlink" title="Testing our code in the REPL"></a>Testing our code in the REPL</h2><p>The grape-clusters data structure is a vector of two grape clusters.  To see what a grape cluster is, get the first element of that data structure</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">first</span></span> grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; &#123;:grapes [&#123;:rotten? false, :clean? false&#125; &#123;:rotten? true, :clean? false&#125;], :colour :green&#125;</span></span><br></pre></td></tr></table></figure>
+<p>For each cluster in grape-clusters, return just the :grapes data, ignoring the colour information</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">split-cluster</span> &#123;<span class="symbol">:grapes</span> [&#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;</span><br><span class="line">                         &#123;<span class="symbol">:rotten?</span> <span class="literal">true</span>  <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;]</span><br><span class="line">                <span class="symbol">:colour</span> <span class="symbol">:green</span>&#125;)</span><br><span class="line"><span class="comment">;; =&gt;[&#123;:rotten? false, :clean? false&#125; &#123;:rotten? true, :clean? false&#125;]</span></span><br></pre></td></tr></table></figure>
+<h2 id="A-filter-for-rotten-grapes"><a href="#A-filter-for-rotten-grapes" class="headerlink" title="A filter for rotten grapes"></a>A filter for rotten grapes</h2><p>We dont want to include any rotten grapes after we have processed all our clusters, so here we define a simple filter to only return grapes where <code>:rotten?</code> is false.</p>
+<p>This filter will be used on each individual grape extracted from the cluster.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> not-rotten</span><br><span class="line">  <span class="string">"Given a grape, only return it if it is not rotten.  A grape is defined as &#123;:rotten? true|false :clean? true|false&#125;"</span></span><br><span class="line">  [grape]</span><br><span class="line">  (<span class="name"><span class="builtin-name">not</span></span> (<span class="symbol">:rotten?</span> grape)))</span><br></pre></td></tr></table></figure>
+<h2 id="Cleaning-all-the-grapes"><a href="#Cleaning-all-the-grapes" class="headerlink" title="Cleaning all the grapes"></a>Cleaning all the grapes</h2><p>Any grapes we have left should be cleaned.  Rather than model the cleaning process, we have simply written a function that updates all the grapes with a value of <code>true</code> for the key <code>:clean?</code> </p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> clean-grape</span><br><span class="line">  <span class="string">"Given a grape, updating the grapes :clean? value to true regardless of its current value.  A grape is defined as &#123;:rotten? true|false :clean? true|false&#125;"</span></span><br><span class="line">  [grape]</span><br><span class="line">  (<span class="name"><span class="builtin-name">assoc</span></span> grape <span class="symbol">:clean?</span> <span class="literal">true</span>))</span><br></pre></td></tr></table></figure>
+<p>Lets give our clean grape function a quick test in the REPL.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">clean-grape</span> &#123;<span class="symbol">:rotten?</span> <span class="literal">false</span> <span class="symbol">:clean?</span> <span class="literal">false</span>&#125;)</span><br><span class="line"><span class="comment">;; =&gt; &#123;:rotten? false, :clean? true&#125;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Functional-composition-using-the-thread-last-macro"><a href="#Functional-composition-using-the-thread-last-macro" class="headerlink" title="Functional composition using the thread last macro."></a>Functional composition using the thread last macro.</h1><p>Each line passes its evaluate value to the next line as its last argument.  Here is the algorithm we want to create with our code:</p>
+<ul>
+<li>evaluate the name grape-clusters and return the data structure it points to.</li>
+<li>use mapcat to map the split-clusters function over each element in grape-clusters, returning 4 grapes concatinated into one collection</li>
+<li>filter the 4 grapes, dropping the grapes where :rotten? equals true, returning 2 grapes</li>
+<li>update each grape to have a :clean? value of true</li>
+</ul>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">-&gt;&gt;</span></span> grape-clusters</span><br><span class="line">     (<span class="name"><span class="builtin-name">mapcat</span></span> split-cluster)</span><br><span class="line">     (<span class="name"><span class="builtin-name">filter</span></span> not-rotten)</span><br><span class="line">     (<span class="name"><span class="builtin-name">map</span></span> clean-grape))</span><br><span class="line"></span><br><span class="line"><span class="comment">;; =&gt; (&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;)</span></span><br></pre></td></tr></table></figure>
+<h1 id="Using-partial-to-compose-functions-together"><a href="#Using-partial-to-compose-functions-together" class="headerlink" title="Using partial to compose functions together"></a>Using partial to compose functions together</h1><p>  Composing functions are read in the lisp way, so we pass the grape-clusters collection to the last composed function first</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> process-clusters</span><br><span class="line">  <span class="string">"Takes clusters of grapes and returns only the nice ones, that have been cleaned.  Using comp, read the function from the bottom up to understand the argument."</span></span><br><span class="line">  (<span class="name"><span class="builtin-name">comp</span></span></span><br><span class="line">   (<span class="name"><span class="builtin-name">partial</span></span> map clean-grape)</span><br><span class="line">   (<span class="name"><span class="builtin-name">partial</span></span> filter not-rotten)</span><br><span class="line">   (<span class="name"><span class="builtin-name">partial</span></span> mapcat split-cluster)))</span><br></pre></td></tr></table></figure>
+<p>Now lets call this composite function again…</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">process-clusters</span> grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; (&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>The <code>process-clusters</code> definition above uses the lisp way of evaluation - inside-out.</p>
+<p>Here is a simple example of evaluating a maths expression from inside-out.  Each line is the same expression, but with the innermost expression replaced by its value.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">+</span></span> <span class="number">2</span> <span class="number">3</span> (<span class="name"><span class="builtin-name">+</span></span> <span class="number">4</span> <span class="number">5</span> (/ <span class="number">24</span> <span class="number">6</span>)))   <span class="comment">;; (/ 24 6)   =&gt; 4</span></span><br><span class="line">(<span class="name"><span class="builtin-name">+</span></span> <span class="number">2</span> <span class="number">3</span> (<span class="name"><span class="builtin-name">+</span></span> <span class="number">4</span> <span class="number">5</span> <span class="number">4</span>))          <span class="comment">;; (+ 4 5 4)  =&gt; 13</span></span><br><span class="line">(<span class="name"><span class="builtin-name">+</span></span> <span class="number">2</span> <span class="number">3</span> <span class="number">13</span>)                 <span class="comment">;; (+ 2 3 13) =&gt; 18</span></span><br><span class="line"><span class="number">18</span></span><br></pre></td></tr></table></figure>
+<h1 id="Transducers-in-Clojure"><a href="#Transducers-in-Clojure" class="headerlink" title="Transducers in Clojure"></a>Transducers in Clojure</h1><p>There are several functions that work on sequences (collections) which will return what is refered to as a transducer if they are not passed a sequence as an argument.  For example, if you only pass map a function and not a collector, it returns a transducer that can be used with a collection that is passed to it later.</p>
+<p>Using the transduce feature of each of the functions in process-clusters, we can actually remove the partial function from our code and redefine a simpler version of process-clusters</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">def</span></span> process-clusters</span><br><span class="line">  (<span class="name"><span class="builtin-name">comp</span></span></span><br><span class="line">   (<span class="name"><span class="builtin-name">mapcat</span></span> split-cluster)</span><br><span class="line">   (<span class="name"><span class="builtin-name">filter</span></span> not-rotten)</span><br><span class="line">   (<span class="name"><span class="builtin-name">map</span></span> clean-grape)))</span><br></pre></td></tr></table></figure>
+<p>A few things changed since our previous definition process-clusters. First of all, we are using the transducer-returning versions of mapcat, filter and map instead of partially applying them for working on sequences.</p>
+<p>Also you may have noticed that the order in which they are composed is reversed, they appear in the order they are executed. Note that all map, filter and mapcat return a transducer. filter transforms the reducing function returned by map, applying the filtering before proceeding; mapcat transforms the reducing function returned by filter, applying the mapping and catenation before proceeding.</p>
+<p>One of the powerful properties of transducers is that they are combined using regular function composition. What’s even more elegant is that the composition of various transducers is itself a transducer! This means that our process-cluster is a transducer too, so we have defined a composable and context-independent algorithmic transformation.</p>
+<p>Many of the core ClojureScript functions accept a transducer, let’s look at some examples with our newly defined version of <code>process-cluster</code>:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">into</span></span> [] process-clusters grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; [&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">sequence</span></span> process-clusters grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; (&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">reduce</span></span> (<span class="name">process-clusters</span> conj) [] grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; [&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;]</span></span><br></pre></td></tr></table></figure>
+<p>Since using reduce with the reducing function returned from a transducer is so common, there is a function for reducing with a transformation called transduce. We can now rewrite the previous call to reduce using transduce:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">transduce</span> process-clusters conj [] grape-clusters)</span><br><span class="line"><span class="comment">;; =&gt; [&#123;:rotten? false, :clean? true&#125; &#123;:rotten? false, :clean? true&#125;]</span></span><br></pre></td></tr></table></figure>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>This was just a brief taste of Transducers in Clojure and I hope to create more examples of their use over time.  I dont see Transducers being used too much for my own code initially, but its a useful way to abstract functional composition and make your code more reusable within your project.</p>
+<p>If you need more time for this concept to sink in, its quite alright to stay with threading macros and the partial function, or even just applying map.  I find Clojure more rewarding when you first get more comfortable with the core concepts and build on them when you are ready.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank" rel="noopener">@jr0cket</a></p>
+
+        <license id="license">
+    <div>
+        <hr>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 ShareAlike License</a>, including custom images & stylesheets. Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </div>
+</license>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.co.uk/2016/06/transducers-in-clojure-getting-started.html" data-id="cl2mbqg0n00utzqmjganrys82" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.co.uk/2016/06/transducers-in-clojure-getting-started.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-composition/">functional-composition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/transducers/">transducers</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/git-2-9-on-ubuntu-16-04.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git 2.9 on Ubuntu 16.04
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Thinking Functional With Clojure at DevoxxUK 2016</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/beautiful-terminalation-ohmyzsh-on-ubuntu.html">Beautiful Terminalation - Ohmyzsh on Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/spacemacs-creating-animated-gifs-videos.html">camcorder.el - Creating Animated Gifs &amp; Videos for Spacemacs</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/Kanban-board-Emacs-Org-mode-to-get-work-done.html">Kanban in Emacs Org-Mode to Get More Work Done</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/Call-for-Speakers-London-Clojurian-conference-2016.html">Call for Speakers: London Clojurian Conference 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/spacemacs-adding-your-own-yasnippets.html">Spacemacs - Adding Custom Snippets to Yasnippet</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/clojure-dojo-celebrity-name-smash-June-2016.html">Clojure Dojo: Celebrity Name Smash - June 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/git-2-9-on-ubuntu-16-04.html">Git 2.9 on Ubuntu 16.04</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/transducers-in-clojure-getting-started.html">Transducers in Clojure: Getting Started</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/thinking-functional-with-clojure-at-devoxxuk-2016.html">Thinking Functional With Clojure at DevoxxUK 2016</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/publishing-for-developers-with-Gitbook-io.html">Publishing for Developers With Gitbook.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blogging/">blogging</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/book-reviews/">book-reviews</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/clojure/">clojure</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/community/">community</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev-tools/">dev-tools</a><span class="category-list-count">44</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/emacs/">emacs</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/events/">events</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gitbook/">gitbook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/presenting/">presenting</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4clojure/" style="font-size: 10px;">4clojure</a> <a href="/tags/6ThinkingHats/" style="font-size: 10px;">6ThinkingHats</a> <a href="/tags/agile/" style="font-size: 19.38px;">agile</a> <a href="/tags/agilecambridge/" style="font-size: 10px;">agilecambridge</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atlassian/" style="font-size: 16.25px;">atlassian</a> <a href="/tags/bdd/" style="font-size: 10.63px;">bdd</a> <a href="/tags/blender/" style="font-size: 10px;">blender</a> <a href="/tags/bookreview/" style="font-size: 10px;">bookreview</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/caftsmanship/" style="font-size: 10px;">caftsmanship</a> <a href="/tags/ci/" style="font-size: 11.25px;">ci</a> <a href="/tags/cider/" style="font-size: 10px;">cider</a> <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/clojurescript/" style="font-size: 10px;">clojurescript</a> <a href="/tags/cloud/" style="font-size: 10.63px;">cloud</a> <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/coding/" style="font-size: 15.63px;">coding</a> <a href="/tags/collaboration/" style="font-size: 10.63px;">collaboration</a> <a href="/tags/depreciated/" style="font-size: 10px;">depreciated</a> <a href="/tags/dev-tools/" style="font-size: 18.13px;">dev-tools</a> <a href="/tags/devoxx/" style="font-size: 10px;">devoxx</a> <a href="/tags/dibiconf/" style="font-size: 10px;">dibiconf</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/dvcs/" style="font-size: 10px;">dvcs</a> <a href="/tags/emacs/" style="font-size: 18.75px;">emacs</a> <a href="/tags/emacslive/" style="font-size: 11.25px;">emacslive</a> <a href="/tags/estimation/" style="font-size: 10px;">estimation</a> <a href="/tags/euroclojure/" style="font-size: 10px;">euroclojure</a> <a href="/tags/events/" style="font-size: 14.38px;">events</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/functional-composition/" style="font-size: 10px;">functional-composition</a> <a href="/tags/gdc/" style="font-size: 10px;">gdc</a> <a href="/tags/gifs/" style="font-size: 10px;">gifs</a> <a href="/tags/gimp/" style="font-size: 10.63px;">gimp</a> <a href="/tags/git/" style="font-size: 18.75px;">git</a> <a href="/tags/gitbook/" style="font-size: 10px;">gitbook</a> <a href="/tags/github/" style="font-size: 14.38px;">github</a> <a href="/tags/github-gists/" style="font-size: 10px;">github-gists</a> <a href="/tags/github-pages/" style="font-size: 10.63px;">github-pages</a> <a href="/tags/gits/" style="font-size: 10px;">gits</a> <a href="/tags/google/" style="font-size: 11.88px;">google</a> <a href="/tags/graphics/" style="font-size: 10px;">graphics</a> <a href="/tags/hackathon/" style="font-size: 11.88px;">hackathon</a> <a href="/tags/hackday/" style="font-size: 10.63px;">hackday</a> <a href="/tags/hackference/" style="font-size: 10px;">hackference</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/heroku/" style="font-size: 15px;">heroku</a> <a href="/tags/hexo/" style="font-size: 16.88px;">hexo</a> <a href="/tags/hindsight/" style="font-size: 11.25px;">hindsight</a> <a href="/tags/hub/" style="font-size: 10px;">hub</a> <a href="/tags/inkscape/" style="font-size: 11.25px;">inkscape</a> <a href="/tags/java/" style="font-size: 11.25px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jaxlondon/" style="font-size: 10.63px;">jaxlondon</a> <a href="/tags/jbehave/" style="font-size: 10px;">jbehave</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/kanban/" style="font-size: 17.5px;">kanban</a> <a href="/tags/leadership/" style="font-size: 10px;">leadership</a> <a href="/tags/lean/" style="font-size: 10px;">lean</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/leiningen/" style="font-size: 11.25px;">leiningen</a> <a href="/tags/lenovo/" style="font-size: 13.75px;">lenovo</a> <a href="/tags/lighttable/" style="font-size: 12.5px;">lighttable</a> <a href="/tags/ljcjug/" style="font-size: 12.5px;">ljcjug</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/macosx/" style="font-size: 10px;">macosx</a> <a href="/tags/magit/" style="font-size: 11.25px;">magit</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mentoring/" style="font-size: 10px;">mentoring</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/monkigras/" style="font-size: 10.63px;">monkigras</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/netbeans/" style="font-size: 11.88px;">netbeans</a> <a href="/tags/nodejs/" style="font-size: 11.25px;">nodejs</a> <a href="/tags/octopress/" style="font-size: 12.5px;">octopress</a> <a href="/tags/ohmyzsh/" style="font-size: 10px;">ohmyzsh</a> <a href="/tags/openjdk/" style="font-size: 10px;">openjdk</a> <a href="/tags/org-mode/" style="font-size: 12.5px;">org-mode</a> <a href="/tags/orgmode/" style="font-size: 10px;">orgmode</a> <a href="/tags/overtone/" style="font-size: 10px;">overtone</a> <a href="/tags/parody/" style="font-size: 10px;">parody</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/powerline/" style="font-size: 10px;">powerline</a> <a href="/tags/presenting/" style="font-size: 10.63px;">presenting</a> <a href="/tags/process/" style="font-size: 10px;">process</a> <a href="/tags/qcon/" style="font-size: 11.25px;">qcon</a> <a href="/tags/revealjs/" style="font-size: 11.25px;">revealjs</a> <a href="/tags/salesforce/" style="font-size: 11.25px;">salesforce</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/screencapture/" style="font-size: 10px;">screencapture</a> <a href="/tags/scribus/" style="font-size: 10.63px;">scribus</a> <a href="/tags/scrum/" style="font-size: 10.63px;">scrum</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/slashdot/" style="font-size: 10px;">slashdot</a> <a href="/tags/spacemacs/" style="font-size: 13.13px;">spacemacs</a> <a href="/tags/sublimetext/" style="font-size: 10px;">sublimetext</a> <a href="/tags/tdd/" style="font-size: 10.63px;">tdd</a> <a href="/tags/terry-pratchett/" style="font-size: 10px;">terry-pratchett</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/transducers/" style="font-size: 10px;">transducers</a> <a href="/tags/ubuntu/" style="font-size: 19.38px;">ubuntu</a> <a href="/tags/unity/" style="font-size: 10.63px;">unity</a> <a href="/tags/virtualbox/" style="font-size: 10px;">virtualbox</a> <a href="/tags/visualisation/" style="font-size: 10px;">visualisation</a> <a href="/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/tags/xpdays/" style="font-size: 10px;">xpdays</a> <a href="/tags/yasnippets/" style="font-size: 10px;">yasnippets</a> <a href="/tags/zsh/" style="font-size: 10.63px;">zsh</a>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Stevenson<br>
+      <a href="http://twitter.com/jr0cket" target="_blank">@jr0cket</a><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="http://jr0cket.co.uk/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+    <a href="http://jr0cket.co.uk/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="/clojure" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/hexo" class="mobile-nav-link">Hexo</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.co.uk/2016/06/transducers-in-clojure-getting-started.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="scroll2top" style="position:fixed;bottom:150px;right:50px;cursor: pointer;Z-index:9999">
+<a title="返回顶部" href="#"><img src="/scroll2top/scrollup.png"/></a>
+</div>
+<script src="/scroll2top/scroll2top.js"></script>
+
+
+
+  </div>
+</body>
+</html>
